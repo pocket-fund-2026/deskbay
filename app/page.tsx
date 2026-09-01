@@ -156,6 +156,7 @@ export default function HomePage() {
         <span>© 2026 Deskbay</span>
         <nav className="flex gap-5">
           <Link href="/mumbai" className="hover:text-paper">The map</Link>
+          <Link href="/blog" className="hover:text-paper">Blog</Link>
           <Link href="/about" className="hover:text-paper">About</Link>
           <Link href="/submit" className="hover:text-paper">Submit a cafe</Link>
         </nav>
