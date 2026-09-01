@@ -32,6 +32,8 @@ export type Cafe = {
   publicRating: { value: number; count: number; source: string; url: string } | null;
   synthesis: string | null;
   workability: number | null;
+  images: { url: string; alt: string; credit?: string; creditUrl?: string; license?: string }[];
+  menuUrl: string | null;
 };
 
 export const CITY = raw.city as { slug: string; name: string; tagline: string; center: { lat: number; lng: number }; zoom: number };

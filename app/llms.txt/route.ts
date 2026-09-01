@@ -8,7 +8,7 @@ export function GET() {
     .sort((a, b) => (b.workability ?? -1) - (a.workability ?? -1))
     .map(
       (c) =>
-        `- ${c.name} — ${c.neighborhood}, ${c.area === "bandra" ? "Bandra" : "South Bombay"}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not enough evidence to score"}. ${c.editorialNote}`
+        `- ${c.name} — ${c.neighborhood}, ${c.area === "bandra" ? "Bandra" : "South Bombay"}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not enough evidence to score"}. ${c.editorialNote} https://deskbay-blue.vercel.app/mumbai/${c.slug}`
     )
     .join("\n");
 

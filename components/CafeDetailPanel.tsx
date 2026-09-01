@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 
 const EVIDENCE_ORDER: { key: keyof Cafe["evidence"]; label: string }[] = [
@@ -40,6 +42,18 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
       </div>
 
       <div className="p-4">
+        {cafe.images.length > 0 && (
+          <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-lg border border-white/10">
+            <Image
+              src={cafe.images[0].url}
+              alt={cafe.images[0].alt}
+              fill
+              unoptimized
+              sizes="380px"
+              className="object-cover"
+            />
+          </div>
+        )}
         <div className="flex items-start justify-between gap-3">
           <div>
             <h2 className="font-display text-[20px] font-medium leading-snug">{cafe.name}</h2>
@@ -79,6 +93,16 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
               className="wa-btn border-white/15"
             >
               Instagram
+            </a>
+          )}
+          {cafe.menuUrl && (
+            <a
+              href={cafe.menuUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wa-btn border-white/15"
+            >
+              Order / menu
             </a>
           )}
           <a
@@ -160,6 +184,13 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
             Sources: {cafe.sources.join(" · ")} — verified {cafe.lastVerifiedAt}
           </p>
         )}
+
+        <Link
+          href={`/mumbai/${cafe.slug}`}
+          className="wa-btn wa-btn--solid mt-6 !bg-paper !text-ink"
+        >
+          Open full page
+        </Link>
       </div>
     </div>
   );

@@ -74,7 +74,16 @@
         "url": "https://wanderlog.com/place/details/1506638/mary-lodge-bandra-by-subko"
       },
       "synthesis": "Three floors with plug points, desks and wifi make three hours plausible, and reviewers call it an unofficial office — but weekends get noisy and calls are discouraged.",
-      "workability": 3.7
+      "workability": 3.7,
+      "images": [
+        {
+          "url": "https://www.subko.coffee/cdn/shop/files/mlb-1-min.png?v=1706613182&width=480",
+          "alt": "The counter at Subko's Mary Lodge outlet on Chapel Road, Bandra: a narrow bungalow room with a green pitched ceiling, a concrete bar and the espresso machine facing the door",
+          "credit": "subko.coffee",
+          "creditUrl": "https://www.subko.coffee/pages/locations"
+        }
+      ],
+      "menuUrl": null
     },
     {
       "slug": "bombay-coffee-house-waterfield-road",
@@ -142,7 +151,9 @@
         "url": "https://wanderlog.com/place/details/423265/bombay-coffee-house"
       },
       "synthesis": "Open 9am to midnight with well-corroborated fast wifi and reviewers reporting one-to-four-hour laptop sessions; no source mentions outlets, and noise reports are mixed.",
-      "workability": 3.6
+      "workability": 3.6,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "shelter-cafe-x-coffee-by-javaphile-sherly-rajan-road",
@@ -208,7 +219,9 @@
         "url": "https://wanderlog.com/place/details/12772766/shelter-cafe-x-coffee-by-javaphile-bandra"
       },
       "synthesis": "Two independent sources report an outlet at nearly every table in a spacious, quiet room that is explicitly listed as work-friendly, making a three-hour session well supported.",
-      "workability": 4
+      "workability": 4,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "kitchen-garden-by-suzette-st-john-street",
@@ -273,7 +286,9 @@
         "url": "https://www.district.in/dining/mumbai/kitchen-garden-by-suzette-pali-hill-bandra-west"
       },
       "synthesis": "Listed as work-friendly with wifi and a quieter room, but reviewers call it tiny and always crowded with tables packed close, and no source mentions outlets.",
-      "workability": 2.9
+      "workability": 2.9,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "taj-mahal-tea-house-st-john-baptist-road",
@@ -340,7 +355,9 @@
         "url": "https://www.tripadvisor.com/Restaurant_Review-g304554-d8613386-Reviews-Taj_Mahal_Tea_House-Mumbai_Maharashtra.html"
       },
       "synthesis": "A large restored bungalow, quiet with many nooks and a patio, named in two Bandra work-cafe guides; wifi is listed once and no source mentions power outlets.",
-      "workability": 3.7
+      "workability": 3.7,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "candies-pali-hill",
@@ -404,7 +421,9 @@
         "url": "https://wanderlog.com/place/details/1323671/candies"
       },
       "synthesis": "Plentiful multi-level indoor and outdoor seating and real food, but a loud, crowded, queue-heavy room with basic chairs and no evidence of wifi or power.",
-      "workability": 2.9
+      "workability": 2.9,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "the-bagel-shop-carter-road",
@@ -471,7 +490,9 @@
         "url": "https://magicpin.in/Mumbai/Pali-Hill/Restaurant/The-Bagel-Shop/store/23323"
       },
       "synthesis": "Multiple sources describe it as an explicitly work-friendly cafe with fast wifi, outlets at outdoor tables, sofa seating and tolerance of long laptop stays; it is small and can get noisy.",
-      "workability": 4
+      "workability": 4,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "blue-tokai-coffee-roasters-perry-road-perry-road",
@@ -536,7 +557,9 @@
         "url": "https://www.tripadvisor.in/Restaurant_Review-g304554-d13985958-Reviews-Blue_Tokai_Coffee_Roasters_Bandra-Mumbai_Maharashtra.html"
       },
       "synthesis": "Good coffee with wifi and, per one reviewer, plenty of outlets, but every source calls the room very small with about five tables and little acoustic privacy.",
-      "workability": 3.1
+      "workability": 3.1,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "the-yoga-house-sherly-rajan-road",
@@ -600,7 +623,9 @@
         "url": "https://wanderlog.com/place/details/1407990/the-yoga-house-studio--cafe"
       },
       "synthesis": "Consistently described as quiet, leafy and work-friendly with wifi, varied seating and real healthy meals; no source mentions power outlets, and one notes there is no air conditioning.",
-      "workability": 4.2
+      "workability": 4.2,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "earth-cafe-waterfield-road",
@@ -664,7 +689,9 @@
         "url": "https://wanderlog.com/place/details/423260/earth-cafe--waterfield"
       },
       "synthesis": "Bright, well-liked all-vegan cafe with wifi, clean bathrooms and good food, but a 2024 reviewer was told laptops are not allowed, which undercuts a three-hour session.",
-      "workability": 3.1
+      "workability": 3.1,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "mokai-pali-naka",
@@ -726,7 +753,9 @@
         "url": "https://www.district.in/dining/mumbai/mokai-pali-hill-bandra-west"
       },
       "synthesis": "A five-month-old experience-led matcha cafe over two floors with lounging beds, live music and no reported wifi or outlets — pleasant, but unevidenced as a workspace.",
-      "workability": 2.7
+      "workability": 2.7,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "boojee-cafe-perry-road",
@@ -787,7 +816,9 @@
         "url": "https://wanderlog.com/place/details/2590802/boojee-cafe"
       },
       "synthesis": "Excellent coffee and brunch, indoor and outdoor tables, and a district listing calling it work-friendly — but queues on ordinary weekdays, tiny tables and 25-minute average visits.",
-      "workability": 2.5
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "veronica-s-waroda-road",
@@ -849,7 +880,9 @@
         "url": "https://wanderlog.com/place/details/6732114/veronicas"
       },
       "synthesis": "Wifi is listed and one review invites lingering, but reviewers call it loud, claustrophobic and deliberately short on seats, with hour-long queues and a weekend afternoon closure.",
-      "workability": 2.3
+      "workability": 2.3,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "poetry-by-love-and-cheesecake-24th-road",
@@ -911,7 +944,9 @@
         "url": "https://wanderlog.com/place/details/1418748"
       },
       "synthesis": "Confirmed trading with long daily hours and a proper savoury menu, but no source tied to this address mentions wifi, sockets, seating or how long anyone stays.",
-      "workability": null
+      "workability": null,
+      "images": [],
+      "menuUrl": "https://ordernow.loveandcheesecake.com/order/poetry-by-love-cheesecake-bandra-west-mumbai"
     },
     {
       "slug": "kcroasters-by-koinonia-chuim-village",
@@ -972,7 +1007,9 @@
         "url": "https://www.district.in/dining/mumbai/kcroasters-a-koinonia-project-khar"
       },
       "synthesis": "Serious coffee in a five-to-six-seat roastery with no real food, and two directories now report it permanently closed while the official site still lists daily hours.",
-      "workability": 2.5
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "kala-ghoda-cafe-kala-ghoda",
@@ -1037,7 +1074,9 @@
         "url": "https://wanderlog.com/place/details/54393/kala-ghoda-cafe"
       },
       "synthesis": "Beautiful three-room space with comfortable seating, all-day food and tolerant staff, but the free wifi is time-capped and reportedly cut over lunch — bring your own connection.",
-      "workability": 2.8
+      "workability": 2.8,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "blue-tokai-new-excelsior-fort",
@@ -1101,7 +1140,9 @@
         "url": "https://www.district.in/dining/mumbai/blue-tokai-coffee-roasters-3-fort"
       },
       "synthesis": "Blue Tokai's own page sells this Fort outlet as a place to get work done, with wifi, a terrace and 7am–11pm hours; outlets and noise are undocumented.",
-      "workability": 3.5
+      "workability": 3.5,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "araku-coffee-apollo-bunder",
@@ -1166,7 +1207,9 @@
         "url": "https://wanderlog.com/place/details/9170395/araku-coffee"
       },
       "synthesis": "Good wifi and a handsome 55-seat two-level room, but the one work-focused review says sockets are limited and calls it suitable only for short sessions.",
-      "workability": 3
+      "workability": 3,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "subko-the-cacao-mill-colaba",
@@ -1226,7 +1269,16 @@
         "url": "https://wanderlog.com/place/details/6732044/the-cacao-mill-by-subko"
       },
       "synthesis": "A surprisingly large two-floor room, tagged work friendly, where a reviewer says people camp for six hours — but no source confirms wifi or power sockets.",
-      "workability": 3.3
+      "workability": 3.3,
+      "images": [
+        {
+          "url": "https://www.subko.coffee/cdn/shop/files/Subko_Cacao_wides-0423_1_bac2fca4-ade8-4a8b-98fd-de8b20f8c80c.png?v=1704982609&width=480",
+          "alt": "Inside Subko's The Cacao Mill on 2nd Pasta Lane, Colaba: a double-height stone-walled room with counter seating on a mezzanine above the glazed chocolate-making floor",
+          "credit": "subko.coffee",
+          "creditUrl": "https://www.subko.coffee/pages/locations"
+        }
+      ],
+      "menuUrl": null
     },
     {
       "slug": "nandan-coffee-kala-ghoda",
@@ -1288,7 +1340,9 @@
         "url": "https://wanderlog.com/place/details/12367434/nandan-coffee"
       },
       "synthesis": "A handsome two-storey tasting-led coffee bar with small tables, few chairs, a deliberately tiny food menu and afternoon crowds; no source confirms wifi or sockets.",
-      "workability": 2.3
+      "workability": 2.3,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "starbucks-horniman-circle-horniman-circle",
@@ -1353,7 +1407,9 @@
         "url": "https://www.district.in/dining/mumbai/starbucks-coffee-fort"
       },
       "synthesis": "A work-cafe guide calls it the most reliable work cafe in south Mumbai: ample outlets, reliable wifi, air-conditioned varied seating; peak-hour crowds and worn sofas are the caveats.",
-      "workability": 3.8
+      "workability": 3.8,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "bombay-coffee-house-ballard-estate-ballard-estate",
@@ -1417,7 +1473,9 @@
         "url": "https://wanderlog.com/place/details/6789991/bombay-coffee-house-fort"
       },
       "synthesis": "A quiet Ballard Estate heritage room with good wifi, sockets and multi-level wooden seating; guides call it comfortable for long sits, though damp walls draw complaints.",
-      "workability": 3.9
+      "workability": 3.9,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "kyani-co-marine-lines",
@@ -1479,7 +1537,9 @@
         "url": "https://wanderlog.com/place/details/1323666/kyani--co--legendary-irani-restaurant-bakers"
       },
       "synthesis": "Explicitly unworkable: a food publication reports laptops are not allowed and staff object to lingering, with no wifi, shared cramped tables, no air conditioning and reportedly no washroom.",
-      "workability": 1.6
+      "workability": 1.6,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "cafe-mondegar-colaba",
@@ -1540,7 +1600,45 @@
         "url": "https://wanderlog.com/place/details/1323711"
       },
       "synthesis": "Effectively unworkable: restaurant-guru records no wifi, tables are jammed together, a jukebox and live music dominate, and typical visits last minutes amid queues outside.",
-      "workability": 1.6
+      "workability": 1.6,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Cafe_Mondegar%2C_Colaba_Causeway%2C_interior_wall_murals.jpg",
+          "alt": "Cafe Mondegar's dining room, its walls covered end to end in Mario Miranda's murals",
+          "credit": "Flickr user zadeus xb7 CC BY-SA 2.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Mondegar%2C_Colaba_Causeway%2C_interior_wall_murals.jpg",
+          "license": "CC BY-SA 2.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cafe_Mondegar_bar_with_mural.JPG/1280px-Cafe_Mondegar_bar_with_mural.JPG",
+          "alt": "The bar at Cafe Mondegar, mural-painted walls and ceiling fans above the counter",
+          "credit": "AKS.9955 xb7 CC BY-SA 4.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Mondegar_bar_with_mural.JPG",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Cafe_Mondegar_jukebox.JPG/1280px-Cafe_Mondegar_jukebox.JPG",
+          "alt": "The jukebox at Cafe Mondegar — the cafe is one of the last in Mumbai to keep one running",
+          "credit": "AKS.9955 xb7 CC BY-SA 4.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Mondegar_jukebox.JPG",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cafe_Mondegar.JPG/1280px-Cafe_Mondegar.JPG",
+          "alt": "Metro House on Colaba Causeway, the building Cafe Mondegar occupies at street level",
+          "credit": "AKS.9955 xb7 CC BY-SA 4.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Mondegar.JPG",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Cafe_Mondegar%2C_on_Colaba_Causeway.jpg",
+          "alt": "Colaba Causeway outside Cafe Mondegar, looking along the arcade",
+          "credit": "Flickr user ghoseb xb7 CC BY-SA 2.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Cafe_Mondegar%2C_on_Colaba_Causeway.jpg",
+          "license": "CC BY-SA 2.0"
+        }
+      ],
+      "menuUrl": null
     },
     {
       "slug": "leopold-cafe-bar-colaba",
@@ -1601,7 +1699,24 @@
         "url": "https://www.district.in/dining/mumbai/leopold-cafe-bar-colaba"
       },
       "synthesis": "Two directories list wifi and there is a quieter air-conditioned upstairs room, but cramped tables, loud music, queues outside and fast turnover make three hours unrealistic.",
-      "workability": 2.3
+      "workability": 2.3,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/LeopoldCafe_gobeirne.jpg/1280px-LeopoldCafe_gobeirne.jpg",
+          "alt": "The Leopold Cafe & Bar shopfront on Colaba Causeway, under its red “Since 1871” sign",
+          "credit": "Greg O'Beirne xb7 CC BY-SA 3.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:LeopoldCafe_gobeirne.jpg",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/LeopoldCafe2_gobeirne.jpg/1280px-LeopoldCafe2_gobeirne.jpg",
+          "alt": "Inside Leopold: red chairs at close-set tables under the tall street windows",
+          "credit": "Greg O'Beirne xb7 CC BY-SA 3.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:LeopoldCafe2_gobeirne.jpg",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "menuUrl": null
     },
     {
       "slug": "cafe-military-fort",
@@ -1662,7 +1777,9 @@
         "url": "https://wanderlog.com/place/details/1323659/cafe-military"
       },
       "synthesis": "A crowded, fanned 1933 Irani lunchroom: one reviewer says you can sit forever unbothered, others report rushed service and waits for tables. No wifi or outlets are mentioned anywhere.",
-      "workability": 2.5
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "ideal-corner-fort",
@@ -1723,7 +1840,9 @@
         "url": "https://wanderlog.com/place/details/4647030/ideal-corner"
       },
       "synthesis": "A tiny, cramped Parsi lunch counter where the typical visit is about ten minutes and food arrives in two; quiet at 3pm, but nothing suggests wifi, outlets or laptop tolerance.",
-      "workability": 2.5
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "yazdani-bakery-fort",
@@ -1784,7 +1903,45 @@
         "url": "https://wanderlog.com/place/details/54399/yazdani-restaurant--bakery"
       },
       "synthesis": "Explicitly no wifi, no toilets and no air conditioning; shared benches, few seats and a typical fifteen-minute visit. A chai-and-brun stop, not a place to work for three hours.",
-      "workability": 1.8
+      "workability": 1.8,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Yazdani_Bakery.JPG/1280px-Yazdani_Bakery.JPG",
+          "alt": "Yazdani Bakery's shopfront in Fort, its red boards and arched window over the open doors",
+          "credit": "AnshumanF xb7 CC BY-SA 3.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Yazdani_Bakery.JPG",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Yazdani_Bakery_Wall.JPG/1280px-Yazdani_Bakery_Wall.JPG",
+          "alt": "Inside Yazdani: framed photographs, notices and price lists filling the wall above the tables",
+          "credit": "AnshumanF xb7 CC BY-SA 3.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Yazdani_Bakery_Wall.JPG",
+          "license": "CC BY-SA 3.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yazdani_Bakery_in_Fort.jpg/1280px-Yazdani_Bakery_in_Fort.jpg",
+          "alt": "The Yazdani Restaurant & Bakery frontage on Cawasji Patel Street, staff in whites at the counter",
+          "credit": "Nick Gray xb7 CC BY-SA 2.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Yazdani_Bakery_in_Fort.jpg",
+          "license": "CC BY-SA 2.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Yazdani_bakery_sign.jpg/1280px-Yazdani_bakery_sign.jpg",
+          "alt": "A hand-chalked board at Yazdani advertising fresh ginger biscuits and apple pie",
+          "credit": "Nick Gray xb7 CC BY-SA 2.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Yazdani_bakery_sign.jpg",
+          "license": "CC BY-SA 2.0"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Breadcutter_Yazdani_Bakery_1.JPG/1280px-Breadcutter_Yazdani_Bakery_1.JPG",
+          "alt": "A baker at Yazdani's wood-fired oven, cutting bread at the mouth of the arch",
+          "credit": "AroundTheGlobe xb7 CC BY-SA 3.0",
+          "creditUrl": "https://commons.wikimedia.org/wiki/File:Breadcutter_Yazdani_Bakery_1.JPG",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "menuUrl": null
     },
     {
       "slug": "third-wave-coffee-churchgate-churchgate",
@@ -1842,7 +1999,9 @@
       "lastVerifiedAt": "2026-08-23",
       "publicRating": null,
       "synthesis": "Only the official store page could be tied to this address: it confirms the Churchgate outlet trades and offers dine-in. No evidence at all on wifi, power, noise or long stays.",
-      "workability": null
+      "workability": null,
+      "images": [],
+      "menuUrl": null
     },
     {
       "slug": "blue-tokai-nariman-point-nariman-point",
@@ -1906,7 +2065,9 @@
         "url": "https://yappe.in/maharashtra/mumbai/blue-tokai-coffee-roasters-nariman-point/156549"
       },
       "synthesis": "Blue Tokai's own page for this address confirms wifi, and the one review digest available calls it a calm, clean room that suits working professionals. Nothing on outlets or long stays.",
-      "workability": 3.5
+      "workability": 3.5,
+      "images": [],
+      "menuUrl": null
     }
   ]
 }

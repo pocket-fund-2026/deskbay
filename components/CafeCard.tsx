@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 import { FACTORS } from "@/lib/cafes";
 
@@ -30,9 +31,12 @@ export default function CafeCard({
   onSelect: () => void;
 }) {
   return (
-    <button
+    <div
+      role="button"
+      tabIndex={0}
       onClick={onSelect}
-      className={`w-full rounded-xl border p-4 text-left transition-colors ${
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onSelect()}
+      className={`w-full cursor-pointer rounded-xl border p-4 text-left transition-colors ${
         active ? "border-accent/60 bg-white/[0.06]" : "border-white/10 hover:bg-white/[0.03]"
       }`}
     >
@@ -72,7 +76,15 @@ export default function CafeCard({
           ))}
         </div>
       )}
-    </button>
+
+      <Link
+        href={`/mumbai/${cafe.slug}`}
+        onClick={(e) => e.stopPropagation()}
+        className="wa-mono mt-3 inline-block text-paper/40 hover:text-paper"
+      >
+        Full page →
+      </Link>
+    </div>
   );
 }
 
