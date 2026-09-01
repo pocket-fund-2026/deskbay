@@ -1,0 +1,1912 @@
+{
+  "city": {
+    "slug": "mumbai",
+    "name": "Mumbai",
+    "tagline": "Bandra and South Bombay",
+    "center": {
+      "lat": 18.995,
+      "lng": 72.833
+    },
+    "zoom": 11.4,
+    "live": true
+  },
+  "spots": [
+    {
+      "slug": "subko-coffee-mary-lodge-chapel-road",
+      "name": "Subko Coffee — Mary Lodge",
+      "area": "bandra",
+      "neighborhood": "Chapel Road",
+      "address": "21A, Ground Floor, Mary Lodge, Ranwar, opposite Saba Heritage Building, Chapel Road, Bandra West",
+      "latitude": 19.0575,
+      "longitude": 72.8264,
+      "website": "https://www.subko.coffee",
+      "instagram": "https://instagram.com/subkocoffee",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Subko%20Coffee%20—%20Mary%20Lodge%2C%2021A%2C%20Ground%20Floor%2C%20Mary%20Lodge%2C%20Ranwar%2C%20opposite%20Saba%20Heritage%20Building%2C%20Chapel%20Road%2C%20Bandra%20West%2C%20Mumbai",
+      "openingHours": "Mon–Thu 7:30am–10pm · Fri–Sun 7:30am–9:30pm",
+      "editorialNote": "The reference point for Indian specialty coffee, in a Ranwar bungalow that refuses to hurry you.",
+      "whyWeRecommend": "Because the coffee genuinely justifies the queue, and because the building does something no glass-fronted cafe manages: it makes an hour feel longer than it is. Come before ten if you want a table and a conversation.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": 4,
+        "seating": 3,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": "Some tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": "Afternoons",
+        "avgFoodCost": "₹900+"
+      },
+      "evidence": {
+        "wifi": "district.in lists “Wifi” and “Work friendly” among its amenities.",
+        "charging": null,
+        "quiet": "Reported as quiet through the morning, filling up after 10am on weekdays.",
+        "seating": "Reviewers consistently describe limited seating — roughly eight to ten tables.",
+        "work": "Listed as work friendly by district.in; guides recommend it for deep work and coffee meetings."
+      },
+      "toggles": [
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "roastery",
+        "bakehouse",
+        "heritage building",
+        "brunch"
+      ],
+      "sources": [
+        "subko.coffee",
+        "district.in",
+        "mumbaipune.co.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 3364,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1506638/mary-lodge-bandra-by-subko"
+      },
+      "synthesis": "Three floors with plug points, desks and wifi make three hours plausible, and reviewers call it an unofficial office — but weekends get noisy and calls are discouraged.",
+      "workability": 3.7
+    },
+    {
+      "slug": "bombay-coffee-house-waterfield-road",
+      "name": "Bombay Coffee House",
+      "area": "bandra",
+      "neighborhood": "Waterfield Road",
+      "address": "248, Neelkamal Building, Waterfield Road, opposite National College, Bandra West, Mumbai 400050",
+      "latitude": 19.0568,
+      "longitude": 72.8316,
+      "website": "https://bombaycoffeehouse.com",
+      "instagram": "https://instagram.com/bchbombay",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bombay%20Coffee%20House%2C%20248%2C%20Neelkamal%20Building%2C%20Waterfield%20Road%2C%20opposite%20National%20College%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 9am–midnight",
+      "editorialNote": "Built for people with laptops, and honest about it. The best odds in Bandra of a table, a plug and three quiet hours.",
+      "whyWeRecommend": "This is the answer to “where can I work for three hours” more often than anywhere else on this map. Generous tables, findable outlets, and staff who do not hover once your cup is empty.",
+      "scores": {
+        "wifi": 5,
+        "charging": 4,
+        "quiet": 4,
+        "seating": 5,
+        "work": 5
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": "Good",
+        "chargingNote": "Most tables can charge",
+        "noise": "Quiet",
+        "seating": "Lots of room",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "district.in lists complimentary internet and describes the room as designed for remote workers.",
+        "charging": "Remote-work guides report that outlets are easy to find at most tables.",
+        "quiet": "Reported to stay quieter later into the afternoon than the nearby brunch cafes.",
+        "seating": "district.in lists indoor, comfortable and large-group seating.",
+        "work": "Described by district.in as built for remote work; appears on multiple work-cafe lists."
+      },
+      "toggles": [
+        "Outlets",
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "work friendly",
+        "wifi",
+        "patisserie",
+        "all day",
+        "large tables"
+      ],
+      "sources": [
+        "bombaycoffeehouse.com",
+        "district.in",
+        "eazydiner.com",
+        "coworkingers.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.2,
+        "count": 3189,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/423265/bombay-coffee-house"
+      },
+      "synthesis": "Open 9am to midnight with well-corroborated fast wifi and reviewers reporting one-to-four-hour laptop sessions; no source mentions outlets, and noise reports are mixed.",
+      "workability": 3.6
+    },
+    {
+      "slug": "shelter-cafe-x-coffee-by-javaphile-sherly-rajan-road",
+      "name": "Shelter Cafe x Coffee by Javaphile",
+      "area": "bandra",
+      "neighborhood": "Sherly Rajan Road",
+      "address": "Ground Floor, Noorie House, 4 Sherly Rajan Road, off Carter Road, Bandra West, Mumbai 400050",
+      "latitude": 19.0659,
+      "longitude": 72.8236,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Shelter%20Cafe%20x%20Coffee%20by%20Javaphile%2C%20Ground%20Floor%2C%20Noorie%20House%2C%204%20Sherly%20Rajan%20Road%2C%20off%20Carter%20Road%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 8am–10:30pm",
+      "editorialNote": "Plug points at most tables and light from the right direction. A working cafe that also happens to be pleasant.",
+      "whyWeRecommend": "The seating was clearly planned by someone who has tried to work in a cafe. Two to three hours here is comfortable rather than a negotiation — and the road outside is calm enough for a call.",
+      "scores": {
+        "wifi": 4,
+        "charging": 4,
+        "quiet": 4,
+        "seating": 4,
+        "work": 5
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": "Good",
+        "chargingNote": "Most tables can charge",
+        "noise": "Quiet",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": "district.in's amenity list explicitly includes “Wifi” and “Work friendly”.",
+        "charging": "Guides note that many tables have plug points.",
+        "quiet": "Described as peaceful; the lane sits off the Carter Road traffic.",
+        "seating": "Indoor and outdoor seating listed; large windows and natural light reported.",
+        "work": "Listed work friendly; guides say it is good for a two-to-three-hour session."
+      },
+      "toggles": [
+        "Outlets",
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "work friendly",
+        "wifi",
+        "outlets",
+        "vegan options",
+        "outdoor seating"
+      ],
+      "sources": [
+        "district.in",
+        "mumbaipune.co.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 260,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/12772766/shelter-cafe-x-coffee-by-javaphile-bandra"
+      },
+      "synthesis": "Two independent sources report an outlet at nearly every table in a spacious, quiet room that is explicitly listed as work-friendly, making a three-hour session well supported.",
+      "workability": 4
+    },
+    {
+      "slug": "kitchen-garden-by-suzette-st-john-street",
+      "name": "Kitchen Garden by Suzette",
+      "area": "bandra",
+      "neighborhood": "St John Street",
+      "address": "Shop 8/9, Gasper Enclave, St John Street, opposite Gold's Gym, Pali Naka, Bandra West",
+      "latitude": 19.0671,
+      "longitude": 72.8288,
+      "website": "https://www.suzette.in",
+      "instagram": "https://instagram.com/kitchengardenbysuzette",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kitchen%20Garden%20by%20Suzette%2C%20Shop%208/9%2C%20Gasper%20Enclave%2C%20St%20John%20Street%2C%20opposite%20Gold's%20Gym%2C%20Pali%20Naka%2C%20Bandra%20West%2C%20Mumbai",
+      "openingHours": "Daily 8am–11:30pm",
+      "editorialNote": "Fast wifi and a real salad, until the brunch crowd arrives at one and takes the quiet with them.",
+      "whyWeRecommend": "A genuine morning work cafe with a hard stop. Get in before eleven, take a wall table where the outlets are, and be finished by the time lunch turns the volume up.",
+      "scores": {
+        "wifi": 5,
+        "charging": 3,
+        "quiet": 3,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": "Okay",
+        "chargingNote": "A plug if you pick your table",
+        "noise": "Medium",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": "Afternoons",
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "A remote-work blog measured roughly 45–60 Mbps, holding up even at lunch hour.",
+        "charging": "The same blog reports about one outlet per two tables, mostly along the side walls.",
+        "quiet": "Reported to get loud after 1pm with the brunch crowd; recommended before 11am.",
+        "seating": "EazyDiner lists group seating; the room is described as generous for the stretch.",
+        "work": "Recommended for morning work sessions by the same remote-work survey."
+      },
+      "toggles": [
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "fast wifi",
+        "salads",
+        "farm to table",
+        "morning pick",
+        "bakery"
+      ],
+      "sources": [
+        "eazydiner.com",
+        "travelkismat.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 3.7,
+        "count": 711,
+        "source": "district.in",
+        "url": "https://www.district.in/dining/mumbai/kitchen-garden-by-suzette-pali-hill-bandra-west"
+      },
+      "synthesis": "Listed as work-friendly with wifi and a quieter room, but reviewers call it tiny and always crowded with tables packed close, and no source mentions outlets.",
+      "workability": 2.9
+    },
+    {
+      "slug": "taj-mahal-tea-house-st-john-baptist-road",
+      "name": "Taj Mahal Tea House",
+      "area": "bandra",
+      "neighborhood": "St John Baptist Road",
+      "address": "36-A, Ground Floor, Sanatan Pereira Bungalow, St John Baptist Road, Bandra West, Mumbai 400050",
+      "latitude": 19.0566,
+      "longitude": 72.8256,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Taj%20Mahal%20Tea%20House%2C%2036-A%2C%20Ground%20Floor%2C%20Sanatan%20Pereira%20Bungalow%2C%20St%20John%20Baptist%20Road%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 7:30am–11:30pm",
+      "editorialNote": "Forty teas, eighty seats and soft light in a Bandra bungalow. Does dates and deadlines equally well.",
+      "whyWeRecommend": "The rare Bandra room that is calm enough to work in during the day and flattering enough to bring someone to at night. Sit inside for the quiet, outside for the street.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": 4,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "Tripadvisor's amenity list includes free WiFi.",
+        "charging": null,
+        "quiet": "Guides describe calm seating and soft lighting, and recommend it for laptop work in quiet hours.",
+        "seating": "Wikipedia records roughly 80 seats across 3,500 sq ft, indoor and outdoor.",
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "tea",
+        "heritage building",
+        "wifi",
+        "outdoor seating",
+        "quiet hours"
+      ],
+      "sources": [
+        "tripadvisor.in",
+        "district.in",
+        "en.wikipedia.org",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 208,
+        "source": "tripadvisor.com",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g304554-d8613386-Reviews-Taj_Mahal_Tea_House-Mumbai_Maharashtra.html"
+      },
+      "synthesis": "A large restored bungalow, quiet with many nooks and a patio, named in two Bandra work-cafe guides; wifi is listed once and no source mentions power outlets.",
+      "workability": 3.7
+    },
+    {
+      "slug": "candies-pali-hill",
+      "name": "Candies",
+      "area": "bandra",
+      "neighborhood": "Pali Hill",
+      "address": "5AA Pali Hill, next to Learners Academy School, Bandra West, Mumbai 400050",
+      "latitude": 19.0701,
+      "longitude": 72.8259,
+      "website": "https://www.candiescafe.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Candies%2C%205AA%20Pali%20Hill%2C%20next%20to%20Learners%20Academy%20School%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Tue–Sun 8:30am–10:30pm · closed Mondays",
+      "editorialNote": "Four decades of Bandra on several floors and a terrace. Closed Mondays, crowded weekends, worth both.",
+      "whyWeRecommend": "No other cafe here gives you this much choice of where to sit. Find a terrace corner on a weekday morning and you have the most generous seating in Bandra for the price of a cold coffee.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2,
+        "seating": 5,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Loud",
+        "seating": "Lots of room",
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": "Weekends",
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reported as very crowded at weekends and calmer on weekday mornings.",
+        "seating": "Tripadvisor and district.in both describe extensive seating across multiple levels and open terraces.",
+        "work": null
+      },
+      "toggles": [
+        "Roomy"
+      ],
+      "tags": [
+        "institution",
+        "terrace",
+        "self service",
+        "cheap",
+        "closed mondays"
+      ],
+      "sources": [
+        "candiescafe.com",
+        "tripadvisor.com",
+        "district.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 18055,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1323671/candies"
+      },
+      "synthesis": "Plentiful multi-level indoor and outdoor seating and real food, but a loud, crowded, queue-heavy room with basic chairs and no evidence of wifi or power.",
+      "workability": 2.9
+    },
+    {
+      "slug": "the-bagel-shop-carter-road",
+      "name": "The Bagel Shop",
+      "area": "bandra",
+      "neighborhood": "Carter Road",
+      "address": "30, Pali Mala Road, near Carter Road, Bandra West, Mumbai 400050",
+      "latitude": 19.0633,
+      "longitude": 72.8221,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Bagel%20Shop%2C%2030%2C%20Pali%20Mala%20Road%2C%20near%20Carter%20Road%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 9am–10:30pm",
+      "editorialNote": "Quiet, comfortable, and one of the few Bandra rooms where a two-person meeting is not a shouting match.",
+      "whyWeRecommend": "The noise level is the selling point. If you need to actually hear a client, this is a better bet than anywhere on Linking Road.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": 4,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": "district.in's amenity list includes “Wifi” and “Work friendly”.",
+        "charging": null,
+        "quiet": "A coworking guide describes a quiet atmosphere suited to meetings and brainstorming.",
+        "seating": "Indoor and outdoor seating listed, plus step-free entry and a restroom.",
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "bagels",
+        "wifi",
+        "quiet",
+        "pet friendly",
+        "step-free entry"
+      ],
+      "sources": [
+        "district.in",
+        "tripadvisor.in",
+        "eazydiner.com",
+        "coworkingers.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 75,
+        "source": "magicpin.in",
+        "url": "https://magicpin.in/Mumbai/Pali-Hill/Restaurant/The-Bagel-Shop/store/23323"
+      },
+      "synthesis": "Multiple sources describe it as an explicitly work-friendly cafe with fast wifi, outlets at outdoor tables, sofa seating and tolerance of long laptop stays; it is small and can get noisy.",
+      "workability": 4
+    },
+    {
+      "slug": "blue-tokai-coffee-roasters-perry-road-perry-road",
+      "name": "Blue Tokai Coffee Roasters — Perry Road",
+      "area": "bandra",
+      "neighborhood": "Perry Road",
+      "address": "Shop 1, No. 33, Mayflower Building, Perry Road, New Kantwadi Lane, Bandra West, Mumbai 400050",
+      "latitude": 19.0666,
+      "longitude": 72.8267,
+      "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-bandra-cafe-bandra-west-mumbai-436738/Home",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%20—%20Perry%20Road%2C%20Shop%201%2C%20No.%2033%2C%20Mayflower%20Building%2C%20Perry%20Road%2C%20New%20Kantwadi%20Lane%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 7am–11:30pm",
+      "editorialNote": "Small, functional, reliably good — the cafe you go to when you need the coffee to just be right.",
+      "whyWeRecommend": "For the hours as much as the beans. Very few Bandra cafes will take you at 7am or 11pm, and this one does both without treating either as unusual.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": null,
+        "seating": 3,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Some tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "The operator's own store page lists “WiFi available”.",
+        "charging": null,
+        "quiet": null,
+        "seating": "Described in guides as small but clean and functional, used for short work sessions.",
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "single origin",
+        "pet friendly",
+        "early opening",
+        "late"
+      ],
+      "sources": [
+        "bluetokaicoffee.com",
+        "district.in",
+        "mumbaipune.co.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 31,
+        "source": "tripadvisor.in",
+        "url": "https://www.tripadvisor.in/Restaurant_Review-g304554-d13985958-Reviews-Blue_Tokai_Coffee_Roasters_Bandra-Mumbai_Maharashtra.html"
+      },
+      "synthesis": "Good coffee with wifi and, per one reviewer, plenty of outlets, but every source calls the room very small with about five tables and little acoustic privacy.",
+      "workability": 3.1
+    },
+    {
+      "slug": "the-yoga-house-sherly-rajan-road",
+      "name": "The Yoga House",
+      "area": "bandra",
+      "neighborhood": "Sherly Rajan Road",
+      "address": "Nargis Villa, Sherly Rajan Road, off Carter Road, Bandra West",
+      "latitude": 19.0667,
+      "longitude": 72.8228,
+      "website": "https://www.yogahouse.in",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Yoga%20House%2C%20Nargis%20Villa%2C%20Sherly%20Rajan%20Road%2C%20off%20Carter%20Road%2C%20Bandra%20West%2C%20Mumbai",
+      "openingHours": "Daily 8am–9pm",
+      "editorialNote": "The quietest room in Bandra, in a bungalow behind Carter Road. Vegetarian, ayurvedic, genuinely calm.",
+      "whyWeRecommend": "For the calm, which is not a marketing word here — this is the closest Bandra gets to silence at 4pm on a Saturday. Come to read, not to take calls.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 5,
+        "seating": 4,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Very quiet",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Guides describe calm surroundings and an outdoor space that “feels like a small treehouse”.",
+        "seating": "EazyDiner lists outdoor seating; the cafe occupies an old villa rather than a shopfront.",
+        "work": null
+      },
+      "toggles": [
+        "Roomy"
+      ],
+      "tags": [
+        "quietest",
+        "vegetarian",
+        "ayurvedic",
+        "bungalow",
+        "outdoor seating"
+      ],
+      "sources": [
+        "yogahouse.in",
+        "eazydiner.com",
+        "mumbaipune.co.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.8,
+        "count": 2925,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1407990/the-yoga-house-studio--cafe"
+      },
+      "synthesis": "Consistently described as quiet, leafy and work-friendly with wifi, varied seating and real healthy meals; no source mentions power outlets, and one notes there is no air conditioning.",
+      "workability": 4.2
+    },
+    {
+      "slug": "earth-cafe-waterfield-road",
+      "name": "Earth Cafe",
+      "area": "bandra",
+      "neighborhood": "Waterfield Road",
+      "address": "Durga Chambers, Waterfield Road, Bandra West, Mumbai 400050",
+      "latitude": 19.058,
+      "longitude": 72.8299,
+      "website": "https://earthcafeindia.com",
+      "instagram": "https://instagram.com/earthcafeindia",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Earth%20Cafe%2C%20Durga%20Chambers%2C%20Waterfield%20Road%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 8am–10:30pm",
+      "editorialNote": "All-vegan, garden-quiet, and unbothered by how long you stay.",
+      "whyWeRecommend": "The terrace is the quietest outdoor seating on this stretch. It is expensive for what it is, and still the right call when you want to sit outside without traffic in your ear.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 4,
+        "seating": 4,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": null,
+        "avgFoodCost": "₹900+"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "magicpin describes a serene, garden-like setting.",
+        "seating": "magicpin lists a terrace for al fresco dining.",
+        "work": null
+      },
+      "toggles": [
+        "Roomy"
+      ],
+      "tags": [
+        "vegan",
+        "terrace",
+        "quiet",
+        "healthy",
+        "bakery"
+      ],
+      "sources": [
+        "earthcafeindia.com",
+        "magicpin.in",
+        "lbb.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.6,
+        "count": 2697,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/423260/earth-cafe--waterfield"
+      },
+      "synthesis": "Bright, well-liked all-vegan cafe with wifi, clean bathrooms and good food, but a 2024 reviewer was told laptops are not allowed, which undercuts a three-hour session.",
+      "workability": 3.1
+    },
+    {
+      "slug": "mokai-pali-naka",
+      "name": "Mokai",
+      "area": "bandra",
+      "neighborhood": "Pali Naka",
+      "address": "600–602, Hill Crest Building, Ground Floor, Dr Ambedkar Road, next to Arvind Store, Pali Naka, Bandra West",
+      "latitude": 19.066,
+      "longitude": 72.8301,
+      "website": null,
+      "instagram": "https://instagram.com/mokaiindia",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mokai%2C%20600–602%2C%20Hill%20Crest%20Building%2C%20Ground%20Floor%2C%20Dr%20Ambedkar%20Road%2C%20next%20to%20Arvind%20Store%2C%20Pali%20Naka%2C%20Bandra%20West%2C%20Mumbai",
+      "openingHours": "Daily 8am–11:30pm",
+      "editorialNote": "Matcha, curved beige everything, and a queue of people photographing it. Better than that description suggests.",
+      "whyWeRecommend": "The design does most of the talking, but the kitchen is not coasting. Go on a weekday afternoon if you would rather look at the room than queue for it.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2,
+        "seating": null,
+        "work": 2
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Loud",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Press coverage and guides report steady crowds since the relocation.",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "matcha",
+        "design led",
+        "japanese",
+        "instagram famous",
+        "brunch"
+      ],
+      "sources": [
+        "timeout.com",
+        "curlytales.com",
+        "district.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 707,
+        "source": "district.in",
+        "url": "https://www.district.in/dining/mumbai/mokai-pali-hill-bandra-west"
+      },
+      "synthesis": "A five-month-old experience-led matcha cafe over two floors with lounging beds, live music and no reported wifi or outlets — pleasant, but unevidenced as a workspace.",
+      "workability": 2.7
+    },
+    {
+      "slug": "boojee-cafe-perry-road",
+      "name": "Boojee Cafe",
+      "area": "bandra",
+      "neighborhood": "Perry Road",
+      "address": "Shop 6, New Kantwadi Road, off Perry Cross Road, Bandra West, Mumbai 400050",
+      "latitude": 19.0673,
+      "longitude": 72.8258,
+      "website": "https://boojeecafe.com",
+      "instagram": "https://instagram.com/boojeecafe",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Boojee%20Cafe%2C%20Shop%206%2C%20New%20Kantwadi%20Road%2C%20off%20Perry%20Cross%20Road%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": "Daily 7am–11pm",
+      "editorialNote": "Very good breakfast, very little room. A weekday cafe pretending to be a weekend one.",
+      "whyWeRecommend": "The food earns the reputation. The seating does not: weekends put people on the pavement waiting. Come on a Tuesday morning and it is one of the better breakfasts in Bandra.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2,
+        "seating": 2,
+        "work": 2
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Loud",
+        "seating": "Limited tables",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": "Weekends",
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Guides describe it as very social and crowded at weekends, with people waiting outside.",
+        "seating": "Reported as not large, with limited seating.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "breakfast",
+        "all day",
+        "small room",
+        "weekday pick"
+      ],
+      "sources": [
+        "boojeecafe.com",
+        "district.in",
+        "mumbaipune.co.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 4380,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/2590802/boojee-cafe"
+      },
+      "synthesis": "Excellent coffee and brunch, indoor and outdoor tables, and a district listing calling it work-friendly — but queues on ordinary weekdays, tiny tables and 25-minute average visits.",
+      "workability": 2.5
+    },
+    {
+      "slug": "veronica-s-waroda-road",
+      "name": "Veronica's",
+      "area": "bandra",
+      "neighborhood": "Waroda Road",
+      "address": "Waroda Road, Ranwar, Bandra West, Mumbai 400050",
+      "latitude": 19.0584,
+      "longitude": 72.8271,
+      "website": "https://veronicasbombay.com",
+      "instagram": "https://instagram.com/veronicasbombay",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Veronica's%2C%20Waroda%20Road%2C%20Ranwar%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "A sandwich shop with the ambition of a restaurant. Eat standing if you have to.",
+      "whyWeRecommend": "The sandwiches are the reason and they are worth the trip. Do not plan a working session around it — the room is built for turnover, not for lingering.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": null,
+        "seating": 2,
+        "work": 2
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Limited tables",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": "district.in lists “Wifi” among its amenities.",
+        "charging": null,
+        "quiet": null,
+        "seating": "A counter-service sandwich shop; reviewers note limited seating.",
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi"
+      ],
+      "tags": [
+        "sandwiches",
+        "wifi",
+        "counter service",
+        "takeaway"
+      ],
+      "sources": [
+        "veronicasbombay.com",
+        "district.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.2,
+        "count": 1964,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/6732114/veronicas"
+      },
+      "synthesis": "Wifi is listed and one review invites lingering, but reviewers call it loud, claustrophobic and deliberately short on seats, with hour-long queues and a weekend afternoon closure.",
+      "workability": 2.3
+    },
+    {
+      "slug": "poetry-by-love-and-cheesecake-24th-road",
+      "name": "Poetry by Love and Cheesecake",
+      "area": "bandra",
+      "neighborhood": "24th Road",
+      "address": "Shop 1–2, Ground Floor, Kamal Vishrantee Kutir, 24th Road, opposite St Theresa's School, Pali Hill, Bandra West",
+      "latitude": 19.0707,
+      "longitude": 72.8349,
+      "website": "https://loveandcheesecake.com/pages/poetry",
+      "instagram": "https://instagram.com/loveandcheesecake",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Poetry%20by%20Love%20and%20Cheesecake%2C%20Shop%201–2%2C%20Ground%20Floor%2C%20Kamal%20Vishrantee%20Kutir%2C%2024th%20Road%2C%20opposite%20St%20Theresa's%20School%2C%20Pali%20Hill%2C%20Bandra%20West%2C%20Mumbai",
+      "openingHours": "Daily 8am–midnight",
+      "editorialNote": "A patisserie that lets you sit down until midnight. Underrated for exactly that.",
+      "whyWeRecommend": "Almost nowhere in Pali Hill will still seat you at 11pm over a coffee and a slice of something. This will, without making it feel like a favour.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "patisserie",
+        "desserts",
+        "late",
+        "pet friendly",
+        "live music"
+      ],
+      "sources": [
+        "loveandcheesecake.com",
+        "district.in",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 890,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1418748"
+      },
+      "synthesis": "Confirmed trading with long daily hours and a proper savoury menu, but no source tied to this address mentions wifi, sockets, seating or how long anyone stays.",
+      "workability": null
+    },
+    {
+      "slug": "kcroasters-by-koinonia-chuim-village",
+      "name": "KCROASTERS by Koinonia",
+      "area": "bandra",
+      "neighborhood": "Chuim Village",
+      "address": "66, Chuim Village, off Dr B.R. Ambedkar Road, Khar West, Mumbai 400052",
+      "latitude": 19.0654,
+      "longitude": 72.8361,
+      "website": "https://kcroasters.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KCROASTERS%20by%20Koinonia%2C%2066%2C%20Chuim%20Village%2C%20off%20Dr%20B.R.%20Ambedkar%20Road%2C%20Khar%20West%2C%20Mumbai%20400052%2C%20Mumbai",
+      "openingHours": "Coffee Lab daily 8:30am–10pm",
+      "editorialNote": "India's first dedicated siphon bar. Come for the brewing, not for the wifi.",
+      "whyWeRecommend": "If you care how the cup was made, this is the most instructive room in the neighbourhood. Treat it as a tasting stop rather than a place to settle in with a laptop.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 2
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "specialty coffee",
+        "roastery",
+        "siphon",
+        "tasting room"
+      ],
+      "sources": [
+        "kcroasters.com",
+        "lbb.in",
+        "yappe.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.7,
+        "count": 1017,
+        "source": "district.in",
+        "url": "https://www.district.in/dining/mumbai/kcroasters-a-koinonia-project-khar"
+      },
+      "synthesis": "Serious coffee in a five-to-six-seat roastery with no real food, and two directories now report it permanently closed while the official site still lists daily hours.",
+      "workability": 2.5
+    },
+    {
+      "slug": "kala-ghoda-cafe-kala-ghoda",
+      "name": "Kala Ghoda Cafe",
+      "area": "south-bombay",
+      "neighborhood": "Kala Ghoda",
+      "address": "10 Rope Walk Lane, Kala Ghoda, Fort, Mumbai 400001",
+      "latitude": 18.9276,
+      "longitude": 72.8317,
+      "website": "https://kgcafe.in",
+      "instagram": "https://instagram.com/kgcbar",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kala%20Ghoda%20Cafe%2C%2010%20Rope%20Walk%20Lane%2C%20Kala%20Ghoda%2C%20Fort%2C%20Mumbai%20400001%2C%20Mumbai",
+      "openingHours": "Daily 8am–midnight",
+      "editorialNote": "White walls, enormous glass doors, and the calm that Kala Ghoda's lanes are supposed to have.",
+      "whyWeRecommend": "The room does the work: high light, low noise, and a location that puts the Jehangir and the museum within a two-minute walk. The most civilised place in Fort to spend a working morning.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": 4,
+        "seating": null,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "Listed in a Mumbai coworking guide's roundup of cafes with wifi.",
+        "charging": null,
+        "quiet": "The same guide describes big white walls and enormous glass doors creating calmness.",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "heritage building",
+        "wifi",
+        "quiet",
+        "all day",
+        "art district"
+      ],
+      "sources": [
+        "kgcafe.in",
+        "eazydiner.com",
+        "mumbaicoworking.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 5699,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/54393/kala-ghoda-cafe"
+      },
+      "synthesis": "Beautiful three-room space with comfortable seating, all-day food and tolerant staff, but the free wifi is time-capped and reportedly cut over lunch — bring your own connection.",
+      "workability": 2.8
+    },
+    {
+      "slug": "blue-tokai-new-excelsior-fort",
+      "name": "Blue Tokai — New Excelsior",
+      "area": "south-bombay",
+      "neighborhood": "Fort",
+      "address": "Ground Floor, New Excelsior Cinema 1, A.K. Nayak Marg, Azad Maidan, Fort, Mumbai 400001",
+      "latitude": 18.9383,
+      "longitude": 72.8324,
+      "website": "https://bluetokaicoffee.com/pages/blue-tokai-coffee-roasters-new-excelsior-cinema-fort",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20—%20New%20Excelsior%2C%20Ground%20Floor%2C%20New%20Excelsior%20Cinema%201%2C%20A.K.%20Nayak%20Marg%2C%20Azad%20Maidan%2C%20Fort%2C%20Mumbai%20400001%2C%20Mumbai",
+      "openingHours": "Daily 7am–11pm",
+      "editorialNote": "Specialty coffee inside a 1930s cinema, with a terrace. The best-value work cafe in Fort.",
+      "whyWeRecommend": "Cinema-building ceilings, a terrace, wifi the operator actually commits to, and a 7am open. For working mornings in Fort this is the first place to try.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": null,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "The operator's own store page lists wireless internet connectivity as an amenity.",
+        "charging": null,
+        "quiet": null,
+        "seating": "Operator lists an open terrace and outdoor seating.",
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "wifi",
+        "terrace",
+        "heritage building",
+        "early opening"
+      ],
+      "sources": [
+        "bluetokaicoffee.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.5,
+        "count": 224,
+        "source": "district.in",
+        "url": "https://www.district.in/dining/mumbai/blue-tokai-coffee-roasters-3-fort"
+      },
+      "synthesis": "Blue Tokai's own page sells this Fort outlet as a place to get work done, with wifi, a terrace and 7am–11pm hours; outlets and noise are undocumented.",
+      "workability": 3.5
+    },
+    {
+      "slug": "araku-coffee-apollo-bunder",
+      "name": "Araku Coffee",
+      "area": "south-bombay",
+      "neighborhood": "Apollo Bunder",
+      "address": "Ground Floor, Sunny House, Mandlik Road, Apollo Bandar, Colaba, Mumbai",
+      "latitude": 18.9224,
+      "longitude": 72.8331,
+      "website": "https://www.arakucoffee.in",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Araku%20Coffee%2C%20Ground%20Floor%2C%20Sunny%20House%2C%20Mandlik%20Road%2C%20Apollo%20Bandar%2C%20Colaba%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 8am–11pm",
+      "editorialNote": "An 1897 building, a modbar, and a reading area someone actually curated. Behind the Taj, and worth finding.",
+      "whyWeRecommend": "The reading area is the tell: this is a cafe built for staying, not turning over. Downstairs in the afternoon for coffee and a book; upstairs in the evening if the evening is going well.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹900+"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "The operator publishes a curated reading area and an upper level with bakery and cocktail bar.",
+        "work": null
+      },
+      "toggles": [
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "heritage building",
+        "reading area",
+        "bakery",
+        "cocktails"
+      ],
+      "sources": [
+        "arakucoffee.in",
+        "eazydiner.com",
+        "baristamagazine.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.1,
+        "count": 379,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/9170395/araku-coffee"
+      },
+      "synthesis": "Good wifi and a handsome 55-seat two-level room, but the one work-focused review says sockets are limited and calls it suitable only for short sessions.",
+      "workability": 3
+    },
+    {
+      "slug": "subko-the-cacao-mill-colaba",
+      "name": "Subko — The Cacao Mill",
+      "area": "south-bombay",
+      "neighborhood": "Colaba",
+      "address": "2nd Pasta Lane, Colaba, Mumbai",
+      "latitude": 18.9153,
+      "longitude": 72.8288,
+      "website": "https://www.subko.coffee",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Subko%20—%20The%20Cacao%20Mill%2C%202nd%20Pasta%20Lane%2C%20Colaba%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 9am–11pm",
+      "editorialNote": "A cacao mill that also pours coffee. The most single-minded room on this map.",
+      "whyWeRecommend": "Come for what you cannot get anywhere else in the city — bean-to-bar cacao made on the premises, next to coffee from the same sourcing discipline. Not a working cafe; a destination.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "specialty coffee",
+        "cacao",
+        "bean to bar",
+        "roastery"
+      ],
+      "sources": [
+        "subko.coffee",
+        "baristamagazine.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 1169,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/6732044/the-cacao-mill-by-subko"
+      },
+      "synthesis": "A surprisingly large two-floor room, tagged work friendly, where a reviewer says people camp for six hours — but no source confirms wifi or power sockets.",
+      "workability": 3.3
+    },
+    {
+      "slug": "nandan-coffee-kala-ghoda",
+      "name": "Nandan Coffee",
+      "area": "south-bombay",
+      "neighborhood": "Kala Ghoda",
+      "address": "Mulla House, 34 Homi Modi Street, opposite Central Bank Head Office, Kala Ghoda, Fort, Mumbai",
+      "latitude": 18.9298,
+      "longitude": 72.8339,
+      "website": "https://www.nandancoffee.com",
+      "instagram": "https://instagram.com/nandancoffee",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nandan%20Coffee%2C%20Mulla%20House%2C%2034%20Homi%20Modi%20Street%2C%20opposite%20Central%20Bank%20Head%20Office%2C%20Kala%20Ghoda%2C%20Fort%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 8am–10pm",
+      "editorialNote": "Single-estate coffee from a Kodaikanal wildlife sanctuary, poured by people who want to explain it.",
+      "whyWeRecommend": "Come for the education. This is the most direct line in Bombay between an Indian coffee estate and the cup, and the staff will take the time if you ask a real question.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 4,
+        "seating": null,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "moderate",
+        "peakCrowd": null,
+        "avgFoodCost": "₹900+"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "district.in's aggregated reviews describe a very calm and positive vibe.",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "specialty coffee",
+        "single estate",
+        "organic",
+        "pet friendly",
+        "tasting"
+      ],
+      "sources": [
+        "nandancoffee.com",
+        "district.in",
+        "baristamagazine.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 945,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/12367434/nandan-coffee"
+      },
+      "synthesis": "A handsome two-storey tasting-led coffee bar with small tables, few chairs, a deliberately tiny food menu and afternoon crowds; no source confirms wifi or sockets.",
+      "workability": 2.3
+    },
+    {
+      "slug": "starbucks-horniman-circle-horniman-circle",
+      "name": "Starbucks — Horniman Circle",
+      "area": "south-bombay",
+      "neighborhood": "Horniman Circle",
+      "address": "Elphinstone Building, Ground Floor, 10 Horniman Circle, Veer Nariman Road, Fort, Mumbai 400001",
+      "latitude": 18.9301,
+      "longitude": 72.8364,
+      "website": "https://stores.starbucks.in/store-pages/starbucks-mumbai/",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%20—%20Horniman%20Circle%2C%20Elphinstone%20Building%2C%20Ground%20Floor%2C%2010%20Horniman%20Circle%2C%20Veer%20Nariman%20Road%2C%20Fort%2C%20Mumbai%20400001%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "India's first Starbucks, in a colonial-era banking hall. The building is the reason to choose it.",
+      "whyWeRecommend": "Nobody needs a recommendation to find a Starbucks. This one earns its place on a Bombay map because of the room it is in — double-height, stone, genuinely beautiful — and because it is the most predictable plug-and-wifi bet in Fort.",
+      "scores": {
+        "wifi": 4,
+        "charging": 4,
+        "quiet": null,
+        "seating": null,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": "Good",
+        "chargingNote": "Most tables can charge",
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "A city guide states that most Mumbai outlets have all-day free wifi — a chain-level claim, not confirmed for this store.",
+        "charging": "The same guide reports plug points near the tables across the chain's Mumbai outlets.",
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [
+        "Outlets",
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "heritage building",
+        "wifi",
+        "outlets",
+        "chain",
+        "reliable"
+      ],
+      "sources": [
+        "stories.starbucks.com",
+        "lbb.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.6,
+        "count": 2604,
+        "source": "district.in (citing Google ratings)",
+        "url": "https://www.district.in/dining/mumbai/starbucks-coffee-fort"
+      },
+      "synthesis": "A work-cafe guide calls it the most reliable work cafe in south Mumbai: ample outlets, reliable wifi, air-conditioned varied seating; peak-hour crowds and worn sofas are the caveats.",
+      "workability": 3.8
+    },
+    {
+      "slug": "bombay-coffee-house-ballard-estate-ballard-estate",
+      "name": "Bombay Coffee House — Ballard Estate",
+      "area": "south-bombay",
+      "neighborhood": "Ballard Estate",
+      "address": "3A Sprotte Road, near Grand Hotel, S.S. Ram Gulam Marg, Ballard Estate, Fort, Mumbai",
+      "latitude": 18.9343,
+      "longitude": 72.8397,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bombay%20Coffee%20House%20—%20Ballard%20Estate%2C%203A%20Sprotte%20Road%2C%20near%20Grand%20Hotel%2C%20S.S.%20Ram%20Gulam%20Marg%2C%20Ballard%20Estate%2C%20Fort%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 9am–9pm",
+      "editorialNote": "Old-world room, generous portions, and the best interview table in Ballard Estate.",
+      "whyWeRecommend": "Ballard Estate empties out after office hours and the quiet is the asset. If you have a conversation that needs an hour and no background noise, book this one.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": "LBB lists wifi among its amenities.",
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "wifi",
+        "quiet",
+        "interviews",
+        "old world",
+        "office district"
+      ],
+      "sources": [
+        "eazydiner.com",
+        "lbb.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.5,
+        "count": 1064,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/6789991/bombay-coffee-house-fort"
+      },
+      "synthesis": "A quiet Ballard Estate heritage room with good wifi, sockets and multi-level wooden seating; guides call it comfortable for long sits, though damp walls draw complaints.",
+      "workability": 3.9
+    },
+    {
+      "slug": "kyani-co-marine-lines",
+      "name": "Kyani & Co.",
+      "area": "south-bombay",
+      "neighborhood": "Marine Lines",
+      "address": "Jer Mahal Estate, Jagannath Shankar Seth Road, Marine Lines, Mumbai 400002",
+      "latitude": 18.9451,
+      "longitude": 72.8269,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kyani%20&%20Co.%2C%20Jer%20Mahal%20Estate%2C%20Jagannath%20Shankar%20Seth%20Road%2C%20Marine%20Lines%2C%20Mumbai%20400002%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "1904. Marble tables, slow fans, bun maska. The oldest room on this map and the least interested in changing.",
+      "whyWeRecommend": "Everything modern cafes reconstruct, this one simply kept: marble tops, aged wooden chairs, high ceilings, shared tables. Seating is limited and you may sit with strangers. That is the experience, not a flaw.",
+      "scores": {
+        "wifi": 1,
+        "charging": null,
+        "quiet": null,
+        "seating": 2,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": "Slow",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Limited tables",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹100–250"
+      },
+      "evidence": {
+        "wifi": "A food-history account notes the cafe deliberately avoids modern amenities.",
+        "charging": null,
+        "quiet": null,
+        "seating": "The same account reports marble-top tables and aged wooden chairs, limited seating, and that patrons should expect to share tables.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "irani cafe",
+        "institution",
+        "since 1904",
+        "bun maska",
+        "cheap",
+        "shared tables"
+      ],
+      "sources": [
+        "eazydiner.com",
+        "thetastytales.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.1,
+        "count": 13602,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1323666/kyani--co--legendary-irani-restaurant-bakers"
+      },
+      "synthesis": "Explicitly unworkable: a food publication reports laptops are not allowed and staff object to lingering, with no wifi, shared cramped tables, no air conditioning and reportedly no washroom.",
+      "workability": 1.6
+    },
+    {
+      "slug": "cafe-mondegar-colaba",
+      "name": "Cafe Mondegar",
+      "area": "south-bombay",
+      "neighborhood": "Colaba",
+      "address": "Metro House, Colaba Causeway, near Regal Cinema, Apollo Bandar, Colaba, Mumbai 400001",
+      "latitude": 18.9226,
+      "longitude": 72.832,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Mondegar%2C%20Metro%20House%2C%20Colaba%20Causeway%2C%20near%20Regal%20Cinema%2C%20Apollo%20Bandar%2C%20Colaba%2C%20Mumbai%20400001%2C%20Mumbai",
+      "openingHours": "Daily 8am–11:30pm",
+      "editorialNote": "Mario Miranda drew on every wall here in 1932 and the jukebox never really stopped. Loud, and unapologetic.",
+      "whyWeRecommend": "Nobody comes here for the coffee. Come for the murals, the noise and one of the last rooms in Colaba that has not been redesigned — then go elsewhere to work.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 1,
+        "seating": null,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Very loud",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Wikipedia records the first jukebox in Mumbai; the room is documented as a loud, music-led hangout.",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "irani cafe",
+        "institution",
+        "since 1932",
+        "mario miranda",
+        "loud"
+      ],
+      "sources": [
+        "en.wikipedia.org",
+        "wheree.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 5884,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1323711"
+      },
+      "synthesis": "Effectively unworkable: restaurant-guru records no wifi, tables are jammed together, a jukebox and live music dominate, and typical visits last minutes amid queues outside.",
+      "workability": 1.6
+    },
+    {
+      "slug": "leopold-cafe-bar-colaba",
+      "name": "Leopold Cafe & Bar",
+      "area": "south-bombay",
+      "neighborhood": "Colaba",
+      "address": "Shahid Bhagat Singh Road, Colaba Causeway, Colaba, Mumbai",
+      "latitude": 18.9218,
+      "longitude": 72.8311,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Leopold%20Cafe%20&%20Bar%2C%20Shahid%20Bhagat%20Singh%20Road%2C%20Colaba%20Causeway%2C%20Colaba%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 7:30am–midnight",
+      "editorialNote": "Since 1871. Keeps its bullet marks on the wall as a memorial and its doors open until midnight.",
+      "whyWeRecommend": "It is a landmark before it is a cafe, and it knows that. Worth a table for an hour if you understand what you are sitting in; not the place for a quiet conversation.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹500–900"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "irani cafe",
+        "institution",
+        "since 1871",
+        "landmark",
+        "loud"
+      ],
+      "sources": [
+        "en.wikipedia.org",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.1,
+        "count": 10268,
+        "source": "district.in (citing Google ratings)",
+        "url": "https://www.district.in/dining/mumbai/leopold-cafe-bar-colaba"
+      },
+      "synthesis": "Two directories list wifi and there is a quieter air-conditioned upstairs room, but cramped tables, loud music, queues outside and fast turnover make three hours unrealistic.",
+      "workability": 2.3
+    },
+    {
+      "slug": "cafe-military-fort",
+      "name": "Cafe Military",
+      "area": "south-bombay",
+      "neighborhood": "Fort",
+      "address": "Ali Chambers, Tamarind Lane, Fort, Mumbai",
+      "latitude": 18.9329,
+      "longitude": 72.8349,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Military%2C%20Ali%20Chambers%2C%20Tamarind%20Lane%2C%20Fort%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Mon–Sat 8:30am–9:30pm · closed Sundays",
+      "editorialNote": "One of the last real Irani cafes in Fort. Berry pulao, bare walls, no concessions.",
+      "whyWeRecommend": "This is not a cafe in the sense the rest of this map means it — it is a canteen with ninety years of muscle memory. Go for the food and the fact that it still exists.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹100–250"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "irani cafe",
+        "institution",
+        "parsi food",
+        "cheap",
+        "closed sundays"
+      ],
+      "sources": [
+        "eazydiner.com",
+        "lbb.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.1,
+        "count": 3182,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/1323659/cafe-military"
+      },
+      "synthesis": "A crowded, fanned 1933 Irani lunchroom: one reviewer says you can sit forever unbothered, others report rushed service and waits for tables. No wifi or outlets are mentioned anywhere.",
+      "workability": 2.5
+    },
+    {
+      "slug": "ideal-corner-fort",
+      "name": "Ideal Corner",
+      "area": "south-bombay",
+      "neighborhood": "Fort",
+      "address": "12 F/G, Hornby View, Gunbow Street, Fort, Mumbai",
+      "latitude": 18.9343,
+      "longitude": 72.8353,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Corner%2C%2012%20F/G%2C%20Hornby%20View%2C%20Gunbow%20Street%2C%20Fort%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Tue–Sun 9am–4:30pm",
+      "editorialNote": "A twelve-table Parsi lunch room with a menu that changes by the day of the week. Get there by one.",
+      "whyWeRecommend": "The rotating menu is the whole idea: turn up on the right day for the dish you want. Not a place to sit with a laptop, and it would be strange to try.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2,
+        "seating": null,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Loud",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": "Afternoons",
+        "avgFoodCost": "₹100–250"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Guides describe a tiny room with a heavy office-lunch crowd and fast turnover.",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "parsi food",
+        "institution",
+        "lunch only",
+        "cheap",
+        "closed mondays"
+      ],
+      "sources": [
+        "eazydiner.com",
+        "lbb.in"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.3,
+        "count": 988,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/4647030/ideal-corner"
+      },
+      "synthesis": "A tiny, cramped Parsi lunch counter where the typical visit is about ten minutes and food arrives in two; quiet at 3pm, but nothing suggests wifi, outlets or laptop tolerance.",
+      "workability": 2.5
+    },
+    {
+      "slug": "yazdani-bakery-fort",
+      "name": "Yazdani Bakery",
+      "area": "south-bombay",
+      "neighborhood": "Fort",
+      "address": "Cawasji Patel Street, Fort, Mumbai",
+      "latitude": 18.9336,
+      "longitude": 72.8332,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yazdani%20Bakery%2C%20Cawasji%20Patel%20Street%2C%20Fort%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 7am–7pm",
+      "editorialNote": "Diesel-oven brun maska since 1953, in a building that started life as a Japanese bank.",
+      "whyWeRecommend": "One of the genuinely irreplaceable rooms in the city. Go early, take the bread seriously, and check before you plan to sit down.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 1,
+        "work": 1
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Very limited",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹100–250"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "Wikipedia records that as of 2023 it was operating take-out only, with sit-down service closed.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "irani bakery",
+        "institution",
+        "since 1953",
+        "brun maska",
+        "cheap"
+      ],
+      "sources": [
+        "en.wikipedia.org",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.2,
+        "count": 2521,
+        "source": "wanderlog.com (citing Google)",
+        "url": "https://wanderlog.com/place/details/54399/yazdani-restaurant--bakery"
+      },
+      "synthesis": "Explicitly no wifi, no toilets and no air conditioning; shared benches, few seats and a typical fifteen-minute visit. A chai-and-brun stop, not a place to work for three hours.",
+      "workability": 1.8
+    },
+    {
+      "slug": "third-wave-coffee-churchgate-churchgate",
+      "name": "Third Wave Coffee — Churchgate",
+      "area": "south-bombay",
+      "neighborhood": "Churchgate",
+      "address": "Unit 116A, HP Petrol Pump, Jamshedji Tata Road, near Eros Cinema, Churchgate, Mumbai",
+      "latitude": 18.9341,
+      "longitude": 72.8264,
+      "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-churchgate-mumbai/",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%20—%20Churchgate%2C%20Unit%20116A%2C%20HP%20Petrol%20Pump%2C%20Jamshedji%20Tata%20Road%2C%20near%20Eros%20Cinema%2C%20Churchgate%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "Two minutes from Churchgate station and open absurdly late. The commuter's coffee.",
+      "whyWeRecommend": "Location is the entire argument: you can be off the train and into a seat in three minutes. Useful before a South Bombay meeting, and one of the later options in the area.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 4,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Plenty of tables",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "The operator's store page lists air conditioning and table seating.",
+        "work": null
+      },
+      "toggles": [
+        "Roomy",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "chain",
+        "near station",
+        "late",
+        "air conditioned"
+      ],
+      "sources": [
+        "thirdwavecoffeeroasters.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": null,
+      "synthesis": "Only the official store page could be tied to this address: it confirms the Churchgate outlet trades and offers dine-in. No evidence at all on wifi, power, noise or long stays.",
+      "workability": null
+    },
+    {
+      "slug": "blue-tokai-nariman-point-nariman-point",
+      "name": "Blue Tokai — Nariman Point",
+      "area": "south-bombay",
+      "neighborhood": "Nariman Point",
+      "address": "Unit 25 & 26, Commercial Centre, CR2 Mall, Barrister Rajni Patel Marg, Nariman Point, Mumbai",
+      "latitude": 18.9286,
+      "longitude": 72.8237,
+      "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-nariman-point-cafe-nariman-point-mumbai-436767/Home",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20—%20Nariman%20Point%2C%20Unit%2025%20&%2026%2C%20Commercial%20Centre%2C%20CR2%20Mall%2C%20Barrister%20Rajni%20Patel%20Marg%2C%20Nariman%20Point%2C%20Mumbai%2C%20Mumbai",
+      "openingHours": "Daily 7:30am–10pm",
+      "editorialNote": "The closest decent coffee to Marine Drive, and the nearest thing Nariman Point has to a third place.",
+      "whyWeRecommend": "Nariman Point is an office district with almost nowhere to sit. This has wifi, air conditioning and a 7:30am open, and the promenade is a five-minute walk when you need to stop looking at a screen.",
+      "scores": {
+        "wifi": 4,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 4
+      },
+      "attrs": {
+        "wifi": "Fast",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": "₹250–500"
+      },
+      "evidence": {
+        "wifi": "The operator's store page lists wireless internet as an amenity.",
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [
+        "Fast WiFi",
+        "No time limit"
+      ],
+      "tags": [
+        "specialty coffee",
+        "wifi",
+        "office district",
+        "near marine drive",
+        "parking"
+      ],
+      "sources": [
+        "bluetokaicoffee.com",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-08-23",
+      "publicRating": {
+        "value": 4.4,
+        "count": 250,
+        "source": "yappe.in",
+        "url": "https://yappe.in/maharashtra/mumbai/blue-tokai-coffee-roasters-nariman-point/156549"
+      },
+      "synthesis": "Blue Tokai's own page for this address confirms wifi, and the one review digest available calls it a calm, clean room that suits working professionals. Nothing on outlets or long stays.",
+      "workability": 3.5
+    }
+  ]
+}

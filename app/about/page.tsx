@@ -1,0 +1,90 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { CAFES, FACTORS } from "@/lib/cafes";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "How Deskbay scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.",
+  alternates: { canonical: "/about" },
+};
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
+      <div className="mx-auto max-w-2xl">
+        <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+          ← Deskbay
+        </Link>
+
+        <h1 className="font-display mt-6 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
+          Find a cafe you can actually work from.
+        </h1>
+
+        <p className="mt-4 text-[15px] leading-relaxed text-paper/75">
+          That is deliberately narrower than a restaurant rating. A room can serve excellent
+          coffee and still be useless with a laptop, and the reverse is true more often than
+          anyone admits.
+        </p>
+
+        <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
+          The nine factors
+        </h2>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+          One weighted model, the same for all {CAFES.length} cafes. It is weighted toward the
+          two things that end a work session early — nowhere to plug in and a connection that
+          drops — and it treats a bathroom as worth noting and almost nothing else.
+        </p>
+
+        <ul className="mt-5 divide-y divide-white/10 overflow-hidden rounded-xl border border-white/12">
+          {FACTORS.map((f) => (
+            <li key={f.key} className="px-4 py-3.5">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="text-[15px] font-medium">{f.label}</span>
+                <span className="wa-mono shrink-0 tabular-nums text-paper/55">{f.weight}%</span>
+              </div>
+              <p className="mt-1 text-[13.5px] leading-snug text-paper-dim text-paper/55">
+                {f.question}
+              </p>
+            </li>
+          ))}
+        </ul>
+        <p className="wa-mono mt-3 text-paper/35">
+          The percentages are the weights the code actually applies — this list is generated
+          from the same table the score is computed from, so it cannot fall out of date.
+        </p>
+
+        <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
+          Where the factor scores come from
+        </h2>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+          An unknown factor is left out, not scored zero. Names, addresses, hours and public
+          ratings are what the cafe or a credible source publishes, attributed on the panel. A
+          public rating is shown next to the workability score, never blended into it: they
+          measure different things, and a cafe people love is often a cafe you cannot work in.
+        </p>
+
+        <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
+          What we will not fake
+        </h2>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+          Every finding is cited. Where the sources are too thin to average a factor, the panel
+          says so instead of printing a number.
+        </p>
+
+        <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
+          The scores should get better
+        </h2>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+          Every cafe panel has a short feedback form — wifi, outlets, noise. It is anonymous and
+          takes a few seconds. Reports go into a queue rather than straight onto the score, so a
+          handful of votes cannot swing a listing, but enough of them will get it re-rated.
+        </p>
+
+        <Link href="/mumbai" className="wa-btn wa-btn--solid mt-10 !bg-paper !text-ink">
+          Back to the map
+        </Link>
+      </div>
+    </main>
+  );
+}
