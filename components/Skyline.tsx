@@ -5,9 +5,20 @@ const PALETTES = {
   stone: {
     sky: "linear-gradient(180deg,#2f3a42 0%,#41525c 24%,#5c7079 46%,#33393c 72%,#131412 100%)",
   },
+  teal: {
+    sky: "linear-gradient(180deg,#233a3c 0%,#33565a 24%,#4a7d7f 46%,#2c4344 72%,#131412 100%)",
+  },
+  plum: {
+    sky: "linear-gradient(180deg,#3a2b3d 0%,#5a3f5f 24%,#82577f 46%,#3d2f42 72%,#151013 100%)",
+  },
+  moss: {
+    sky: "linear-gradient(180deg,#2c3524 0%,#455334 24%,#657b47 46%,#2f3924 72%,#131412 100%)",
+  },
 };
 
-export default function Skyline({ variant }: { variant: "warm" | "stone" }) {
+export type SkylineVariant = keyof typeof PALETTES;
+
+export default function Skyline({ variant }: { variant: SkylineVariant }) {
   const bars = [80, 268, 452, 700, 892];
   return (
     <div aria-hidden className="absolute inset-0">

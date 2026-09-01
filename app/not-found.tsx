@@ -9,7 +9,7 @@ export default function NotFound() {
           Not on the map.
         </h1>
         <p className="mt-3 text-[15.5px] leading-relaxed text-paper/60">
-          That page does not exist. Bandra and South Bombay are still where you left them.
+          That page does not exist. The cafes are still where you left them.
         </p>
         <Link href="/" className="wa-btn wa-btn--solid mt-7 !bg-paper !text-ink">
           Back to the map

@@ -11,7 +11,7 @@ export type CafeScores = {
 export type Cafe = {
   slug: string;
   name: string;
-  area: "bandra" | "south-bombay";
+  area: "bandra" | "south-bombay" | "western-suburbs" | "central-mumbai" | "bkc";
   neighborhood: string;
   address: string;
   latitude: number;
@@ -53,6 +53,24 @@ export const AREAS = {
     description:
       "Stone arcades, Irani cafes that have kept the same tables for a century, and new roasters in the old banking streets.",
     streets: "Fort · Colaba · Kala Ghoda · Ballard Estate",
+  },
+  "western-suburbs": {
+    slug: "western-suburbs",
+    name: "Western Suburbs",
+    description: "Chains and specialty roasters across the western lanes. Directory listings, not yet scored.",
+    streets: "Andheri · Juhu · Khar · Santacruz · Versova · Malad",
+  },
+  "central-mumbai": {
+    slug: "central-mumbai",
+    name: "Central Mumbai",
+    description: "Mill-district roasters and suburban outposts. Directory listings, not yet scored.",
+    streets: "Worli · Lower Parel · Dadar · Matunga · Powai · Chembur",
+  },
+  bkc: {
+    slug: "bkc",
+    name: "BKC",
+    description: "Coffee near the business district. Directory listings, not yet scored.",
+    streets: "Bandra Kurla Complex",
   },
 } as const;
 

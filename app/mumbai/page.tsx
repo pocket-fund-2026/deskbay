@@ -5,7 +5,7 @@ import MumbaiScreen from "./MumbaiScreen";
 const SITE_URL = "https://deskbay-blue.vercel.app";
 
 function resolveArea(area?: string): AreaSlug | "all" {
-  return area === "bandra" || area === "south-bombay" ? area : "all";
+  return area && Object.prototype.hasOwnProperty.call(AREAS, area) ? (area as AreaSlug) : "all";
 }
 
 export async function generateMetadata({
@@ -22,7 +22,7 @@ export async function generateMetadata({
       : `${AREAS[area].name} — cafes you can work from`;
   const description =
     area === "all"
-      ? "Every cafe in Bandra and South Bombay ranked on wifi, power outlets, noise and seating. Find one you can actually work from."
+      ? "Cafes across Mumbai ranked on wifi, power outlets, noise and seating. Find one you can actually work from."
       : `Every work-friendly cafe in ${AREAS[area].name}, Mumbai, ranked on wifi, power outlets, noise and seating.`;
   const path = area === "all" ? "/mumbai" : `/mumbai?area=${area}`;
 

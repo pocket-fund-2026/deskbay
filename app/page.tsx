@@ -3,8 +3,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { AREAS, CAFES, FACTORS, cafesByArea } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
-import Skyline from "@/components/Skyline";
+import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
+
+const AREA_STYLES: { variant: SkylineVariant; pin: string }[] = [
+  { variant: "warm", pin: "#d97b3f" },
+  { variant: "stone", pin: "#7fa8b0" },
+  { variant: "teal", pin: "#5fb0ac" },
+  { variant: "moss", pin: "#8fae5c" },
+  { variant: "plum", pin: "#b581ae" },
+];
 
 const EDITOR_PICKS = [
   "bombay-coffee-house-waterfield-road",
@@ -40,25 +48,26 @@ export default function HomePage() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">
         <p className="wa-mono mb-4 text-paper/45 sm:hidden">Explore Mumbai</p>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {(Object.values(AREAS)).map((area, i) => {
             const count = cafesByArea(area.slug).length;
+            const style = AREA_STYLES[i % AREA_STYLES.length];
             return (
               <Link
                 key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
-                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-white/12 sm:aspect-[16/10]"
+                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-white/12 sm:aspect-[16/10] lg:aspect-[4/3]"
                 style={{ animationDelay: `${i * 90}ms` }}
               >
                 <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
-                  <Skyline variant={i === 0 ? "warm" : "stone"} />
+                  <Skyline variant={style.variant} />
                 </span>
-                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/15 bg-ink/50 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
-                  <PinBadge color={i === 0 ? "#d97b3f" : "#7fa8b0"} size={11} />
-                  {count} cafes
+                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/15 bg-ink/60 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
+                  <PinBadge color={style.pin} size={11} />
+                  {count}
                 </span>
-                <span className="relative z-10 bg-gradient-to-t from-ink/95 via-ink/35 to-transparent p-6 pt-14">
-                  <span className="font-display block text-2xl font-medium tracking-tight sm:text-3xl">
+                <span className="relative z-10 bg-gradient-to-t from-ink/95 via-ink/40 to-transparent p-6">
+                  <span className="font-display block text-xl font-medium tracking-tight sm:text-2xl">
                     {area.name}
                   </span>
                   <span className="mt-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
@@ -77,9 +86,11 @@ export default function HomePage() {
             hours: somewhere to plug in, somewhere to sit, a connection that holds, and whether
             anyone minds you staying.{" "}
             <span className="text-paper/50">
-              All {CAFES.length} are graded on the same {FACTORS.length} weighted factors, from
-              published evidence, with every finding cited — and where the sources are too thin
-              to average, the panel says so instead of printing a number.
+              {CAFES.filter((c) => c.workability !== null).length} cafes in Bandra and South
+              Bombay are graded on the same {FACTORS.length} weighted factors, from published
+              evidence, with every finding cited. Another{" "}
+              {CAFES.filter((c) => c.workability === null).length} across the rest of Mumbai are
+              listed with directory info while we work through scoring them properly.
             </span>
           </h1>
         </div>

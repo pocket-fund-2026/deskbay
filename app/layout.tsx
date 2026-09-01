@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · Deskbay",
   },
   description:
-    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — across Bandra and South Bombay — so you know which one will let you stay three hours.",
+    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — starting in Bandra and South Bombay, expanding citywide — so you know which one will let you stay three hours.",
   keywords: [
     "work friendly cafes Mumbai",
     "cafes with wifi Mumbai",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deskbay — find a Mumbai cafe you can actually work from",
     description:
-      "Every cafe in Bandra and South Bombay ranked on wifi, power outlets, noise and seating.",
+      "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
     url: SITE_URL,
     siteName: "Deskbay",
     locale: "en_IN",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Deskbay",
     description:
-      "Every cafe in Bandra and South Bombay ranked on wifi, power outlets, noise and seating.",
+      "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
     images: ["/opengraph-image"],
   },
   icons: { icon: "/icon.svg" },
@@ -66,7 +66,7 @@ const websiteLd = {
   name: "Deskbay",
   url: SITE_URL,
   description:
-    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — across Bandra and South Bombay.",
+    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating, expanding across the city.",
   inLanguage: "en-IN",
 };
 
