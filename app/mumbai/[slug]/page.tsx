@@ -124,7 +124,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           <Link href={`/mumbai?area=${cafe.area}`} className="hover:text-paper">{areaName}</Link>
         </nav>
 
-        {cafe.images.length > 0 ? (
+        {cafe.images.length > 0 && (
           <div className="mt-5 grid gap-2 sm:grid-cols-2">
             {cafe.images.slice(0, 4).map((img, i) => (
               <figure
@@ -147,13 +147,9 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
               </figure>
             ))}
           </div>
-        ) : (
-          <div className="mt-5 flex aspect-[16/9] items-center justify-center rounded-xl border border-dashed border-paper/12 text-paper/25">
-            <p className="wa-mono">no photo yet</p>
-          </div>
         )}
 
-        <div className="mt-6 flex items-start justify-between gap-4">
+        <div className={`flex items-start justify-between gap-4 ${cafe.images.length > 0 ? "mt-6" : "mt-5"}`}>
           <div>
             <h1 className="font-display text-[clamp(1.7rem,4vw,2.3rem)] font-medium leading-tight">
               {cafe.name}
@@ -182,7 +178,9 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         </p>
 
         <p className="mt-4 text-[15px] leading-relaxed text-paper/75">{cafe.editorialNote}</p>
-        <p className="mt-3 text-[14px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
+        {cafe.whyWeRecommend && cafe.whyWeRecommend !== cafe.editorialNote && (
+          <p className="mt-3 text-[14px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
+        )}
 
         <div className="mt-5 flex flex-wrap gap-2 text-[12.5px]">
           {cafe.website && (
@@ -280,10 +278,15 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           </p>
         )}
 
-        {cafe.images.some((i) => i.creditUrl) && (
+        {cafe.images.some((i) => i.creditUrl) ? (
           <p className="wa-mono mt-3 text-paper/25">
             Photos via Wikimedia Commons, licensed{" "}
             {[...new Set(cafe.images.map((i) => i.license).filter(Boolean))].join(", ")}.
+          </p>
+        ) : (
+          <p className="wa-mono mt-3 text-paper/25">
+            No photo yet —{" "}
+            <Link href="/submit" className="underline hover:text-paper/60">send us one</Link>.
           </p>
         )}
 

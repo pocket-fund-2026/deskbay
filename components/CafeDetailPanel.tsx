@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
+import { AREAS } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
@@ -39,7 +40,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
         </button>
       </div>
 
-      {cafe.images.length > 0 ? (
+      {cafe.images.length > 0 && (
         <div className="relative aspect-[16/9] overflow-hidden border-b border-paper/10">
           <Image
             src={cafe.images[0].url}
@@ -51,10 +52,6 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
         </div>
-      ) : (
-        <div className="flex aspect-[16/9] items-center justify-center border-b border-dashed border-paper/10 bg-paper/[0.02]">
-          <p className="wa-mono text-paper/25">no photo yet</p>
-        </div>
       )}
 
       <div className="p-4">
@@ -62,7 +59,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
           <div>
             <h2 className="font-display text-[21px] font-medium leading-snug">{cafe.name}</h2>
             <p className="wa-mono mt-1.5 text-paper/40">
-              {cafe.neighborhood} · {cafe.area === "bandra" ? "Bandra" : "South Bombay"}
+              {cafe.neighborhood} · {AREAS[cafe.area].name}
             </p>
           </div>
           <div
@@ -85,7 +82,9 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
         </p>
 
         <p className="mt-3.5 text-[14px] leading-relaxed text-paper/70">{cafe.editorialNote}</p>
-        <p className="mt-3 text-[13.5px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
+        {cafe.whyWeRecommend && cafe.whyWeRecommend !== cafe.editorialNote && (
+          <p className="mt-3 text-[13.5px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
+        )}
 
         <div className="mt-4 flex flex-wrap gap-2 text-[12.5px]">
           {cafe.website && (
