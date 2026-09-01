@@ -204,6 +204,19 @@ export default function MapView({
         .setPopup(popup)
         .addTo(map);
 
+      // Guard against this exact class of regression happening silently again:
+      // MapLibre must own `position: absolute` on this element to place it at
+      // the cafe's coordinates. If any future change sets an inline position
+      // style here (directly, or via a CSS class with higher specificity),
+      // markers will detach from their real map location — loudly warn so
+      // that's caught immediately instead of shipping as "markers float".
+      if (getComputedStyle(el).position !== "absolute") {
+        console.error(
+          `[MapView] Marker for "${cafe.name}" lost its absolute positioning ` +
+            "(inline style or CSS is overriding MapLibre's placement) — it will not sit at its real map coordinates."
+        );
+      }
+
       el.addEventListener("click", () => onSelectRef.current?.(cafe.slug));
       markersRef.current[cafe.slug] = marker;
       innerElsRef.current[cafe.slug] = inner;
