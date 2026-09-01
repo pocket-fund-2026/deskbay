@@ -3,6 +3,14 @@ import type { Metadata } from "next";
 import { AREAS, CAFES, FACTORS } from "@/lib/cafes";
 import Skyline from "@/components/Skyline";
 
+const EDITOR_PICKS = [
+  "bombay-coffee-house-waterfield-road",
+  "kala-ghoda-cafe-kala-ghoda",
+  "araku-coffee-apollo-bunder",
+]
+  .map((slug) => CAFES.find((c) => c.slug === slug))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+
 export const metadata: Metadata = {
   title: "Deskbay — find a Mumbai cafe you can actually work from",
   alternates: { canonical: "/" },
@@ -12,9 +20,9 @@ export default function HomePage() {
   return (
     <main className="wa-grid flex min-h-dvh flex-col bg-ink text-paper">
       <header className="wa-rise relative z-10 flex items-baseline justify-between gap-4 px-6 pt-7 sm:px-10">
-        <h1 className="font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
+        <div className="font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
           desk<em className="font-semibold not-italic italic">bay</em>
-        </h1>
+        </div>
         <Link
           className="wa-mono hidden items-center gap-1.5 text-paper/45 transition-colors hover:text-paper sm:flex"
           href="/mumbai"
@@ -50,7 +58,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10 max-w-2xl">
-          <p className="text-[15px] leading-relaxed text-paper/80">
+          <h1 className="text-[15px] font-normal leading-relaxed text-paper/80">
             Cafes you can actually work from, scored on what decides whether you last three
             hours: somewhere to plug in, somewhere to sit, a connection that holds, and whether
             anyone minds you staying.{" "}
@@ -59,7 +67,26 @@ export default function HomePage() {
               published evidence, with every finding cited — and where the sources are too thin
               to average, the panel says so instead of printing a number.
             </span>
-          </p>
+          </h1>
+        </div>
+
+        <div className="mt-12 max-w-2xl">
+          <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {EDITOR_PICKS.map((cafe) => (
+              <Link
+                key={cafe.slug}
+                href={`/mumbai?area=${cafe.area}`}
+                className="rounded-xl border border-white/12 p-4 transition-colors hover:bg-white/[0.04]"
+              >
+                <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
+                <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-paper/60">
+                  {cafe.whyWeRecommend}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 

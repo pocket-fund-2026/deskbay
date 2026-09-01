@@ -2,16 +2,63 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CAFES, FACTORS } from "@/lib/cafes";
 
+const SITE_URL = "https://deskbay-blue.vercel.app";
+const TITLE = "About Deskbay's scoring methodology";
+const DESCRIPTION =
+  "How Deskbay scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.";
+
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "How Deskbay scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.",
+  description: DESCRIPTION,
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: `${TITLE} · Deskbay`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/about`,
+    type: "website",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE} · Deskbay`,
+    description: DESCRIPTION,
+    images: ["/opengraph-image"],
+  },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}/about` },
+  ],
+};
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FACTORS.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `Weighted at ${f.weight}% of the workability score — Deskbay's answer to "${f.question}" for each of the ${CAFES.length} cafes it tracks, scored from published evidence and left blank where the sources are too thin to average.`,
+    },
+  })),
 };
 
 export default function AboutPage() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <div className="mx-auto max-w-2xl">
         <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
           ← Deskbay

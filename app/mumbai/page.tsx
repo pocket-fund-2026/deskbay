@@ -1,28 +1,67 @@
 import type { Metadata } from "next";
-import { CAFES } from "@/lib/cafes";
+import { AREAS, CAFES, cafesByArea, type AreaSlug } from "@/lib/cafes";
 import MumbaiScreen from "./MumbaiScreen";
 
-export const metadata: Metadata = {
-  title: "Mumbai — cafes you can work from",
-  description:
-    "Every cafe in Bandra and South Bombay ranked on wifi, power outlets, noise and seating. Find one you can actually work from.",
-  alternates: { canonical: "/mumbai" },
-};
+const SITE_URL = "https://deskbay-blue.vercel.app";
+
+function resolveArea(area?: string): AreaSlug | "all" {
+  return area === "bandra" || area === "south-bombay" ? area : "all";
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ area?: string }>;
+}): Promise<Metadata> {
+  const { area: rawArea } = await searchParams;
+  const area = resolveArea(rawArea);
+
+  const title =
+    area === "all"
+      ? "Mumbai — cafes you can work from"
+      : `${AREAS[area].name} — cafes you can work from`;
+  const description =
+    area === "all"
+      ? "Every cafe in Bandra and South Bombay ranked on wifi, power outlets, noise and seating. Find one you can actually work from."
+      : `Every work-friendly cafe in ${AREAS[area].name}, Mumbai, ranked on wifi, power outlets, noise and seating.`;
+  const path = area === "all" ? "/mumbai" : `/mumbai?area=${area}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      title: `${title} · Deskbay`,
+      description,
+      url: `${SITE_URL}${path}`,
+      type: "website",
+      images: ["/opengraph-image"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} · Deskbay`,
+      description,
+      images: ["/opengraph-image"],
+    },
+  };
+}
 
 export default async function MumbaiPage({
   searchParams,
 }: {
   searchParams: Promise<{ area?: string }>;
 }) {
-  const { area } = await searchParams;
-  const initialArea = area === "bandra" || area === "south-bombay" ? area : "all";
+  const { area: rawArea } = await searchParams;
+  const area = resolveArea(rawArea);
+  const cafes = area === "all" ? CAFES : cafesByArea(area);
 
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Cafes to work from in Mumbai",
-    numberOfItems: CAFES.length,
-    itemListElement: CAFES.map((c, i) => ({
+    name:
+      area === "all" ? "Cafes to work from in Mumbai" : `Cafes to work from in ${AREAS[area].name}`,
+    numberOfItems: cafes.length,
+    itemListElement: cafes.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
       item: {
@@ -45,13 +84,29 @@ export default async function MumbaiPage({
     })),
   };
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Mumbai", item: `${SITE_URL}/mumbai` },
+      ...(area !== "all"
+        ? [{ "@type": "ListItem", position: 3, name: AREAS[area].name, item: `${SITE_URL}/mumbai?area=${area}` }]
+        : []),
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
-      <MumbaiScreen initialArea={initialArea} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <MumbaiScreen initialArea={area} />
     </>
   );
 }

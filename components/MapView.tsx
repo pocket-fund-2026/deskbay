@@ -14,6 +14,16 @@ function scoreColor(score: number | null) {
   return "#8a6a5a";
 }
 
+function pinSvg(color: string) {
+  return `
+    <svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg" style="display:block;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.45))">
+      <path d="M15 37C15 37 28 22.8 28 14C28 6.8 22.2 1 15 1C7.8 1 2 6.8 2 14C2 22.8 15 37 15 37Z"
+            fill="${color}" stroke="#f6f1e9" stroke-width="2"/>
+      <circle cx="15" cy="14" r="6.5" fill="#f6f1e9"/>
+      <path d="M12 12.3h4.6M12 14.3h4.6M12.6 16h3.4" stroke="${color}" stroke-width="1.15" stroke-linecap="round"/>
+    </svg>`;
+}
+
 export default function MapView({
   cafes,
   selectedSlug,
@@ -26,6 +36,7 @@ export default function MapView({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<Record<string, maplibregl.Marker>>({});
+  const elsRef = useRef<Record<string, HTMLButtonElement>>({});
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -73,17 +84,27 @@ export default function MapView({
       }
 
       cafes.forEach((cafe) => {
+        const color = scoreColor(cafe.workability);
         const el = document.createElement("button");
         el.setAttribute("aria-label", cafe.name);
-        el.style.width = "14px";
-        el.style.height = "14px";
-        el.style.borderRadius = "50%";
-        el.style.border = "2px solid #f6f1e9";
-        el.style.background = scoreColor(cafe.workability);
+        el.style.width = "30px";
+        el.style.height = "38px";
         el.style.cursor = "pointer";
-        el.style.boxShadow = "0 0 0 3px rgba(0,0,0,0.35)";
+        el.style.background = "transparent";
+        el.style.border = "none";
+        el.style.padding = "0";
+        el.style.transformOrigin = "bottom center";
+        el.style.transition = "transform 0.15s ease";
+        el.innerHTML = pinSvg(color);
 
-        const popup = new maplibregl.Popup({ offset: 14, closeButton: false }).setHTML(
+        el.addEventListener("mouseenter", () => {
+          if (el.dataset.selected !== "true") el.style.transform = "scale(1.15)";
+        });
+        el.addEventListener("mouseleave", () => {
+          if (el.dataset.selected !== "true") el.style.transform = "scale(1)";
+        });
+
+        const popup = new maplibregl.Popup({ offset: 20, closeButton: false }).setHTML(
           `<div style="font-family: var(--font-inter, sans-serif); min-width:180px">
             <div style="font-weight:600;font-size:13.5px">${cafe.name}</div>
             <div style="font-size:11px;opacity:.6;margin-top:2px">${cafe.neighborhood}</div>
@@ -91,13 +112,14 @@ export default function MapView({
           </div>`
         );
 
-        const marker = new maplibregl.Marker({ element: el })
+        const marker = new maplibregl.Marker({ element: el, anchor: "bottom" })
           .setLngLat([cafe.longitude, cafe.latitude])
           .setPopup(popup)
           .addTo(map);
 
         el.addEventListener("click", () => onSelect?.(cafe.slug));
         markersRef.current[cafe.slug] = marker;
+        elsRef.current[cafe.slug] = el;
       });
     });
 
@@ -110,6 +132,13 @@ export default function MapView({
   }, []);
 
   useEffect(() => {
+    Object.entries(elsRef.current).forEach(([slug, el]) => {
+      const isSelected = slug === selectedSlug;
+      el.dataset.selected = isSelected ? "true" : "false";
+      el.style.transform = isSelected ? "scale(1.35)" : "scale(1)";
+      el.style.zIndex = isSelected ? "10" : "0";
+    });
+
     if (!selectedSlug || !mapRef.current) return;
     const cafe = cafes.find((c) => c.slug === selectedSlug);
     if (!cafe) return;
@@ -119,7 +148,6 @@ export default function MapView({
       pitch: 60,
       duration: 900,
     });
-    markersRef.current[selectedSlug]?.togglePopup();
   }, [selectedSlug, cafes]);
 
   return <div ref={containerRef} className="h-full w-full" />;

@@ -60,13 +60,41 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg" },
 };
 
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Deskbay",
+  url: SITE_URL,
+  description:
+    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — across Bandra and South Bombay.",
+  inLanguage: "en-IN",
+};
+
+const organizationLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Deskbay",
+  url: SITE_URL,
+  logo: `${SITE_URL}/icon.svg`,
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-IN"
       className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} h-full`}
     >
-      <body className="min-h-dvh font-sans antialiased">{children}</body>
+      <body className="min-h-dvh font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

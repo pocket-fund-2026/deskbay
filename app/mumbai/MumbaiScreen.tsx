@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AREAS, CAFES, type AreaSlug } from "@/lib/cafes";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
+import CafeDetailPanel from "@/components/CafeDetailPanel";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
@@ -24,12 +25,17 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
     [area]
   );
 
+  const selectedCafe = selected ? cafes.find((c) => c.slug === selected) ?? null : null;
+
   return (
     <main className="flex h-dvh flex-col bg-ink text-paper">
       <header className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-3.5">
         <Link href="/" className="font-display text-[18px] tracking-tight">
           desk<em className="font-semibold not-italic italic">bay</em>
         </Link>
+        <h1 className="sr-only">
+          {area === "all" ? "Mumbai" : AREAS[area].name} — cafes you can work from
+        </h1>
         <div className="wa-mono flex gap-1 rounded-full border border-white/12 p-1 text-paper/50">
           {(["all", ...Object.keys(AREAS)] as (AreaSlug | "all")[]).map((a) => (
             <button
@@ -47,19 +53,25 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
 
       <div className="grid flex-1 grid-cols-1 overflow-hidden md:grid-cols-[380px_1fr]">
         <div className="order-2 flex flex-col overflow-y-auto border-white/10 md:order-1 md:border-r">
-          <div className="border-b border-white/10 px-4 py-3">
-            <FactorLegend />
-          </div>
-          <div className="space-y-2.5 p-3">
-            {cafes.map((cafe) => (
-              <CafeCard
-                key={cafe.slug}
-                cafe={cafe}
-                active={selected === cafe.slug}
-                onSelect={() => setSelected(cafe.slug)}
-              />
-            ))}
-          </div>
+          {selectedCafe ? (
+            <CafeDetailPanel cafe={selectedCafe} onBack={() => setSelected(null)} />
+          ) : (
+            <>
+              <div className="border-b border-white/10 px-4 py-3">
+                <FactorLegend />
+              </div>
+              <div className="space-y-2.5 p-3">
+                {cafes.map((cafe) => (
+                  <CafeCard
+                    key={cafe.slug}
+                    cafe={cafe}
+                    active={selected === cafe.slug}
+                    onSelect={() => setSelected(cafe.slug)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
         <div className="order-1 h-[40dvh] md:order-2 md:h-full">
           <MapView cafes={cafes} selectedSlug={selected} onSelect={setSelected} />
