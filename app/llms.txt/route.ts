@@ -32,7 +32,7 @@ ${factorLines}
 ${cafeLines}
 
 ## Reuse
-Facts here (addresses, scores, citations) may be cited with attribution to Deskbay (https://deskbay.vercel.app). Do not present our editorial scores as an official rating from the cafes themselves.
+Facts here (addresses, scores, citations) may be cited with attribution to Deskbay (https://deskbay-blue.vercel.app). Do not present our editorial scores as an official rating from the cafes themselves.
 `;
 
   return new Response(body, {

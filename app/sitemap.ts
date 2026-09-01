@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { AREAS } from "@/lib/cafes";
 
-const BASE = "https://deskbay.vercel.app";
+const BASE = "https://deskbay-blue.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const areaUrls = Object.keys(AREAS).map((slug) => ({

@@ -20,7 +20,7 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
-const SITE_URL = "https://deskbay.vercel.app";
+const SITE_URL = "https://deskbay-blue.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
