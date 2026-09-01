@@ -32,6 +32,20 @@ const TOP_15 = CAFES.filter((c) => c.workability !== null)
   .sort((a, b) => (b.workability as number) - (a.workability as number))
   .slice(0, 15);
 
+function writeup(cafe: (typeof TOP_15)[number]) {
+  const parts: string[] = [cafe.editorialNote];
+  if (cafe.whyWeRecommend && cafe.whyWeRecommend !== cafe.editorialNote) {
+    parts.push(cafe.whyWeRecommend);
+  }
+  const ev = cafe.evidence;
+  const evidenceBits = [ev.wifi, ev.charging, ev.quiet, ev.seating, ev.work].filter(
+    (e): e is string => Boolean(e) && !parts.join(" ").includes(e as string)
+  );
+  parts.push(...evidenceBits.slice(0, 2));
+  if (cafe.synthesis && !parts.join(" ").includes(cafe.synthesis)) parts.push(cafe.synthesis);
+  return parts.join(" ");
+}
+
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -44,10 +58,34 @@ const articleLd = {
   mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
 };
 
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the best cafe to work from in Mumbai?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `${TOP_15[0].name} on ${TOP_15[0].neighborhood} currently has Deskbay's highest workability score (${TOP_15[0].workability}/5), based on cited evidence about its wifi, seating and noise levels.`,
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Deskbay decide which cafes are good for working?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Every cafe is scored on wifi, power outlets, seating, noise and how long you can realistically stay, using published evidence rather than star ratings. See /about for the full weighting.",
+      },
+    },
+  ],
+};
+
 export default function Post() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="mx-auto max-w-2xl">
         <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
           ← Blog
@@ -64,10 +102,20 @@ export default function Post() {
         </div>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
-          This isn&apos;t a separate opinion piece — it&apos;s the top 15 out of the{" "}
+          Finding a Mumbai cafe with fast wifi, real power outlets and staff who won&apos;t hover
+          once your cup is empty is harder than it should be for a city this size. This isn&apos;t
+          a separate opinion piece — it&apos;s the top 15 out of the{" "}
           {CAFES.filter((c) => c.workability !== null).length} cafes we&apos;ve fully scored on
-          Deskbay&apos;s nine-factor workability model, ranked by that same score. Every claim
-          here traces back to the cited evidence on each cafe&apos;s own page.
+          Deskbay&apos;s nine-factor workability model (wifi, power, seating, noise, and how long
+          you can actually stay), ranked by that same score and scored on a deliberately strict
+          scale. Every claim here traces back to the cited evidence on each cafe&apos;s own page —
+          nothing is invented to fill a paragraph.
+        </p>
+        <p className="mt-3 text-[15px] leading-relaxed text-paper/75">
+          A quick note on what this list is not: it is not a ranking of the best coffee in
+          Mumbai, or the most popular cafes on Google. Some genuinely great cafes are loud,
+          cramped, or turn tables fast on purpose — great for a coffee, bad for three hours with a
+          laptop. This list only answers one question: where can you actually get work done.
         </p>
 
         <ol className="mt-8 space-y-5">
@@ -106,7 +154,11 @@ export default function Post() {
                     />
                   </div>
                 )}
-                <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{cafe.whyWeRecommend}</p>
+                <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{writeup(cafe)}</p>
+                <p className="wa-mono mt-2 text-paper/35">
+                  {cafe.address}
+                  {cafe.openingHours ? ` · ${cafe.openingHours}` : ""}
+                </p>
                 <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1.5 inline-block text-paper/40 hover:text-paper">
                   Full profile and evidence →
                 </Link>
@@ -115,7 +167,30 @@ export default function Post() {
           })}
         </ol>
 
-        <div className="mt-10 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
+        <h2 className="font-display mt-10 text-[20px] font-medium tracking-tight">
+          Frequently asked
+        </h2>
+        <div className="mt-3 space-y-4">
+          <div>
+            <p className="font-medium text-[14.5px]">What is the best cafe to work from in Mumbai?</p>
+            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
+              {TOP_15[0].name} on {TOP_15[0].neighborhood} currently has Deskbay&apos;s highest
+              workability score ({TOP_15[0].workability}/5), based on cited evidence about its
+              wifi, seating and noise levels — see its{" "}
+              <Link href={`/mumbai/${TOP_15[0].slug}`} className="underline hover:text-paper">full profile</Link>.
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-[14.5px]">How does Deskbay decide which cafes are good for working?</p>
+            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
+              Every cafe is scored on wifi, power outlets, seating, noise and how long you can
+              realistically stay, using published evidence rather than star ratings — read the{" "}
+              <Link href="/about" className="underline hover:text-paper">full methodology</Link>.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
           <p className="text-[14px] leading-relaxed text-paper/65">
             Want the full picture, including the cafes that scored lower and why? See{" "}
             <Link href="/mumbai" className="underline hover:text-paper">the interactive map</Link>{" "}

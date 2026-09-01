@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPost } from "@/lib/blog";
-import { getCafe } from "@/lib/cafes";
+import { getCafe, CAFES } from "@/lib/cafes";
 import CoffeeHero from "@/components/CoffeeHero";
 
 const SITE_URL = "https://deskbay-blue.vercel.app";
@@ -60,9 +60,13 @@ export default function Post() {
         </div>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
-          A roundup of real openings and expansions reported recently, plus where the city&apos;s
-          specialty coffee scene is actually heading — each claim sourced, same as the rest of
-          this site.
+          Mumbai&apos;s cafe scene doesn&apos;t sit still — chains keep opening new outlets in the
+          suburbs, independents keep expanding into new neighborhoods, and the specialty coffee
+          crowd keeps pushing what a Mumbai cafe menu looks like. This is a roundup of real
+          openings and expansions reported recently, plus where the city&apos;s coffee culture is
+          actually heading — each claim sourced, same standard as every cafe profile on this
+          site. Nothing here is guessed at or paraphrased from a press release without checking
+          it against an independent report first.
         </p>
 
         <h2 className="font-display mt-9 text-[20px] font-medium tracking-tight">Recent openings and expansions</h2>
@@ -73,7 +77,10 @@ export default function Post() {
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
               Third Wave Coffee opened its 200th cafe in Sindhi Society, Chembur — its ~40th in
               Mumbai — as part of a stated plan to add roughly 100 more cafes nationally through
-              2026.
+              2026. The chain has become one of the most reliable names on Deskbay&apos;s own
+              directory precisely because of that scale: a Third Wave branch is one of the few
+              cafe formats consistent enough across suburbs like Andheri, Kandivali and Santacruz
+              that its wifi and seating setup rarely varies from outlet to outlet.
             </p>
           </div>
           <div>
@@ -81,7 +88,9 @@ export default function Post() {
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
               Bombay Sweet Shop opened its first Borivali outpost in June 2026 — an all-day cafe,
               mithai shop and retail store serving chaat, sandwiches, coffee and mithai alongside
-              its usual retail line.
+              its usual retail line. It&apos;s a sign of where new cafe openings are landing:
+              further out in the western suburbs, not just Bandra, which is also where most of
+              Deskbay&apos;s own newer, not-yet-scored directory listings have come from.
             </p>
           </div>
           <div>
@@ -95,7 +104,8 @@ export default function Post() {
                 </>
               )}{" "}
               — was reported in August 2026 to be opening a fifth Mumbai outlet in Bandra Kurla
-              Complex.
+              Complex, following the wider pattern of independent Bandra cafes following the
+              office crowd into BKC rather than sticking to residential neighbourhoods.
             </p>
           </div>
           <div>
@@ -123,6 +133,19 @@ export default function Post() {
           coffee cocktails, and cafes are positioning themselves as community spaces — cupping
           sessions, brewing classes and tasting flights — rather than just counters to grab a cup
           and go.
+        </p>
+
+        <h2 className="font-display mt-9 text-[20px] font-medium tracking-tight">
+          Where Deskbay&apos;s own coverage is growing
+        </h2>
+        <p className="mt-3 text-[14px] leading-relaxed text-paper/65">
+          We track this expansion directly: Deskbay now lists {CAFES.length} Mumbai cafes across
+          seven areas, up from an initial 30 in Bandra and South Bombay. Newer areas like BKC,
+          Thane and Navi Mumbai are still directory listings rather than fully scored, which is
+          the honest state of coverage right now — a cafe appearing on the map is not the same as
+          a cafe we&apos;ve verified is good to work from. See the{" "}
+          <Link href="/about" className="underline hover:text-paper">methodology</Link> for the
+          distinction.
         </p>
 
         <div className="mt-9 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">

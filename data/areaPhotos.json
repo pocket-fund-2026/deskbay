@@ -1,51 +1,10 @@
 {
   "bandra": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Bandra_Bandstand.jpg",
-    "alt": "Bandra Bandstand, a promenade near Bandra Fort in Bandra, Mumbai",
-    "credit": "Nichalp — CC BY-SA 3.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Bandra_Bandstand.jpg",
-    "license": "CC BY-SA 3.0"
+    "url": "https://www.subko.coffee/cdn/shop/files/mlb-1-min.png?v=1706613182&width=480",
+    "alt": "The counter at Subko's Mary Lodge outlet on Chapel Road, Bandra"
   },
   "south-bombay": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/The_Spirit_of_Kala_Ghoda_-_statue_in_the_Kala_Ghoda_arts_district_in_Mumbai_%2C_India.jpg",
-    "alt": "The Spirit of Kala Ghoda statue in the Kala Ghoda arts district, South Mumbai",
-    "credit": "Carol Miranda (Themirandaroute) — CC BY-SA 4.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Spirit_of_Kala_Ghoda_-_statue_in_the_Kala_Ghoda_arts_district_in_Mumbai_,_India.jpg",
-    "license": "CC BY-SA 4.0"
-  },
-  "western-suburbs": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Morning_at_Juhu_Beach.jpg",
-    "alt": "Morning at Juhu Beach in the western suburbs of Mumbai",
-    "credit": "Manas46951 — CC BY-SA 4.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Morning_at_Juhu_Beach.jpg",
-    "license": "CC BY-SA 4.0"
-  },
-  "central-mumbai": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Worli_Sea_Face_Towards_Bandra.jpg",
-    "alt": "Worli Sea Face looking towards Bandra, central Mumbai",
-    "credit": "Swaminathan — CC BY 2.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Worli_Sea_Face_Towards_Bandra.jpg",
-    "license": "CC BY 2.0"
-  },
-  "bkc": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/ICICI_Towers%2C_BKC_%28289443859%29.jpg",
-    "alt": "ICICI Towers in the Bandra Kurla Complex (BKC), Mumbai",
-    "credit": "Rakesh — CC BY-SA 2.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:ICICI_Towers,_BKC_(289443859).jpg",
-    "license": "CC BY-SA 2.0"
-  },
-  "thane": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Kachrali_Lake.jpg",
-    "alt": "Kachrali Lake in Thane, known as the City of Lakes",
-    "credit": "Thaneboy — Public domain",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Kachrali_Lake.jpg",
-    "license": "Public domain"
-  },
-  "navi-mumbai": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Vashi%2C_Navi_Mumbai.jpg",
-    "alt": "Residential towers in Sector 30A, Vashi, Navi Mumbai",
-    "credit": "This Now — CC BY-SA 4.0",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Vashi,_Navi_Mumbai.jpg",
-    "license": "CC BY-SA 4.0"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Cafe_Mondegar%2C_Colaba_Causeway%2C_interior_wall_murals.jpg",
+    "alt": "Cafe Mondegar's dining room, its walls covered end to end in Mario Miranda's murals"
   }
 }
