@@ -1,13 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { AREAS, CAFES, FACTORS } from "@/lib/cafes";
+import { AREAS, CAFES, FACTORS, cafesByArea } from "@/lib/cafes";
+import { tier } from "@/lib/scoreTier";
 import Skyline from "@/components/Skyline";
+import PinBadge from "@/components/PinBadge";
 
 const EDITOR_PICKS = [
   "bombay-coffee-house-waterfield-road",
   "kala-ghoda-cafe-kala-ghoda",
   "araku-coffee-apollo-bunder",
 ]
+  .map((slug) => CAFES.find((c) => c.slug === slug))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+
+const LANDMARKS = ["cafe-mondegar-colaba", "leopold-cafe-bar-colaba", "yazdani-bakery-fort"]
   .map((slug) => CAFES.find((c) => c.slug === slug))
   .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
@@ -31,30 +38,37 @@ export default function HomePage() {
         </Link>
       </header>
 
-      <div className="relative z-10 flex flex-1 flex-col justify-center px-6 py-10 sm:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">
         <p className="wa-mono mb-4 text-paper/45 sm:hidden">Explore Mumbai</p>
         <div className="grid gap-4 md:grid-cols-2">
-          {(Object.values(AREAS)).map((area, i) => (
-            <Link
-              key={area.slug}
-              href={`/mumbai?area=${area.slug}`}
-              className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-white/12 sm:aspect-[16/10]"
-              style={{ animationDelay: `${i * 90}ms` }}
-            >
-              <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
-                <Skyline variant={i === 0 ? "warm" : "stone"} />
-              </span>
-              <span className="relative z-10 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent p-6">
-                <span className="font-display block text-2xl font-medium tracking-tight sm:text-3xl">
-                  {area.name}
+          {(Object.values(AREAS)).map((area, i) => {
+            const count = cafesByArea(area.slug).length;
+            return (
+              <Link
+                key={area.slug}
+                href={`/mumbai?area=${area.slug}`}
+                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-white/12 sm:aspect-[16/10]"
+                style={{ animationDelay: `${i * 90}ms` }}
+              >
+                <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
+                  <Skyline variant={i === 0 ? "warm" : "stone"} />
                 </span>
-                <span className="mt-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
-                  {area.description}
+                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/15 bg-ink/50 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
+                  <PinBadge color={i === 0 ? "#d97b3f" : "#7fa8b0"} size={11} />
+                  {count} cafes
                 </span>
-                <span className="wa-mono mt-3 block text-paper/45">{area.streets}</span>
-              </span>
-            </Link>
-          ))}
+                <span className="relative z-10 bg-gradient-to-t from-ink/95 via-ink/35 to-transparent p-6 pt-14">
+                  <span className="font-display block text-2xl font-medium tracking-tight sm:text-3xl">
+                    {area.name}
+                  </span>
+                  <span className="mt-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
+                    {area.description}
+                  </span>
+                  <span className="wa-mono mt-3 block text-paper/45">{area.streets}</span>
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="mt-10 max-w-2xl">
@@ -70,20 +84,57 @@ export default function HomePage() {
           </h1>
         </div>
 
-        <div className="mt-12 max-w-2xl">
+        <div className="mt-12">
           <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>
           <div className="grid gap-3 sm:grid-cols-3">
-            {EDITOR_PICKS.map((cafe) => (
+            {EDITOR_PICKS.map((cafe) => {
+              const t = tier(cafe.workability);
+              return (
+                <Link
+                  key={cafe.slug}
+                  href={`/mumbai?area=${cafe.area}`}
+                  className="rounded-xl border border-white/12 p-4 transition-colors hover:bg-white/[0.04]"
+                >
+                  <div className="flex items-center gap-2">
+                    <PinBadge color={t.color} />
+                    <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
+                  </div>
+                  <p className="wa-mono mt-1.5 text-paper/40">{cafe.neighborhood}</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-paper/60">
+                    {cafe.whyWeRecommend}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-12 pb-4">
+          <p className="wa-mono mb-4 text-paper/40">Mumbai institutions worth seeing (not for laptops)</p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {LANDMARKS.map((cafe) => (
               <Link
                 key={cafe.slug}
-                href={`/mumbai?area=${cafe.area}`}
-                className="rounded-xl border border-white/12 p-4 transition-colors hover:bg-white/[0.04]"
+                href={`/mumbai/${cafe.slug}`}
+                className="group overflow-hidden rounded-xl border border-white/12 transition-colors hover:bg-white/[0.04]"
               >
-                <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
-                <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-paper/60">
-                  {cafe.whyWeRecommend}
-                </p>
+                {cafe.images[0] && (
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={cafe.images[0].url}
+                      alt={cafe.images[0].alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-4">
+                  <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
+                  <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-paper/60">{cafe.editorialNote}</p>
+                </div>
               </Link>
             ))}
           </div>
