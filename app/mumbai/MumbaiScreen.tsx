@@ -30,8 +30,8 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
 
   return (
     <main className="flex h-dvh flex-col bg-ink text-paper">
-      <header className="flex items-center justify-between gap-4 border-b border-paper/10 px-5 py-3.5">
-        <div className="flex items-center gap-4">
+      <header className="border-b border-paper/10 px-5 py-3.5">
+        <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-1.5 font-display text-[18px] tracking-tight">
             <Logo size={20} />
             desk<em className="font-semibold not-italic italic">bay</em>
@@ -43,12 +43,12 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
         <h1 className="sr-only">
           {area === "all" ? "Mumbai" : AREAS[area].name} — cafes you can work from
         </h1>
-        <div className="wa-mono flex gap-1 rounded-full border border-paper/12 p-1 text-paper/50">
+        <div className="no-scrollbar wa-mono -mx-5 mt-3 flex gap-1 overflow-x-auto px-5 text-paper/50 md:mx-0 md:mt-0 md:justify-end md:px-0">
           {(["all", ...Object.keys(AREAS)] as (AreaSlug | "all")[]).map((a) => (
             <button
               key={a}
               onClick={() => setArea(a)}
-              className={`rounded-full px-3 py-1 transition-colors ${
+              className={`shrink-0 rounded-full border border-paper/12 px-3 py-1.5 transition-colors ${
                 area === a ? "bg-paper text-ink" : "hover:text-paper"
               }`}
             >

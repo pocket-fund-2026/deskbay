@@ -14,15 +14,22 @@ function scoreColor(score: number | null) {
   return "#8a6a5a";
 }
 
-function pinSvg(color: string) {
-  return `
-    <svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg" style="display:block;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.5))">
-      <path d="M15 37C15 37 28 22.8 28 14C28 6.8 22.2 1 15 1C7.8 1 2 6.8 2 14C2 22.8 15 37 15 37Z"
-            fill="${color}" stroke="#ffffff" stroke-width="2"/>
-      <circle cx="15" cy="14" r="6.5" fill="#ffffff"/>
-      <path d="M12 12.3h4.6M12 14.3h4.6M12.6 16h3.4" stroke="${color}" stroke-width="1.15" stroke-linecap="round"/>
-    </svg>`;
+function toGeoJSON(cafes: Cafe[]): GeoJSON.FeatureCollection {
+  return {
+    type: "FeatureCollection",
+    features: cafes.map((c) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [c.longitude, c.latitude] },
+      properties: {
+        slug: c.slug,
+        color: scoreColor(c.workability),
+        topScored: c.workability !== null && c.workability >= 4,
+      },
+    })),
+  };
 }
+
+const emptyFC: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
 
 export default function MapView({
   cafes,
@@ -35,12 +42,6 @@ export default function MapView({
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
-  const markersRef = useRef<Record<string, maplibregl.Marker>>({});
-  // The marker root element's own `transform` is owned by MapLibre (it uses it to
-  // position the marker at its lng/lat). We must never write to that style — scaling
-  // it directly breaks positioning and sends the pin flying to the map's corner.
-  // Hover/selected scaling is applied to this inner wrapper instead.
-  const innerElsRef = useRef<Record<string, HTMLSpanElement>>({});
   const onSelectRef = useRef(onSelect);
   onSelectRef.current = onSelect;
   const selectedSlugRef = useRef(selectedSlug);
@@ -56,9 +57,12 @@ export default function MapView({
       (b, c) => b.extend([c.longitude, c.latitude]),
       new maplibregl.LngLatBounds([list[0].longitude, list[0].latitude], [list[0].longitude, list[0].latitude])
     );
+    // Small filtered groups (a single area) should zoom in enough to split
+    // apart into individual pins; only the full, city-wide "All" view should
+    // stay pulled back and clustered.
     map.fitBounds(bounds, {
       padding: 60,
-      maxZoom: 14,
+      maxZoom: list.length <= 25 ? 16 : 13,
       pitch: 55,
       bearing: -12,
       duration: opts?.duration ?? 600,
@@ -89,10 +93,6 @@ export default function MapView({
 
     const resizeObserver = new ResizeObserver(() => {
       map.resize();
-      // A container resize (e.g. the list panel's content height changing when
-      // switching area filters) can leave the WebGL canvas visually blank even
-      // though resize() reports the same pixel size. Force a redraw so the
-      // basemap always reappears.
       map.triggerRepaint();
     });
     resizeObserver.observe(containerRef.current);
@@ -123,6 +123,121 @@ export default function MapView({
         );
       }
 
+      // Cafes are shown as a clustered point source instead of one DOM marker
+      // per cafe: with 100+ cafes, individual pins overlapped into an
+      // unreadable pile whenever several were close together (the "crowded"
+      // map). Clustering groups nearby cafes into a count bubble that splits
+      // apart as you zoom in.
+      map.addSource("cafes", {
+        type: "geojson",
+        data: emptyFC,
+        cluster: true,
+        clusterMaxZoom: 14,
+        clusterRadius: 45,
+      });
+
+      // A two-tone "coffee ring" look for clusters: a soft accent halo behind
+      // a solid espresso disc, instead of a single flat circle.
+      map.addLayer({
+        id: "cluster-halo",
+        type: "circle",
+        source: "cafes",
+        filter: ["has", "point_count"],
+        paint: {
+          "circle-color": "#b5651d",
+          "circle-opacity": 0.22,
+          "circle-radius": ["step", ["get", "point_count"], 24, 10, 30, 30, 38],
+        },
+      });
+
+      map.addLayer({
+        id: "clusters",
+        type: "circle",
+        source: "cafes",
+        filter: ["has", "point_count"],
+        paint: {
+          "circle-color": "#2b1810",
+          "circle-stroke-width": 2,
+          "circle-stroke-color": "#f7efe0",
+          "circle-radius": ["step", ["get", "point_count"], 16, 10, 20, 30, 25],
+        },
+      });
+
+      map.addLayer({
+        id: "cluster-count",
+        type: "symbol",
+        source: "cafes",
+        filter: ["has", "point_count"],
+        layout: {
+          "text-field": ["get", "point_count_abbreviated"],
+          "text-size": 12,
+          "text-font": ["Noto Sans Bold"],
+        },
+        paint: { "text-color": "#f7efe0" },
+      });
+
+      map.addLayer({
+        id: "point-halo",
+        type: "circle",
+        source: "cafes",
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+          "circle-color": ["get", "color"],
+          "circle-radius": ["case", ["get", "topScored"], 17, 12],
+          "circle-opacity": ["case", ["get", "topScored"], 0.3, 0.16],
+        },
+      });
+
+      map.addLayer({
+        id: "unclustered-point",
+        type: "circle",
+        source: "cafes",
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+          "circle-color": ["get", "color"],
+          "circle-radius": ["case", ["get", "topScored"], 9, 7.5],
+          "circle-stroke-width": 2,
+          "circle-stroke-color": "#fdf9f2",
+        },
+      });
+
+      map.addSource("selected-cafe", { type: "geojson", data: emptyFC });
+      map.addLayer({
+        id: "selected-ring",
+        type: "circle",
+        source: "selected-cafe",
+        paint: {
+          "circle-color": "transparent",
+          "circle-radius": 14,
+          "circle-stroke-width": 3,
+          "circle-stroke-color": "#2b1810",
+        },
+      });
+
+      map.on("mouseenter", "clusters", () => (map.getCanvas().style.cursor = "pointer"));
+      map.on("mouseleave", "clusters", () => (map.getCanvas().style.cursor = ""));
+      map.on("mouseenter", "unclustered-point", () => (map.getCanvas().style.cursor = "pointer"));
+      map.on("mouseleave", "unclustered-point", () => (map.getCanvas().style.cursor = ""));
+
+      map.on("click", "clusters", (e) => {
+        const features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
+        const clusterId = features[0]?.properties?.cluster_id;
+        const source = map.getSource("cafes") as maplibregl.GeoJSONSource;
+        if (clusterId === undefined) return;
+        source
+          .getClusterExpansionZoom(clusterId)
+          .then((zoom) => {
+            const geometry = features[0].geometry as GeoJSON.Point;
+            map.easeTo({ center: geometry.coordinates as [number, number], zoom, duration: 500 });
+          })
+          .catch(() => {});
+      });
+
+      map.on("click", "unclustered-point", (e) => {
+        const slug = e.features?.[0]?.properties?.slug as string | undefined;
+        if (slug) onSelectRef.current?.(slug);
+      });
+
       setMapReady(true);
     });
 
@@ -134,97 +249,12 @@ export default function MapView({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Keep the markers on the map in sync with whichever cafes are currently
-  // being shown (e.g. after switching the area filter), instead of only ever
-  // reflecting whatever list was passed in on first mount.
+  // Keep the clustered source in sync with whichever cafes are currently shown.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !mapReady) return;
+    (map.getSource("cafes") as maplibregl.GeoJSONSource | undefined)?.setData(toGeoJSON(cafes));
 
-    const nextSlugs = new Set(cafes.map((c) => c.slug));
-    for (const slug of Object.keys(markersRef.current)) {
-      if (!nextSlugs.has(slug)) {
-        markersRef.current[slug].remove();
-        delete markersRef.current[slug];
-        delete innerElsRef.current[slug];
-      }
-    }
-
-    cafes.forEach((cafe) => {
-      if (markersRef.current[cafe.slug]) return;
-
-      const color = scoreColor(cafe.workability);
-      const el = document.createElement("button");
-      el.setAttribute("aria-label", cafe.name);
-      // Do NOT set el.style.position here: MapLibre applies its own
-      // `position: absolute` via the .maplibregl-marker CSS class to place
-      // this element at the cafe's lng/lat. An inline position style (even
-      // "relative") has higher specificity and silently overrides that,
-      // knocking every marker out of its mapped position.
-      el.style.width = "30px";
-      el.style.height = "38px";
-      el.style.cursor = "pointer";
-      el.style.background = "transparent";
-      el.style.border = "none";
-      el.style.padding = "0";
-
-      if (cafe.workability !== null && cafe.workability >= 4) {
-        const pulse = document.createElement("span");
-        pulse.className = "marker-pulse";
-        pulse.style.background = color;
-        el.appendChild(pulse);
-      }
-
-      const inner = document.createElement("span");
-      inner.style.display = "block";
-      inner.style.width = "100%";
-      inner.style.height = "100%";
-      inner.style.transformOrigin = "bottom center";
-      inner.style.transition = "transform 0.15s ease";
-      inner.innerHTML = pinSvg(color);
-      el.appendChild(inner);
-
-      el.addEventListener("mouseenter", () => {
-        if (el.dataset.selected !== "true") inner.style.transform = "scale(1.15)";
-      });
-      el.addEventListener("mouseleave", () => {
-        if (el.dataset.selected !== "true") inner.style.transform = "scale(1)";
-      });
-
-      const popup = new maplibregl.Popup({ offset: 20, closeButton: false }).setHTML(
-        `<div style="font-family: var(--font-inter, sans-serif); min-width:180px">
-          <div style="font-weight:600;font-size:13.5px">${cafe.name}</div>
-          <div style="font-size:11px;opacity:.6;margin-top:2px">${cafe.neighborhood}</div>
-          <div style="font-size:11px;margin-top:6px;opacity:.85">Workability ${cafe.workability !== null ? `${cafe.workability.toFixed(1)}/5` : "too thin to score"}</div>
-        </div>`
-      );
-
-      const marker = new maplibregl.Marker({ element: el, anchor: "bottom" })
-        .setLngLat([cafe.longitude, cafe.latitude])
-        .setPopup(popup)
-        .addTo(map);
-
-      // Guard against this exact class of regression happening silently again:
-      // MapLibre must own `position: absolute` on this element to place it at
-      // the cafe's coordinates. If any future change sets an inline position
-      // style here (directly, or via a CSS class with higher specificity),
-      // markers will detach from their real map location — loudly warn so
-      // that's caught immediately instead of shipping as "markers float".
-      if (getComputedStyle(el).position !== "absolute") {
-        console.error(
-          `[MapView] Marker for "${cafe.name}" lost its absolute positioning ` +
-            "(inline style or CSS is overriding MapLibre's placement) — it will not sit at its real map coordinates."
-        );
-      }
-
-      el.addEventListener("click", () => onSelectRef.current?.(cafe.slug));
-      markersRef.current[cafe.slug] = marker;
-      innerElsRef.current[cafe.slug] = inner;
-    });
-
-    // Frame the map around whichever cafes are currently shown, so switching
-    // an area filter doesn't leave the pins scattered off-screen. Skipped
-    // while a cafe is selected, since that has its own closer flyTo.
     if (!selectedSlugRef.current) {
       fitToCafes(cafes);
     }
@@ -232,23 +262,24 @@ export default function MapView({
   }, [cafes, mapReady]);
 
   useEffect(() => {
-    Object.entries(innerElsRef.current).forEach(([slug, inner]) => {
-      const isSelected = slug === selectedSlug;
-      inner.parentElement!.dataset.selected = isSelected ? "true" : "false";
-      inner.style.transform = isSelected ? "scale(1.35)" : "scale(1)";
-      inner.parentElement!.style.zIndex = isSelected ? "10" : "0";
-    });
-
-    if (!selectedSlug || !mapRef.current) return;
-    const cafe = cafes.find((c) => c.slug === selectedSlug);
-    if (!cafe) return;
-    mapRef.current.flyTo({
-      center: [cafe.longitude, cafe.latitude],
-      zoom: 16,
-      pitch: 60,
-      duration: 900,
-    });
-  }, [selectedSlug, cafes]);
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+    const selectedSource = map.getSource("selected-cafe") as maplibregl.GeoJSONSource | undefined;
+    const cafe = selectedSlug ? cafes.find((c) => c.slug === selectedSlug) : null;
+    selectedSource?.setData(
+      cafe
+        ? {
+            type: "FeatureCollection",
+            features: [
+              { type: "Feature", geometry: { type: "Point", coordinates: [cafe.longitude, cafe.latitude] }, properties: {} },
+            ],
+          }
+        : emptyFC
+    );
+    if (cafe) {
+      map.flyTo({ center: [cafe.longitude, cafe.latitude], zoom: 16, pitch: 60, duration: 900 });
+    }
+  }, [selectedSlug, cafes, mapReady]);
 
   return (
     <div className="relative h-full w-full">
