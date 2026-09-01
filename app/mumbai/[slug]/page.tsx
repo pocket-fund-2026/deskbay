@@ -3,16 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { AREAS, CAFES, getCafe } from "@/lib/cafes";
+import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 
 const SITE_URL = "https://deskbay-blue.vercel.app";
-
-const EVIDENCE_ORDER: { key: string; label: string }[] = [
-  { key: "wifi", label: "Wi-Fi" },
-  { key: "charging", label: "Power" },
-  { key: "quiet", label: "Quiet" },
-  { key: "seating", label: "Seating" },
-  { key: "work", label: "Work friendliness" },
-];
 
 export function generateStaticParams() {
   return CAFES.map((c) => ({ slug: c.slug }));
@@ -54,14 +47,12 @@ export async function generateMetadata({
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="wa-mono w-16 shrink-0 text-paper/40">{label}</span>
-      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
-        {value !== null && (
-          <div
-            className="h-full rounded-full bg-accent"
-            style={{ width: `${(value / 5) * 100}%` }}
-          />
-        )}
+      <span className="wa-mono w-16 shrink-0 text-paper/45">{label}</span>
+      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-white/[0.07]">
+        <div
+          className="h-full rounded-full"
+          style={{ width: `${((value ?? 0) / 5) * 100}%`, background: tier(value).color }}
+        />
       </div>
       <span className="wa-mono w-4 text-right text-paper/50">{value ?? "–"}</span>
     </div>
@@ -171,15 +162,24 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
               {cafe.neighborhood} · {areaName}
             </p>
           </div>
-          <div className="shrink-0 rounded-lg border border-white/12 px-3 py-2 text-center">
-            <div className="font-display text-[20px] leading-none">
+          <div
+            className="flex shrink-0 flex-col items-center justify-center rounded-full"
+            style={{
+              width: 62,
+              height: 62,
+              border: `2px solid ${tier(cafe.workability).color}`,
+              boxShadow: `0 0 0 3px ${tier(cafe.workability).color}22`,
+            }}
+          >
+            <div className="font-display text-[19px] leading-none">
               {cafe.workability !== null ? cafe.workability.toFixed(1) : "–"}
             </div>
-            <div className="wa-mono mt-0.5 text-[9px] text-paper/40">
-              {cafe.workability !== null ? "score" : "too thin"}
-            </div>
+            <div className="wa-mono mt-0.5 text-[8px] uppercase text-paper/45">/5</div>
           </div>
         </div>
+        <p className="wa-mono mt-2" style={{ color: tier(cafe.workability).color }}>
+          {tier(cafe.workability).label}
+        </p>
 
         <p className="mt-4 text-[15px] leading-relaxed text-paper/75">{cafe.editorialNote}</p>
         <p className="mt-3 text-[14px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
@@ -212,12 +212,18 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         <p className="mt-1 text-[13.5px] leading-relaxed text-paper/50">{cafe.address}</p>
 
         <div className="mt-6 space-y-1.5">
-          <ScoreBar label="Wi-Fi" value={cafe.scores.wifi} />
-          <ScoreBar label="Power" value={cafe.scores.charging} />
-          <ScoreBar label="Quiet" value={cafe.scores.quiet} />
-          <ScoreBar label="Seating" value={cafe.scores.seating} />
-          <ScoreBar label="Work" value={cafe.scores.work} />
+          {SCORE_ROWS.filter((r) => cafe.scores[r.key] !== null).map((r) => (
+            <ScoreBar key={r.key} label={r.label} value={cafe.scores[r.key]} />
+          ))}
         </div>
+        {SCORE_ROWS.some((r) => cafe.scores[r.key] === null) && (
+          <p className="wa-mono mt-2 text-paper/30">
+            Not enough evidence:{" "}
+            {SCORE_ROWS.filter((r) => cafe.scores[r.key] === null)
+              .map((r) => r.label)
+              .join(", ")}
+          </p>
+        )}
 
         {cafe.toggles.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">
@@ -237,7 +243,10 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         )}
 
         {cafe.synthesis && (
-          <div className="mt-7 rounded-lg border border-white/10 bg-white/[0.03] p-4">
+          <div
+            className="mt-7 rounded-lg border-l-2 bg-white/[0.03] p-4"
+            style={{ borderColor: tier(cafe.workability).color }}
+          >
             <p className="wa-mono mb-1.5 text-paper/40">Verdict</p>
             <p className="text-[14px] leading-relaxed text-paper/70">{cafe.synthesis}</p>
           </div>

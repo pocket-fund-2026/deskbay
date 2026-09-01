@@ -16,7 +16,7 @@ function scoreColor(score: number | null) {
 
 function pinSvg(color: string) {
   return `
-    <svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg" style="display:block;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.45))">
+    <svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg" style="display:block;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.5))">
       <path d="M15 37C15 37 28 22.8 28 14C28 6.8 22.2 1 15 1C7.8 1 2 6.8 2 14C2 22.8 15 37 15 37Z"
             fill="${color}" stroke="#f6f1e9" stroke-width="2"/>
       <circle cx="15" cy="14" r="6.5" fill="#f6f1e9"/>
@@ -36,7 +36,11 @@ export default function MapView({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<Record<string, maplibregl.Marker>>({});
-  const elsRef = useRef<Record<string, HTMLButtonElement>>({});
+  // The marker root element's own `transform` is owned by MapLibre (it uses it to
+  // position the marker at its lng/lat). We must never write to that style — scaling
+  // it directly breaks positioning and sends the pin flying to the map's corner.
+  // Hover/selected scaling is applied to this inner wrapper instead.
+  const innerElsRef = useRef<Record<string, HTMLSpanElement>>({});
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -53,6 +57,12 @@ export default function MapView({
 
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+
+    // Recolor the stock OpenFreeMap style to sit with the site's dark ink/paper
+    // palette instead of its bright default greens/yellows/whites.
+    const canvas = map.getCanvas();
+    canvas.style.filter =
+      "invert(1) hue-rotate(185deg) brightness(0.92) contrast(0.92) saturate(0.65) sepia(0.12)";
 
     const resizeObserver = new ResizeObserver(() => map.resize());
     resizeObserver.observe(containerRef.current);
@@ -76,7 +86,7 @@ export default function MapView({
               "fill-extrusion-color": "#3a332c",
               "fill-extrusion-height": ["coalesce", ["get", "render_height"], 8],
               "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0],
-              "fill-extrusion-opacity": 0.85,
+              "fill-extrusion-opacity": 0.9,
             },
           },
           labelLayerId
@@ -85,6 +95,7 @@ export default function MapView({
 
       cafes.forEach((cafe) => {
         const color = scoreColor(cafe.workability);
+
         const el = document.createElement("button");
         el.setAttribute("aria-label", cafe.name);
         el.style.width = "30px";
@@ -93,15 +104,21 @@ export default function MapView({
         el.style.background = "transparent";
         el.style.border = "none";
         el.style.padding = "0";
-        el.style.transformOrigin = "bottom center";
-        el.style.transition = "transform 0.15s ease";
-        el.innerHTML = pinSvg(color);
+
+        const inner = document.createElement("span");
+        inner.style.display = "block";
+        inner.style.width = "100%";
+        inner.style.height = "100%";
+        inner.style.transformOrigin = "bottom center";
+        inner.style.transition = "transform 0.15s ease";
+        inner.innerHTML = pinSvg(color);
+        el.appendChild(inner);
 
         el.addEventListener("mouseenter", () => {
-          if (el.dataset.selected !== "true") el.style.transform = "scale(1.15)";
+          if (el.dataset.selected !== "true") inner.style.transform = "scale(1.15)";
         });
         el.addEventListener("mouseleave", () => {
-          if (el.dataset.selected !== "true") el.style.transform = "scale(1)";
+          if (el.dataset.selected !== "true") inner.style.transform = "scale(1)";
         });
 
         const popup = new maplibregl.Popup({ offset: 20, closeButton: false }).setHTML(
@@ -119,7 +136,7 @@ export default function MapView({
 
         el.addEventListener("click", () => onSelect?.(cafe.slug));
         markersRef.current[cafe.slug] = marker;
-        elsRef.current[cafe.slug] = el;
+        innerElsRef.current[cafe.slug] = inner;
       });
     });
 
@@ -132,11 +149,11 @@ export default function MapView({
   }, []);
 
   useEffect(() => {
-    Object.entries(elsRef.current).forEach(([slug, el]) => {
+    Object.entries(innerElsRef.current).forEach(([slug, inner]) => {
       const isSelected = slug === selectedSlug;
-      el.dataset.selected = isSelected ? "true" : "false";
-      el.style.transform = isSelected ? "scale(1.35)" : "scale(1)";
-      el.style.zIndex = isSelected ? "10" : "0";
+      inner.parentElement!.dataset.selected = isSelected ? "true" : "false";
+      inner.style.transform = isSelected ? "scale(1.35)" : "scale(1)";
+      inner.parentElement!.style.zIndex = isSelected ? "10" : "0";
     });
 
     if (!selectedSlug || !mapRef.current) return;
