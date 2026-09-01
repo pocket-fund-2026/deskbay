@@ -11,7 +11,7 @@ export type CafeScores = {
 export type Cafe = {
   slug: string;
   name: string;
-  area: "bandra" | "south-bombay" | "western-suburbs" | "central-mumbai" | "bkc";
+  area: "bandra" | "south-bombay" | "western-suburbs" | "central-mumbai" | "bkc" | "thane" | "navi-mumbai";
   neighborhood: string;
   address: string;
   latitude: number;
@@ -71,6 +71,18 @@ export const AREAS = {
     name: "BKC",
     description: "Coffee near the business district. Directory listings, not yet scored.",
     streets: "Bandra Kurla Complex",
+  },
+  thane: {
+    slug: "thane",
+    name: "Thane",
+    description: "The satellite city's own cafe scene, growing fast along Ghodbunder Road. Directory listings, not yet scored.",
+    streets: "Ghodbunder Road · Vartak Nagar · Thane West · Thane East",
+  },
+  "navi-mumbai": {
+    slug: "navi-mumbai",
+    name: "Navi Mumbai",
+    description: "Planned-city cafes across Vashi, Nerul and Belapur. Directory listings, not yet scored.",
+    streets: "Vashi · Nerul · Belapur · Kharghar",
   },
 } as const;
 

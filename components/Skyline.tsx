@@ -14,6 +14,12 @@ const PALETTES = {
   moss: {
     sky: "linear-gradient(180deg,#2c3524 0%,#455334 24%,#657b47 46%,#2f3924 72%,#131412 100%)",
   },
+  slate: {
+    sky: "linear-gradient(180deg,#242b3a 0%,#37415a 24%,#4f5c82 46%,#2a3040 72%,#121316 100%)",
+  },
+  amber: {
+    sky: "linear-gradient(180deg,#3d2f1c 0%,#6b4f26 24%,#a3792f 46%,#40331e 72%,#161209 100%)",
+  },
 };
 
 export type SkylineVariant = keyof typeof PALETTES;
