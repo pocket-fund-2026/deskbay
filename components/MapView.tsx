@@ -43,7 +43,11 @@ export default function MapView({
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
 
+    const resizeObserver = new ResizeObserver(() => map.resize());
+    resizeObserver.observe(containerRef.current);
+
     map.on("load", () => {
+      map.resize();
       const layers = map.getStyle().layers ?? [];
       const labelLayerId = layers.find(
         (l) => l.type === "symbol" && (l.layout as { "text-field"?: unknown })?.["text-field"]
@@ -98,6 +102,7 @@ export default function MapView({
     });
 
     return () => {
+      resizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
     };
