@@ -92,6 +92,13 @@ export default function AboutPage() {
           {CAFES.filter((c) => c.workability === null).length} cafes are on the map as directory
           listings — name, address, links — while we work through scoring them the same way.
         </p>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+          The scale runs stricter than most star ratings: a &quot;good&quot; wifi mention in one
+          review isn&apos;t enough for a 4 here, and a cafe has to clear a higher bar to be called
+          excellent at any single factor. A low workability score is not a verdict on the cafe —
+          plenty of great cafes are bad places to open a laptop, and that&apos;s the entire
+          question this site answers.
+        </p>
 
         <ul className="mt-5 divide-y divide-paper/10 overflow-hidden rounded-xl border border-paper/12">
           {FACTORS.map((f) => (
