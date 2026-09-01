@@ -6,6 +6,8 @@ import { tier } from "@/lib/scoreTier";
 import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
 import Logo from "@/components/Logo";
+import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 import areaPhotos from "@/data/areaPhotos.json";
 
 type AreaPhoto = { url: string; alt: string };
@@ -46,12 +48,12 @@ export default function HomePage() {
           <Logo size={26} />
           desk<em className="font-semibold not-italic italic">bay</em>
         </div>
-        <Link
-          className="wa-mono hidden items-center gap-1.5 text-paper/45 transition-colors hover:text-paper sm:flex"
-          href="/mumbai"
-        >
-          Explore Mumbai <span className="text-[13px] leading-none">+</span>
-        </Link>
+        <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
+          <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>
+          <Link href="/mumbai" className="flex items-center gap-1.5 transition-colors hover:text-paper">
+            Explore Mumbai <span className="text-[13px] leading-none">+</span>
+          </Link>
+        </nav>
       </header>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">
@@ -114,7 +116,7 @@ export default function HomePage() {
           </h1>
         </div>
 
-        <div className="mt-12">
+        <Reveal className="mt-12">
           <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {EDITOR_PICKS.map((cafe) => {
@@ -137,9 +139,9 @@ export default function HomePage() {
               );
             })}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 pb-4">
+        <Reveal className="mt-12 pb-4" delay={100}>
           <p className="wa-mono mb-4 text-paper/40">Mumbai institutions worth seeing (not for laptops)</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {LANDMARKS.map((cafe) => (
@@ -168,18 +170,10 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
 
-      <footer className="wa-mono relative z-10 flex flex-wrap items-center justify-between gap-3 border-t border-paper/10 px-6 py-5 text-paper/40 sm:px-10">
-        <span>© 2026 Deskbay</span>
-        <nav className="flex gap-5">
-          <Link href="/mumbai" className="hover:text-paper">The map</Link>
-          <Link href="/blog" className="hover:text-paper">Blog</Link>
-          <Link href="/about" className="hover:text-paper">About</Link>
-          <Link href="/submit" className="hover:text-paper">Submit a cafe</Link>
-        </nav>
-      </footer>
+      <Footer />
     </main>
   );
 }
