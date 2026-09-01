@@ -156,12 +156,20 @@ export default function MapView({
       const color = scoreColor(cafe.workability);
       const el = document.createElement("button");
       el.setAttribute("aria-label", cafe.name);
+      el.style.position = "relative";
       el.style.width = "30px";
       el.style.height = "38px";
       el.style.cursor = "pointer";
       el.style.background = "transparent";
       el.style.border = "none";
       el.style.padding = "0";
+
+      if (cafe.workability !== null && cafe.workability >= 4) {
+        const pulse = document.createElement("span");
+        pulse.className = "marker-pulse";
+        pulse.style.background = color;
+        el.appendChild(pulse);
+      }
 
       const inner = document.createElement("span");
       inner.style.display = "block";
