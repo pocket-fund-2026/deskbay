@@ -6,6 +6,10 @@ import { tier } from "@/lib/scoreTier";
 import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
 import Logo from "@/components/Logo";
+import areaPhotos from "@/data/areaPhotos.json";
+
+type AreaPhoto = { url: string; alt: string };
+const AREA_PHOTOS = areaPhotos as Record<string, AreaPhoto>;
 
 const AREA_STYLES: { variant: SkylineVariant; pin: string }[] = [
   { variant: "warm", pin: "#d97b3f" },
@@ -64,7 +68,18 @@ export default function HomePage() {
                 style={{ animationDelay: `${i * 90}ms` }}
               >
                 <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
-                  <Skyline variant={style.variant} />
+                  {AREA_PHOTOS[area.slug] ? (
+                    <Image
+                      src={AREA_PHOTOS[area.slug].url}
+                      alt={AREA_PHOTOS[area.slug].alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <Skyline variant={style.variant} />
+                  )}
                 </span>
                 <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/60 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
                   <PinBadge color={style.pin} size={11} />
