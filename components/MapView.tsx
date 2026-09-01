@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Cafe } from "@/lib/cafes";
@@ -41,6 +41,29 @@ export default function MapView({
   // it directly breaks positioning and sends the pin flying to the map's corner.
   // Hover/selected scaling is applied to this inner wrapper instead.
   const innerElsRef = useRef<Record<string, HTMLSpanElement>>({});
+  const onSelectRef = useRef(onSelect);
+  onSelectRef.current = onSelect;
+  const selectedSlugRef = useRef(selectedSlug);
+  selectedSlugRef.current = selectedSlug;
+  const cafesRef = useRef(cafes);
+  cafesRef.current = cafes;
+  const [mapReady, setMapReady] = useState(false);
+
+  function fitToCafes(list: Cafe[], opts?: { duration?: number }) {
+    const map = mapRef.current;
+    if (!map || list.length === 0) return;
+    const bounds = list.reduce(
+      (b, c) => b.extend([c.longitude, c.latitude]),
+      new maplibregl.LngLatBounds([list[0].longitude, list[0].latitude], [list[0].longitude, list[0].latitude])
+    );
+    map.fitBounds(bounds, {
+      padding: 60,
+      maxZoom: 14,
+      pitch: 55,
+      bearing: -12,
+      duration: opts?.duration ?? 600,
+    });
+  }
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -64,7 +87,14 @@ export default function MapView({
     const canvas = map.getCanvas();
     canvas.style.filter = "sepia(0.35) saturate(0.85) brightness(1.04) contrast(0.96)";
 
-    const resizeObserver = new ResizeObserver(() => map.resize());
+    const resizeObserver = new ResizeObserver(() => {
+      map.resize();
+      // A container resize (e.g. the list panel's content height changing when
+      // switching area filters) can leave the WebGL canvas visually blank even
+      // though resize() reports the same pixel size. Force a redraw so the
+      // basemap always reappears.
+      map.triggerRepaint();
+    });
     resizeObserver.observe(containerRef.current);
 
     map.on("load", () => {
@@ -93,51 +123,7 @@ export default function MapView({
         );
       }
 
-      cafes.forEach((cafe) => {
-        const color = scoreColor(cafe.workability);
-
-        const el = document.createElement("button");
-        el.setAttribute("aria-label", cafe.name);
-        el.style.width = "30px";
-        el.style.height = "38px";
-        el.style.cursor = "pointer";
-        el.style.background = "transparent";
-        el.style.border = "none";
-        el.style.padding = "0";
-
-        const inner = document.createElement("span");
-        inner.style.display = "block";
-        inner.style.width = "100%";
-        inner.style.height = "100%";
-        inner.style.transformOrigin = "bottom center";
-        inner.style.transition = "transform 0.15s ease";
-        inner.innerHTML = pinSvg(color);
-        el.appendChild(inner);
-
-        el.addEventListener("mouseenter", () => {
-          if (el.dataset.selected !== "true") inner.style.transform = "scale(1.15)";
-        });
-        el.addEventListener("mouseleave", () => {
-          if (el.dataset.selected !== "true") inner.style.transform = "scale(1)";
-        });
-
-        const popup = new maplibregl.Popup({ offset: 20, closeButton: false }).setHTML(
-          `<div style="font-family: var(--font-inter, sans-serif); min-width:180px">
-            <div style="font-weight:600;font-size:13.5px">${cafe.name}</div>
-            <div style="font-size:11px;opacity:.6;margin-top:2px">${cafe.neighborhood}</div>
-            <div style="font-size:11px;margin-top:6px;opacity:.85">Workability ${cafe.workability !== null ? `${cafe.workability.toFixed(1)}/5` : "too thin to score"}</div>
-          </div>`
-        );
-
-        const marker = new maplibregl.Marker({ element: el, anchor: "bottom" })
-          .setLngLat([cafe.longitude, cafe.latitude])
-          .setPopup(popup)
-          .addTo(map);
-
-        el.addEventListener("click", () => onSelect?.(cafe.slug));
-        markersRef.current[cafe.slug] = marker;
-        innerElsRef.current[cafe.slug] = inner;
-      });
+      setMapReady(true);
     });
 
     return () => {
@@ -147,6 +133,78 @@ export default function MapView({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Keep the markers on the map in sync with whichever cafes are currently
+  // being shown (e.g. after switching the area filter), instead of only ever
+  // reflecting whatever list was passed in on first mount.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+
+    const nextSlugs = new Set(cafes.map((c) => c.slug));
+    for (const slug of Object.keys(markersRef.current)) {
+      if (!nextSlugs.has(slug)) {
+        markersRef.current[slug].remove();
+        delete markersRef.current[slug];
+        delete innerElsRef.current[slug];
+      }
+    }
+
+    cafes.forEach((cafe) => {
+      if (markersRef.current[cafe.slug]) return;
+
+      const color = scoreColor(cafe.workability);
+      const el = document.createElement("button");
+      el.setAttribute("aria-label", cafe.name);
+      el.style.width = "30px";
+      el.style.height = "38px";
+      el.style.cursor = "pointer";
+      el.style.background = "transparent";
+      el.style.border = "none";
+      el.style.padding = "0";
+
+      const inner = document.createElement("span");
+      inner.style.display = "block";
+      inner.style.width = "100%";
+      inner.style.height = "100%";
+      inner.style.transformOrigin = "bottom center";
+      inner.style.transition = "transform 0.15s ease";
+      inner.innerHTML = pinSvg(color);
+      el.appendChild(inner);
+
+      el.addEventListener("mouseenter", () => {
+        if (el.dataset.selected !== "true") inner.style.transform = "scale(1.15)";
+      });
+      el.addEventListener("mouseleave", () => {
+        if (el.dataset.selected !== "true") inner.style.transform = "scale(1)";
+      });
+
+      const popup = new maplibregl.Popup({ offset: 20, closeButton: false }).setHTML(
+        `<div style="font-family: var(--font-inter, sans-serif); min-width:180px">
+          <div style="font-weight:600;font-size:13.5px">${cafe.name}</div>
+          <div style="font-size:11px;opacity:.6;margin-top:2px">${cafe.neighborhood}</div>
+          <div style="font-size:11px;margin-top:6px;opacity:.85">Workability ${cafe.workability !== null ? `${cafe.workability.toFixed(1)}/5` : "too thin to score"}</div>
+        </div>`
+      );
+
+      const marker = new maplibregl.Marker({ element: el, anchor: "bottom" })
+        .setLngLat([cafe.longitude, cafe.latitude])
+        .setPopup(popup)
+        .addTo(map);
+
+      el.addEventListener("click", () => onSelectRef.current?.(cafe.slug));
+      markersRef.current[cafe.slug] = marker;
+      innerElsRef.current[cafe.slug] = inner;
+    });
+
+    // Frame the map around whichever cafes are currently shown, so switching
+    // an area filter doesn't leave the pins scattered off-screen. Skipped
+    // while a cafe is selected, since that has its own closer flyTo.
+    if (!selectedSlugRef.current) {
+      fitToCafes(cafes);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cafes, mapReady]);
 
   useEffect(() => {
     Object.entries(innerElsRef.current).forEach(([slug, inner]) => {
@@ -167,5 +225,15 @@ export default function MapView({
     });
   }, [selectedSlug, cafes]);
 
-  return <div ref={containerRef} className="h-full w-full" />;
+  return (
+    <div className="relative h-full w-full">
+      <div ref={containerRef} className="h-full w-full" />
+      <button
+        onClick={() => fitToCafes(cafesRef.current, { duration: 800 })}
+        className="wa-mono absolute left-3 top-3 z-10 rounded-full border border-paper/15 bg-ink/85 px-3 py-1.5 text-paper/70 shadow-sm backdrop-blur-sm transition-colors hover:text-paper"
+      >
+        Reset view
+      </button>
+    </div>
+  );
 }

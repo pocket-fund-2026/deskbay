@@ -30,9 +30,14 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
   return (
     <main className="flex h-dvh flex-col bg-ink text-paper">
       <header className="flex items-center justify-between gap-4 border-b border-paper/10 px-5 py-3.5">
-        <Link href="/" className="font-display text-[18px] tracking-tight">
-          desk<em className="font-semibold not-italic italic">bay</em>
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/" className="font-display text-[18px] tracking-tight">
+            desk<em className="font-semibold not-italic italic">bay</em>
+          </Link>
+          <Link href="/blog" className="wa-mono hidden text-paper/45 hover:text-paper md:inline">
+            Blog
+          </Link>
+        </div>
         <h1 className="sr-only">
           {area === "all" ? "Mumbai" : AREAS[area].name} — cafes you can work from
         </h1>

@@ -60,9 +60,16 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <div className="mx-auto max-w-2xl">
-        <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-          ← Deskbay
-        </Link>
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+            ← Deskbay
+          </Link>
+          <nav className="wa-mono flex gap-4 text-paper/45">
+            <Link href="/mumbai" className="hover:text-paper">The map</Link>
+            <Link href="/blog" className="hover:text-paper">Blog</Link>
+            <Link href="/submit" className="hover:text-paper">Submit a cafe</Link>
+          </nav>
+        </div>
 
         <h1 className="font-display mt-6 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           Find a cafe you can actually work from.
