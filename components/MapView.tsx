@@ -156,7 +156,11 @@ export default function MapView({
       const color = scoreColor(cafe.workability);
       const el = document.createElement("button");
       el.setAttribute("aria-label", cafe.name);
-      el.style.position = "relative";
+      // Do NOT set el.style.position here: MapLibre applies its own
+      // `position: absolute` via the .maplibregl-marker CSS class to place
+      // this element at the cafe's lng/lat. An inline position style (even
+      // "relative") has higher specificity and silently overrides that,
+      // knocking every marker out of its mapped position.
       el.style.width = "30px";
       el.style.height = "38px";
       el.style.cursor = "pointer";
