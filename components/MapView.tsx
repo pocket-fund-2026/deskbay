@@ -113,6 +113,24 @@ export default function MapView({
         (l) => l.type === "symbol" && (l.layout as { "text-field"?: unknown })?.["text-field"]
       )?.id;
 
+      // The stock style ships every shop/amenity as a labelled icon, which
+      // at city zoom reads as visual noise competing with our own cafe
+      // pins. Mute it instead of removing it outright, so streets still
+      // orient the reader without shouting over the map's real subject.
+      for (const l of layers) {
+        if (/poi|shield|transit|railway-label/i.test(l.id) && (l.type === "symbol" || l.type === "circle")) {
+          try {
+            map.setPaintProperty(l.id, l.type === "symbol" ? "icon-opacity" : "circle-opacity", 0.35);
+            if (l.type === "symbol") map.setPaintProperty(l.id, "text-opacity", 0.45);
+          } catch {
+            /* layer doesn't support this paint property; skip */
+          }
+        }
+      }
+
+      // Real depth instead of a flat dark silhouette: a vertical gradient
+      // shades each building darker at street level and warmer near the
+      // roofline, like it's catching low light.
       if (map.getSource("openmaptiles")) {
         map.addLayer(
           {
@@ -120,17 +138,39 @@ export default function MapView({
             source: "openmaptiles",
             "source-layer": "building",
             type: "fill-extrusion",
-            minzoom: 13,
+            minzoom: 12.5,
             paint: {
-              "fill-extrusion-color": "#3a332c",
+              "fill-extrusion-color": [
+                "interpolate",
+                ["linear"],
+                ["coalesce", ["get", "render_height"], 8],
+                0,
+                "#241811",
+                40,
+                "#5c3f28",
+                120,
+                "#8a5a35",
+              ],
               "fill-extrusion-height": ["coalesce", ["get", "render_height"], 8],
               "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0],
-              "fill-extrusion-opacity": 0.9,
+              "fill-extrusion-opacity": 0.92,
+              "fill-extrusion-vertical-gradient": true,
             },
           },
           labelLayerId
         );
       }
+
+      // A warm dusk sky for the tilted 3D view instead of flat void above
+      // the horizon.
+      map.setSky({
+        "sky-color": "#cfa876",
+        "sky-horizon-blend": 0.5,
+        "horizon-color": "#f2e2c4",
+        "horizon-fog-blend": 0.6,
+        "fog-color": "#e9d7b2",
+        "fog-ground-blend": 0.4,
+      });
 
       // Cafes are shown as a clustered point source instead of one DOM marker
       // per cafe: with 100+ cafes, individual pins overlapped into an
