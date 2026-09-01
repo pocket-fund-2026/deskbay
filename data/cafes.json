@@ -2073,7 +2073,7 @@
     {
       "slug": "third-wave-coffee-lokhandwala-lokhandwala",
       "name": "Third Wave Coffee — Lokhandwala",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Lokhandwala, Andheri West",
       "address": "Ground floor, Green Ville CHS, Lokhandwala, Opposite Samarth Vaibhav, Andheri West, Mumbai 400053",
       "latitude": 19.1379,
@@ -2127,7 +2127,7 @@
     {
       "slug": "third-wave-coffee-versova-versova",
       "name": "Third Wave Coffee — Versova",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Versova, Andheri West",
       "address": "Spring Leaf Cooperative Housing Society, JP Road, Versova, Opposite Nana Nani Garden, Andheri West, Mumbai 400061",
       "latitude": 19.1317,
@@ -2180,7 +2180,7 @@
     {
       "slug": "third-wave-coffee-juhu-juhu",
       "name": "Third Wave Coffee — Juhu",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "Gate B, 27 Janki Kutir, Opposite Prithvi Theatre, Juhu Church Road, Juhu, Mumbai 400080",
       "latitude": 19.1075,
@@ -2229,7 +2229,7 @@
     {
       "slug": "third-wave-coffee-santacruz-west-santacruz-west",
       "name": "Third Wave Coffee — Santacruz West",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Santacruz West",
       "address": "6th Floor, Krishna Curve, Crossword, Junction of Linking Road & Juhu Tara Road, Juhu Garden, Santacruz West, Mumbai 400054",
       "latitude": 19.0806,
@@ -2282,7 +2282,7 @@
     {
       "slug": "third-wave-coffee-vile-parle-east-vile-parle-east",
       "name": "Third Wave Coffee — Vile Parle East",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Vile Parle East",
       "address": "178, Ground Floor, Vilco Centre, Subhash Road, Opposite Garware House, Vile Parle East, Mumbai 400057",
       "latitude": 19.0997,
@@ -2384,7 +2384,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-lokhandwala-lokhandwala",
       "name": "Blue Tokai Coffee Roasters — Lokhandwala",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Lokhandwala, Andheri West",
       "address": "Shop No 18, Ground Floor, Samartha Vaibhav CHS, Lokhandwala, Andheri West, Mumbai",
       "latitude": 19.1379,
@@ -2436,7 +2436,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-andheri-east-andheri-east",
       "name": "Blue Tokai Coffee Roasters — Andheri East",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Andheri East",
       "address": "Unit No G/2, Amba Shanti Chambers, Andheri Kurla Road, Andheri East, Mumbai",
       "latitude": 19.1197,
@@ -2485,7 +2485,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-malad-west-malad-west",
       "name": "Blue Tokai Coffee Roasters — Malad West",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Malad West",
       "address": "Link Road, Malad West, Mumbai",
       "latitude": 19.1868,
@@ -2537,7 +2537,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-khar-west-khar-west",
       "name": "Blue Tokai Coffee Roasters — Khar West",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Khar West",
       "address": "14th Road, Khar West, Mumbai",
       "latitude": 19.0728,
@@ -2589,7 +2589,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-powai-powai",
       "name": "Blue Tokai Coffee Roasters — Powai",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Powai",
       "address": "No G/01, Ventura Building, Central Avenue, Near Hiranandani Business Park, Powai, Mumbai",
       "latitude": 19.1197,
@@ -2841,7 +2841,7 @@
     {
       "slug": "leaping-windows-cafe-versova",
       "name": "Leaping Windows Cafe",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Versova, Andheri West",
       "address": "Yari Road, Versova, Andheri West, Mumbai",
       "latitude": 19.1317,
@@ -2895,7 +2895,7 @@
     {
       "slug": "ettarra-coffee-house-juhu-juhu",
       "name": "Ettarra Coffee House — Juhu",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "148B, Juhu Residency Boutique Hotel, Juhu Tara Road, Juhu, Mumbai",
       "latitude": 19.1075,
@@ -2947,7 +2947,7 @@
     {
       "slug": "ettarra-coffee-house-andheri-andheri-west",
       "name": "Ettarra Coffee House — Andheri",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Andheri West",
       "address": "Unit No. 5 Killfire, Laxmi Mall, near Fun Republic Road, Andheri West, Mumbai 400053",
       "latitude": 19.1364,
@@ -2996,7 +2996,7 @@
     {
       "slug": "august-cafe-andheri-west",
       "name": "August Cafe",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Andheri West",
       "address": "Andheri West, Mumbai",
       "latitude": 19.1364,
@@ -3045,7 +3045,7 @@
     {
       "slug": "bombay-to-barcelona-cafe-marol",
       "name": "Bombay To Barcelona Cafe",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Marol, Andheri East",
       "address": "Marol, Andheri East, Mumbai",
       "latitude": 19.1197,
@@ -3094,7 +3094,7 @@
     {
       "slug": "silk-road-coffee-company-versova",
       "name": "Silk Road Coffee Company",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Versova, Andheri West",
       "address": "Versova, Andheri West, Mumbai",
       "latitude": 19.1317,
@@ -3146,7 +3146,7 @@
     {
       "slug": "fable-cafe-and-bar-juhu-juhu",
       "name": "Fable Cafe and Bar — Juhu",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "Ground Floor, Emerald Hotel, Opposite Sea Princess Hotel, Juhu Tara Road, Juhu, Mumbai",
       "latitude": 19.1075,
@@ -3198,7 +3198,7 @@
     {
       "slug": "the-homemade-cafe-and-bar-juhu",
       "name": "The Homemade Cafe & Bar",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "Opposite Mahesh Lunch Home, Juhu Tara Road, Juhu, Mumbai 400049",
       "latitude": 19.1075,
@@ -3247,7 +3247,7 @@
     {
       "slug": "lotus-cafe-juhu",
       "name": "Lotus Cafe",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "JW Marriott, Juhu Tara Road, Uditi Tarang Housing Colony, Juhu, Mumbai",
       "latitude": 19.1075,
@@ -3296,7 +3296,7 @@
     {
       "slug": "sequel-bistro-and-juice-bar-khar-west",
       "name": "Sequel Bistro & Juice Bar",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Khar West",
       "address": "Shop No 2, Solace Building, 33rd Road, Khar West, Mumbai 400050",
       "latitude": 19.0728,
@@ -3345,7 +3345,7 @@
     {
       "slug": "grandmama-s-cafe-juhu-juhu",
       "name": "Grandmama's Cafe — Juhu",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Juhu",
       "address": "Juhu, Mumbai",
       "latitude": 19.1075,
@@ -3500,7 +3500,7 @@
     {
       "slug": "grandmama-s-cafe-ghatkopar-west-ghatkopar-west",
       "name": "Grandmama's Cafe — Ghatkopar West",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Ghatkopar West",
       "address": "Ground Floor, R City Mall, Ghatkopar West, Mumbai",
       "latitude": 19.0864,
@@ -3552,7 +3552,7 @@
     {
       "slug": "grandmama-s-cafe-chembur-chembur",
       "name": "Grandmama's Cafe — Chembur",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Chembur",
       "address": "Chembur, Mumbai",
       "latitude": 19.0522,
@@ -3757,7 +3757,7 @@
     {
       "slug": "coffee-capital-chembur",
       "name": "Coffee Capital",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Chembur",
       "address": "Shop A-4, A-Wing, Hubtown Seasons, RK Marg, Near Jain Temple, Chembur, Mumbai",
       "latitude": 19.0522,
@@ -3806,7 +3806,7 @@
     {
       "slug": "aroma-s-cafe-powai",
       "name": "Aroma's Cafe",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Powai",
       "address": "Hiranandani Gardens, Powai, Mumbai",
       "latitude": 19.1197,
@@ -3859,7 +3859,7 @@
     {
       "slug": "pomona-cafe-powai",
       "name": "Pomona Cafe",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Powai",
       "address": "Shop No 121, First Floor, Powai Plaza, Hiranandani Business Park, Powai, Mumbai 400076",
       "latitude": 19.1197,
@@ -3908,7 +3908,7 @@
     {
       "slug": "fable-cafe-and-bar-powai-powai",
       "name": "Fable Cafe and Bar — Powai",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Powai",
       "address": "Powai, Mumbai",
       "latitude": 19.1197,
@@ -3960,7 +3960,7 @@
     {
       "slug": "fable-cafe-and-bar-andheri-lokhandwala-lokhandwala",
       "name": "Fable Cafe and Bar — Andheri Lokhandwala",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Lokhandwala, Andheri West",
       "address": "Lokhandwala, Andheri West, Mumbai",
       "latitude": 19.1379,
@@ -4162,7 +4162,7 @@
     {
       "slug": "starbucks-andheri-east-chakala-chakala",
       "name": "Starbucks — Andheri East (Chakala)",
-      "area": "western-suburbs",
+      "area": "andheri-juhu",
       "neighborhood": "Chakala, Andheri East",
       "address": "Chakala, Andheri Kurla Road, Hanuman Nagar, Near Andheri East Station, Mumbai 400093",
       "latitude": 19.1136,
@@ -4897,7 +4897,7 @@
     {
       "slug": "third-wave-coffee-emerald-mall-borivali-roshan-nagar",
       "name": "Third Wave Coffee — Emerald Mall, Borivali",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Roshan Nagar, Borivali West",
       "address": "Shop No 4-5, Ground Floor, Emerald, B-Wing, Final Plot No 90, Roshan Nagar, Borivali West, Mumbai 400092",
       "latitude": 19.2317,
@@ -4948,7 +4948,7 @@
     {
       "slug": "third-wave-coffee-mahavir-nagar-mahavir-nagar",
       "name": "Third Wave Coffee — Mahavir Nagar",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Mahavir Nagar, Kandivali West",
       "address": "Shop No 2C, Ground Floor, V-Souk, Sai Baba Extension Road, Mahavir Nagar, Kandivali West, opposite Sachin Tendulkar Sports Club, Mumbai",
       "latitude": 19.2003,
@@ -5000,7 +5000,7 @@
     {
       "slug": "third-wave-coffee-thakur-village-thakur-village",
       "name": "Third Wave Coffee — Thakur Village",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Thakur Village, Kandivali East",
       "address": "Shop No 7, Viceroy Savana, 120 Feet Road, Dathani Park, Thakur Village, Kandivali East, Mumbai 400101",
       "latitude": 19.2095,
@@ -5051,7 +5051,7 @@
     {
       "slug": "third-wave-coffee-dalvi-nagar-borivali-dalvi-nagar",
       "name": "Third Wave Coffee — Dalvi Nagar, Borivali",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Dalvi Nagar, Borivali West",
       "address": "Shop No 213, Ground Floor, Bhattad Tower, R.M. Bhattad Road, Dalvi Nagar, opposite Kora Kendra Ground, Borivali West, Mumbai 400092",
       "latitude": 19.2312,
@@ -5102,7 +5102,7 @@
     {
       "slug": "kaffeine-shastri-nagar",
       "name": "Kaffeine",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Shastri Nagar, Borivali West",
       "address": "Shop No 1, Bathia Apartments, S.V. Road, near Vijay Sales, Shastri Nagar, Dattani Nagar, Borivali West, Mumbai",
       "latitude": 19.2298,
@@ -5154,7 +5154,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-goregaon-east-goregaon-east",
       "name": "Blue Tokai Coffee Roasters — Goregaon East",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Goregaon East",
       "address": "SN 2, Om Shree Ganesh Building, Churi Wadi, Vishveshwar Nagar Road, opposite ICICI Bank, Goregaon East, Mumbai",
       "latitude": 19.1663,
@@ -5206,7 +5206,7 @@
     {
       "slug": "kruti-coffee-siddharth-nagar",
       "name": "Kruti Coffee",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "Siddharth Nagar, Goregaon West",
       "address": "Shop 5 & 6, Plot R/6, A Wing, Ekta Chronicle, Siddharth Nagar, 9th & 2nd Road, Goregaon West, Mumbai",
       "latitude": 19.1653,
@@ -5255,7 +5255,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-mulund-mulund-west",
       "name": "Blue Tokai Coffee Roasters — Mulund",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Mulund West",
       "address": "Shop No 56 & 57, Ground Floor, Runwal Greens, Mulund-Goregaon Link Road, Mulund West, Mumbai 400078",
       "latitude": 19.1726,
@@ -5304,7 +5304,7 @@
     {
       "slug": "third-wave-coffee-bhandup-west-bhandup-west",
       "name": "Third Wave Coffee — Bhandup West",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Bhandup West",
       "address": "Shop No 40-4, Ground Floor, R-Galleria, Runwal Greens, Mulund-Goregaon Link Road, Bhandup West, Mumbai",
       "latitude": 19.1436,
@@ -5353,7 +5353,7 @@
     {
       "slug": "love-and-latte-mulund-mulund-west",
       "name": "Love & Latte — Mulund",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Mulund West",
       "address": "Lal Bahadur Shastri Road, Mulund West, Mumbai",
       "latitude": 19.1726,
@@ -5705,7 +5705,7 @@
     {
       "slug": "cogs-and-brews-cafe-hiranandani-gardens",
       "name": "Cogs and Brews Cafe",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Hiranandani Gardens, Powai",
       "address": "Supreme Business Park, S2 & S3, Stilt 2, A Wing, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",
       "latitude": 19.1176,
@@ -5754,7 +5754,7 @@
     {
       "slug": "bombay-island-coffee-company-vikhroli-vikhroli-east",
       "name": "Bombay Island Coffee Company — Vikhroli",
-      "area": "central-mumbai",
+      "area": "eastern-suburbs",
       "neighborhood": "Vikhroli East",
       "address": "Godrej One, Shop #4, Tower C, Retail Street, The Trees, Pirojshanagar, Vikhroli East, Mumbai 400079",
       "latitude": 19.109,
@@ -5852,7 +5852,7 @@
     {
       "slug": "blue-tokai-coffee-roasters-ic-colony-borivali-ic-colony",
       "name": "Blue Tokai Coffee Roasters — IC Colony, Borivali",
-      "area": "western-suburbs",
+      "area": "malad-borivali",
       "neighborhood": "IC Colony, Borivali West",
       "address": "Shop No 2, Ground Floor, Acropolis Apartment, Marian Colony, IC Colony, Near Laxman Mhatre Road, Borivali West, Mumbai 400103",
       "latitude": 19.241,

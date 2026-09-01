@@ -11,7 +11,16 @@ export type CafeScores = {
 export type Cafe = {
   slug: string;
   name: string;
-  area: "bandra" | "south-bombay" | "western-suburbs" | "central-mumbai" | "bkc" | "thane" | "navi-mumbai";
+  area:
+    | "bandra"
+    | "south-bombay"
+    | "andheri-juhu"
+    | "malad-borivali"
+    | "central-mumbai"
+    | "eastern-suburbs"
+    | "bkc"
+    | "thane"
+    | "navi-mumbai";
   neighborhood: string;
   address: string;
   latitude: number;
@@ -54,17 +63,29 @@ export const AREAS = {
       "Stone arcades, Irani cafes that have kept the same tables for a century, and new roasters in the old banking streets.",
     streets: "Fort · Colaba · Kala Ghoda · Ballard Estate",
   },
-  "western-suburbs": {
-    slug: "western-suburbs",
-    name: "Western Suburbs",
-    description: "Chains and specialty roasters across the western lanes. Directory listings, not yet scored.",
-    streets: "Andheri · Juhu · Khar · Santacruz · Versova · Malad",
+  "andheri-juhu": {
+    slug: "andheri-juhu",
+    name: "Andheri & Juhu",
+    description: "Chains and specialty roasters through Andheri, Juhu and Khar. Directory listings, not yet scored.",
+    streets: "Andheri · Juhu · Khar · Santacruz · Versova",
+  },
+  "malad-borivali": {
+    slug: "malad-borivali",
+    name: "Malad & Borivali",
+    description: "The far western suburbs' own cafe stretch, from Goregaon up to Borivali. Directory listings, not yet scored.",
+    streets: "Malad · Goregaon · Kandivali · Borivali",
   },
   "central-mumbai": {
     slug: "central-mumbai",
     name: "Central Mumbai",
-    description: "Mill-district roasters and suburban outposts. Directory listings, not yet scored.",
-    streets: "Worli · Lower Parel · Dadar · Matunga · Powai · Chembur",
+    description: "Mill-district roasters and old-Bombay cafes in the middle of the city. Directory listings, not yet scored.",
+    streets: "Worli · Lower Parel · Dadar · Matunga · Mahim",
+  },
+  "eastern-suburbs": {
+    slug: "eastern-suburbs",
+    name: "Eastern Suburbs",
+    description: "Powai's lakeside cafes and the cafe scene spreading through the eastern belt. Directory listings, not yet scored.",
+    streets: "Powai · Ghatkopar · Chembur · Mulund · Vikhroli",
   },
   bkc: {
     slug: "bkc",

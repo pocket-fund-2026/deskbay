@@ -21,6 +21,8 @@ const AREA_STYLES: { variant: SkylineVariant; pin: string }[] = [
   { variant: "plum", pin: "#b581ae" },
   { variant: "slate", pin: "#7d8fd6" },
   { variant: "amber", pin: "#d9a03f" },
+  { variant: "rust", pin: "#c66b4a" },
+  { variant: "ocean", pin: "#5a9aa8" },
 ];
 
 const EDITOR_PICKS = [

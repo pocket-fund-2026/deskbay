@@ -20,6 +20,12 @@ const PALETTES = {
   amber: {
     sky: "linear-gradient(180deg,#3d2f1c 0%,#6b4f26 24%,#a3792f 46%,#40331e 72%,#161209 100%)",
   },
+  rust: {
+    sky: "linear-gradient(180deg,#3f2620 0%,#6e3a2c 24%,#a45338 46%,#42291f 72%,#170f0b 100%)",
+  },
+  ocean: {
+    sky: "linear-gradient(180deg,#1e323a 0%,#2c4e58 24%,#3f7583 46%,#233a41 72%,#0f1618 100%)",
+  },
 };
 
 export type SkylineVariant = keyof typeof PALETTES;
