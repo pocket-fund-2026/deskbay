@@ -6,12 +6,16 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import type { Cafe } from "@/lib/cafes";
 import { CITY } from "@/lib/cafes";
 
+// Deliberately more saturated than the site's muted palette elsewhere: these
+// render as small map-layer dots, filtered by the canvas's warm cast, so a
+// gentler color would wash out and become indistinguishable from its
+// neighbors. Contrast here matters more than matching the brand tone.
 function scoreColor(score: number | null) {
-  if (score === null) return "#6b6259";
-  if (score >= 4) return "#7fb069";
-  if (score >= 3) return "#d97b3f";
-  if (score >= 2) return "#c85c3c";
-  return "#8a6a5a";
+  if (score === null) return "#9c9084";
+  if (score >= 4) return "#3f9e4f";
+  if (score >= 3) return "#e08a2e";
+  if (score >= 2) return "#d64a3a";
+  return "#8a4a3a";
 }
 
 function toGeoJSON(cafes: Cafe[]): GeoJSON.FeatureCollection {
@@ -89,7 +93,12 @@ export default function MapView({
     // with the site's cream/espresso palette instead of its default bright
     // greens and blues.
     const canvas = map.getCanvas();
-    canvas.style.filter = "sepia(0.35) saturate(0.85) brightness(1.04) contrast(0.96)";
+    // Lighter than before: the cafe markers are now real map layers on this
+    // same canvas (not separate DOM elements), so a heavy sepia/desaturate
+    // filter here was also muddying their green/orange/red workability
+    // colors into near-identical browns. This keeps the warm cast on the
+    // basemap while marker colors stay legible.
+    canvas.style.filter = "sepia(0.15) saturate(1.05) brightness(1.02) contrast(0.98)";
 
     const resizeObserver = new ResizeObserver(() => {
       map.resize();
