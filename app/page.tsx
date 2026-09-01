@@ -5,6 +5,7 @@ import { AREAS, CAFES, FACTORS, cafesByArea } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
 import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
+import Logo from "@/components/Logo";
 
 const AREA_STYLES: { variant: SkylineVariant; pin: string }[] = [
   { variant: "warm", pin: "#d97b3f" },
@@ -37,7 +38,8 @@ export default function HomePage() {
   return (
     <main className="wa-grid flex min-h-dvh flex-col bg-ink text-paper">
       <header className="wa-rise relative z-10 flex items-baseline justify-between gap-4 px-6 pt-7 sm:px-10">
-        <div className="font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
+        <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
+          <Logo size={26} />
           desk<em className="font-semibold not-italic italic">bay</em>
         </div>
         <Link

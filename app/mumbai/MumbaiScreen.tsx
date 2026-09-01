@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { AREAS, CAFES, type AreaSlug } from "@/lib/cafes";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
+import Logo from "@/components/Logo";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
@@ -31,7 +32,8 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
     <main className="flex h-dvh flex-col bg-ink text-paper">
       <header className="flex items-center justify-between gap-4 border-b border-paper/10 px-5 py-3.5">
         <div className="flex items-center gap-4">
-          <Link href="/" className="font-display text-[18px] tracking-tight">
+          <Link href="/" className="flex items-center gap-1.5 font-display text-[18px] tracking-tight">
+            <Logo size={20} />
             desk<em className="font-semibold not-italic italic">bay</em>
           </Link>
           <Link href="/blog" className="wa-mono hidden text-paper/45 hover:text-paper md:inline">
