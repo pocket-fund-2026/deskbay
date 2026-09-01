@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #131110;
-  --color-paper: #f6f1e9;
-  --color-accent: #d97b3f;
+  /* "ink" is now the light coffee-with-milk background; "paper" is now the
+     dark espresso text/border color. Names kept as-is (still widely used as
+     bg-ink / text-paper throughout) so the whole app relights from these two
+     values without touching every component. */
+  --color-ink: #f7efe0;
+  --color-paper: #2b1810;
+  --color-accent: #b5651d;
 }
 
 @theme inline {
@@ -16,7 +20,7 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -37,8 +41,8 @@ body {
 
 .wa-grid {
   background-image:
-    linear-gradient(rgba(246, 241, 233, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(246, 241, 233, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(43, 24, 16, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 24, 16, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
@@ -51,7 +55,7 @@ body {
   font-size: 13.5px;
   font-weight: 500;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  border: 1px solid rgba(246, 241, 233, 0.16);
+  border: 1px solid rgba(43, 24, 16, 0.16);
 }
 
 .wa-btn:hover {
@@ -99,16 +103,16 @@ body {
 }
 
 .maplibregl-popup-content {
-  background: #1c1815 !important;
+  background: var(--color-ink) !important;
   color: var(--color-paper) !important;
   border-radius: 12px !important;
-  border: 1px solid rgba(246, 241, 233, 0.14);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(43, 24, 16, 0.14);
+  box-shadow: 0 12px 32px rgba(43, 24, 16, 0.18);
 }
 
 .maplibregl-popup-tip {
-  border-top-color: #1c1815 !important;
-  border-bottom-color: #1c1815 !important;
+  border-top-color: var(--color-ink) !important;
+  border-bottom-color: var(--color-ink) !important;
 }
 
 .maplibregl-popup-close-button {

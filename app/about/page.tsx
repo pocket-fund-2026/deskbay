@@ -87,7 +87,7 @@ export default function AboutPage() {
           them the same way.
         </p>
 
-        <ul className="mt-5 divide-y divide-white/10 overflow-hidden rounded-xl border border-white/12">
+        <ul className="mt-5 divide-y divide-paper/10 overflow-hidden rounded-xl border border-paper/12">
           {FACTORS.map((f) => (
             <li key={f.key} className="px-4 py-3.5">
               <div className="flex items-baseline justify-between gap-4">

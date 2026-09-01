@@ -14,12 +14,12 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "linear-gradient(160deg,#181512 0%,#2a2019 55%,#3a2a1c 100%)",
-          color: "#f6f1e9",
+          background: "linear-gradient(160deg,#f7efe0 0%,#f0e3cc 55%,#e8d5b3 100%)",
+          color: "#2b1810",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ fontSize: 30, letterSpacing: 4, textTransform: "uppercase", opacity: 0.55 }}>
+        <div style={{ fontSize: 30, letterSpacing: 4, textTransform: "uppercase", opacity: 0.6, color: "#b5651d" }}>
           Deskbay
         </div>
         <div

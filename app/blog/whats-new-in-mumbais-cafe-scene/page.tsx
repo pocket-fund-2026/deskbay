@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getPost } from "@/lib/blog";
 import { getCafe } from "@/lib/cafes";
+import CoffeeHero from "@/components/CoffeeHero";
 
 const SITE_URL = "https://deskbay-blue.vercel.app";
 const post = getPost("whats-new-in-mumbais-cafe-scene")!;
@@ -53,6 +54,10 @@ export default function Post() {
         <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           {post.title}
         </h1>
+
+        <div className="mt-6">
+          <CoffeeHero />
+        </div>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
           A roundup of real openings and expansions reported recently, plus where the city&apos;s
@@ -120,7 +125,7 @@ export default function Post() {
           and go.
         </p>
 
-        <div className="mt-9 rounded-xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="mt-9 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
           <p className="wa-mono mb-2 text-paper/40">Sources</p>
           <ul className="space-y-1.5 text-[13px] leading-relaxed text-paper/55">
             <li>

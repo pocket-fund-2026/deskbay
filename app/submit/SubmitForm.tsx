@@ -29,7 +29,7 @@ export default function SubmitForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-2 w-full rounded-lg border border-white/15 bg-white/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
+          className="mt-2 w-full rounded-lg border border-paper/15 bg-paper/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
           placeholder="e.g. Kaya Kalp Bakehouse"
         />
       </div>
@@ -42,7 +42,7 @@ export default function SubmitForm() {
           required
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          className="mt-2 w-full rounded-lg border border-white/15 bg-white/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
+          className="mt-2 w-full rounded-lg border border-paper/15 bg-paper/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
           placeholder="Street, neighborhood, Mumbai"
         />
       </div>
@@ -55,7 +55,7 @@ export default function SubmitForm() {
           rows={4}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
-          className="mt-2 w-full rounded-lg border border-white/15 bg-white/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
+          className="mt-2 w-full rounded-lg border border-paper/15 bg-paper/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
           placeholder="Wifi, outlets, seating, how long you've worked from there…"
         />
       </div>

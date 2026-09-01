@@ -8,7 +8,7 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
       <span className="wa-mono w-16 shrink-0 text-paper/40">{label}</span>
-      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
+      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-paper/10">
         {value !== null && (
           <div
             className="h-full rounded-full bg-accent"
@@ -37,7 +37,7 @@ export default function CafeCard({
       onClick={onSelect}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onSelect()}
       className={`w-full cursor-pointer rounded-xl border p-4 text-left transition-colors ${
-        active ? "border-accent/60 bg-white/[0.06]" : "border-white/10 hover:bg-white/[0.03]"
+        active ? "border-accent/60 bg-paper/[0.06]" : "border-paper/10 hover:bg-paper/[0.03]"
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -45,7 +45,7 @@ export default function CafeCard({
           <h3 className="font-display text-[17px] font-medium leading-snug">{cafe.name}</h3>
           <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
         </div>
-        <div className="shrink-0 rounded-lg border border-white/12 px-2 py-1 text-center">
+        <div className="shrink-0 rounded-lg border border-paper/12 px-2 py-1 text-center">
           <div className="font-display text-[15px] leading-none">
             {cafe.workability !== null ? cafe.workability.toFixed(1) : "–"}
           </div>
@@ -69,7 +69,7 @@ export default function CafeCard({
           {cafe.toggles.map((t) => (
             <span
               key={t}
-              className="wa-mono rounded-full border border-white/10 px-2 py-1 text-paper/50"
+              className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/50"
             >
               {t}
             </span>

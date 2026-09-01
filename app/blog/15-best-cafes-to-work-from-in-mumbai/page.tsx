@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CAFES } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
 import { getPost } from "@/lib/blog";
+import CoffeeHero from "@/components/CoffeeHero";
 
 const SITE_URL = "https://deskbay-blue.vercel.app";
 const post = getPost("15-best-cafes-to-work-from-in-mumbai")!;
@@ -57,6 +59,10 @@ export default function Post() {
           {post.title}
         </h1>
 
+        <div className="mt-6">
+          <CoffeeHero />
+        </div>
+
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
           This isn&apos;t a separate opinion piece — it&apos;s the top 15 out of the{" "}
           {CAFES.filter((c) => c.workability !== null).length} cafes we&apos;ve fully scored on
@@ -68,7 +74,7 @@ export default function Post() {
           {TOP_15.map((cafe, i) => {
             const t = tier(cafe.workability);
             return (
-              <li key={cafe.slug} className="border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
+              <li key={cafe.slug} className="border-t border-paper/10 pt-5 first:border-t-0 first:pt-0">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="wa-mono text-paper/35">#{i + 1}</p>
@@ -88,6 +94,18 @@ export default function Post() {
                     </span>
                   </div>
                 </div>
+                {cafe.images[0] && (
+                  <div className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
+                    <Image
+                      src={cafe.images[0].url}
+                      alt={cafe.images[0].alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 640px) 100vw, 640px"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{cafe.whyWeRecommend}</p>
                 <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1.5 inline-block text-paper/40 hover:text-paper">
                   Full profile and evidence →
@@ -97,7 +115,7 @@ export default function Post() {
           })}
         </ol>
 
-        <div className="mt-10 rounded-xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="mt-10 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
           <p className="text-[14px] leading-relaxed text-paper/65">
             Want the full picture, including the cafes that scored lower and why? See{" "}
             <Link href="/mumbai" className="underline hover:text-paper">the interactive map</Link>{" "}

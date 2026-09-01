@@ -29,14 +29,14 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
 
   return (
     <main className="flex h-dvh flex-col bg-ink text-paper">
-      <header className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-3.5">
+      <header className="flex items-center justify-between gap-4 border-b border-paper/10 px-5 py-3.5">
         <Link href="/" className="font-display text-[18px] tracking-tight">
           desk<em className="font-semibold not-italic italic">bay</em>
         </Link>
         <h1 className="sr-only">
           {area === "all" ? "Mumbai" : AREAS[area].name} — cafes you can work from
         </h1>
-        <div className="wa-mono flex gap-1 rounded-full border border-white/12 p-1 text-paper/50">
+        <div className="wa-mono flex gap-1 rounded-full border border-paper/12 p-1 text-paper/50">
           {(["all", ...Object.keys(AREAS)] as (AreaSlug | "all")[]).map((a) => (
             <button
               key={a}
@@ -52,12 +52,12 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
       </header>
 
       <div className="grid flex-1 grid-cols-1 overflow-hidden md:grid-cols-[380px_1fr]">
-        <div className="order-2 flex flex-col overflow-y-auto border-white/10 md:order-1 md:border-r">
+        <div className="order-2 flex flex-col overflow-y-auto border-paper/10 md:order-1 md:border-r">
           {selectedCafe ? (
             <CafeDetailPanel cafe={selectedCafe} onBack={() => setSelected(null)} />
           ) : (
             <>
-              <div className="border-b border-white/10 px-4 py-3">
+              <div className="border-b border-paper/10 px-4 py-3">
                 <FactorLegend />
               </div>
               <div className="space-y-2.5 p-3">

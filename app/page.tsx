@@ -58,13 +58,13 @@ export default function HomePage() {
               <Link
                 key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
-                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-white/12 sm:aspect-[16/10] lg:aspect-[4/3]"
+                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 sm:aspect-[16/10] lg:aspect-[4/3]"
                 style={{ animationDelay: `${i * 90}ms` }}
               >
                 <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
                   <Skyline variant={style.variant} />
                 </span>
-                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-white/15 bg-ink/60 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
+                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/60 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
                   <PinBadge color={style.pin} size={11} />
                   {count}
                 </span>
@@ -106,7 +106,7 @@ export default function HomePage() {
                 <Link
                   key={cafe.slug}
                   href={`/mumbai?area=${cafe.area}`}
-                  className="rounded-xl border border-white/12 p-4 transition-colors hover:bg-white/[0.04]"
+                  className="rounded-xl border border-paper/12 p-4 transition-colors hover:bg-paper/[0.04]"
                 >
                   <div className="flex items-center gap-2">
                     <PinBadge color={t.color} />
@@ -129,7 +129,7 @@ export default function HomePage() {
               <Link
                 key={cafe.slug}
                 href={`/mumbai/${cafe.slug}`}
-                className="group overflow-hidden rounded-xl border border-white/12 transition-colors hover:bg-white/[0.04]"
+                className="group overflow-hidden rounded-xl border border-paper/12 transition-colors hover:bg-paper/[0.04]"
               >
                 {cafe.images[0] && (
                   <div className="relative aspect-[16/10] overflow-hidden">
@@ -154,7 +154,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <footer className="wa-mono relative z-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 px-6 py-5 text-paper/40 sm:px-10">
+      <footer className="wa-mono relative z-10 flex flex-wrap items-center justify-between gap-3 border-t border-paper/10 px-6 py-5 text-paper/40 sm:px-10">
         <span>© 2026 Deskbay</span>
         <nav className="flex gap-5">
           <Link href="/mumbai" className="hover:text-paper">The map</Link>

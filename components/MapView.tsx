@@ -18,8 +18,8 @@ function pinSvg(color: string) {
   return `
     <svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg" style="display:block;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.5))">
       <path d="M15 37C15 37 28 22.8 28 14C28 6.8 22.2 1 15 1C7.8 1 2 6.8 2 14C2 22.8 15 37 15 37Z"
-            fill="${color}" stroke="#f6f1e9" stroke-width="2"/>
-      <circle cx="15" cy="14" r="6.5" fill="#f6f1e9"/>
+            fill="${color}" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="15" cy="14" r="6.5" fill="#ffffff"/>
       <path d="M12 12.3h4.6M12 14.3h4.6M12.6 16h3.4" stroke="${color}" stroke-width="1.15" stroke-linecap="round"/>
     </svg>`;
 }
@@ -58,11 +58,11 @@ export default function MapView({
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
 
-    // Recolor the stock OpenFreeMap style to sit with the site's dark ink/paper
-    // palette instead of its bright default greens/yellows/whites.
+    // Give the stock OpenFreeMap style a warm, coffee-toned cast so it sits
+    // with the site's cream/espresso palette instead of its default bright
+    // greens and blues.
     const canvas = map.getCanvas();
-    canvas.style.filter =
-      "invert(1) hue-rotate(185deg) brightness(0.92) contrast(0.92) saturate(0.65) sepia(0.12)";
+    canvas.style.filter = "sepia(0.35) saturate(0.85) brightness(1.04) contrast(0.96)";
 
     const resizeObserver = new ResizeObserver(() => map.resize());
     resizeObserver.observe(containerRef.current);

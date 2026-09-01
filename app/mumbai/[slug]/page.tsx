@@ -48,7 +48,7 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
       <span className="wa-mono w-16 shrink-0 text-paper/45">{label}</span>
-      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-white/[0.07]">
+      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-paper/[0.07]">
         <div
           className="h-full rounded-full"
           style={{ width: `${((value ?? 0) / 5) * 100}%`, background: tier(value).color }}
@@ -129,7 +129,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             {cafe.images.slice(0, 4).map((img, i) => (
               <figure
                 key={img.url}
-                className={`relative overflow-hidden rounded-xl border border-white/10 ${i === 0 ? "sm:col-span-2 aspect-[16/9]" : "aspect-[4/3]"}`}
+                className={`relative overflow-hidden rounded-xl border border-paper/10 ${i === 0 ? "sm:col-span-2 aspect-[16/9]" : "aspect-[4/3]"}`}
               >
                 <Image
                   src={img.url}
@@ -148,7 +148,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             ))}
           </div>
         ) : (
-          <div className="mt-5 flex aspect-[16/9] items-center justify-center rounded-xl border border-dashed border-white/12 text-paper/25">
+          <div className="mt-5 flex aspect-[16/9] items-center justify-center rounded-xl border border-dashed border-paper/12 text-paper/25">
             <p className="wa-mono">no photo yet</p>
           </div>
         )}
@@ -186,21 +186,21 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         <div className="mt-5 flex flex-wrap gap-2 text-[12.5px]">
           {cafe.website && (
-            <a href={cafe.website} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.website} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Website
             </a>
           )}
           {cafe.instagram && (
-            <a href={cafe.instagram} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.instagram} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Instagram
             </a>
           )}
           {cafe.menuUrl && (
-            <a href={cafe.menuUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.menuUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Order / menu
             </a>
           )}
-          <a href={cafe.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+          <a href={cafe.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
             Directions
           </a>
           <Link href={`/mumbai?area=${cafe.area}`} className="wa-btn wa-btn--solid !bg-paper !text-ink">
@@ -228,7 +228,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         {cafe.toggles.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">
             {cafe.toggles.map((t) => (
-              <span key={t} className="wa-mono rounded-full border border-white/10 px-2 py-1 text-paper/50">
+              <span key={t} className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/50">
                 {t}
               </span>
             ))}
@@ -244,7 +244,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         {cafe.synthesis && (
           <div
-            className="mt-7 rounded-lg border-l-2 bg-white/[0.03] p-4"
+            className="mt-7 rounded-lg border-l-2 bg-paper/[0.03] p-4"
             style={{ borderColor: tier(cafe.workability).color }}
           >
             <p className="wa-mono mb-1.5 text-paper/40">Verdict</p>
@@ -256,7 +256,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           <p className="wa-mono mb-2 text-paper/40">Where the scores come from</p>
           <ul className="space-y-3">
             {EVIDENCE_ORDER.filter(({ key }) => cafe.evidence[key]).map(({ key, label }) => (
-              <li key={key} className="border-l-2 border-white/10 pl-3">
+              <li key={key} className="border-l-2 border-paper/10 pl-3">
                 <p className="text-[12.5px] font-medium text-paper/60">{label}</p>
                 <p className="mt-0.5 text-[13px] leading-relaxed text-paper/50">{cafe.evidence[key]}</p>
               </li>

@@ -9,7 +9,7 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
       <span className="wa-mono w-14 shrink-0 text-paper/45">{label}</span>
-      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-white/[0.07]">
+      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-paper/[0.07]">
         <div
           className="h-full rounded-full"
           style={{
@@ -30,7 +30,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
 
   return (
     <div className="flex h-full flex-col overflow-y-auto">
-      <div className="sticky top-0 z-10 border-b border-white/10 bg-ink/95 px-4 py-3 backdrop-blur">
+      <div className="sticky top-0 z-10 border-b border-paper/10 bg-ink/95 px-4 py-3 backdrop-blur">
         <button
           onClick={onBack}
           className="wa-mono flex items-center gap-1.5 text-paper/50 hover:text-paper"
@@ -40,7 +40,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
       </div>
 
       {cafe.images.length > 0 ? (
-        <div className="relative aspect-[16/9] overflow-hidden border-b border-white/10">
+        <div className="relative aspect-[16/9] overflow-hidden border-b border-paper/10">
           <Image
             src={cafe.images[0].url}
             alt={cafe.images[0].alt}
@@ -52,7 +52,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
           <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
         </div>
       ) : (
-        <div className="flex aspect-[16/9] items-center justify-center border-b border-dashed border-white/10 bg-white/[0.02]">
+        <div className="flex aspect-[16/9] items-center justify-center border-b border-dashed border-paper/10 bg-paper/[0.02]">
           <p className="wa-mono text-paper/25">no photo yet</p>
         </div>
       )}
@@ -89,26 +89,26 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
 
         <div className="mt-4 flex flex-wrap gap-2 text-[12.5px]">
           {cafe.website && (
-            <a href={cafe.website} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.website} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Website
             </a>
           )}
           {cafe.instagram && (
-            <a href={cafe.instagram} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.instagram} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Instagram
             </a>
           )}
           {cafe.menuUrl && (
-            <a href={cafe.menuUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+            <a href={cafe.menuUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
               Order / menu
             </a>
           )}
-          <a href={cafe.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-white/15">
+          <a href={cafe.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
             Directions
           </a>
         </div>
 
-        <div className="mt-5 rounded-lg border border-white/10 bg-white/[0.02] px-3.5 py-3">
+        <div className="mt-5 rounded-lg border border-paper/10 bg-paper/[0.02] px-3.5 py-3">
           {cafe.openingHours && (
             <p className="wa-mono text-paper/50">{cafe.openingHours}</p>
           )}
@@ -139,7 +139,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
         {cafe.toggles.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">
             {cafe.toggles.map((t) => (
-              <span key={t} className="wa-mono rounded-full border border-white/10 px-2 py-1 text-paper/50">
+              <span key={t} className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/50">
                 {t}
               </span>
             ))}
@@ -148,7 +148,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
 
         {cafe.synthesis && (
           <div
-            className="mt-6 rounded-lg border-l-2 bg-white/[0.03] p-3.5"
+            className="mt-6 rounded-lg border-l-2 bg-paper/[0.03] p-3.5"
             style={{ borderColor: scoreTier.color }}
           >
             <p className="wa-mono mb-1.5 text-paper/40">Verdict</p>
@@ -156,11 +156,11 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
           </div>
         )}
 
-        <div className="mt-6 border-t border-white/10 pt-5">
+        <div className="mt-6 border-t border-paper/10 pt-5">
           <p className="wa-mono mb-2 text-paper/40">Where the scores come from</p>
           <ul className="space-y-3">
             {EVIDENCE_ORDER.filter(({ key }) => cafe.evidence[key]).map(({ key, label }) => (
-              <li key={key} className="border-l-2 border-white/10 pl-3">
+              <li key={key} className="border-l-2 border-paper/10 pl-3">
                 <p className="text-[12px] font-medium text-paper/60">{label}</p>
                 <p className="mt-0.5 text-[12.5px] leading-relaxed text-paper/50">
                   {cafe.evidence[key]}

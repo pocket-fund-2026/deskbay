@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blog";
+import CoffeeHero from "@/components/CoffeeHero";
 
 const SITE_URL = "https://deskbay-blue.vercel.app";
 const TITLE = "Blog";
@@ -36,8 +37,11 @@ export default function BlogIndex() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block rounded-xl border border-white/12 p-5 transition-colors hover:bg-white/[0.04]"
+              className="block rounded-xl border border-paper/12 p-5 transition-colors hover:bg-paper/[0.04]"
             >
+              <div className="mb-4 max-w-xs">
+                <CoffeeHero />
+              </div>
               <p className="wa-mono text-paper/40">
                 {post.date} · {post.readingTime}
               </p>
