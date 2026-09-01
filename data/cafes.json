@@ -903,7 +903,7 @@
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": 3
+        "work": null
       },
       "attrs": {
         "wifi": null,
@@ -912,7 +912,7 @@
         "noise": null,
         "seating": null,
         "seatingStyles": null,
-        "stay": "moderate",
+        "stay": null,
         "peakCrowd": null,
         "avgFoodCost": "₹250–500"
       },
@@ -943,7 +943,7 @@
         "source": "wanderlog.com (citing Google)",
         "url": "https://wanderlog.com/place/details/1418748"
       },
-      "synthesis": "Confirmed trading with long daily hours and a proper savoury menu, but no source tied to this address mentions wifi, sockets, seating or how long anyone stays.",
+      "synthesis": "Cosy corners and bookshelves are mentioned, but no source directly addresses wifi, power or laptop use — consistent with this cafe's existing 'too thin to score' status.",
       "workability": null,
       "images": [],
       "menuUrl": "https://ordernow.loveandcheesecake.com/order/poetry-by-love-cheesecake-bandra-west-mumbai"
@@ -1958,29 +1958,29 @@
       "editorialNote": "Two minutes from Churchgate station and open absurdly late. The commuter's coffee.",
       "whyWeRecommend": "Location is the entire argument: you can be off the train and into a seat in three minutes. Useful before a South Bombay meeting, and one of the later options in the area.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
-        "quiet": null,
-        "seating": 4,
+        "quiet": 4,
+        "seating": 3,
         "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": "Plenty of tables",
+        "noise": "Quiet, undisturbed",
+        "seating": "Ground floor tight, first floor spacious",
         "seatingStyles": null,
         "stay": "long",
         "peakCrowd": null,
         "avgFoodCost": "₹250–500"
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Reviewers confirm free wifi is available at this outlet.",
         "charging": null,
-        "quiet": null,
-        "seating": "The operator's store page lists air conditioning and table seating.",
-        "work": null
+        "quiet": "A reviewer specifically notes being able to work peacefully without being disturbed, calling the atmosphere pleasant.",
+        "seating": "Small ground floor with few tables, but a staircase leads to a spacious first floor with many more tables.",
+        "work": "Explicitly recommended for peaceful work by a reviewer, alongside praise for the pour-over coffee."
       },
       "toggles": [
         "Roomy",
@@ -1994,14 +1994,15 @@
         "air conditioned"
       ],
       "sources": [
-        "thirdwavecoffeeroasters.com"
+        "tripadvisor.com"
       ],
       "lastVerifiedAt": "2026-08-23",
       "publicRating": null,
-      "synthesis": "Only the official store page could be tied to this address: it confirms the Churchgate outlet trades and offers dine-in. No evidence at all on wifi, power, noise or long stays.",
-      "workability": null,
+      "synthesis": "A reviewer explicitly worked here undisturbed — free wifi, a genuinely quiet atmosphere, and a spacious first floor once you're past the small ground level.",
+      "workability": 3.8,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-nariman-point-nariman-point",
@@ -2084,39 +2085,44 @@
       "editorialNote": "A Third Wave Coffee outlet in the Lokhandwala shopping stretch, part of the chain's wider Mumbai rollout.",
       "whyWeRecommend": "A Third Wave Coffee outlet in the Lokhandwala shopping stretch, part of the chain's wider Mumbai rollout.",
       "scores": {
-        "wifi": null,
-        "charging": null,
+        "wifi": 4,
+        "charging": 4,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
-        "charging": null,
+        "wifi": "Fast",
+        "charging": "Available",
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
-        "charging": null,
+        "wifi": "Reviews note free wifi and charging are available, with laptops commonly out and 'a lot of people on their laptops.'",
+        "charging": "The same coverage describes charging as available alongside wifi, calling the setup great for working.",
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Described as spacious with ample seating, natural lighting and a work-friendly setup.",
+        "work": "Called a good spot for startups, with reviewers noting many people working on laptops."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "highape.com",
+        "tripadvisor.com",
+        "stores.thirdwavecoffeeroasters.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A modern, spacious Third Wave outlet reviewers repeatedly describe as laptop-friendly, with free wifi, charging and startup-crowd energy.",
+      "workability": 4,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-versova-versova",
@@ -2133,39 +2139,43 @@
       "editorialNote": "Third Wave's Versova branch, near JP Road's cafe strip.",
       "whyWeRecommend": "Third Wave's Versova branch, near JP Road's cafe strip.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 3
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Good",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Ample",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Reviews describe the branch as having good wifi.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Noted for ample space to sit and work, with reviewers saying you 'don't get hurried out.'",
+        "work": "Called 'a perfect place for screen time' with prompt, unhurried service."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "zomato.com",
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Reviewers single this branch out as a relaxed, unhurried spot with good wifi and enough room to settle in.",
+      "workability": 3.3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-juhu-juhu",
@@ -2211,7 +2221,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews cover food and service quality but say nothing about wifi, power or seating for work — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2234,17 +2244,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Soft music, natural light",
+        "seating": "Comfortable",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -2252,18 +2262,22 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Set inside a Crossword bookstore, reviewers call the seating 'a perfect haven for anyone looking to work or read a book.'",
+        "work": "One review says the ambience and service combination made the visit 'enjoyable and productive.'"
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "The Crossword-bookstore location is explicitly framed by reviewers as good for working or reading, though wifi and power aren't confirmed.",
+      "workability": 4,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-vile-parle-east-vile-parle-east",
@@ -2309,7 +2323,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews focus on staff and menu items with nothing about wifi, seating or work-friendliness — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2329,39 +2343,43 @@
       "editorialNote": "Third Wave's Worli outlet, tucked into a residential society off Dr. RG Thadani Marg.",
       "whyWeRecommend": "Third Wave's Worli outlet, tucked into a residential society off Dr. RG Thadani Marg.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 3
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported reliable",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Chain-wide review coverage for Third Wave Coffee describes reliable wifi and late opening hours suited to work.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Reviews describe comfortable seating with a welcoming atmosphere at this outlet.",
+        "work": "General coverage frames Third Wave outlets as viable laptop workspaces combining wifi, seating and food options."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "laptopfriendlycafe.com",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Reviews are largely brand-level rather than specific to this outlet, but point to a workable Third Wave setup: decent wifi and comfortable seating.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-lokhandwala-lokhandwala",
@@ -2378,14 +2396,14 @@
       "editorialNote": "Blue Tokai's roastery-chain outlet in Lokhandwala.",
       "whyWeRecommend": "Blue Tokai's roastery-chain outlet in Lokhandwala.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": null
+        "work": 3
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Available",
         "charging": null,
         "chargingNote": null,
         "noise": null,
@@ -2396,21 +2414,24 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Listed as offering wifi alongside a 'work café' framing.",
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": null
+        "work": "district.in describes the ambience as 'fit for work and hangout' with friendly staff."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Positioned by its own listing as a work café with wifi, though independent reviews don't go into seating or power detail.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-andheri-east-andheri-east",
@@ -2456,7 +2477,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Only the brand's own store listing was found for this address — no independent reviews turned up, too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2479,17 +2500,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 3
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Cozy",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -2497,18 +2518,21 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Described as a cozy seating area good for relaxing, reading, or getting work done.",
+        "work": "Local coverage calls it 'a perfect place to relax and enjoy specialty coffee while catching up with friends or getting work done.'"
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "bluetokaicoffee.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "General coverage frames it as fine for casual work, but no source confirms wifi or power specifically.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-khar-west-khar-west",
@@ -2528,7 +2552,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 2,
         "work": null
       },
       "attrs": {
@@ -2536,7 +2560,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Congested inside",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -2546,15 +2570,18 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "One reviewer said the inside 'does not feel too comfortable for long sittings' and 'feels a little congested,' though the outdoor seating is more relaxed.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "restaurant-guru.in",
+        "wanderlog.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Mixed signal on seating comfort for long stays, and no evidence on the other factors — not enough to score overall.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2576,15 +2603,15 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
+        "quiet": 4,
         "seating": null,
-        "work": null
+        "work": 3
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
+        "noise": "Quiet",
         "seating": null,
         "seatingStyles": null,
         "stay": null,
@@ -2594,19 +2621,22 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
+        "quiet": "Described as bright, well lit and having a quiet atmosphere with friendly, attentive staff.",
         "seating": null,
-        "work": null
+        "work": "Restaurant-guru coverage calls it a nice place to do work, pet-friendly with good service."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "restaurant-guru.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Multiple sources call the Powai outlet a good, quiet place to work, though wifi and seating specifics weren't confirmed for this location.",
+      "workability": 3.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-one-world-center-lower-parel-lower-parel",
@@ -2652,7 +2682,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Coverage found is generic brand/food commentary with no wifi, power or seating specifics for this outlet — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2701,7 +2731,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews describe the space and inconsistent service but say nothing about wifi, power or work suitability — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2723,16 +2753,16 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": 3,
+        "seating": 3,
         "work": null
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Calm",
+        "seating": "Indoor and outdoor",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -2741,19 +2771,23 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": "Described as a small, cozy spot with a relaxed, minimalist atmosphere.",
+        "seating": "Comfortable seating both indoors and outdoors is noted by reviewers.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "wanderlog.com",
+        "eazydiner.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A small, calm cafe with decent seating, though no source confirms wifi or power outlets.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-one-international-center-dadar-west-dadar-west",
@@ -2799,7 +2833,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "No location-specific coverage found beyond directory listings — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2819,39 +2853,44 @@
       "editorialNote": "A cafe-and-library combination with a large comics and books collection.",
       "whyWeRecommend": "Cited by LBB as offering quiet corners and free wifi suited to reading or working.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": null
+        "quiet": 3,
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Not too loud",
+        "seating": "Varied — beanbags, sofas, tables",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "long",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Described as 'a good place to bring your laptop and work,' with free wifi and staff that doesn't hover.",
         "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": "Cited by LBB as offering quiet corners and free wifi suited to reading or working."
+        "quiet": "Reviewers note the music is not too loud.",
+        "seating": "Multiple seating styles — chairs and tables, beanbags, sofas, plus a downstairs reading nook.",
+        "work": "Listed on laptopfriendlycafe.com and confirmed by reviewers as laptop-friendly."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "laptopfriendlycafe.com",
+        "tripadvisor.com",
+        "wanderlog.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A comics-themed cafe reviewers and a laptop-friendly-cafe directory both call genuinely good for working, with free wifi and varied seating.",
+      "workability": 3.8,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "ettarra-coffee-house-juhu-juhu",
@@ -2868,39 +2907,42 @@
       "editorialNote": "A two-floor coffee house inside the Juhu Residency Boutique Hotel.",
       "whyWeRecommend": "Described by LBB as having high-speed wifi and filter coffee.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 2,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "High-speed",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Limited — small space",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Reviewers note high-speed wifi, calling it 'an ideal place to be productive.'",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": "Described by LBB as having high-speed wifi and filter coffee."
+        "seating": "Some customers mention seating is limited, since it's a small space.",
+        "work": "Praised as calm and modern, good for a productive coffee break."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Good wifi and a productive, calm vibe are consistently mentioned, but the small footprint means limited seating.",
+      "workability": 3.3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "ettarra-coffee-house-andheri-andheri-west",
@@ -2946,7 +2988,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Search results returned reviews for a different Ettarra branch (Veera Desai/Industrial Area) that couldn't be reliably matched to this Laxmi Mall address — left unscored rather than misattributed.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -2988,14 +3030,14 @@
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": "LBB describes it as calm and well suited to working."
+        "work": null
       },
       "toggles": [],
       "tags": [],
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews focus entirely on desserts and ambience; nothing on wifi, power or work-friendliness — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3037,14 +3079,14 @@
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": "LBB notes stable wifi and a quiet atmosphere for work."
+        "work": null
       },
       "toggles": [],
       "tags": [],
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A library cafe with a strong social mission, but no source addresses wifi, power or seating for laptop work — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3064,14 +3106,14 @@
       "editorialNote": "A tree-shaded, low-key spot in Versova known for strong coffee.",
       "whyWeRecommend": "A tree-shaded, low-key spot in Versova known for strong coffee.",
       "scores": {
-        "wifi": null,
+        "wifi": 1,
         "charging": null,
         "quiet": null,
         "seating": null,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported broken",
         "charging": null,
         "chargingNote": null,
         "noise": null,
@@ -3082,7 +3124,7 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "One reviewer reported the internet had not worked since January and mobile network was also very low, calling it 'difficult to work there.'",
         "charging": null,
         "quiet": null,
         "seating": null,
@@ -3090,59 +3132,13 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
-      "images": [],
-      "menuUrl": null
-    },
-    {
-      "slug": "me-time-caf-versova",
-      "name": "ME TIME CAFÉ",
-      "area": "western-suburbs",
-      "neighborhood": "Versova, Andheri West",
-      "address": "Shop No 207, Aram Nagar Part 2, Versova, Andheri West, Mumbai",
-      "latitude": 19.1317,
-      "longitude": 72.8153,
-      "website": null,
-      "instagram": null,
-      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=ME%20TIME%20CAF%C3%89%2C%20Shop%20No%20207%2C%20Aram%20Nagar%20Part%202%2C%20Versova%2C%20Andheri%20West%2C%20Mumbai",
-      "openingHours": null,
-      "editorialNote": "A board-games cafe with indoor and outdoor seating in Aram Nagar.",
-      "whyWeRecommend": "Advertises free wifi and long opening hours (8:30am–midnight).",
-      "scores": {
-        "wifi": null,
-        "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": null
-      },
-      "attrs": {
-        "wifi": null,
-        "charging": null,
-        "chargingNote": null,
-        "noise": null,
-        "seating": null,
-        "seatingStyles": null,
-        "stay": null,
-        "peakCrowd": null,
-        "avgFoodCost": null
-      },
-      "evidence": {
-        "wifi": null,
-        "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": "Advertises free wifi and long opening hours (8:30am–midnight)."
-      },
-      "toggles": [],
-      "tags": [],
-      "sources": [],
-      "lastVerifiedAt": "2026-09-01",
-      "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A large two-floor roastery, but a direct, recent review flags the internet as non-functional — not enough other evidence to average a full score, but this alone is a strong warning.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3165,7 +3161,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 2,
         "work": null
       },
       "attrs": {
@@ -3173,7 +3169,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Congested, tight tables",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3183,15 +3179,18 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviewers note the space is 'congested with tight seating arrangements,' with waits during weekends.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com",
+        "knocksense.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A storybook-themed cafe with charm, but reviewers flag tight, congested seating and weekend waits — not built for settling in with a laptop.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3240,7 +3239,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A cocktail-and-comfort-food bar rather than a work spot; no wifi/seating evidence found. One source hinted at a possible December 2025 closure while others still list it as open — worth verifying it's still trading.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3289,7 +3288,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A JW Marriott buffet restaurant, not really positioned as a work cafe — reviews are entirely about the buffet spread, not laptop use.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3338,7 +3337,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "An organic/farm-to-fork restaurant reviewed entirely on food quality; nothing on wifi, power or seating for work.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3358,14 +3357,14 @@
       "editorialNote": "Part of the vintage-styled Grandmama's chain, open late.",
       "whyWeRecommend": "Part of the vintage-styled Grandmama's chain, open late.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
         "seating": null,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
         "noise": null,
@@ -3376,7 +3375,7 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "The directory listing confirms free wifi is offered.",
         "charging": null,
         "quiet": null,
         "seating": null,
@@ -3384,10 +3383,12 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Free wifi is confirmed, but nothing else about seating, power or work-friendliness turned up — too thin to average a full score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3409,16 +3410,16 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": 2,
+        "seating": 3,
         "work": null
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Lively, karaoke/live music",
+        "seating": "Comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3427,19 +3428,22 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": "Reviewers cite roughly 28 Mbps wifi, though tables sit close together and it leans more toward meetings than solo work."
+        "quiet": "Described as a bar-restaurant with karaoke and live music, which cuts against quiet work.",
+        "seating": "Contemporary decor with a comfortable seating arrangement.",
+        "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "magicpin.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A stylish European-Italian restaurant-bar with karaoke nights — comfortable seating, but the live-music format works against it as a workspace.",
+      "workability": 2.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "grandmama-s-cafe-lower-parel-lower-parel",
@@ -3456,39 +3460,42 @@
       "editorialNote": "A charming, vintage-styled cafe inside the Kamala Mills compound, open until 1am.",
       "whyWeRecommend": "A charming, vintage-styled cafe inside the Kamala Mills compound, open until 1am.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported, some inconsistency",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious, comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Chain-wide coverage of Grandmama's Cafe describes free wifi across outlets, though one review flagged inconsistent access at some locations.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviews describe extremely comfortable seating with a large open outdoor area and spacious indoor seating at some outlets.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Chain-wide reviews describe free wifi and generous, comfortable seating, though this is brand-level evidence rather than confirmed for this specific outlet.",
+      "workability": 3.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "grandmama-s-cafe-ghatkopar-west-ghatkopar-west",
@@ -3505,39 +3512,42 @@
       "editorialNote": "The Grandmama's branch inside R City Mall.",
       "whyWeRecommend": "The Grandmama's branch inside R City Mall.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported, some inconsistency",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious, comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Chain-wide coverage of Grandmama's Cafe describes free wifi across outlets, though one review flagged inconsistent access at some locations.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviews describe extremely comfortable seating with a large open outdoor area and spacious indoor seating at some outlets.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Chain-wide reviews describe free wifi and generous, comfortable seating, though this is brand-level evidence rather than confirmed for this specific outlet.",
+      "workability": 3.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "grandmama-s-cafe-chembur-chembur",
@@ -3554,39 +3564,42 @@
       "editorialNote": "A Chembur branch of the vintage-styled Grandmama's chain.",
       "whyWeRecommend": "A Chembur branch of the vintage-styled Grandmama's chain.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported, some inconsistency",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious, comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Chain-wide coverage of Grandmama's Cafe describes free wifi across outlets, though one review flagged inconsistent access at some locations.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviews describe extremely comfortable seating with a large open outdoor area and spacious indoor seating at some outlets.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Chain-wide reviews describe free wifi and generous, comfortable seating, though this is brand-level evidence rather than confirmed for this specific outlet.",
+      "workability": 3.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "grandmama-s-cafe-dadar-east-dadar-east",
@@ -3603,39 +3616,42 @@
       "editorialNote": "A Dadar East branch of the Grandmama's chain.",
       "whyWeRecommend": "A Dadar East branch of the Grandmama's chain.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported, some inconsistency",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious, comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Chain-wide coverage of Grandmama's Cafe describes free wifi across outlets, though one review flagged inconsistent access at some locations.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviews describe extremely comfortable seating with a large open outdoor area and spacious indoor seating at some outlets.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Chain-wide reviews describe free wifi and generous, comfortable seating, though this is brand-level evidence rather than confirmed for this specific outlet.",
+      "workability": 3.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "cafe-792-dadar",
@@ -3663,7 +3679,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Tiny, outhouse setting",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3681,7 +3697,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A tiny Parsi outhouse cafe known for desserts and cold cuts — no wifi, power or work-related coverage found; reads as a food destination, not a workspace.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3703,16 +3719,16 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": 3,
+        "seating": 2,
         "work": null
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Quiet off-peak, crowded at rush hours",
+        "seating": "Fills up fast",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3721,19 +3737,22 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": "Reviewers say it can be a cool, calm place to read or chat during non-rush hours.",
+        "seating": "Seating is described as hard to find during lunch and breakfast rush, split across AC and non-AC levels.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A historic South Indian cafe that's genuinely calm outside rush hours but hard to get a seat in during them — timing matters a lot here.",
+      "workability": 2.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "coffee-capital-chembur",
@@ -3779,7 +3798,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews cover the food and hangout vibe but say nothing about wifi, power or seating for work — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3801,16 +3820,16 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": 2,
+        "seating": 2,
         "work": null
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Busy, high footfall",
+        "seating": "Frequently full",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3819,19 +3838,23 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": "Located on a busy stretch of Hiranandani Gardens opposite D'Mart; described as one of Powai's busiest cafes.",
+        "seating": "Reviewers note it's always full, even in early mornings.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "lbb.in",
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "One of Powai's most popular cafes for food, but consistently busy and full — not an easy place to find a quiet seat.",
+      "workability": 2,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "pomona-cafe-powai",
@@ -3877,7 +3900,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Available coverage is limited to ratings and hours, with nothing on wifi, power or work suitability — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3899,16 +3922,16 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": 3,
+        "seating": 3,
         "work": null
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Calm inside",
+        "seating": "Spacious, outdoor option",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -3917,19 +3940,22 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
-        "seating": null,
+        "quiet": "Reviewers describe it as calm inside despite sitting in a busy, traffic-prone stretch of Chandivali.",
+        "seating": "Spacious with an outdoor sitting arrangement and book-lined decor.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "lbb.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A spacious, literary-themed cafe-bar that reviewers call calm inside despite a busy road outside — no wifi coverage found either way.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "fable-cafe-and-bar-andheri-lokhandwala-lokhandwala",
@@ -3975,7 +4001,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews cover food and brunch quality only; nothing about wifi, power or seating for work.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -3997,15 +4023,15 @@
       "scores": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
+        "quiet": 1,
         "seating": null,
-        "work": null
+        "work": 1
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
+        "noise": "Live band, lively",
         "seating": null,
         "seatingStyles": null,
         "stay": null,
@@ -4015,19 +4041,22 @@
       "evidence": {
         "wifi": null,
         "charging": null,
-        "quiet": null,
+        "quiet": "Reviewers describe a lively ambience with a live band playing retro songs.",
         "seating": null,
-        "work": null
+        "work": "This is a hotel buffet all-day dining restaurant, not set up as a workspace — reviews focus entirely on food and dining experience."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A Sofitel buffet restaurant with a live band — built for dining, not for a laptop session.",
+      "workability": 1,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "starbucks-bkc-the-capital-bkc",
@@ -4044,39 +4073,42 @@
       "editorialNote": "A Starbucks outlet inside The Capital office tower in BKC.",
       "whyWeRecommend": "A Starbucks outlet inside The Capital office tower in BKC.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Roomy",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Reviewers confirm free wifi at this outlet.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Described as unusually roomy and well laid out.",
+        "work": "Called a great meeting place for work or friends by reviewers."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A notably roomy Starbucks near BKC's office towers with free wifi, explicitly recommended by reviewers as a work-meeting spot.",
+      "workability": 4,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-kurla-equinox-kurla",
@@ -4122,7 +4154,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Coverage is limited to ratings and menu items — nothing on wifi, power or work suitability found.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4171,7 +4203,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "No branch-specific reviews turned up — Starbucks generally offers wifi, but that wasn't independently confirmed for this Chakala location, so left unscored rather than assumed.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4191,39 +4223,43 @@
       "editorialNote": "A Starbucks branch in the Lower Parel commercial district.",
       "whyWeRecommend": "A Starbucks branch in the Lower Parel commercial district.",
       "scores": {
-        "wifi": null,
-        "charging": null,
+        "wifi": 4,
+        "charging": 4,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
-        "charging": null,
+        "wifi": "Free, reliable",
+        "charging": "Ample outlets",
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Limited but comfortable",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "long",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
-        "charging": null,
+        "wifi": "Reviewers confirm free wifi, with one noting Starbucks should reconsider how long free wifi sessions last for extended work.",
+        "charging": "Reviewers specifically note ample power outlets for plugging in laptops with no rush to leave.",
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Seating is comfortable but limited, and often taken up by people using the wifi.",
+        "work": "Described as popular with working professionals from nearby offices rather than students, with no rush to move customers along."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.in",
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A genuinely work-friendly Starbucks — reviewers specifically call out plentiful power outlets, free wifi and a no-rush culture aimed at working professionals, though seating is limited when busy.",
+      "workability": 3.8,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "cafe-prato-and-bar-worli",
@@ -4243,15 +4279,15 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 3
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious, bright",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -4261,18 +4297,21 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "High ceilings and floor-to-ceiling windows create a bright, spacious setting.",
+        "work": "Described as a comfortable setting for business meetings as well as dining."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A Four Seasons all-day dining room reviewers describe as suited to business meetings, though no source confirms wifi or power outlets — likely fine for a working coffee, less so for a long laptop session.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "d-cr-pes-cafe-manpada",
@@ -4289,39 +4328,44 @@
       "editorialNote": "A crepe and coffee spot near Hiranandani Meadows known for its Mocha and Latte alongside sweet and savory crepes.",
       "whyWeRecommend": "A crepe and coffee spot near Hiranandani Meadows known for its Mocha and Latte alongside sweet and savory crepes.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 2,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Present",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Tiny room",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Listed as offering free wifi alongside parking, per aggregator listings, though no review speaks to reliability.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Reviewers describe the room as tiny, seating roughly 15 to 20 people and best suited to couples rather than groups or long sessions.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "swiggy.com",
+        "tripadvisor.in",
+        "wanderlog.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Free wifi is listed, but the room is small and reviews frame it as a food-and-bakery date spot rather than a work cafe — nothing on offer speaks to staying with a laptop.",
+      "workability": 2.5,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "love-leaf-cafe-hiranandani-estate",
@@ -4364,10 +4408,13 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.in",
+        "wanderlog.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A poolside boho cafe inside Thane Club with an entry fee — reviews cover decor and slow service but say nothing about wifi, power or working, so there isn't enough to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4387,39 +4434,44 @@
       "editorialNote": "A Blue Tokai specialty coffee outlet in the Hiranandani Estate commercial stretch of Thane.",
       "whyWeRecommend": "A Blue Tokai specialty coffee outlet in the Hiranandani Estate commercial stretch of Thane.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Likely available",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Indoor and outdoor",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Blue Tokai's Thane West locations are categorised as \"Cafe with WiFi\" on aggregator listings, though this location isn't individually verified.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "The cafe offers both indoor and outdoor seating, per the official store page.",
+        "work": "A customer review specifically calls it a \"great cafe to work,\" alongside its use for casual meet-ups and first dates."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "stores.bluetokaicoffee.com",
+        "district.in",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "One reviewer explicitly calls it a great place to work, and indoor/outdoor seating gives options — but nothing confirms power outlets or how it holds up when busy.",
+      "workability": 3.3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-panch-pakadi-panch-pakadi",
@@ -4462,10 +4514,13 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "stores.bluetokaicoffee.com",
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews call it \"a lovely cafe to relax in\" with friendly staff, but none touch on wifi, seating capacity or working — too thin to score on any factor.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4485,39 +4540,43 @@
       "editorialNote": "A Third Wave Coffee outlet on LBS Road in Thane's Panchpakhadi/Naupada stretch.",
       "whyWeRecommend": "A Third Wave Coffee outlet on LBS Road in Thane's Panchpakhadi/Naupada stretch.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Fast",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Work-desk style",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "General reviews of Third Wave Coffee locations report free wifi that \"works great,\" though not location-verified for this outlet specifically.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Third Wave locations are described as offering varied seating including work-desk style tables, though the exact mix at this branch isn't detailed.",
+        "work": "Described as an ideal spot ranging \"from casual meet-ups to focused work sessions.\""
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "stores.thirdwavecoffeeroasters.com",
+        "wanderlog.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Explicitly marketed and reviewed as suited to focused work sessions, with wifi and desk-style seating typical of the chain — though details are more brand-level than confirmed for this exact branch.",
+      "workability": 3.7,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-viviana-mall-thane-west",
@@ -4534,39 +4593,43 @@
       "editorialNote": "A mall outlet inside Viviana Mall, one of Thane's largest malls.",
       "whyWeRecommend": "A mall outlet inside Viviana Mall, one of Thane's largest malls.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 3,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Available",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "General coverage of Thane coffee shops notes that most chains including this one provide complimentary wifi for remote work.",
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "MagicPin lists \"seating available\" among the cafe's highlights, alongside a 4.1 rating.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "magicpin.in",
+        "rokazu.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A busy, well-rated mall outlet with wifi and seating confirmed generically, but no review specifically addresses whether it works for a long laptop session.",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-hiranandani-estate-hiranandani-estate",
@@ -4583,14 +4646,14 @@
       "editorialNote": "A Third Wave Coffee outlet inside The Walk Mall in Hiranandani Estate, Thane.",
       "whyWeRecommend": "A Third Wave Coffee outlet inside The Walk Mall in Hiranandani Estate, Thane.",
       "scores": {
-        "wifi": null,
+        "wifi": 3,
         "charging": null,
         "quiet": null,
         "seating": null,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Reported fast",
         "charging": null,
         "chargingNote": null,
         "noise": null,
@@ -4601,7 +4664,7 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "General reporting on Thane coffee shops (this one included) describes \"sleek furniture and high-speed wifi, ideal for remote workers,\" though not individually confirmed.",
         "charging": null,
         "quiet": null,
         "seating": null,
@@ -4609,10 +4672,13 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in",
+        "rokazu.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews praise the ambience and service but don't go into wifi, seating or work-friendliness specifically enough to score beyond a general wifi mention.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4632,39 +4698,44 @@
       "editorialNote": "A Starbucks outlet inside Viviana Mall in Thane West.",
       "whyWeRecommend": "A Starbucks outlet inside Viviana Mall in Thane West.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": null
+        "quiet": 3,
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free",
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Not intrusive",
+        "seating": "Sofas and tables",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Reviewers confirm free wifi alongside comfortable seating and ambient lighting as a dependable spot for working.",
         "charging": null,
-        "quiet": null,
-        "seating": null,
-        "work": null
+        "quiet": "One reviewer notes \"no one disturbs you till you are finished with your meetings/interactions.\"",
+        "seating": "Sofas, high stools and table seating for two to four-plus people are all described, with cushy seats called out by multiple reviewers.",
+        "work": "Described as a dependable spot \"whether you're working solo, meeting friends, or just taking a break.\""
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "justdial.com",
+        "magicpin.in",
+        "tripadvisor.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Multiple reviews independently back this as a working spot — free wifi, varied comfortable seating and reviewers explicitly note being left alone to work, though service complaints show up too.",
+      "workability": 3.8,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "blue-tokai-coffee-roasters-airoli-airoli",
@@ -4707,10 +4778,13 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Mixed reviews — calm mornings but reports of slow service and this branch running \"average\" compared to other Blue Tokai locations, plus outdoor seating was removed. Nothing on wifi or work-friendliness, so left unscored.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4734,7 +4808,7 @@
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": null
+        "work": 4
       },
       "attrs": {
         "wifi": null,
@@ -4752,14 +4826,16 @@
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": "Listed by a local guide as offering a workspace-friendly layout with charging points."
+        "work": "A reviewer specifically credits the staff with making \"this place becomes a very comfortable place to sit your coffee and do your work.\""
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "stores.thirdwavecoffeeroasters.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "One specific review calls it out as comfortable for working, but with only that single factor confirmed there isn't enough to produce an overall score yet.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4782,17 +4858,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "9-10 tables",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -4800,18 +4876,23 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Reviewers describe ample seating that lets patrons \"relax or work on their laptops without feeling rushed\" even when busy, though one review also notes it's limited to 9-10 tables.",
+        "work": "Called a good spot to \"relax/work/hangout with friends,\" with the space described as designed to accommodate laptop use."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.in",
+        "wanderlog.com",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Reviewers explicitly describe working on laptops here without being rushed, and the mall itself offers free wifi to shoppers, but Starbucks-specific wifi isn't confirmed and seating is limited to under a dozen tables.",
+      "workability": 4,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-emerald-mall-borivali-roshan-nagar",
@@ -4831,7 +4912,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
@@ -4839,7 +4920,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Comfortable, clean",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -4849,15 +4930,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Borivali-area Third Wave locations are described in reviews as cozy, immaculately clean, with comfortable seating.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "General Borivali-branch reviews describe comfortable, clean seating, but nothing specific to wifi or power at this exact outlet.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4880,17 +4963,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 4,
+        "work": 4
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Calm yet energetic",
+        "seating": "Comfortable",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -4898,18 +4981,21 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Reviewers describe this Kandivali West branch as 'a very comfortable café with a great vibe.'",
+        "work": "Specifically called out as having 'a calm yet energetic atmosphere that makes it an ideal workspace.'"
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "This branch gets a direct, specific callout as an ideal workspace with comfortable seating, though wifi and power aren't confirmed.",
+      "workability": 4,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "third-wave-coffee-thakur-village-thakur-village",
@@ -4929,7 +5015,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
@@ -4937,7 +5023,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Comfortable",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -4947,15 +5033,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "This Kandivali East branch is described as having 'great ambience and very comfortable seating.'",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Comfortable seating is specifically confirmed for this branch, but no source addresses wifi, power or overall work suitability.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -4978,7 +5066,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
@@ -4986,7 +5074,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Comfortable, clean",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -4996,15 +5084,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Borivali-area Third Wave branches are described in reviews as cozy and clean with comfortable seating.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "General Borivali-branch coverage describes comfortable seating, but nothing specific to this exact outlet's wifi or power.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5027,7 +5117,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 4,
         "work": null
       },
       "attrs": {
@@ -5035,7 +5125,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Spacious",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -5045,15 +5135,18 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": "A local work-cafe directory lists it as having high-speed wifi suited to laptops and tablets."
+        "seating": "Described as warm and spacious with a large seating area, plenty of tables and chairs both inside and out.",
+        "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in",
+        "zomato.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Spacious seating is well documented, but wifi and power weren't mentioned in any source found.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5076,17 +5169,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 3
       },
       "attrs": {
         "wifi": null,
         "charging": null,
         "chargingNote": null,
-        "noise": null,
-        "seating": null,
+        "noise": "Calm, cozy",
+        "seating": "Cozy",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "medium",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -5094,18 +5187,21 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Described as having a calm, cozy vibe.",
+        "work": "Local coverage says it's 'perfect for relaxing or getting some work done.'"
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "district.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "General coverage frames it as fine for casual work, but wifi quality wasn't confirmed for this specific branch (a sibling Blue Tokai in Goregaon West was flagged for bad wifi, which was not applied here since it's a different location).",
+      "workability": 3,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "kruti-coffee-siddharth-nagar",
@@ -5151,7 +5247,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviews focus on coffee and food quality; nothing on wifi, seating or work amenities — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5200,7 +5296,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "No location-specific review coverage found beyond store listings — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5249,7 +5345,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Search results returned reviews for other Third Wave branches, not this one specifically — too thin to score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5269,39 +5365,42 @@
       "editorialNote": "A coffee shop on LBS Road in Mulund West with spacious indoor and outdoor seating, serving espresso drinks and pastries.",
       "whyWeRecommend": "A coffee shop on LBS Road in Mulund West with spacious indoor and outdoor seating, serving espresso drinks and pastries.",
       "scores": {
-        "wifi": null,
+        "wifi": 4,
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": 3,
+        "work": 4
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "Free, popular draw",
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Cozy + meeting area",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "long",
         "peakCrowd": null,
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "Described as known for free wifi, with the cafe often full specifically because of wifi access.",
         "charging": null,
         "quiet": null,
-        "seating": null,
-        "work": null
+        "seating": "Ground floor of a commercial park split into a cozy section and a separate area suited to meetings.",
+        "work": "Called a popular spot for people wanting to work or study, thanks to the wifi."
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "Reviewers specifically flag this as a go-to work/study spot because of its free wifi — popular enough that seating fills up as a result.",
+      "workability": 3.7,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "barista-coffee-sion-sion",
@@ -5321,7 +5420,7 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": 3,
         "work": null
       },
       "attrs": {
@@ -5329,7 +5428,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Comfortable, spacious",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -5339,15 +5438,17 @@
         "wifi": null,
         "charging": null,
         "quiet": null,
-        "seating": null,
+        "seating": "Called one of the better Barista locations, bigger with comfortable seating.",
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "Reviewed as a spacious, comfortable Barista outlet, but with no wifi or power information found — not enough to compute an overall score.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5378,7 +5479,7 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Two floors, some outdoor",
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
@@ -5396,7 +5497,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A cozy vegetarian family cafe near Sion station — reviews cover food and ambience only, nothing on wifi or work suitability.",
       "workability": null,
       "images": [],
       "menuUrl": null
@@ -5416,17 +5517,17 @@
       "editorialNote": "A small Irani cafe in Mahim keeping old-world Irani cafe ambiance alive, known for akuri and chicken cutlets.",
       "whyWeRecommend": "A small Irani cafe in Mahim keeping old-world Irani cafe ambiance alive, known for akuri and chicken cutlets.",
       "scores": {
-        "wifi": null,
+        "wifi": 1,
         "charging": null,
-        "quiet": null,
+        "quiet": 3,
         "seating": null,
         "work": null
       },
       "attrs": {
-        "wifi": null,
+        "wifi": "None",
         "charging": null,
         "chargingNote": null,
-        "noise": null,
+        "noise": "Calm interior",
         "seating": null,
         "seatingStyles": null,
         "stay": null,
@@ -5434,21 +5535,25 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": null,
+        "wifi": "A review explicitly states the cafe does not offer free wifi.",
         "charging": null,
-        "quiet": null,
+        "quiet": "Reviewers describe the interior ambience as notably cool and calm.",
         "seating": null,
         "work": null
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
+      "sources": [
+        "tripadvisor.com",
+        "magicpin.in"
+      ],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
-      "workability": null,
+      "synthesis": "A 125-year-old Irani cafe with a genuinely calm interior, but explicitly no wifi — fine for a quiet cup, not for connected work.",
+      "workability": 2,
       "images": [],
-      "menuUrl": null
+      "menuUrl": null,
+      "verificationStatus": "researched"
     },
     {
       "slug": "cafe-colony-dadar-east",
@@ -5476,9 +5581,9 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Small counter setup",
         "seatingStyles": null,
-        "stay": null,
+        "stay": "short",
         "peakCrowd": null,
         "avgFoodCost": null
       },
@@ -5494,7 +5599,7 @@
       "sources": [],
       "lastVerifiedAt": "2026-09-01",
       "publicRating": null,
-      "synthesis": null,
+      "synthesis": "A small, fast-turnover Irani cafe near Dadar circle, cash-only — nothing found on wifi or long-stay work suitability, and the small counter format suggests a short visit rather than a workspace.",
       "workability": null,
       "images": [],
       "menuUrl": null

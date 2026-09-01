@@ -88,10 +88,10 @@ export default function HomePage() {
             hours: somewhere to plug in, somewhere to sit, a connection that holds, and whether
             anyone minds you staying.{" "}
             <span className="text-paper/50">
-              {CAFES.filter((c) => c.workability !== null).length} cafes in Bandra and South
-              Bombay are graded on the same {FACTORS.length} weighted factors, from published
-              evidence, with every finding cited. Another{" "}
-              {CAFES.filter((c) => c.workability === null).length} across the rest of Mumbai are
+              {CAFES.filter((c) => c.workability !== null).length} cafes across Mumbai are graded
+              on the same {FACTORS.length} weighted factors, from published evidence, with every
+              finding cited. Another{" "}
+              {CAFES.filter((c) => c.workability === null).length} are
               listed with directory info while we work through scoring them properly.
             </span>
           </h1>

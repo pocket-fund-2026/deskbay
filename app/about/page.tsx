@@ -43,7 +43,7 @@ const faqLd = {
     name: f.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: `Weighted at ${f.weight}% of the workability score — Deskbay's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Bandra and South Bombay cafes, scored from published evidence and left blank where the sources are too thin to average. Cafes elsewhere in Mumbai are listed as directory entries and not yet scored on this model.`,
+      text: `Weighted at ${f.weight}% of the workability score — Deskbay's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Mumbai cafes, scored from published evidence and left blank where the sources are too thin to average. The rest are listed as directory entries and not yet scored on this model.`,
     },
   })),
 };
@@ -86,12 +86,11 @@ export default function AboutPage() {
         </h2>
         <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
           One weighted model, applied to the {CAFES.filter((c) => c.workability !== null).length}{" "}
-          cafes in Bandra and South Bombay we&apos;ve fully researched. It is weighted toward the
+          cafes across Mumbai we&apos;ve fully researched so far. It is weighted toward the
           two things that end a work session early — nowhere to plug in and a connection that
           drops — and it treats a bathroom as worth noting and almost nothing else. The other{" "}
-          {CAFES.filter((c) => c.workability === null).length} cafes across the rest of Mumbai are
-          on the map as directory listings — name, address, links — while we work through scoring
-          them the same way.
+          {CAFES.filter((c) => c.workability === null).length} cafes are on the map as directory
+          listings — name, address, links — while we work through scoring them the same way.
         </p>
 
         <ul className="mt-5 divide-y divide-paper/10 overflow-hidden rounded-xl border border-paper/12">
