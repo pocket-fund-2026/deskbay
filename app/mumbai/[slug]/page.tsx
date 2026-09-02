@@ -104,6 +104,24 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
     ],
   };
 
+  const reviewLd =
+    cafe.workability !== null
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Review",
+          itemReviewed: { "@type": "CafeOrCoffeeShop", name: cafe.name, image: cafe.images.map((i) => i.url) },
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: cafe.workability,
+            bestRating: 5,
+            worstRating: 0,
+          },
+          author: { "@type": "Organization", name: "Bombay Cafe Map", url: SITE_URL },
+          reviewBody: cafe.editorialNote,
+          ...(cafe.lastVerifiedAt ? { datePublished: cafe.lastVerifiedAt } : {}),
+        }
+      : null;
+
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <script
@@ -114,6 +132,12 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {reviewLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewLd) }}
+        />
+      )}
 
       <div className="mx-auto max-w-2xl">
         <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">

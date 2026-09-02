@@ -77,7 +77,7 @@ export default function HomePage() {
                       src={AREA_PHOTOS[area.slug].url}
                       alt={AREA_PHOTOS[area.slug].alt}
                       fill
-                      unoptimized
+                      priority={i === 0}
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
                     />
@@ -105,9 +105,9 @@ export default function HomePage() {
 
         <div className="mt-10 max-w-2xl">
           <h1 className="text-[15px] font-normal leading-relaxed text-paper/80">
-            Cafes you can actually work from, scored on what decides whether you last three
-            hours: somewhere to plug in, somewhere to sit, a connection that holds, and whether
-            anyone minds you staying.{" "}
+            Mumbai cafes you can actually work from, scored on what decides whether you last
+            three hours: somewhere to plug in, somewhere to sit, a connection that holds, and
+            whether anyone minds you staying.{" "}
             <span className="text-paper/50">
               {CAFES.filter((c) => c.workability !== null).length} cafes across Mumbai are graded
               on the same {FACTORS.length} weighted factors, from published evidence, with every

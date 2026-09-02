@@ -14,7 +14,7 @@ export default function SubmitForm() {
     const body = encodeURIComponent(
       `Cafe name: ${name}\nAddress: ${address}\n\nWhy it belongs here:\n${notes}`
     );
-    window.location.href = `mailto:submissions@deskbay.app?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:submissions@bombaycafemap.com?subject=${subject}&body=${body}`;
     setSent(true);
   }
 

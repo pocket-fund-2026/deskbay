@@ -58,6 +58,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   icons: { icon: "/icon.svg" },
+  verification: { google: "uKGJoLyvBJdHaTySPXTeOr5SqxC9CCnpWwbu28p3G2Y" },
 };
 
 const websiteLd = {
