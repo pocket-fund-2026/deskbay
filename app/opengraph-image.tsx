@@ -20,7 +20,7 @@ export default function Image() {
         }}
       >
         <div style={{ fontSize: 30, letterSpacing: 4, textTransform: "uppercase", opacity: 0.6, color: "#b5651d" }}>
-          Deskbay
+          Bombay Cafe Map
         </div>
         <div
           style={{

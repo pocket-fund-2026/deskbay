@@ -11,7 +11,7 @@ export function GET() {
     .sort((a, b) => (b.workability ?? -1) - (a.workability ?? -1))
     .map(
       (c) =>
-        `- ${c.name} — ${c.neighborhood}, ${AREAS[c.area].name}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not scored yet — directory listing only"}. ${c.editorialNote} https://deskbay-blue.vercel.app/mumbai/${c.slug}`
+        `- ${c.name} — ${c.neighborhood}, ${AREAS[c.area].name}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not scored yet — directory listing only"}. ${c.editorialNote} https://bombaycafemap.com/mumbai/${c.slug}`
     )
     .join("\n");
 
@@ -19,9 +19,9 @@ export function GET() {
     .map((a) => `- ${a.name} (${a.slug}): /mumbai?area=${a.slug}`)
     .join("\n");
 
-  const body = `# Deskbay
+  const body = `# Bombay Cafe Map
 
-> Deskbay ranks Mumbai cafes on how good they actually are to work from — wifi, power outlets, noise and seating — starting in Bandra and South Bombay and expanding citywide.
+> Bombay Cafe Map ranks Mumbai cafes on how good they actually are to work from — wifi, power outlets, noise and seating — starting in Bandra and South Bombay and expanding citywide.
 
 ## What this site is
 ${scored.length} cafes in Bandra and South Bombay are fully scored on a nine-factor "workability" model from published evidence, with every finding cited. ${unscored.length} more across the rest of Mumbai are listed as directory entries (name, address, coordinates) while scoring is still in progress for them — their workability is intentionally left blank rather than guessed. A high star rating on other platforms does not imply a high workability score here, and vice versa.
@@ -42,7 +42,7 @@ ${areaLines}
 ${cafeLines}
 
 ## Reuse
-Facts here (addresses, scores, citations) may be cited with attribution to Deskbay (https://deskbay-blue.vercel.app). Do not present our editorial scores as an official rating from the cafes themselves, and do not present the unscored directory entries as if they carry a workability verdict.
+Facts here (addresses, scores, citations) may be cited with attribution to Bombay Cafe Map (https://bombaycafemap.com). Do not present our editorial scores as an official rating from the cafes themselves, and do not present the unscored directory entries as if they carry a workability verdict.
 `;
 
   return new Response(body, {

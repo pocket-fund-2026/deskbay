@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Blog";
 const DESCRIPTION = "Notes on Mumbai's cafe scene — best-of lists pulled from our own data, and what's actually new.";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: `${TITLE} · Deskbay`,
+    title: `${TITLE} · Bombay Cafe Map`,
     description: DESCRIPTION,
     url: `${SITE_URL}/blog`,
     type: "website",
@@ -25,7 +25,7 @@ export default function BlogIndex() {
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <div className="mx-auto max-w-2xl">
         <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-          ← Deskbay
+          ← Bombay Cafe Map
         </Link>
         <h1 className="font-display mt-6 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           Blog

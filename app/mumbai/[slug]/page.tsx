@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { AREAS, CAFES, getCafe } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 
 export function generateStaticParams() {
   return CAFES.map((c) => ({ slug: c.slug }));
@@ -29,7 +29,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `/mumbai/${cafe.slug}` },
     openGraph: {
-      title: `${title} · Deskbay`,
+      title: `${title} · Bombay Cafe Map`,
       description,
       url: `${SITE_URL}/mumbai/${cafe.slug}`,
       type: "website",
@@ -37,7 +37,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · Deskbay`,
+      title: `${title} · Bombay Cafe Map`,
       description,
       images: [image],
     },
@@ -97,7 +97,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Bombay Cafe Map", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Mumbai", item: `${SITE_URL}/mumbai` },
       { "@type": "ListItem", position: 3, name: areaName, item: `${SITE_URL}/mumbai?area=${cafe.area}` },
       { "@type": "ListItem", position: 4, name: cafe.name, item: `${SITE_URL}/mumbai/${cafe.slug}` },
@@ -117,7 +117,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
       <div className="mx-auto max-w-2xl">
         <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">
-          <Link href="/" className="hover:text-paper">Deskbay</Link>
+          <Link href="/" className="hover:text-paper">Bombay Cafe Map</Link>
           <span>/</span>
           <Link href="/mumbai" className="hover:text-paper">Mumbai</Link>
           <span>/</span>

@@ -95,7 +95,7 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-1.5 font-display text-[18px] tracking-tight">
             <Logo size={20} />
-            desk<em className="font-semibold not-italic italic">bay</em>
+            Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </Link>
           <div className="hidden items-center gap-5 md:flex">
             <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">

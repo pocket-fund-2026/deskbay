@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-1.5 font-display text-[17px] tracking-tight">
             <Logo size={20} />
-            desk<em className="font-semibold not-italic italic">bay</em>
+            Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </div>
           <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/50">
             Mumbai cafes scored on whether you can actually work from them — wifi, power,
@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
 
       <div className="wa-mono mx-auto mt-9 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-paper/10 pt-5 text-paper/35">
-        <span>© 2026 Deskbay</span>
+        <span>© 2026 Bombay Cafe Map</span>
         <span>Built for people who need a table for three hours</span>
       </div>
     </footer>

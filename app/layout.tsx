@@ -20,13 +20,13 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Deskbay — find a Mumbai cafe you can actually work from",
-    template: "%s · Deskbay",
+    default: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
+    template: "%s · Bombay Cafe Map",
   },
   description:
     "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — starting in Bandra and South Bombay, expanding citywide — so you know which one will let you stay three hours.",
@@ -41,18 +41,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Deskbay — find a Mumbai cafe you can actually work from",
+    title: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
     description:
       "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
     url: SITE_URL,
-    siteName: "Deskbay",
+    siteName: "Bombay Cafe Map",
     locale: "en_IN",
     type: "website",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deskbay",
+    title: "Bombay Cafe Map",
     description:
       "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
     images: ["/opengraph-image"],
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Deskbay",
+  name: "Bombay Cafe Map",
   url: SITE_URL,
   description:
     "A map of Mumbai cafes scored on wifi, power outlets, noise and seating, expanding across the city.",
@@ -73,7 +73,7 @@ const websiteLd = {
 const organizationLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Deskbay",
+  name: "Bombay Cafe Map",
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
 };

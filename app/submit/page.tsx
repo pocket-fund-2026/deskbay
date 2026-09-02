@@ -2,16 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import SubmitForm from "./SubmitForm";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Submit a cafe";
-const DESCRIPTION = "Know a Mumbai cafe that belongs on Deskbay? Tell us about it.";
+const DESCRIPTION = "Know a Mumbai cafe that belongs on Bombay Cafe Map? Tell us about it.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/submit" },
   openGraph: {
-    title: `${TITLE} · Deskbay`,
+    title: `${TITLE} · Bombay Cafe Map`,
     description: DESCRIPTION,
     url: `${SITE_URL}/submit`,
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} · Deskbay`,
+    title: `${TITLE} · Bombay Cafe Map`,
     description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
@@ -29,7 +29,7 @@ const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+    { "@type": "ListItem", position: 1, name: "Bombay Cafe Map", item: SITE_URL },
     { "@type": "ListItem", position: 2, name: "Submit a cafe", item: `${SITE_URL}/submit` },
   ],
 };
@@ -44,7 +44,7 @@ export default function SubmitPage() {
       <div className="mx-auto max-w-lg">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-            ← Deskbay
+            ← Bombay Cafe Map
           </Link>
           <nav className="wa-mono flex gap-4 text-paper/45">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>

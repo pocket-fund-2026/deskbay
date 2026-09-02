@@ -6,7 +6,7 @@ import { tier } from "@/lib/scoreTier";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 const post = getPost("15-best-cafes-to-work-from-in-mumbai")!;
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: post.description,
   alternates: { canonical: `/blog/${post.slug}` },
   openGraph: {
-    title: `${post.title} · Deskbay`,
+    title: `${post.title} · Bombay Cafe Map`,
     description: post.description,
     url: `${SITE_URL}/blog/${post.slug}`,
     type: "article",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${post.title} · Deskbay`,
+    title: `${post.title} · Bombay Cafe Map`,
     description: post.description,
     images: ["/opengraph-image"],
   },
@@ -53,8 +53,8 @@ const articleLd = {
   description: post.description,
   datePublished: post.date,
   dateModified: post.date,
-  author: { "@type": "Organization", name: "Deskbay" },
-  publisher: { "@type": "Organization", name: "Deskbay", url: SITE_URL },
+  author: { "@type": "Organization", name: "Bombay Cafe Map" },
+  publisher: { "@type": "Organization", name: "Bombay Cafe Map", url: SITE_URL },
   mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
 };
 
@@ -67,12 +67,12 @@ const faqLd = {
       name: "What is the best cafe to work from in Mumbai?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: `${TOP_15[0].name} on ${TOP_15[0].neighborhood} currently has Deskbay's highest workability score (${TOP_15[0].workability}/5), based on cited evidence about its wifi, seating and noise levels.`,
+        text: `${TOP_15[0].name} on ${TOP_15[0].neighborhood} currently has Bombay Cafe Map's highest workability score (${TOP_15[0].workability}/5), based on cited evidence about its wifi, seating and noise levels.`,
       },
     },
     {
       "@type": "Question",
-      name: "How does Deskbay decide which cafes are good for working?",
+      name: "How does Bombay Cafe Map decide which cafes are good for working?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Every cafe is scored on wifi, power outlets, seating, noise and how long you can realistically stay, using published evidence rather than star ratings. See /about for the full weighting.",
@@ -106,7 +106,7 @@ export default function Post() {
           once your cup is empty is harder than it should be for a city this size. This isn&apos;t
           a separate opinion piece — it&apos;s the top 15 out of the{" "}
           {CAFES.filter((c) => c.workability !== null).length} cafes we&apos;ve fully scored on
-          Deskbay&apos;s nine-factor workability model (wifi, power, seating, noise, and how long
+          Bombay Cafe Map&apos;s nine-factor workability model (wifi, power, seating, noise, and how long
           you can actually stay), ranked by that same score and scored on a deliberately strict
           scale. Every claim here traces back to the cited evidence on each cafe&apos;s own page —
           nothing is invented to fill a paragraph.
@@ -174,14 +174,14 @@ export default function Post() {
           <div>
             <p className="font-medium text-[14.5px]">What is the best cafe to work from in Mumbai?</p>
             <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
-              {TOP_15[0].name} on {TOP_15[0].neighborhood} currently has Deskbay&apos;s highest
+              {TOP_15[0].name} on {TOP_15[0].neighborhood} currently has Bombay Cafe Map&apos;s highest
               workability score ({TOP_15[0].workability}/5), based on cited evidence about its
               wifi, seating and noise levels — see its{" "}
               <Link href={`/mumbai/${TOP_15[0].slug}`} className="underline hover:text-paper">full profile</Link>.
             </p>
           </div>
           <div>
-            <p className="font-medium text-[14.5px]">How does Deskbay decide which cafes are good for working?</p>
+            <p className="font-medium text-[14.5px]">How does Bombay Cafe Map decide which cafes are good for working?</p>
             <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
               Every cafe is scored on wifi, power outlets, seating, noise and how long you can
               realistically stay, using published evidence rather than star ratings — read the{" "}

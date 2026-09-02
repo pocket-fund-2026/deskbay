@@ -2,17 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CAFES, FACTORS } from "@/lib/cafes";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
-const TITLE = "About Deskbay's scoring methodology";
+const SITE_URL = "https://bombaycafemap.com";
+const TITLE = "About Bombay Cafe Map's scoring methodology";
 const DESCRIPTION =
-  "How Deskbay scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.";
+  "How Bombay Cafe Map scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.";
 
 export const metadata: Metadata = {
   title: "About",
   description: DESCRIPTION,
   alternates: { canonical: "/about" },
   openGraph: {
-    title: `${TITLE} · Deskbay`,
+    title: `${TITLE} · Bombay Cafe Map`,
     description: DESCRIPTION,
     url: `${SITE_URL}/about`,
     type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} · Deskbay`,
+    title: `${TITLE} · Bombay Cafe Map`,
     description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
@@ -30,7 +30,7 @@ const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+    { "@type": "ListItem", position: 1, name: "Bombay Cafe Map", item: SITE_URL },
     { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}/about` },
   ],
 };
@@ -43,7 +43,7 @@ const faqLd = {
     name: f.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: `Weighted at ${f.weight}% of the workability score — Deskbay's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Mumbai cafes, scored from published evidence and left blank where the sources are too thin to average. The rest are listed as directory entries and not yet scored on this model.`,
+      text: `Weighted at ${f.weight}% of the workability score — Bombay Cafe Map's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Mumbai cafes, scored from published evidence and left blank where the sources are too thin to average. The rest are listed as directory entries and not yet scored on this model.`,
     },
   })),
 };
@@ -62,7 +62,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-            ← Deskbay
+            ← Bombay Cafe Map
           </Link>
           <nav className="wa-mono flex gap-4 text-paper/45">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>

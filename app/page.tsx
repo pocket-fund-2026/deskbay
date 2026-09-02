@@ -38,7 +38,7 @@ const LANDMARKS = ["cafe-mondegar-colaba", "leopold-cafe-bar-colaba", "yazdani-b
   .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
 export const metadata: Metadata = {
-  title: "Deskbay — find a Mumbai cafe you can actually work from",
+  title: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
   alternates: { canonical: "/" },
 };
 
@@ -48,7 +48,7 @@ export default function HomePage() {
       <header className="wa-rise relative z-10 flex items-baseline justify-between gap-4 px-6 pt-7 sm:px-10">
         <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
           <Logo size={26} />
-          desk<em className="font-semibold not-italic italic">bay</em>
+          Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
         </div>
         <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
           <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>

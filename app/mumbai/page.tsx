@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AREAS, CAFES, cafesByArea, type AreaSlug } from "@/lib/cafes";
 import MumbaiScreen from "./MumbaiScreen";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 
 function resolveArea(area?: string): AreaSlug | "all" {
   return area && Object.prototype.hasOwnProperty.call(AREAS, area) ? (area as AreaSlug) : "all";
@@ -31,7 +31,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: `${title} · Deskbay`,
+      title: `${title} · Bombay Cafe Map`,
       description,
       url: `${SITE_URL}${path}`,
       type: "website",
@@ -39,7 +39,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · Deskbay`,
+      title: `${title} · Bombay Cafe Map`,
       description,
       images: ["/opengraph-image"],
     },
@@ -88,7 +88,7 @@ export default async function MumbaiPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Deskbay", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Bombay Cafe Map", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Mumbai", item: `${SITE_URL}/mumbai` },
       ...(area !== "all"
         ? [{ "@type": "ListItem", position: 3, name: AREAS[area].name, item: `${SITE_URL}/mumbai?area=${area}` }]

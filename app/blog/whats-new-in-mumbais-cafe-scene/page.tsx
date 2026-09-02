@@ -4,7 +4,7 @@ import { getPost } from "@/lib/blog";
 import { getCafe, CAFES } from "@/lib/cafes";
 import CoffeeHero from "@/components/CoffeeHero";
 
-const SITE_URL = "https://deskbay-blue.vercel.app";
+const SITE_URL = "https://bombaycafemap.com";
 const post = getPost("whats-new-in-mumbais-cafe-scene")!;
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: post.description,
   alternates: { canonical: `/blog/${post.slug}` },
   openGraph: {
-    title: `${post.title} · Deskbay`,
+    title: `${post.title} · Bombay Cafe Map`,
     description: post.description,
     url: `${SITE_URL}/blog/${post.slug}`,
     type: "article",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${post.title} · Deskbay`,
+    title: `${post.title} · Bombay Cafe Map`,
     description: post.description,
     images: ["/opengraph-image"],
   },
@@ -33,8 +33,8 @@ const articleLd = {
   description: post.description,
   datePublished: post.date,
   dateModified: post.date,
-  author: { "@type": "Organization", name: "Deskbay" },
-  publisher: { "@type": "Organization", name: "Deskbay", url: SITE_URL },
+  author: { "@type": "Organization", name: "Bombay Cafe Map" },
+  publisher: { "@type": "Organization", name: "Bombay Cafe Map", url: SITE_URL },
   mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
 };
 
@@ -77,7 +77,7 @@ export default function Post() {
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
               Third Wave Coffee opened its 200th cafe in Sindhi Society, Chembur — its ~40th in
               Mumbai — as part of a stated plan to add roughly 100 more cafes nationally through
-              2026. The chain has become one of the most reliable names on Deskbay&apos;s own
+              2026. The chain has become one of the most reliable names on Bombay Cafe Map&apos;s own
               directory precisely because of that scale: a Third Wave branch is one of the few
               cafe formats consistent enough across suburbs like Andheri, Kandivali and Santacruz
               that its wifi and seating setup rarely varies from outlet to outlet.
@@ -90,13 +90,13 @@ export default function Post() {
               mithai shop and retail store serving chaat, sandwiches, coffee and mithai alongside
               its usual retail line. It&apos;s a sign of where new cafe openings are landing:
               further out in the western suburbs, not just Bandra, which is also where most of
-              Deskbay&apos;s own newer, not-yet-scored directory listings have come from.
+              Bombay Cafe Map&apos;s own newer, not-yet-scored directory listings have come from.
             </p>
           </div>
           <div>
             <h3 className="font-medium text-[15.5px]">Boojee Cafe, BKC</h3>
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
-              Boojee Cafe — already on Deskbay
+              Boojee Cafe — already on Bombay Cafe Map
               {boojee && (
                 <>
                   {" "}
@@ -136,10 +136,10 @@ export default function Post() {
         </p>
 
         <h2 className="font-display mt-9 text-[20px] font-medium tracking-tight">
-          Where Deskbay&apos;s own coverage is growing
+          Where Bombay Cafe Map&apos;s own coverage is growing
         </h2>
         <p className="mt-3 text-[14px] leading-relaxed text-paper/65">
-          We track this expansion directly: Deskbay now lists {CAFES.length} Mumbai cafes across
+          We track this expansion directly: Bombay Cafe Map now lists {CAFES.length} Mumbai cafes across
           seven areas, up from an initial 30 in Bandra and South Bombay. Newer areas like BKC,
           Thane and Navi Mumbai are still directory listings rather than fully scored, which is
           the honest state of coverage right now — a cafe appearing on the map is not the same as
