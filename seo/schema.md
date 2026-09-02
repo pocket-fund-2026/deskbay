@@ -45,15 +45,21 @@ each route builds its own object(s) inline.
   `CafeOrCoffeeShop`) is scoped only to the actual cafes being reviewed, which is
   the correct entity to mark up.
 
+## `/mumbai/[slug]` — Review (added 2026-09-02)
+
+- **`Review`** — added for cafes with a `workability` score (i.e. fully scored,
+  not directory-only entries). `itemReviewed` references the cafe, `reviewRating`
+  uses the workability score (`bestRating: 5, worstRating: 0`), `author` is the
+  `Organization` (Bombay Cafe Map), `reviewBody` is `cafe.editorialNote` (the
+  genuine on-page review copy — this schema was only added because that copy
+  already exists and is visible on the page, satisfying Google's requirement
+  that `Review` schema reflect real first-party content). Cafes with
+  `workability === null` (unscored, directory-only) intentionally get no
+  `Review` block — do not add one for those; there is no review to make a claim
+  about yet.
+
 ## Opportunities (not yet implemented, no code change made)
 
-- **`Review`/`ItemReviewed`** on cafe pages: the site already computes a workability
-  score with cited evidence per factor — this maps cleanly onto schema.org `Review`
-  (with `reviewRating` = workability score /5) if/when the editorial team wants
-  that surfaced as a rich result. Not added automatically since `Review` schema
-  carries stricter Google quality requirements (must be a genuine first-party
-  review, visible on-page) — confirm the on-page copy reads as a review before
-  adding it, rather than just scores in a table.
 - **`ItemList`** on `/mumbai` and `/mumbai?area=X` wrapping the visible ranked cafe
   list — would reinforce the "ranked list" semantics for AI/LLM extraction. Left
   as a recommendation rather than auto-applied because it requires picking a
