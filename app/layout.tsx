@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-89FQDR1XDM";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -57,7 +60,13 @@ export const metadata: Metadata = {
       "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
     images: ["/opengraph-image"],
   },
-  icons: { icon: "/icon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   verification: { google: "uKGJoLyvBJdHaTySPXTeOr5SqxC9CCnpWwbu28p3G2Y" },
 };
 
@@ -86,6 +95,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} h-full`}
     >
       <body className="min-h-dvh font-sans antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
