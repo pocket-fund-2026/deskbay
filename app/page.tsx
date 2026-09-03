@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
 import areaPhotos from "@/data/areaPhotos.json";
+import ThemeToggle from "@/components/ThemeToggle";
 
 type AreaPhoto = { url: string; alt: string };
 const AREA_PHOTOS = areaPhotos as Record<string, AreaPhoto>;
@@ -51,13 +52,16 @@ export default function HomePage() {
           <Logo size={26} />
           Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
         </div>
-        <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
-          <Link href="/collections" className="transition-colors hover:text-paper">Lists</Link>
-          <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>
-          <Link href="/mumbai" className="flex items-center gap-1.5 transition-colors hover:text-paper">
-            Explore Mumbai <span className="text-[13px] leading-none">+</span>
-          </Link>
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
+            <Link href="/collections" className="transition-colors hover:text-paper">Lists</Link>
+            <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>
+            <Link href="/mumbai" className="flex items-center gap-1.5 transition-colors hover:text-paper">
+              Explore Mumbai <span className="text-[13px] leading-none">+</span>
+            </Link>
+          </nav>
+          <ThemeToggle />
+        </div>
       </header>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">

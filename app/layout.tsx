@@ -94,6 +94,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en-IN"
       className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} h-full`}
     >
+      <head>
+        {/*
+          Runs before first paint so a visitor who chose dark never sees a
+          flash of the cream palette while React hydrates. Deliberately
+          inline and dependency-free — anything async is already too late.
+          No stored choice means no attribute, which leaves the CSS
+          prefers-color-scheme rules in charge.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-dvh font-sans antialiased">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

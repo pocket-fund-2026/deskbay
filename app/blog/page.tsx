@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Blog";
@@ -24,9 +25,12 @@ export default function BlogIndex() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <div className="mx-auto max-w-2xl">
-        <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-          ← Bombay Cafe Map
-        </Link>
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+            ← Bombay Cafe Map
+          </Link>
+          <ThemeToggle />
+        </div>
         <h1 className="font-display mt-6 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           Blog
         </h1>

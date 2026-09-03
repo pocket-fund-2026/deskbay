@@ -7,6 +7,7 @@ import { AREAS, CAFES, cafesByArea, type AreaSlug } from "@/lib/cafes";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
 import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
@@ -105,11 +106,12 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
             <Logo size={20} />
             Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </Link>
-          <div className="hidden items-center gap-5 md:flex">
-            <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
+          <div className="flex items-center gap-3 md:gap-5">
+            <Link href="/blog" className="wa-mono hidden text-paper/45 hover:text-paper md:block">
               Blog
             </Link>
-            {areaDropdown}
+            <div className="hidden md:block">{areaDropdown}</div>
+            <ThemeToggle />
           </div>
         </div>
         <h1 className="sr-only">

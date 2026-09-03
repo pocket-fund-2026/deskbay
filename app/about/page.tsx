@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CAFES, FACTORS } from "@/lib/cafes";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "About Bombay Cafe Map's scoring methodology";
@@ -61,9 +62,12 @@ export default function AboutPage() {
       />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-            ← Bombay Cafe Map
-          </Link>
+          <div className="flex items-center justify-between gap-4">
+            <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+              ← Bombay Cafe Map
+            </Link>
+            <ThemeToggle />
+          </div>
           <nav className="wa-mono flex gap-4 text-paper/45">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>
             <Link href="/blog" className="hover:text-paper">Blog</Link>

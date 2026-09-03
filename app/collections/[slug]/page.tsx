@@ -6,6 +6,7 @@ import { COLLECTIONS, collectionCafes, getCollection } from "@/lib/collections";
 import { tier } from "@/lib/scoreTier";
 import PinBadge from "@/components/PinBadge";
 import Footer from "@/components/Footer";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -69,9 +70,12 @@ export default async function CollectionPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }}
       />
       <div className="mx-auto max-w-3xl px-6 py-10 sm:px-10">
-        <Link href="/collections" className="wa-mono text-paper/45 hover:text-paper">
-          ← All lists
-        </Link>
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/collections" className="wa-mono text-paper/45 hover:text-paper">
+            ← All lists
+          </Link>
+          <ThemeToggle />
+        </div>
         <p className="wa-mono mt-6 text-paper/40">{collection.question}</p>
         <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           {collection.title}

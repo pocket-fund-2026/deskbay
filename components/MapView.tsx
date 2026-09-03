@@ -5,6 +5,7 @@ import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Cafe } from "@/lib/cafes";
 import { CITY } from "@/lib/cafes";
+import { useTheme } from "@/lib/useTheme";
 
 // Deliberately more saturated than the site's muted palette elsewhere: these
 // render as small map-layer dots, filtered by the canvas's warm cast, so a
@@ -58,6 +59,75 @@ function pointFC(cafe: Cafe | null | undefined): GeoJSON.FeatureCollection {
   };
 }
 
+/**
+ * The basemap swaps style rather than getting inverted by a CSS filter. The
+ * filter sits on the canvas, which also carries our own markers — inverting it
+ * would turn the green/amber/red workability dots into their opposites. So
+ * dark mode loads OpenFreeMap's dark style and only the warm cast stays a
+ * filter.
+ */
+const MAP_THEME: Record<"light" | "dark", {
+  style: string;
+  filter: string;
+  clusterFill: string;
+  clusterStroke: string;
+  clusterText: string;
+  dotStroke: string;
+  labelText: string;
+  labelHalo: string;
+  selectedRing: string;
+  accent: string;
+  building: [string, string, string];
+  sky: Record<string, string>;
+}> = {
+  light: {
+    style: "https://tiles.openfreemap.org/styles/liberty",
+    // Light enough that the marker colours stay legible through it.
+    filter: "sepia(0.15) saturate(1.05) brightness(1.02) contrast(0.98)",
+    clusterFill: "#2b1810",
+    clusterStroke: "#f7efe0",
+    clusterText: "#f7efe0",
+    dotStroke: "#fdf9f2",
+    labelText: "#2b1810",
+    labelHalo: "#f7efe0",
+    selectedRing: "#2b1810",
+    accent: "#b5651d",
+    building: ["#241811", "#5c3f28", "#8a5a35"],
+    sky: {
+      "sky-color": "#cfa876",
+      "sky-horizon-blend": "0.5",
+      "horizon-color": "#f2e2c4",
+      "horizon-fog-blend": "0.6",
+      "fog-color": "#e9d7b2",
+      "fog-ground-blend": "0.4",
+    },
+  },
+  dark: {
+    style: "https://tiles.openfreemap.org/styles/dark",
+    // The dark style bottoms out near rgb(12,12,12); this lifts it off pure
+    // black and warms it so it reads as espresso rather than slate.
+    filter: "sepia(0.28) saturate(1.15) brightness(1.18) contrast(0.94)",
+    clusterFill: "#f2e6d3",
+    clusterStroke: "#17100b",
+    clusterText: "#17100b",
+    dotStroke: "#f2e6d3",
+    labelText: "#f2e6d3",
+    labelHalo: "#0d0906",
+    selectedRing: "#f2e6d3",
+    accent: "#d98c4a",
+    // Lifted off the ground colour, or the extrusions disappear into it.
+    building: ["#2a1d14", "#6d4c30", "#a97444"],
+    sky: {
+      "sky-color": "#241a12",
+      "sky-horizon-blend": "0.5",
+      "horizon-color": "#4a3524",
+      "horizon-fog-blend": "0.6",
+      "fog-color": "#241a12",
+      "fog-ground-blend": "0.4",
+    },
+  },
+};
+
 const emptyFC: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
 
 function escapeHtml(s: string) {
@@ -91,6 +161,13 @@ export default function MapView({
   const cafesRef = useRef(cafes);
   cafesRef.current = cafes;
   const [mapReady, setMapReady] = useState(false);
+  const theme = useTheme();
+  // The init effect runs once and closes over its own scope, so the current
+  // theme reaches it through a ref rather than a dependency.
+  const themeRef = useRef(theme);
+  themeRef.current = theme;
+  const installRef = useRef<(() => void) | null>(null);
+  const appliedThemeRef = useRef<"light" | "dark" | null>(null);
 
   function fitToCafes(list: Cafe[], opts?: { duration?: number }) {
     const map = mapRef.current;
@@ -130,7 +207,7 @@ export default function MapView({
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: "https://tiles.openfreemap.org/styles/liberty",
+      style: MAP_THEME[themeRef.current].style,
       center: [CITY.center.lng, CITY.center.lat],
       zoom: CITY.zoom,
       pitch: 55,
@@ -156,16 +233,10 @@ export default function MapView({
     });
     popupRef.current = popup;
 
-    // Give the stock OpenFreeMap style a warm, coffee-toned cast so it sits
-    // with the site's cream/espresso palette instead of its default bright
-    // greens and blues.
-    const canvas = map.getCanvas();
-    // Lighter than before: the cafe markers are now real map layers on this
-    // same canvas (not separate DOM elements), so a heavy sepia/desaturate
-    // filter here was also muddying their green/orange/red workability
-    // colors into near-identical browns. This keeps the warm cast on the
-    // basemap while marker colors stay legible.
-    canvas.style.filter = "sepia(0.15) saturate(1.05) brightness(1.02) contrast(0.98)";
+    // A warm cast so the basemap sits with the site's palette. Kept light:
+    // the cafe markers are real map layers on this same canvas, so a heavy
+    // filter muddies their green/amber/red workability colours too.
+    map.getCanvas().style.filter = MAP_THEME[themeRef.current].filter;
 
     const resizeObserver = new ResizeObserver(() => {
       map.resize();
@@ -173,7 +244,10 @@ export default function MapView({
     });
     resizeObserver.observe(containerRef.current);
 
-    map.on("load", () => {
+    // Everything our own: run on first load, and again after a theme swap
+    // replaces the whole style (setStyle drops custom sources and layers).
+    function installCafeLayers() {
+      const t = MAP_THEME[themeRef.current];
       map.resize();
       const layers = map.getStyle().layers ?? [];
       const labelLayerId = layers.find(
@@ -212,11 +286,11 @@ export default function MapView({
                 ["linear"],
                 ["coalesce", ["get", "render_height"], 8],
                 0,
-                "#241811",
+                t.building[0],
                 40,
-                "#5c3f28",
+                t.building[1],
                 120,
-                "#8a5a35",
+                t.building[2],
               ],
               "fill-extrusion-height": ["coalesce", ["get", "render_height"], 8],
               "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0],
@@ -231,12 +305,12 @@ export default function MapView({
       // A warm dusk sky for the tilted 3D view instead of flat void above
       // the horizon.
       map.setSky({
-        "sky-color": "#cfa876",
-        "sky-horizon-blend": 0.5,
-        "horizon-color": "#f2e2c4",
-        "horizon-fog-blend": 0.6,
-        "fog-color": "#e9d7b2",
-        "fog-ground-blend": 0.4,
+        "sky-color": t.sky["sky-color"],
+        "sky-horizon-blend": Number(t.sky["sky-horizon-blend"]),
+        "horizon-color": t.sky["horizon-color"],
+        "horizon-fog-blend": Number(t.sky["horizon-fog-blend"]),
+        "fog-color": t.sky["fog-color"],
+        "fog-ground-blend": Number(t.sky["fog-ground-blend"]),
       });
 
       // Cafes are shown as a clustered point source instead of one DOM marker
@@ -260,7 +334,7 @@ export default function MapView({
         source: "cafes",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": "#b5651d",
+          "circle-color": t.accent,
           "circle-opacity": 0.22,
           "circle-radius": ["step", ["get", "point_count"], 24, 10, 30, 30, 38],
         },
@@ -272,9 +346,9 @@ export default function MapView({
         source: "cafes",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": "#2b1810",
+          "circle-color": t.clusterFill,
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#f7efe0",
+          "circle-stroke-color": t.clusterStroke,
           "circle-radius": ["step", ["get", "point_count"], 16, 10, 20, 30, 25],
         },
       });
@@ -289,7 +363,7 @@ export default function MapView({
           "text-size": 12,
           "text-font": ["Noto Sans Bold"],
         },
-        paint: { "text-color": "#f7efe0" },
+        paint: { "text-color": t.clusterText },
       });
 
       map.addLayer({
@@ -313,7 +387,7 @@ export default function MapView({
           "circle-color": ["get", "color"],
           "circle-radius": ["case", ["get", "topScored"], 9, 7.5],
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#fdf9f2",
+          "circle-stroke-color": t.dotStroke,
         },
       });
 
@@ -340,8 +414,8 @@ export default function MapView({
           "symbol-sort-key": ["case", ["get", "topScored"], 0, 1],
         },
         paint: {
-          "text-color": "#2b1810",
-          "text-halo-color": "#f7efe0",
+          "text-color": t.labelText,
+          "text-halo-color": t.labelHalo,
           "text-halo-width": 1.6,
         },
       });
@@ -352,11 +426,11 @@ export default function MapView({
         type: "circle",
         source: "hovered-cafe",
         paint: {
-          "circle-color": "#b5651d",
+          "circle-color": t.accent,
           "circle-opacity": 0.25,
           "circle-radius": 18,
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#b5651d",
+          "circle-stroke-color": t.accent,
         },
       });
 
@@ -369,65 +443,70 @@ export default function MapView({
           "circle-color": "transparent",
           "circle-radius": 14,
           "circle-stroke-width": 3,
-          "circle-stroke-color": "#2b1810",
+          "circle-stroke-color": t.selectedRing,
         },
       });
 
-      map.on("mouseenter", "clusters", () => (map.getCanvas().style.cursor = "pointer"));
-      map.on("mouseleave", "clusters", () => (map.getCanvas().style.cursor = ""));
-
-      // Hovering a pin names it, scores it, and mirrors the highlight into
-      // the cafe list alongside the map.
-      map.on("mousemove", "unclustered-point", (e) => {
-        const f = e.features?.[0];
-        if (!f) return;
-        map.getCanvas().style.cursor = "pointer";
-        const p = f.properties as { slug: string; name: string; neighborhood: string; scoreLabel: string };
-        const score = p.scoreLabel ? `<span class="cafe-popup__score">${escapeHtml(p.scoreLabel)}</span>` : "";
-        popup
-          .setLngLat((f.geometry as GeoJSON.Point).coordinates as [number, number])
-          .setHTML(
-            `<div class="cafe-popup__row"><span class="cafe-popup__name">${escapeHtml(p.name)}</span>${score}</div>` +
-              `<div class="cafe-popup__area">${escapeHtml(p.neighborhood ?? "")}</div>`
-          )
-          .addTo(map);
-        onHoverRef.current?.(p.slug);
-      });
-
-      map.on("mouseleave", "unclustered-point", () => {
-        map.getCanvas().style.cursor = "";
-        popup.remove();
-        onHoverRef.current?.(null);
-      });
-
-      map.on("click", "clusters", (e) => {
-        const features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
-        const clusterId = features[0]?.properties?.cluster_id;
-        const source = map.getSource("cafes") as maplibregl.GeoJSONSource;
-        if (clusterId === undefined) return;
-        source
-          .getClusterExpansionZoom(clusterId)
-          .then((zoom) => {
-            const geometry = features[0].geometry as GeoJSON.Point;
-            map.easeTo({ center: geometry.coordinates as [number, number], zoom, duration: 500 });
-          })
-          .catch(() => {});
-      });
-
-      map.on("click", "unclustered-point", (e) => {
-        const slug = e.features?.[0]?.properties?.slug as string | undefined;
-        if (slug) onSelectRef.current?.(slug);
-      });
-
-      // A pin's label is a click target too — it sits right under the dot and
-      // is often the easier thing to hit.
-      map.on("click", "cafe-label", (e) => {
-        const slug = e.features?.[0]?.properties?.slug as string | undefined;
-        if (slug) onSelectRef.current?.(slug);
-      });
-
+      // The source starts empty; the data effects below fill it in, and refill
+      // it after a theme swap rebuilds these layers.
       setMapReady(true);
+    }
+
+    map.on("mouseenter", "clusters", () => (map.getCanvas().style.cursor = "pointer"));
+    map.on("mouseleave", "clusters", () => (map.getCanvas().style.cursor = ""));
+
+    // Hovering a pin names it, scores it, and mirrors the highlight into
+    // the cafe list alongside the map.
+    map.on("mousemove", "unclustered-point", (e) => {
+      const f = e.features?.[0];
+      if (!f) return;
+      map.getCanvas().style.cursor = "pointer";
+      const p = f.properties as { slug: string; name: string; neighborhood: string; scoreLabel: string };
+      const score = p.scoreLabel ? `<span class="cafe-popup__score">${escapeHtml(p.scoreLabel)}</span>` : "";
+      popup
+        .setLngLat((f.geometry as GeoJSON.Point).coordinates as [number, number])
+        .setHTML(
+          `<div class="cafe-popup__row"><span class="cafe-popup__name">${escapeHtml(p.name)}</span>${score}</div>` +
+            `<div class="cafe-popup__area">${escapeHtml(p.neighborhood ?? "")}</div>`
+        )
+        .addTo(map);
+      onHoverRef.current?.(p.slug);
     });
+
+    map.on("mouseleave", "unclustered-point", () => {
+      map.getCanvas().style.cursor = "";
+      popup.remove();
+      onHoverRef.current?.(null);
+    });
+
+    map.on("click", "clusters", (e) => {
+      const features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
+      const clusterId = features[0]?.properties?.cluster_id;
+      const source = map.getSource("cafes") as maplibregl.GeoJSONSource;
+      if (clusterId === undefined) return;
+      source
+        .getClusterExpansionZoom(clusterId)
+        .then((zoom) => {
+          const geometry = features[0].geometry as GeoJSON.Point;
+          map.easeTo({ center: geometry.coordinates as [number, number], zoom, duration: 500 });
+        })
+        .catch(() => {});
+    });
+
+    map.on("click", "unclustered-point", (e) => {
+      const slug = e.features?.[0]?.properties?.slug as string | undefined;
+      if (slug) onSelectRef.current?.(slug);
+    });
+
+    // A pin's label is a click target too — it sits right under the dot and
+    // is often the easier thing to hit.
+    map.on("click", "cafe-label", (e) => {
+      const slug = e.features?.[0]?.properties?.slug as string | undefined;
+      if (slug) onSelectRef.current?.(slug);
+    });
+
+    map.on("load", installCafeLayers);
+    installRef.current = installCafeLayers;
 
     return () => {
       resizeObserver.disconnect();
@@ -466,6 +545,26 @@ export default function MapView({
       map.flyTo({ center: [cafe.longitude, cafe.latitude], zoom: 16, pitch: 60, duration: 900 });
     }
   }, [selectedSlug, cafes, mapReady]);
+
+  // Swapping basemap style tears down every custom source and layer, so they
+  // are rebuilt once the new style has loaded, and the data effects above
+  // re-run to refill them (mapReady flips false then true).
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+    if (appliedThemeRef.current === null) {
+      appliedThemeRef.current = theme;
+      return;
+    }
+    if (appliedThemeRef.current === theme) return;
+    appliedThemeRef.current = theme;
+
+    const next = MAP_THEME[theme];
+    map.getCanvas().style.filter = next.filter;
+    setMapReady(false);
+    map.setStyle(next.style);
+    map.once("styledata", () => installRef.current?.());
+  }, [theme, mapReady]);
 
   // Hovering a card in the list rings the matching pin on the map.
   useEffect(() => {

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getPost } from "@/lib/blog";
 import { getCafe, CAFES } from "@/lib/cafes";
 import CoffeeHero from "@/components/CoffeeHero";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const post = getPost("whats-new-in-mumbais-cafe-scene")!;
@@ -45,9 +46,12 @@ export default function Post() {
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <div className="mx-auto max-w-2xl">
-        <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
-          ← Blog
-        </Link>
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
+            ← Blog
+          </Link>
+          <ThemeToggle />
+        </div>
         <p className="wa-mono mt-6 text-paper/40">
           {post.date} · {post.readingTime}
         </p>

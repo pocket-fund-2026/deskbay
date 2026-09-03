@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { AREAS, CAFES, getCafe } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -140,13 +141,16 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
       )}
 
       <div className="mx-auto max-w-2xl">
-        <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">
-          <Link href="/" className="hover:text-paper">Bombay Cafe Map</Link>
-          <span>/</span>
-          <Link href="/mumbai" className="hover:text-paper">Mumbai</Link>
-          <span>/</span>
-          <Link href={`/mumbai?area=${cafe.area}`} className="hover:text-paper">{areaName}</Link>
-        </nav>
+        <div className="flex items-start justify-between gap-4">
+          <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">
+            <Link href="/" className="hover:text-paper">Bombay Cafe Map</Link>
+            <span>/</span>
+            <Link href="/mumbai" className="hover:text-paper">Mumbai</Link>
+            <span>/</span>
+            <Link href={`/mumbai?area=${cafe.area}`} className="hover:text-paper">{areaName}</Link>
+          </nav>
+          <ThemeToggle />
+        </div>
 
         {cafe.images.length > 0 && (
           <div className="mt-5 grid gap-2 sm:grid-cols-2">

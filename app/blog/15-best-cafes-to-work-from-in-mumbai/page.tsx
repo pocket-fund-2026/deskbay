@@ -5,6 +5,7 @@ import { CAFES } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const post = getPost("15-best-cafes-to-work-from-in-mumbai")!;
@@ -87,9 +88,12 @@ export default function Post() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="mx-auto max-w-2xl">
-        <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
-          ← Blog
-        </Link>
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
+            ← Blog
+          </Link>
+          <ThemeToggle />
+        </div>
         <p className="wa-mono mt-6 text-paper/40">
           {post.date} · {post.readingTime}
         </p>

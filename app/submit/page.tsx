@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import SubmitForm from "./SubmitForm";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Submit a cafe";
@@ -43,9 +44,12 @@ export default function SubmitPage() {
       />
       <div className="mx-auto max-w-lg">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
-            ← Bombay Cafe Map
-          </Link>
+          <div className="flex items-center justify-between gap-4">
+            <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+              ← Bombay Cafe Map
+            </Link>
+            <ThemeToggle />
+          </div>
           <nav className="wa-mono flex gap-4 text-paper/45">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>
             <Link href="/blog" className="hover:text-paper">Blog</Link>
