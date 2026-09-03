@@ -7,6 +7,7 @@ import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
 import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
+import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
 import areaPhotos from "@/data/areaPhotos.json";
 
@@ -51,6 +52,7 @@ export default function HomePage() {
           Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
         </div>
         <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
+          <Link href="/collections" className="transition-colors hover:text-paper">Lists</Link>
           <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>
           <Link href="/mumbai" className="flex items-center gap-1.5 transition-colors hover:text-paper">
             Explore Mumbai <span className="text-[13px] leading-none">+</span>
@@ -117,6 +119,22 @@ export default function HomePage() {
             </span>
           </h1>
         </div>
+
+        <Reveal className="mt-12">
+          <p className="wa-mono mb-4 text-paper/40">Start from what you need today</p>
+          <div className="flex flex-wrap gap-2">
+            {COLLECTIONS.map((collection) => (
+              <Link
+                key={collection.slug}
+                href={`/collections/${collection.slug}`}
+                className="wa-mono flex items-center gap-2 rounded-full border border-paper/12 px-3.5 py-2 text-paper/60 transition-colors hover:bg-paper/[0.04] hover:text-paper"
+              >
+                {collection.name}
+                <span className="text-paper/30">{collectionCount(collection)}</span>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
 
         <Reveal className="mt-12">
           <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>

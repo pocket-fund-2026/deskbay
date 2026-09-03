@@ -21,6 +21,7 @@ export default function Footer() {
           <p className="wa-mono mb-3 text-paper/40">Explore</p>
           <nav className="flex flex-col gap-2 text-[13.5px]">
             <Link href="/mumbai" className="text-paper/65 transition-colors hover:text-paper">The map</Link>
+            <Link href="/collections" className="text-paper/65 transition-colors hover:text-paper">Best-of lists</Link>
             <Link href="/blog" className="text-paper/65 transition-colors hover:text-paper">Blog</Link>
             <Link href="/about" className="text-paper/65 transition-colors hover:text-paper">How we score</Link>
             <Link href="/submit" className="text-paper/65 transition-colors hover:text-paper">Submit a cafe</Link>
