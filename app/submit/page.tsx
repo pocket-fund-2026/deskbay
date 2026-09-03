@@ -45,15 +45,15 @@ export default function SubmitPage() {
       <div className="mx-auto max-w-lg">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+            <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
               ← Bombay Cafe Map
             </Link>
             <ThemeToggle />
           </div>
           <nav className="wa-mono flex gap-4 text-paper/45">
-            <Link href="/mumbai" className="hover:text-paper">The map</Link>
-            <Link href="/blog" className="hover:text-paper">Blog</Link>
-            <Link href="/about" className="hover:text-paper">About</Link>
+            <Link href="/mumbai" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">The map</Link>
+            <Link href="/blog" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">Blog</Link>
+            <Link href="/about" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">About</Link>
           </nav>
         </div>
         <h1 className="font-display mt-6 text-[clamp(1.6rem,3.6vw,2.1rem)] font-medium tracking-tight">

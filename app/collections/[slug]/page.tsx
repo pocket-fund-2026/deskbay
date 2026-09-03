@@ -71,7 +71,7 @@ export default async function CollectionPage({
       />
       <div className="mx-auto max-w-3xl px-6 py-10 sm:px-10">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/collections" className="wa-mono text-paper/45 hover:text-paper">
+          <Link href="/collections" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
             ← All lists
           </Link>
           <ThemeToggle />

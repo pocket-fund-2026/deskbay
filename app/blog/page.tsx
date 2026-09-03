@@ -26,7 +26,7 @@ export default function BlogIndex() {
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+          <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
             ← Bombay Cafe Map
           </Link>
           <ThemeToggle />

@@ -47,7 +47,7 @@ export default function Post() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
+          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
             ← Blog
           </Link>
           <ThemeToggle />

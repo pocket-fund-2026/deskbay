@@ -143,11 +143,11 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
       <div className="mx-auto max-w-2xl">
         <div className="flex items-start justify-between gap-4">
           <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">
-            <Link href="/" className="hover:text-paper">Bombay Cafe Map</Link>
+            <Link href="/" className="-my-1.5 py-1.5 transition-colors hover:text-paper">Bombay Cafe Map</Link>
             <span>/</span>
-            <Link href="/mumbai" className="hover:text-paper">Mumbai</Link>
+            <Link href="/mumbai" className="-my-1.5 py-1.5 transition-colors hover:text-paper">Mumbai</Link>
             <span>/</span>
-            <Link href={`/mumbai?area=${cafe.area}`} className="hover:text-paper">{areaName}</Link>
+            <Link href={`/mumbai?area=${cafe.area}`} className="-my-1.5 py-1.5 transition-colors hover:text-paper">{areaName}</Link>
           </nav>
           <ThemeToggle />
         </div>

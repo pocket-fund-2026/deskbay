@@ -19,23 +19,23 @@ export default function Footer() {
 
         <div>
           <p className="wa-mono mb-3 text-paper/40">Explore</p>
-          <nav className="flex flex-col gap-2 text-[13.5px]">
-            <Link href="/mumbai" className="text-paper/65 transition-colors hover:text-paper">The map</Link>
-            <Link href="/collections" className="text-paper/65 transition-colors hover:text-paper">Best-of lists</Link>
-            <Link href="/blog" className="text-paper/65 transition-colors hover:text-paper">Blog</Link>
-            <Link href="/about" className="text-paper/65 transition-colors hover:text-paper">How we score</Link>
-            <Link href="/submit" className="text-paper/65 transition-colors hover:text-paper">Submit a cafe</Link>
+          <nav className="flex flex-col gap-3 text-[13.5px] sm:gap-2">
+            <Link href="/mumbai" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">The map</Link>
+            <Link href="/collections" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Best-of lists</Link>
+            <Link href="/blog" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Blog</Link>
+            <Link href="/about" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">How we score</Link>
+            <Link href="/submit" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Submit a cafe</Link>
           </nav>
         </div>
 
         <div>
           <p className="wa-mono mb-3 text-paper/40">Areas</p>
-          <nav className="flex flex-col gap-2 text-[13.5px]">
+          <nav className="flex flex-col gap-3 text-[13.5px] sm:gap-2">
             {Object.values(AREAS).map((area) => (
               <Link
                 key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
-                className="text-paper/65 transition-colors hover:text-paper"
+                className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper"
               >
                 {area.name}
               </Link>

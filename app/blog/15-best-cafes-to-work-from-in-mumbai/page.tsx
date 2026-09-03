@@ -89,7 +89,7 @@ export default function Post() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/blog" className="wa-mono text-paper/45 hover:text-paper">
+          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
             ← Blog
           </Link>
           <ThemeToggle />
@@ -163,7 +163,7 @@ export default function Post() {
                   {cafe.address}
                   {cafe.openingHours ? ` · ${cafe.openingHours}` : ""}
                 </p>
-                <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1.5 inline-block text-paper/40 hover:text-paper">
+                <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1 inline-block py-1.5 text-paper/40 transition-colors hover:text-paper">
                   Full profile and evidence →
                 </Link>
               </li>

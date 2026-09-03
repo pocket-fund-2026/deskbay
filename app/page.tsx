@@ -54,9 +54,9 @@ export default function HomePage() {
         </div>
         <div className="flex items-center gap-4">
           <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
-            <Link href="/collections" className="transition-colors hover:text-paper">Lists</Link>
-            <Link href="/blog" className="transition-colors hover:text-paper">Blog</Link>
-            <Link href="/mumbai" className="flex items-center gap-1.5 transition-colors hover:text-paper">
+            <Link href="/collections" className="-my-2 py-2 transition-colors hover:text-paper">Lists</Link>
+            <Link href="/blog" className="-my-2 py-2 transition-colors hover:text-paper">Blog</Link>
+            <Link href="/mumbai" className="-my-2 flex items-center gap-1.5 py-2 transition-colors hover:text-paper">
               Explore Mumbai <span className="text-[13px] leading-none">+</span>
             </Link>
           </nav>
@@ -65,7 +65,57 @@ export default function HomePage() {
       </header>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">
-        <p className="wa-mono mb-4 text-paper/45 sm:hidden">Explore Mumbai</p>
+        {/* The proposition used to sit below all nine area cards — roughly
+            3,400px down on a phone. Someone landing here has to be told what
+            this is before they are asked to pick a neighbourhood. */}
+        <div className="max-w-2xl">
+          <h1 className="font-display text-[clamp(1.6rem,4.6vw,2.6rem)] font-medium leading-[1.15] tracking-tight">
+            Mumbai cafes you can{" "}
+            <em className="not-italic text-accent">actually</em> work from.
+          </h1>
+          <p className="mt-4 text-[15.5px] leading-relaxed text-paper/70">
+            Scored on what decides whether you last three hours: somewhere to plug in,
+            somewhere to sit, a connection that holds, and whether anyone minds you staying.
+          </p>
+          <p className="mt-3 text-[14px] leading-relaxed text-paper/50">
+            {CAFES.filter((c) => c.workability !== null).length} cafes graded on the same{" "}
+            {FACTORS.length} weighted factors, from published evidence, with every finding
+            cited. Another {CAFES.filter((c) => c.workability === null).length} are listed
+            with directory info while we work through scoring them properly.
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-2.5">
+            <Link href="/mumbai" className="wa-btn wa-btn--solid !bg-paper !text-ink">
+              Open the map
+            </Link>
+            <Link href="/collections" className="wa-btn">
+              Best-of lists
+            </Link>
+            <Link href="/about" className="wa-btn">
+              How we score
+            </Link>
+          </div>
+        </div>
+
+        {/* Straight after the pitch, because "where can I plug in" is the
+            question people actually arrive with — not "which suburb". */}
+        <div className="mt-10">
+          <p className="wa-mono mb-3 text-paper/40">Start from what you need today</p>
+          <div className="flex flex-wrap gap-2">
+            {COLLECTIONS.map((collection) => (
+              <Link
+                key={collection.slug}
+                href={`/collections/${collection.slug}`}
+                className="wa-mono flex items-center gap-2 rounded-full border border-paper/12 px-3.5 py-2 text-paper/60 transition-colors hover:bg-paper/[0.04] hover:text-paper"
+              >
+                {collection.name}
+                <span className="text-paper/30">{collectionCount(collection)}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <p className="wa-mono mb-4 mt-12 text-paper/40">Explore by area</p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {(Object.values(AREAS)).map((area, i) => {
             const count = cafesByArea(area.slug).length;
@@ -74,7 +124,7 @@ export default function HomePage() {
               <Link
                 key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
-                className="wa-fade group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 sm:aspect-[16/10] lg:aspect-[4/3]"
+                className="wa-fade group relative flex min-h-[210px] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 sm:min-h-0 sm:aspect-[16/10] lg:aspect-[4/3]"
                 style={{ animationDelay: `${i * 90}ms` }}
               >
                 <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
@@ -91,11 +141,11 @@ export default function HomePage() {
                     <Skyline variant={style.variant} />
                   )}
                 </span>
-                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/60 px-2.5 py-1 text-paper/70 backdrop-blur-sm">
+                <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/85 px-2.5 py-1 text-paper/80 backdrop-blur-sm">
                   <PinBadge color={style.pin} size={11} />
                   {count}
                 </span>
-                <span className="relative z-10 bg-gradient-to-t from-ink/95 via-ink/40 to-transparent p-6">
+                <span className="relative z-10 bg-gradient-to-t from-ink via-ink/90 to-transparent p-6 pt-14">
                   <span className="font-display block text-xl font-medium tracking-tight sm:text-2xl">
                     {area.name}
                   </span>
@@ -108,37 +158,6 @@ export default function HomePage() {
             );
           })}
         </div>
-
-        <div className="mt-10 max-w-2xl">
-          <h1 className="text-[15px] font-normal leading-relaxed text-paper/80">
-            Mumbai cafes you can actually work from, scored on what decides whether you last
-            three hours: somewhere to plug in, somewhere to sit, a connection that holds, and
-            whether anyone minds you staying.{" "}
-            <span className="text-paper/50">
-              {CAFES.filter((c) => c.workability !== null).length} cafes across Mumbai are graded
-              on the same {FACTORS.length} weighted factors, from published evidence, with every
-              finding cited. Another{" "}
-              {CAFES.filter((c) => c.workability === null).length} are
-              listed with directory info while we work through scoring them properly.
-            </span>
-          </h1>
-        </div>
-
-        <Reveal className="mt-12">
-          <p className="wa-mono mb-4 text-paper/40">Start from what you need today</p>
-          <div className="flex flex-wrap gap-2">
-            {COLLECTIONS.map((collection) => (
-              <Link
-                key={collection.slug}
-                href={`/collections/${collection.slug}`}
-                className="wa-mono flex items-center gap-2 rounded-full border border-paper/12 px-3.5 py-2 text-paper/60 transition-colors hover:bg-paper/[0.04] hover:text-paper"
-              >
-                {collection.name}
-                <span className="text-paper/30">{collectionCount(collection)}</span>
-              </Link>
-            ))}
-          </div>
-        </Reveal>
 
         <Reveal className="mt-12">
           <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>

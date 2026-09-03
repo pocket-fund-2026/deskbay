@@ -214,3 +214,16 @@ body {
   color: rgb(var(--color-paper-rgb) / 0.45);
   margin-top: 2px;
 }
+
+/* MapLibre's own controls are 29px, which is under a comfortable thumb on a
+   phone. Only enlarged on coarse pointers so the desktop map keeps its
+   compact controls. */
+@media (pointer: coarse) {
+  .maplibregl-ctrl-group button {
+    width: 40px;
+    height: 40px;
+  }
+  .maplibregl-ctrl-group button .maplibregl-ctrl-icon {
+    background-size: 20px 20px;
+  }
+}

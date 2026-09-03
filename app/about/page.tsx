@@ -63,7 +63,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="wa-mono text-paper/45 hover:text-paper">
+            <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
               ← Bombay Cafe Map
             </Link>
             <ThemeToggle />

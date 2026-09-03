@@ -92,7 +92,7 @@ export default function CafeCard({
       <Link
         href={`/mumbai/${cafe.slug}`}
         onClick={(e) => e.stopPropagation()}
-        className="wa-mono mt-3 inline-block text-paper/40 hover:text-paper"
+        className="wa-mono mt-2 inline-block py-1.5 text-paper/40 transition-colors hover:text-paper"
       >
         Full page →
       </Link>

@@ -107,7 +107,10 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
             Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </Link>
           <div className="flex items-center gap-3 md:gap-5">
-            <Link href="/blog" className="wa-mono hidden text-paper/45 hover:text-paper md:block">
+            <Link href="/collections" className="wa-mono -my-2 py-2 text-paper/45 hover:text-paper">
+              Lists
+            </Link>
+            <Link href="/blog" className="wa-mono -my-2 hidden py-2 text-paper/45 hover:text-paper md:block">
               Blog
             </Link>
             <div className="hidden md:block">{areaDropdown}</div>
@@ -158,7 +161,16 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
             ) : (
               <>
                 <div className="border-b border-paper/10 px-4 py-3">
-                  <FactorLegend />
+                  <div className="hidden md:block">
+                    <FactorLegend />
+                  </div>
+                  <Link
+                    href="/about"
+                    className="wa-mono flex items-center justify-between gap-2 text-paper/40 hover:text-paper md:hidden"
+                  >
+                    <span>{cafes.length} cafes · scored on 9 weighted factors</span>
+                    <span>→</span>
+                  </Link>
                 </div>
                 <div className="space-y-2.5 p-3">
                   {cafes.map((cafe) => (
