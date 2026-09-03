@@ -20,6 +20,9 @@ const MapView = dynamic(() => import("@/components/MapView"), {
 export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | "all" }) {
   const [area, setArea] = useState<AreaSlug | "all">(initialArea);
   const [selected, setSelected] = useState<string | null>(null);
+  // Which cafe is under the cursor, in either the list or the map. Shared so
+  // hovering one highlights the other.
+  const [hovered, setHovered] = useState<string | null>(null);
   // Mobile-only bottom sheet: the cafe list can be swiped down to collapse,
   // handing the freed-up space to the map, and swiped back up to expand.
   const [sheetOpen, setSheetOpen] = useState(true);
@@ -73,6 +76,11 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
                 key={a}
                 onClick={() => {
                   setArea(a);
+                  // The selected cafe usually isn't in the new area; keeping it
+                  // would leave the detail panel and the map showing the area
+                  // you just navigated away from.
+                  setSelected(null);
+                  setHovered(null);
                   setAreaMenuOpen(false);
                 }}
                 className={`wa-mono flex w-full items-center justify-between gap-3 px-4 py-2.5 text-left transition-colors ${
@@ -116,7 +124,13 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
             sheetOpen ? "h-[40dvh]" : "h-[calc(100dvh-148px)]"
           }`}
         >
-          <MapView cafes={cafes} selectedSlug={selected} onSelect={handleSelect} />
+          <MapView
+            cafes={cafes}
+            selectedSlug={selected}
+            hoveredSlug={hovered}
+            onSelect={handleSelect}
+            onHover={setHovered}
+          />
         </div>
 
         <div
@@ -150,7 +164,9 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
                       key={cafe.slug}
                       cafe={cafe}
                       active={selected === cafe.slug}
+                      hovered={hovered === cafe.slug}
                       onSelect={() => handleSelect(cafe.slug)}
+                      onHover={setHovered}
                     />
                   ))}
                 </div>

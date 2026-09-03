@@ -24,11 +24,15 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
 export default function CafeCard({
   cafe,
   active,
+  hovered,
   onSelect,
+  onHover,
 }: {
   cafe: Cafe;
   active: boolean;
+  hovered?: boolean;
   onSelect: () => void;
+  onHover?: (slug: string | null) => void;
 }) {
   return (
     <div
@@ -36,8 +40,16 @@ export default function CafeCard({
       tabIndex={0}
       onClick={onSelect}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onSelect()}
+      onMouseEnter={() => onHover?.(cafe.slug)}
+      onMouseLeave={() => onHover?.(null)}
+      onFocus={() => onHover?.(cafe.slug)}
+      onBlur={() => onHover?.(null)}
       className={`w-full cursor-pointer rounded-xl border p-4 text-left transition-colors ${
-        active ? "border-accent/60 bg-paper/[0.06]" : "border-paper/10 hover:bg-paper/[0.03]"
+        active
+          ? "border-accent/60 bg-paper/[0.06]"
+          : hovered
+            ? "border-accent/35 bg-paper/[0.03]"
+            : "border-paper/10 hover:bg-paper/[0.03]"
       }`}
     >
       <div className="flex items-start justify-between gap-3">

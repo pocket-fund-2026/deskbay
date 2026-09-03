@@ -126,3 +126,54 @@ body {
 .maplibregl-popup-close-button {
   color: var(--color-paper) !important;
 }
+
+/* Hover card on the map's cafe pins. MapLibre's default popup is a white
+   box with a hard border; this restyles it into the site's cream/espresso
+   palette and drops the pointer-events so it never eats the hover that
+   spawned it. */
+.cafe-popup {
+  pointer-events: none;
+}
+
+.cafe-popup .maplibregl-popup-content {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border: 1px solid rgba(43, 24, 16, 0.16);
+  border-radius: 12px;
+  padding: 8px 11px;
+  box-shadow: 0 6px 20px rgba(43, 24, 16, 0.18);
+}
+
+.cafe-popup .maplibregl-popup-tip {
+  border-top-color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
+}
+
+.cafe-popup__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cafe-popup__name {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.cafe-popup__score {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cafe-popup__area {
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(43, 24, 16, 0.45);
+  margin-top: 2px;
+}
