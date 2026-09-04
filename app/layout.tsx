@@ -89,6 +89,7 @@ const organizationLd = {
   name: "Bombay Cafe Map",
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
+  sameAs: ["https://www.instagram.com/bombaycafemap/"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

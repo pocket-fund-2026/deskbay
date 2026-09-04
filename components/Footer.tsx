@@ -15,6 +15,30 @@ export default function Footer() {
             Mumbai cafes scored on whether you can actually work from them — wifi, power,
             seating, noise — with every finding cited.
           </p>
+          <a
+            href="https://www.instagram.com/bombaycafemap/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bombay Cafe Map on Instagram"
+            className="mt-4 inline-flex items-center gap-2 text-[13.5px] text-paper/65 transition-colors hover:text-paper"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" />
+            </svg>
+            @bombaycafemap
+          </a>
         </div>
 
         <div>
