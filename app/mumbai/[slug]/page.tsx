@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { AREAS, CAFES, getCafe } from "@/lib/cafes";
+import { AREAS, CAFES, getCafe, nearbyCafes } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 import ThemeToggle from "@/components/ThemeToggle";
+import PinBadge from "@/components/PinBadge";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -66,6 +67,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
   if (!cafe) notFound();
 
   const areaName = AREAS[cafe.area].name;
+  const nearby = nearbyCafes(cafe, 3);
 
   const cafeLd = {
     "@context": "https://schema.org",
@@ -152,7 +154,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           <ThemeToggle />
         </div>
 
-        {cafe.images.length > 0 && (
+        {cafe.images.length > 0 ? (
           <div className="mt-5 grid gap-2 sm:grid-cols-2">
             {cafe.images.slice(0, 4).map((img, i) => (
               <figure
@@ -175,9 +177,19 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
               </figure>
             ))}
           </div>
+        ) : (
+          <div
+            aria-hidden
+            className="relative mt-5 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-xl border border-paper/10"
+            style={{
+              background: `linear-gradient(160deg, ${tier(cafe.workability).color}26 0%, transparent 65%), radial-gradient(circle at 30% 30%, ${tier(cafe.workability).color}18, transparent 55%)`,
+            }}
+          >
+            <PinBadge color={tier(cafe.workability).color} size={34} />
+          </div>
         )}
 
-        <div className={`flex items-start justify-between gap-4 ${cafe.images.length > 0 ? "mt-6" : "mt-5"}`}>
+        <div className="mt-6 flex items-start justify-between gap-4">
           <div>
             <h1 className="font-display text-[clamp(1.7rem,4vw,2.3rem)] font-medium leading-tight">
               {cafe.name}
@@ -316,6 +328,27 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             No photo yet —{" "}
             <Link href="/submit" className="underline hover:text-paper/60">send us one</Link>.
           </p>
+        )}
+
+        {nearby.length > 0 && (
+          <div className="mt-10">
+            <p className="wa-mono mb-3 text-paper/40">More in {areaName}</p>
+            <div className="grid gap-2.5 sm:grid-cols-3">
+              {nearby.map((n) => (
+                <Link
+                  key={n.slug}
+                  href={`/mumbai/${n.slug}`}
+                  className="rounded-xl border border-paper/10 p-3.5 transition-colors hover:bg-paper/[0.04]"
+                >
+                  <div className="flex items-center gap-2">
+                    <PinBadge color={tier(n.workability).color} size={12} />
+                    <p className="font-display text-[13.5px] font-medium leading-snug">{n.name}</p>
+                  </div>
+                  <p className="wa-mono mt-1.5 text-paper/40">{n.neighborhood}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         )}
 
         <Link href="/mumbai" className="wa-btn wa-btn--solid mt-10 !bg-paper !text-ink">

@@ -18,7 +18,7 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/bombaycafemap/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
             aria-label="Bombay Cafe Map on Instagram"
             className="mt-4 inline-flex items-center gap-2 text-[13.5px] text-paper/65 transition-colors hover:text-paper"
           >

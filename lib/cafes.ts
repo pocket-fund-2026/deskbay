@@ -128,3 +128,10 @@ export function cafesByArea(area: AreaSlug) {
 export function getCafe(slug: string) {
   return CAFES.find((c) => c.slug === slug);
 }
+
+export function nearbyCafes(cafe: Cafe, limit = 3) {
+  return cafesByArea(cafe.area)
+    .filter((c) => c.slug !== cafe.slug)
+    .sort((a, b) => (b.workability ?? -1) - (a.workability ?? -1))
+    .slice(0, limit);
+}
