@@ -6450,6 +6450,311 @@
       "workability": 3.27,
       "images": [],
       "menuUrl": null
+    },
+    {
+      "slug": "coco-cafe-by-cococart-bkc",
+      "name": "Coco Cafe by Cococart",
+      "area": "bkc",
+      "neighborhood": "BKC",
+      "address": "Maker Maxity, Level 2, Jio World Drive, Opposite MMRDA, Bandra Kurla Complex, Mumbai",
+      "latitude": 19.0662,
+      "longitude": 72.8683,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A calm, quiet room inside Jio World Drive's Maker Maxity — built for a quiet conversation more than a work session.",
+      "whyWeRecommend": "Reviewers single out the peaceful, unhurried atmosphere without loud music or crowds, which is rare for a mall-adjacent BKC cafe. The catch: tables are compact enough that you can lay out a meal or a laptop, not comfortably both, so it suits a coffee-and-laptop check-in more than a long working session.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 3.4,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {
+        "quiet": "Multiple reviews describe a calm, peaceful ambience without loud music or heavy crowds, favourable for quiet conversation or focused work."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://www.zomato.com/mumbai/coco-cafe-bandra-kurla-complex",
+        "https://www.tripadvisor.com/Restaurant_Review-g304554-d32993021-Reviews-Cococart_Cafe-Mumbai_Maharashtra.html"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coco%20Cafe%20by%20Cococart%2C%20Maker%20Maxity%2C%20Level%202%2C%20Jio%20World%20Drive%2C%20Opposite%20MMRDA%2C%20Bandra%20Kurla%20Complex%2C%20Mumbai"
+    },
+    {
+      "slug": "britannia-and-co-ballard-estate",
+      "name": "Britannia & Co",
+      "area": "south-bombay",
+      "neighborhood": "Ballard Estate",
+      "address": "Wakefield House, 11 Sprott Road, Ballard Estate, Fort, Mumbai 400001",
+      "latitude": 18.9345,
+      "longitude": 72.8404,
+      "website": "https://britannia.co.in",
+      "instagram": null,
+      "openingHours": "Mon, Thu 11:15am–4pm · Tue–Wed, Fri 11am–4pm · Sat 11am–5:30pm · Sun closed",
+      "editorialNote": "A 1923 Parsi institution in a near-derelict Ballard Estate warehouse room, running on berry pulao and nostalgia — not a work spot, a pilgrimage.",
+      "whyWeRecommend": "Like Yazdani Bakery and Kyani & Co, this is on the map as a landmark rather than a scored desk: it closes at 4pm, shuts entirely on Sunday, and reviewers describe cramped, well-worn seating built for a quick historic meal, not a laptop afternoon.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [
+        "irani-and-udupi",
+        "landmark"
+      ],
+      "sources": [
+        "https://www.tripadvisor.in/ShowUserReviews-g304554-d810625-r391745622-Britannia_Company_Restaurant-Mumbai_Maharashtra.html",
+        "https://www.iranichaimumbai.com/britannia"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Britannia%20%26%20Co%2C%20Wakefield%20House%2C%2011%20Sprott%20Road%2C%20Ballard%20Estate%2C%20Fort%2C%20Mumbai%20400001"
+    },
+    {
+      "slug": "white-house-cafe-malad-west",
+      "name": "White House Cafe",
+      "area": "malad-borivali",
+      "neighborhood": "Malad West",
+      "address": "Shop 9, Rakhsha Hospital, Near Atharva College, Charkop Naka, Malad West, Mumbai 400095",
+      "latitude": 19.195,
+      "longitude": 72.839,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A gourmet-coffee corner near Atharva College, one of the few independents in this stretch of Malad with wifi listed as an amenity.",
+      "whyWeRecommend": "Its directory listing checks off wifi as an amenity, which is more than most nearby options can claim, but nobody documents actual speed, seating density, or plug access. Treat wifi as a modest, checkbox-level verified factor rather than a tested one.",
+      "scores": {
+        "wifi": 3.2,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {
+        "wifi": "Listed with a Wifi amenity on its directory listing (amenities checklist, not a detailed review)."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://magicpin.in/Mumbai/Malad-West/Restaurant/White-House-Cafe/store/571678/",
+        "https://www.zomato.com/mumbai/white-house-cafe-2-malad-west"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": {
+        "value": 4.6,
+        "count": 189,
+        "source": "magicpin",
+        "url": "https://magicpin.in/Mumbai/Malad-West/Restaurant/White-House-Cafe/store/571678/"
+      },
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White%20House%20Cafe%2C%20Shop%209%2C%20Rakhsha%20Hospital%2C%20Near%20Atharva%20College%2C%20Charkop%20Naka%2C%20Malad%20West%2C%20Mumbai%20400095"
+    },
+    {
+      "slug": "aurea-cafe-kandivali-east",
+      "name": "Aurea Cafe",
+      "area": "malad-borivali",
+      "neighborhood": "Kandivali East",
+      "address": "Kandivali East, Mumbai",
+      "latitude": 19.2065,
+      "longitude": 72.8697,
+      "website": "https://aureacafe.com",
+      "instagram": null,
+      "openingHours": "Daily 8am–11pm",
+      "editorialNote": "A handcrafted-coffee, all-day-breakfast spot in Kandivali East pitched more at couples and casual veg diners than laptop regulars.",
+      "whyWeRecommend": "We couldn't find any review that speaks to wifi, seating density, or plug access — it's listed here as a directory entry for the area, not a scored work cafe. Worth a first-hand check before you rely on it for a working session.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://aureacafe.com/"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Aurea%20Cafe%2C%20Kandivali%20East%2C%20Mumbai"
+    },
+    {
+      "slug": "cafe-amigos-manpada-thane",
+      "name": "Cafe Amigos",
+      "area": "thane",
+      "neighborhood": "Manpada",
+      "address": "12, Sunrise Shopping Complex, Behind Hiranandani Meadows, Off Ghodbunder Road, Manpada, Thane West, Thane 400610",
+      "latitude": 19.2288,
+      "longitude": 72.975,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A five-table Manpada cafe split across a ground floor and a mezzanine, with outdoor seating that catches the Ghodbunder Road sunset.",
+      "whyWeRecommend": "Reviews (4.1 from over 2,000 ratings) praise the small, cozy layout and upstairs seating, but nothing on record speaks to wifi or plug access, and the ground floor is genuinely tiny — five tables total. Listed as a directory entry, not a scored work spot.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://www.tripadvisor.in/Restaurant_Review-g660976-d10874660-Reviews-Cafe_Amigos-Thane_Thane_District_Maharashtra.html",
+        "https://www.eazydiner.com/mumbai/cafe-amigos-manpada-thane-region-684895"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": {
+        "value": 4.1,
+        "count": 2078,
+        "source": "Tripadvisor",
+        "url": "https://www.tripadvisor.in/Restaurant_Review-g660976-d10874660-Reviews-Cafe_Amigos-Thane_Thane_District_Maharashtra.html"
+      },
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Amigos%2C%2012%2C%20Sunrise%20Shopping%20Complex%2C%20Behind%20Hiranandani%20Meadows%2C%20Off%20Ghodbunder%20Road%2C%20Manpada%2C%20Thane%20West%2C%20Thane%20400610"
+    },
+    {
+      "slug": "happy-cup-cafe-manpada-thane",
+      "name": "Happy Cup Cafe",
+      "area": "thane",
+      "neighborhood": "Manpada",
+      "address": "Shop 5, A Parampara, Cosmos Heritage, Manpada, Thane West, Thane 400607",
+      "latitude": 19.228,
+      "longitude": 72.9745,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A founder-run Manpada cafe since 2021, known locally for hazelnut cappuccino and a serene, unhurried room.",
+      "whyWeRecommend": "Reviewers describe the ambience as serene and the staff as friendly, but nobody documents wifi, outlets, or how long you can camp out — treat this as a directory listing to try, not a scored desk. Some recent reviews note service has slipped, worth weighing before a long visit.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://wanderlog.com/place/details/7629042/the-happyy-cup-cafe-thane",
+        "https://knowyourtown.co.in/lets-boost-our-happiness-index-at-the-happy-cup-cafe/"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Happy%20Cup%20Cafe%2C%20Shop%205%2C%20A%20Parampara%2C%20Cosmos%20Heritage%2C%20Manpada%2C%20Thane%20West%2C%20Thane%20400607"
+    },
+    {
+      "slug": "le-cafe-chembur",
+      "name": "Le Cafe",
+      "area": "eastern-suburbs",
+      "neighborhood": "Chembur",
+      "address": "Jewel of Chembur, 1st Road, Opp BMC Office, Near Natraj Cinema, Chembur Gaothan, Chembur, Mumbai 400071",
+      "latitude": 19.0522,
+      "longitude": 72.9006,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A well-lit Chembur Gaothan cafe with a stylish, cool ambience — one of the area's few independents with a documented seating layout.",
+      "whyWeRecommend": "Local write-ups specifically call out comfortable seating with 'enough privacy for each table', a genuinely useful signal for anyone trying to work solo. Wifi and plug access aren't documented, so seating is the one factor we're scoring here.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {
+        "seating": "Described as well-lit with comfortable seating offering enough privacy per table."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://myhq.in/mumbai/flexi/work-cafes-in-chembur",
+        "https://wanderlog.com/place/details/854423"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Le%20Cafe%2C%20Jewel%20of%20Chembur%2C%201st%20Road%2C%20Opp%20BMC%20Office%2C%20Near%20Natraj%20Cinema%2C%20Chembur%20Gaothan%2C%20Chembur%2C%20Mumbai%20400071"
+    },
+    {
+      "slug": "cafe-free-india-lower-parel",
+      "name": "Cafe Free India",
+      "area": "central-mumbai",
+      "neighborhood": "Lower Parel",
+      "address": "39/41, Ground Floor, NM Joshi Marg, Opposite Deepak Cinema, Lower Parel West, Mumbai",
+      "latitude": 18.9958,
+      "longitude": 72.8305,
+      "website": null,
+      "instagram": null,
+      "openingHours": null,
+      "editorialNote": "A cozy, vintage-postered room on NM Joshi Marg with dim lighting — more late-evening hangout than daylight work desk.",
+      "whyWeRecommend": "The dim lighting and vintage-vibe decor reviewers describe reads better for an evening coffee than a full workday. No source documents wifi or outlet access, so it's listed as an unscored directory entry alongside the area's chain-heavy options.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://www.plumhq.com/blog/mumbai-work-cafes-guide"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Free%20India%2C%2039%2F41%2C%20Ground%20Floor%2C%20NM%20Joshi%20Marg%2C%20Opposite%20Deepak%20Cinema%2C%20Lower%20Parel%20West%2C%20Mumbai"
     }
   ]
 }
