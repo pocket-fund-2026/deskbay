@@ -6246,6 +6246,210 @@
       "workability": 2.3,
       "images": [],
       "menuUrl": null
+    },
+    {
+      "slug": "cafe-madras-matunga-east",
+      "name": "Cafe Madras",
+      "area": "central-mumbai",
+      "neighborhood": "Matunga East",
+      "address": "38 B, Circle House, King's Circle, Near Maheshwari Udyan, Matunga East, Mumbai",
+      "latitude": 19.0272,
+      "longitude": 72.8555,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Madras%2C%2038%20B%2C%20Circle%20House%2C%20King%27s%20Circle%2C%20Matunga%20East%2C%20Mumbai",
+      "openingHours": "Daily 7am–2:30pm, 4pm–10:30pm",
+      "editorialNote": "A South Indian institution at King's Circle since 1940, running on filter coffee and a queue that never really ends.",
+      "whyWeRecommend": "This is a landmark, not a desk. Cafe Madras turns tables fast and the room is built for eating quickly and well, not for settling in with a laptop — go for the dosa and the coffee, then work somewhere else.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [
+        "irani-and-udupi",
+        "landmark"
+      ],
+      "sources": [
+        "https://www.tripadvisor.com/Restaurant_Review-g304554-d877577-Reviews-or45-Cafe_Madras-Mumbai_Maharashtra.html",
+        "https://www.justdial.com/Mumbai/Cafe-Madras-Near-Maheshwari-Udyaan-Matunga-East/022P2150327_BZDET/reviews"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": {
+        "value": 4.4,
+        "count": 33402,
+        "source": "Justdial",
+        "url": "https://www.justdial.com/Mumbai/Cafe-Madras-Near-Maheshwari-Udyaan-Matunga-East/022P2150327_BZDET/reviews"
+      },
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-kokomo-santacruz-east",
+      "name": "Cafe Kokomo",
+      "area": "andheri-juhu",
+      "neighborhood": "Santacruz East",
+      "address": "4, Pratap CHS Limited, Shivaji Road, Near Vakola Bridge, Santacruz East, Mumbai",
+      "latitude": 19.0797,
+      "longitude": 72.8482,
+      "website": "https://www.cafekokomo.com",
+      "instagram": "https://instagram.com/cafekokomo_mumbai",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Kokomo%2C%204%20Pratap%20CHS%2C%20Shivaji%20Road%2C%20Near%20Vakola%20Bridge%2C%20Santacruz%20East%2C%20Mumbai",
+      "openingHours": "Daily 11am–11pm",
+      "editorialNote": "A women-led corner cafe tucked into the Vakola bylanes, small enough that it still feels like someone's find rather than a listing.",
+      "whyWeRecommend": "We haven't found a source that speaks to wifi or plug access here, so treat it as a coffee-and-conversation stop for now rather than a scored work spot — we'll update this once we can verify it properly.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://www.cafekokomo.com/",
+        "https://www.zomato.com/mumbai/cafe-kokomo-santacruz-east",
+        "https://www.instagram.com/cafekokomo_mumbai/"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "terracotta-cafe-eatery-kharghar",
+      "name": "Terracotta Cafe & Eatery",
+      "area": "navi-mumbai",
+      "neighborhood": "Kharghar",
+      "address": "Shop 23 & 24, Grow More Tower, Sector 2, Plot 5, Kharghar, Navi Mumbai",
+      "latitude": 19.047,
+      "longitude": 73.0665,
+      "website": "https://terracotta.cafe",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Terracotta%20Cafe%20%26%20Eatery%2C%20Grow%20More%20Tower%2C%20Sector%202%2C%20Kharghar%2C%20Navi%20Mumbai",
+      "openingHours": "Daily 9am–11pm",
+      "editorialNote": "Navi Mumbai's own answer to a freelancer cafe — Kharghar's independent scene is thin, and this is the one built with remote workers in mind.",
+      "whyWeRecommend": "Local write-ups describe it as set up for freelancers and small businesses to actually camp out — comfortable seating, a easy-going atmosphere, and enough going on (it hosts its own networking meetups) that staying a while doesn't feel out of place. We haven't independently verified wifi speed or plug density, so treat that part as unscored.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.2,
+        "work": 3
+      },
+      "attrs": {},
+      "evidence": {
+        "seating": "Described in local coverage as offering comfortable seating aimed at freelancers and small-business owners working or meeting there.",
+        "work": "Positioned by local guides as a working cafe for Navi Mumbai freelancers, including hosting networking events and workshops on-site."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://terracotta.cafe/",
+        "https://terracotta.cafe/about/",
+        "https://coworkingers.com/best-work-cafe-in-navi-mumbai/"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": 3.1,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-monza-kharghar",
+      "name": "Cafe Monza",
+      "area": "navi-mumbai",
+      "neighborhood": "Kharghar",
+      "address": "Plot 5/6, Bhoomi Heights, Opposite Sector 8, Near Little World Mall, Kharghar, Navi Mumbai",
+      "latitude": 19.041,
+      "longitude": 73.063,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Monza%2C%20Bhoomi%20Heights%2C%20Opposite%20Sector%208%2C%20Kharghar%2C%20Navi%20Mumbai",
+      "openingHours": "Daily 8am–11pm",
+      "editorialNote": "A long-running Kharghar breakfast spot with a retro dining room, better known for English breakfast and continental plates than for laptop time.",
+      "whyWeRecommend": "Reviews here are consistently about the food and the room, not about wifi or plug points, so we're listing it as a directory entry rather than guessing at a work score.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://www.zomato.com/mumbai/cafe-monza-kharghar-navi-mumbai",
+        "https://www.tripadvisor.in/Restaurant_Review-g304554-d5970760-Reviews-Cafe_Monza-Mumbai_Maharashtra.html"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": {
+        "value": 4.6,
+        "count": 4222,
+        "source": "Zomato",
+        "url": "https://www.zomato.com/mumbai/cafe-monza-kharghar-navi-mumbai"
+      },
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "koa-cafe-bar-vashi",
+      "name": "KOA — Cafe & Bar",
+      "area": "navi-mumbai",
+      "neighborhood": "Vashi",
+      "address": "G13, Inorbit Mall, Palm Beach Road, Sector 30A, Vashi, Navi Mumbai",
+      "latitude": 19.0774,
+      "longitude": 72.9987,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KOA%20Cafe%20%26%20Bar%2C%20Inorbit%20Mall%2C%20Sector%2030A%2C%20Vashi%2C%20Navi%20Mumbai",
+      "openingHours": "Daily 11am–1am",
+      "editorialNote": "A cocktail-and-cafe hybrid inside Inorbit Mall — quiet enough for a laptop before evening, then it turns into a bar.",
+      "whyWeRecommend": "A local Vashi cafe roundup singles it out as good for daytime laptop work, citing comfortable seating and reliable wifi — just plan around the switch to bar mode once evening service starts.",
+      "scores": {
+        "wifi": 3.3,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.3,
+        "work": 3.2
+      },
+      "attrs": {},
+      "evidence": {
+        "wifi": "Named in a Vashi cafe guide as having good wifi suited to daytime laptop work.",
+        "seating": "Same source describes the seating as comfortable for working.",
+        "work": "Explicitly called out as good for working on a laptop during daytime hours."
+      },
+      "toggles": [],
+      "tags": [
+        "bar-by-night"
+      ],
+      "sources": [
+        "https://ilovenavimumbai.com/cafes-in-vashi/",
+        "https://www.zomato.com/mumbai/koa-cafe-bar-vashi-navi-mumbai"
+      ],
+      "lastVerifiedAt": "2026-09-04",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": 3.27,
+      "images": [],
+      "menuUrl": null
     }
   ]
 }

@@ -101,15 +101,17 @@ export default function HomePage() {
             question people actually arrive with — not "which suburb". */}
         <div className="mt-10">
           <p className="wa-mono mb-3 text-paper/40">Start from what you need today</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2.5">
             {COLLECTIONS.map((collection) => (
               <Link
                 key={collection.slug}
                 href={`/collections/${collection.slug}`}
-                className="wa-mono flex items-center gap-2 rounded-full border border-paper/12 px-3.5 py-2 text-paper/60 transition-colors hover:bg-paper/[0.04] hover:text-paper"
+                className="group flex items-center gap-2.5 rounded-full border border-paper/18 bg-paper/[0.03] py-2 pl-4 pr-2 text-[14px] font-medium text-paper/85 transition-colors hover:border-accent/50 hover:bg-accent/[0.08] hover:text-paper"
               >
                 {collection.name}
-                <span className="text-paper/30">{collectionCount(collection)}</span>
+                <span className="wa-mono rounded-full bg-paper/10 px-2 py-0.5 text-[11px] text-paper/55 transition-colors group-hover:bg-accent/25 group-hover:text-paper">
+                  {collectionCount(collection)}
+                </span>
               </Link>
             ))}
           </div>
