@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { COLLECTIONS, collectionCount } from "@/lib/collections";
+import { COLLECTIONS, collectionCafes } from "@/lib/collections";
+import { tier } from "@/lib/scoreTier";
+import PinBadge from "@/components/PinBadge";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -42,23 +44,39 @@ export default function CollectionsIndex() {
         </p>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
-          {COLLECTIONS.map((collection) => (
-            <Link
-              key={collection.slug}
-              href={`/collections/${collection.slug}`}
-              className="flex flex-col rounded-xl border border-paper/12 p-5 transition-colors hover:bg-paper/[0.04]"
-            >
-              <p className="wa-mono text-paper/40">
-                {collectionCount(collection)} cafes
-              </p>
-              <h2 className="font-display mt-1.5 text-[18px] font-medium leading-snug">
-                {collection.title}
-              </h2>
-              <p className="mt-2 text-[13.5px] leading-relaxed text-paper/60">
-                {collection.question}
-              </p>
-            </Link>
-          ))}
+          {COLLECTIONS.map((collection) => {
+            const members = collectionCafes(collection);
+            const top = members[0];
+            const t = tier(top?.workability ?? null);
+            return (
+              <Link
+                key={collection.slug}
+                href={`/collections/${collection.slug}`}
+                className="group relative flex flex-col overflow-hidden rounded-xl border border-paper/12 p-5 pl-6 transition-colors hover:bg-paper/[0.04]"
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-y-0 left-0 w-[3px] transition-[width] duration-200 group-hover:w-1"
+                  style={{ background: t.color }}
+                />
+                <div className="flex items-center justify-between gap-3">
+                  <p className="wa-mono text-paper/40">{members.length} cafes</p>
+                  {top && <PinBadge color={t.color} size={13} />}
+                </div>
+                <h2 className="font-display mt-1.5 text-[18px] font-medium leading-snug">
+                  {collection.title}
+                </h2>
+                <p className="mt-2 text-[13.5px] leading-relaxed text-paper/60">
+                  {collection.question}
+                </p>
+                {top && (
+                  <p className="wa-mono mt-3 text-paper/35">
+                    Top pick: <span className="text-paper/55">{top.name}</span>
+                  </p>
+                )}
+              </Link>
+            );
+          })}
         </div>
       </div>
       <Footer />

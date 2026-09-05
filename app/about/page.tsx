@@ -111,7 +111,13 @@ export default function AboutPage() {
                 <span className="text-[15px] font-medium">{f.label}</span>
                 <span className="wa-mono shrink-0 tabular-nums text-paper/55">{f.weight}%</span>
               </div>
-              <p className="mt-1 text-[13.5px] leading-snug text-paper-dim text-paper/55">
+              <div className="mt-2 h-[4px] overflow-hidden rounded-full bg-paper/[0.07]">
+                <div
+                  className="h-full rounded-full bg-accent"
+                  style={{ width: `${(f.weight / FACTORS[0].weight) * 100}%` }}
+                />
+              </div>
+              <p className="mt-2 text-[13.5px] leading-snug text-paper-dim text-paper/55">
                 {f.question}
               </p>
             </li>
