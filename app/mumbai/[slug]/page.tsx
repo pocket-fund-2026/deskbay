@@ -6,6 +6,7 @@ import { AREAS, CAFES, getCafe, nearbyCafes } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 import ThemeToggle from "@/components/ThemeToggle";
 import PinBadge from "@/components/PinBadge";
+import VoteAndComments from "@/components/VoteAndComments";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -317,6 +318,8 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             Sources: {cafe.sources.join(" · ")} — verified {cafe.lastVerifiedAt}
           </p>
         )}
+
+        <VoteAndComments slug={cafe.slug} />
 
         {cafe.images.some((i) => i.creditUrl) ? (
           <p className="wa-mono mt-3 text-paper/25">
