@@ -6732,8 +6732,8 @@
       "website": null,
       "instagram": null,
       "openingHours": null,
-      "editorialNote": "A cozy, vintage-postered room on NM Joshi Marg with dim lighting — more late-evening hangout than daylight work desk.",
-      "whyWeRecommend": "The dim lighting and vintage-vibe decor reviewers describe reads better for an evening coffee than a full workday. No source documents wifi or outlet access, so it's listed as an unscored directory entry alongside the area's chain-heavy options.",
+      "editorialNote": "A brick-walled, unfussy Lower Parel spot near Kamala Mills — austere from the street, built for a quick gossip session with colleagues rather than a design statement.",
+      "whyWeRecommend": "Its own coverage frames it as a casual after-work hangout for colleagues rather than a considered work cafe, and nothing on record speaks to wifi, seating comfort or plug access. Listed as an unscored directory entry alongside the area's chain-heavy options.",
       "scores": {
         "wifi": null,
         "charging": null,
@@ -6746,15 +6746,168 @@
       "toggles": [],
       "tags": [],
       "sources": [
-        "https://www.plumhq.com/blog/mumbai-work-cafes-guide"
+        "https://lbb.in/mumbai/cafe-free-india/",
+        "https://www.tripadvisor.in/Restaurant_Review-g304554-d4784792-Reviews-Cafe_Free_India-Mumbai_Maharashtra.html",
+        "https://www.zomato.com/mumbai/cafe-free-india-lower-parel"
       ],
-      "lastVerifiedAt": "2026-09-04",
+      "lastVerifiedAt": "2026-09-05",
       "publicRating": null,
       "synthesis": null,
       "workability": null,
       "images": [],
       "menuUrl": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Free%20India%2C%2039%2F41%2C%20Ground%20Floor%2C%20NM%20Joshi%20Marg%2C%20Opposite%20Deepak%20Cinema%2C%20Lower%20Parel%20West%2C%20Mumbai"
+    },
+    {
+      "slug": "cafe-arabica-gorai-borivali-west",
+      "name": "Cafe Arabica",
+      "area": "malad-borivali",
+      "neighborhood": "Gorai",
+      "address": "Shop 1, Shree Gayatri Arcade, RSC 11, Gorai 2, Borivali West, Mumbai 400092",
+      "latitude": 19.2295,
+      "longitude": 72.794,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Arabica%2C%20Shop%201%2C%20Shree%20Gayatri%20Arcade%2C%20RSC%2011%2C%20Gorai%202%2C%20Borivali%20West%2C%20Mumbai%20400092",
+      "openingHours": null,
+      "editorialNote": "A rustic-decor coffee spot out in Gorai, in a stretch of Borivali West far enough from the station that most directories skip it.",
+      "whyWeRecommend": "It's on the map as a directory entry for a genuinely underserved corner of the city — nothing we found documents wifi, plug access or how long you can sit, so treat it as a lead to check in person rather than a scored work spot.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://medium.com/@warehoused161/discover-the-delightful-top-6-cafes-to-must-visit-in-borivali-ac98aeb4da3f"
+      ],
+      "lastVerifiedAt": "2026-09-05",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "victorian-cafe-borivali-west",
+      "name": "The Victorian Cafe",
+      "area": "malad-borivali",
+      "neighborhood": "Borivali West",
+      "address": "G-13, Bhoomi Enclave, Opp. Don Bosco School, Borivali West, Mumbai 400103",
+      "latitude": 19.227,
+      "longitude": 72.849,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Victorian%20Cafe%2C%20G-13%2C%20Bhoomi%20Enclave%2C%20Opp.%20Don%20Bosco%20School%2C%20Borivali%20West%2C%20Mumbai%20400103",
+      "openingHours": null,
+      "editorialNote": "A retro-styled room near Don Bosco School, pitched more at an unhurried cup of tea than a working afternoon.",
+      "whyWeRecommend": "Everything we found describes the decor and drinks menu, nothing about wifi, seating comfort or plug access, so it's listed here as a directory entry rather than a scored work cafe.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://medium.com/@warehoused161/discover-the-delightful-top-6-cafes-to-must-visit-in-borivali-ac98aeb4da3f",
+        "https://wanderlog.com/place/details/1415058/victorian-cafe"
+      ],
+      "lastVerifiedAt": "2026-09-05",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "justice-cafe-and-dine-ghodbunder-road-thane",
+      "name": "Justice Cafe and Dine",
+      "area": "thane",
+      "neighborhood": "Ghodbunder Road",
+      "address": "Shop 2, Cosmos Jewels, Vijay Garden Bus Stop, Near D Mart, Ghodbunder Road, Thane 400615",
+      "latitude": 19.245,
+      "longitude": 72.978,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Justice%20Cafe%20and%20Dine%2C%20Shop%202%2C%20Cosmos%20Jewels%2C%20Vijay%20Garden%20Bus%20Stop%2C%20Near%20D%20Mart%2C%20Ghodbunder%20Road%2C%20Thane%20400615",
+      "openingHours": "Daily 10:30am–11:30pm",
+      "editorialNote": "A courtroom-themed, pure-vegetarian and Jain-friendly cafe on Ghodbunder Road, with an in-house bakery and a banquet floor upstairs.",
+      "whyWeRecommend": "This is a novelty-dining destination, not a work cafe — nothing on record speaks to wifi or how long you can sit with a laptop, and the themed decor and banquet space point toward groups and events rather than solo desk time. Listed as a directory entry.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [
+        "themed"
+      ],
+      "sources": [
+        "https://www.tripadvisor.in/ShowUserReviews-g660976-d15685116-r689564436-Justice_Cafe_Dine-Thane_Thane_District_Maharashtra.html",
+        "https://magicpin.in/Mumbai/Ghodbunder-Road/Restaurant/Justice-Cafe-And-Dine/store/121141/"
+      ],
+      "lastVerifiedAt": "2026-09-05",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "offline-cafe-kalamboli-navi-mumbai",
+      "name": "Offline Cafe",
+      "area": "navi-mumbai",
+      "neighborhood": "Kalamboli",
+      "address": "Shop 6, Plot 35, Pratik Harmony, Sector 20, Roadpali, Kalamboli, Navi Mumbai",
+      "latitude": 19.0122,
+      "longitude": 73.1004,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Offline%20Cafe%2C%20Shop%206%2C%20Plot%2035%2C%20Pratik%20Harmony%2C%20Sector%2020%2C%20Roadpali%2C%20Kalamboli%2C%20Navi%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "A well-reviewed sit-down cafe in Kalamboli, one of the few options this far south in Navi Mumbai with a real online footprint.",
+      "whyWeRecommend": "Reviewers rate the atmosphere and service highly (4.6 from 38 ratings on Restaurant Guru), but nobody documents wifi or plug access, so it's a directory entry rather than a scored work spot. Note there's also a Kharghar branch under the same name — this listing covers the Kalamboli location only.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "https://magicpin.in/Navi-Mumbai/Sector-20,-Kalamboli/Restaurant/Offline-Cafe/store/5b052b/",
+        "https://www.zomato.com/mumbai/offline-cafe-kalamboli-navi-mumbai",
+        "https://restaurant-guru.in/Offline-Cafe-India"
+      ],
+      "lastVerifiedAt": "2026-09-05",
+      "publicRating": {
+        "value": 4.6,
+        "count": 38,
+        "source": "Restaurant Guru",
+        "url": "https://restaurant-guru.in/Offline-Cafe-India"
+      },
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
     }
   ]
 }
