@@ -6,18 +6,21 @@ import { approveSubmission, rejectSubmission, retryGeocode } from "@/lib/submiss
 export async function approveAction(formData: FormData) {
   const id = Number(formData.get("id"));
   await approveSubmission(id);
-  // The static cafe list is a build-time import, but the /mumbai and cafe
-  // detail routes read approved submissions from the database on every
-  // request — clearing the cache here just drops any stale render of this
-  // specific admin page, not the site's own data.
   revalidatePath("/admin");
   revalidatePath("/mumbai");
+  // /mumbai/[slug] pages render on-demand for a slug outside the static
+  // build and then cache like any other page — without this, approving
+  // (or later rejecting) a submission wouldn't be reflected on its own
+  // detail page until something else happened to bust that cache.
+  revalidatePath("/mumbai/[slug]", "page");
 }
 
 export async function rejectAction(formData: FormData) {
   const id = Number(formData.get("id"));
   await rejectSubmission(id);
   revalidatePath("/admin");
+  revalidatePath("/mumbai");
+  revalidatePath("/mumbai/[slug]", "page");
 }
 
 export async function retryGeocodeAction(formData: FormData) {
