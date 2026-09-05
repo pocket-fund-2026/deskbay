@@ -60,9 +60,9 @@ export default function SubmitPage() {
           Submit a cafe
         </h1>
         <p className="mt-3 text-[14.5px] leading-relaxed text-paper/60">
-          Know somewhere in Bandra or South Bombay that deserves a place on the map? Tell us the
-          basics — we verify wifi, power and seating against published sources before it goes
-          live.
+          Know a Mumbai cafe that deserves a place on the map? Tell us the basics — it goes into a
+          review queue, and if it checks out it&apos;s added straight away, unscored on wifi and
+          power until we can verify those the same way as everywhere else.
         </p>
         <SubmitForm />
       </div>

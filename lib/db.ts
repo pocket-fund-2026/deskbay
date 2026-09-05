@@ -60,6 +60,27 @@ export function ensureSchema(): Promise<void> {
         )
       `;
       await sql`CREATE INDEX IF NOT EXISTS cafe_comments_slug_idx ON cafe_comments (cafe_slug, created_at DESC)`;
+
+      await sql`
+        CREATE TABLE IF NOT EXISTS cafe_submissions (
+          id BIGSERIAL PRIMARY KEY,
+          slug TEXT NOT NULL UNIQUE,
+          name TEXT NOT NULL,
+          area TEXT NOT NULL,
+          neighborhood TEXT NOT NULL,
+          address TEXT NOT NULL,
+          website TEXT,
+          instagram TEXT,
+          notes TEXT,
+          submitter_email TEXT,
+          latitude DOUBLE PRECISION,
+          longitude DOUBLE PRECISION,
+          status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+          reviewed_at TIMESTAMPTZ
+        )
+      `;
+      await sql`CREATE INDEX IF NOT EXISTS cafe_submissions_status_idx ON cafe_submissions (status, created_at DESC)`;
     })();
   }
   return schemaReady;

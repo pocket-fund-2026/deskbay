@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { AREAS, CAFES, getCafe, nearbyCafes } from "@/lib/cafes";
+import { getApprovedCafeBySlug } from "@/lib/submissions";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 import ThemeToggle from "@/components/ThemeToggle";
 import PinBadge from "@/components/PinBadge";
@@ -20,7 +21,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const cafe = getCafe(slug);
+  const cafe = getCafe(slug) ?? (await getApprovedCafeBySlug(slug));
   if (!cafe) return {};
 
   const title = `${cafe.name} — ${cafe.neighborhood}, Mumbai`;
@@ -64,7 +65,7 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
 
 export default async function CafePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const cafe = getCafe(slug);
+  const cafe = getCafe(slug) ?? (await getApprovedCafeBySlug(slug));
   if (!cafe) notFound();
 
   const areaName = AREAS[cafe.area].name;

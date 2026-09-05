@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
-import { AREAS, CAFES, cafesByArea, type AreaSlug } from "@/lib/cafes";
+import { AREAS, type AreaSlug, type Cafe } from "@/lib/cafes";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
 import Logo from "@/components/Logo";
@@ -19,7 +19,13 @@ const MapView = dynamic(() => import("@/components/MapView"), {
   ),
 });
 
-export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | "all" }) {
+export default function MumbaiScreen({
+  initialArea,
+  allCafes,
+}: {
+  initialArea: AreaSlug | "all";
+  allCafes: Cafe[];
+}) {
   const [area, setArea] = useState<AreaSlug | "all">(initialArea);
   const [selected, setSelected] = useState<string | null>(null);
   // Which cafe is under the cursor, in either the list or the map. Shared so
@@ -33,8 +39,8 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
   const areaOptions: (AreaSlug | "all")[] = ["all", ...Object.keys(AREAS) as AreaSlug[]];
 
   const cafes = useMemo(
-    () => (area === "all" ? CAFES : CAFES.filter((c) => c.area === area)),
-    [area]
+    () => (area === "all" ? allCafes : allCafes.filter((c) => c.area === area)),
+    [area, allCafes]
   );
 
   const selectedCafe = selected ? cafes.find((c) => c.slug === selected) ?? null : null;
@@ -90,7 +96,9 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
                 }`}
               >
                 <span>{a === "all" ? "All areas" : AREAS[a].name}</span>
-                <span className="text-paper/35">{a === "all" ? CAFES.length : cafesByArea(a).length}</span>
+                <span className="text-paper/35">
+                  {a === "all" ? allCafes.length : allCafes.filter((c) => c.area === a).length}
+                </span>
               </button>
             ))}
           </div>

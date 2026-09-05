@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { AREAS, CAFES, cafesByArea, type AreaSlug } from "@/lib/cafes";
+import { AREAS, CAFES, type AreaSlug } from "@/lib/cafes";
+import { getApprovedCafes } from "@/lib/submissions";
 import MumbaiScreen from "./MumbaiScreen";
+
+export const dynamic = "force-dynamic";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -53,7 +56,13 @@ export default async function MumbaiPage({
 }) {
   const { area: rawArea } = await searchParams;
   const area = resolveArea(rawArea);
-  const cafes = area === "all" ? CAFES : cafesByArea(area);
+
+  // Reader-submitted cafes go live the moment an admin approves them —
+  // merged in here rather than requiring a rebuild, at the cost of these
+  // not yet appearing in the (build-time) sitemap or best-of lists.
+  const approved = await getApprovedCafes();
+  const allCafes = [...CAFES, ...approved];
+  const cafes = area === "all" ? allCafes : allCafes.filter((c) => c.area === area);
 
   const itemListLd = {
     "@context": "https://schema.org",
@@ -106,7 +115,7 @@ export default async function MumbaiPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <MumbaiScreen initialArea={area} />
+      <MumbaiScreen initialArea={area} allCafes={allCafes} />
     </>
   );
 }
