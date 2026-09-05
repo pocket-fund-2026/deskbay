@@ -8,6 +8,7 @@ import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
+import MapErrorBoundary from "@/components/MapErrorBoundary";
 
 const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
@@ -129,13 +130,15 @@ export default function MumbaiScreen({ initialArea }: { initialArea: AreaSlug | 
             sheetOpen ? "h-[40dvh]" : "h-[calc(100dvh-148px)]"
           }`}
         >
-          <MapView
-            cafes={cafes}
-            selectedSlug={selected}
-            hoveredSlug={hovered}
-            onSelect={handleSelect}
-            onHover={setHovered}
-          />
+          <MapErrorBoundary>
+            <MapView
+              cafes={cafes}
+              selectedSlug={selected}
+              hoveredSlug={hovered}
+              onSelect={handleSelect}
+              onHover={setHovered}
+            />
+          </MapErrorBoundary>
         </div>
 
         <div

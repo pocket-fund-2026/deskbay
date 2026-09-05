@@ -130,6 +130,15 @@ const MAP_THEME: Record<"light" | "dark", {
 
 const emptyFC: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
 
+function hasWebGL(): boolean {
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(canvas.getContext("webgl2") || canvas.getContext("webgl"));
+  } catch {
+    return false;
+  }
+}
+
 function escapeHtml(s: string) {
   return s.replace(/[&<>"']/g, (ch) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch] as string
@@ -161,6 +170,7 @@ export default function MapView({
   const cafesRef = useRef(cafes);
   cafesRef.current = cafes;
   const [mapReady, setMapReady] = useState(false);
+  const [unsupported, setUnsupported] = useState(false);
   const theme = useTheme();
   // The init effect runs once and closes over its own scope, so the current
   // theme reaches it through a ref rather than a dependency.
@@ -205,15 +215,31 @@ export default function MapView({
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      style: MAP_THEME[themeRef.current].style,
-      center: [CITY.center.lng, CITY.center.lat],
-      zoom: CITY.zoom,
-      pitch: 55,
-      bearing: -12,
-      attributionControl: { compact: true },
-    });
+    // Older browsers, some in-app webviews, and WebGL-disabled environments
+    // can't run MapLibre at all — check before constructing rather than
+    // letting the constructor throw partway through and leave a half-built
+    // map instance behind.
+    if (!hasWebGL()) {
+      setUnsupported(true);
+      return;
+    }
+
+    let map: maplibregl.Map;
+    try {
+      map = new maplibregl.Map({
+        container: containerRef.current,
+        style: MAP_THEME[themeRef.current].style,
+        center: [CITY.center.lng, CITY.center.lat],
+        zoom: CITY.zoom,
+        pitch: 55,
+        bearing: -12,
+        attributionControl: { compact: true },
+      });
+    } catch (err) {
+      console.error("Failed to construct MapLibre map:", err);
+      setUnsupported(true);
+      return;
+    }
 
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
@@ -508,6 +534,12 @@ export default function MapView({
     map.on("load", installCafeLayers);
     installRef.current = installCafeLayers;
 
+    // MapLibre fires this for all sorts of non-fatal hiccups (a missing
+    // sprite icon, one dropped tile request) and keeps running regardless —
+    // treating every one as fatal would turn a harmless network blip into a
+    // false "map broken" message. Just log it for debugging.
+    map.on("error", (e) => console.error("MapLibre error:", e.error));
+
     return () => {
       resizeObserver.disconnect();
       popup.remove();
@@ -574,6 +606,19 @@ export default function MapView({
     const cafe = hoveredSlug ? cafes.find((c) => c.slug === hoveredSlug) : null;
     source?.setData(pointFC(cafe));
   }, [hoveredSlug, cafes, mapReady]);
+
+  if (unsupported) {
+    return (
+      <div className="grid h-full w-full place-items-center bg-ink px-6 text-center">
+        <div>
+          <p className="wa-mono text-paper/50">The map couldn&apos;t load in this browser.</p>
+          <p className="mt-1.5 text-[13px] text-paper/35">
+            The cafe list alongside it still works — pick a cafe there instead.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative h-full w-full">

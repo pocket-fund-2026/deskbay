@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/validate-cafes.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate": "node scripts/validate-cafes.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1",
