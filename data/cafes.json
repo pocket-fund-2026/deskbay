@@ -6908,6 +6908,45 @@
       "workability": null,
       "images": [],
       "menuUrl": null
+    },
+    {
+      "slug": "the-nutcracker-kala-ghoda",
+      "name": "The Nutcracker",
+      "area": "south-bombay",
+      "neighborhood": "Kala Ghoda",
+      "address": "Modern House, Dr. V.B. Gandhi Marg, Opposite One Forbes Building, Kala Ghoda, Fort, Mumbai 400001",
+      "latitude": 18.9318,
+      "longitude": 72.8361,
+      "website": "https://www.thenutcracker.in",
+      "instagram": "https://instagram.com/thenutcrackermumbai",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Nutcracker%2C%20Modern%20House%2C%20Dr.%20V.B.%20Gandhi%20Marg%2C%20Kala%20Ghoda%2C%20Fort%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "Kala Ghoda's original all-day breakfast room, running since 2014 — small enough that the tables sit close together.",
+      "whyWeRecommend": "The flagship of what has grown into a small Mumbai chain, and the one most people mean when they say Nutcracker. Reviews describe a colourful, art-filled room that seats about two dozen with tables close together — charming for breakfast, tight for spreading out with a laptop. Listed here as a landmark worth eating at, not a scored work spot.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {},
+      "evidence": {},
+      "toggles": [],
+      "tags": [
+        "landmark"
+      ],
+      "sources": [
+        "https://www.thenutcracker.in/kalaghoda.html",
+        "https://magicpin.in/Mumbai/Fort/Restaurant/The-Nutcracker/store/23a47/menu/",
+        "https://www.indianfoodfreak.com/2015/02/06/nutcracker-kala-ghoda-mumbai-quaint-little-cafe-mumbai/"
+      ],
+      "lastVerifiedAt": "2026-09-06",
+      "publicRating": null,
+      "synthesis": null,
+      "workability": null,
+      "images": [],
+      "menuUrl": null
     }
   ]
 }
