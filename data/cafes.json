@@ -6940,10 +6940,16 @@
         "https://www.thenutcracker.in/kalaghoda.html",
         "https://magicpin.in/Mumbai/Fort/Restaurant/The-Nutcracker/store/23a47/menu/",
         "https://www.indianfoodfreak.com/2015/02/06/nutcracker-kala-ghoda-mumbai-quaint-little-cafe-mumbai/",
-        "https://www.tripoto.com/europe/trips/the-7-best-caf-s-in-kala-ghoda-5b055c7736805"
+        "https://www.tripoto.com/europe/trips/the-7-best-caf-s-in-kala-ghoda-5b055c7736805",
+        "https://www.district.in/dining/mumbai/the-nutcracker-fort"
       ],
       "lastVerifiedAt": "2026-09-06",
-      "publicRating": null,
+      "publicRating": {
+        "value": 4.7,
+        "count": 4483,
+        "source": "District",
+        "url": "https://www.district.in/dining/mumbai/the-nutcracker-fort"
+      },
       "synthesis": null,
       "workability": null,
       "images": [],
