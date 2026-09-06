@@ -38,10 +38,20 @@ export default function MumbaiScreen({
   const touchStartY = useRef<number | null>(null);
   const areaOptions: (AreaSlug | "all")[] = ["all", ...Object.keys(AREAS) as AreaSlug[]];
 
+  const [query, setQuery] = useState("");
+
   const cafes = useMemo(
     () => (area === "all" ? allCafes : allCafes.filter((c) => c.area === area)),
     [area, allCafes]
   );
+
+  const visibleCafes = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return cafes;
+    return cafes.filter(
+      (c) => c.name.toLowerCase().includes(q) || c.neighborhood.toLowerCase().includes(q)
+    );
+  }, [cafes, query]);
 
   const selectedCafe = selected ? cafes.find((c) => c.slug === selected) ?? null : null;
 
@@ -140,7 +150,7 @@ export default function MumbaiScreen({
         >
           <MapErrorBoundary>
             <MapView
-              cafes={cafes}
+              cafes={visibleCafes}
               selectedSlug={selected}
               hoveredSlug={hovered}
               onSelect={handleSelect}
@@ -163,12 +173,36 @@ export default function MumbaiScreen({
           >
             <span className="h-1 w-10 rounded-full bg-paper/25" />
             {!sheetOpen && (
-              <span className="wa-mono text-paper/40">{cafes.length} cafes — tap to expand</span>
+              <span className="wa-mono text-paper/40">{visibleCafes.length} cafes — tap to expand</span>
             )}
           </button>
+          <div className="relative shrink-0 border-b border-paper/10 px-3 py-2.5">
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by name or neighbourhood…"
+              aria-label="Search cafes"
+              className="wa-mono w-full rounded-full border border-paper/15 bg-paper/[0.03] px-4 py-2 text-paper/80 outline-none placeholder:text-paper/35 focus:border-accent"
+            />
+            {query && (
+              <button
+                onClick={() => setQuery("")}
+                aria-label="Clear search"
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-paper/40 hover:text-paper"
+              >
+                ×
+              </button>
+            )}
+          </div>
           <div className={`min-h-0 flex-1 overflow-y-auto ${sheetOpen ? "" : "hidden"} md:block`}>
             {selectedCafe ? (
               <CafeDetailPanel cafe={selectedCafe} onBack={() => setSelected(null)} />
+            ) : visibleCafes.length === 0 ? (
+              <p className="wa-mono p-4 text-paper/40">
+                No cafes{query ? ` match "${query}"` : ""}
+                {area !== "all" ? ` in ${AREAS[area].name}` : ""}.
+              </p>
             ) : (
               <>
                 <div className="border-b border-paper/10 px-4 py-3">
@@ -179,12 +213,12 @@ export default function MumbaiScreen({
                     href="/about"
                     className="wa-mono flex items-center justify-between gap-2 text-paper/40 hover:text-paper md:hidden"
                   >
-                    <span>{cafes.length} cafes · scored on 9 weighted factors</span>
+                    <span>{visibleCafes.length} cafes · scored on 9 weighted factors</span>
                     <span>→</span>
                   </Link>
                 </div>
                 <div className="space-y-2.5 p-3">
-                  {cafes.map((cafe) => (
+                  {visibleCafes.map((cafe) => (
                     <CafeCard
                       key={cafe.slug}
                       cafe={cafe}
