@@ -66,43 +66,50 @@ export const AREAS = {
   "andheri-juhu": {
     slug: "andheri-juhu",
     name: "Andheri & Juhu",
-    description: "Chains and specialty roasters through Andheri, Juhu and Khar. Directory listings, not yet scored.",
+    description:
+      "Chains and specialty roasters through Andheri, Juhu and Khar — the widest spread of any suburb, from film-crowd regulars to airport-adjacent chains.",
     streets: "Andheri · Juhu · Khar · Santacruz · Versova",
   },
   "malad-borivali": {
     slug: "malad-borivali",
     name: "Malad & Borivali",
-    description: "The far western suburbs' own cafe stretch, from Goregaon up to Borivali. Directory listings, not yet scored.",
+    description:
+      "The far western suburbs' own cafe stretch, from Goregaon up to Borivali — quieter rooms, and fewer laptops fighting for the good table.",
     streets: "Malad · Goregaon · Kandivali · Borivali",
   },
   "central-mumbai": {
     slug: "central-mumbai",
     name: "Central Mumbai",
-    description: "Mill-district roasters and old-Bombay cafes in the middle of the city. Directory listings, not yet scored.",
+    description:
+      "Mill-district roasters and old-Bombay cafes in the middle of the city, where Worli's new openings meet Matunga's century-old Udupi rooms.",
     streets: "Worli · Lower Parel · Dadar · Matunga · Mahim",
   },
   "eastern-suburbs": {
     slug: "eastern-suburbs",
     name: "Eastern Suburbs",
-    description: "Powai's lakeside cafes and the cafe scene spreading through the eastern belt. Directory listings, not yet scored.",
+    description:
+      "Powai's lakeside cafes anchor a scene now spreading through Ghatkopar, Chembur and Mulund as the eastern belt fills in.",
     streets: "Powai · Ghatkopar · Chembur · Mulund · Vikhroli",
   },
   bkc: {
     slug: "bkc",
     name: "BKC",
-    description: "Coffee near the business district. Directory listings, not yet scored.",
+    description:
+      "Coffee built for the business district's schedule — quick counters and a handful of rooms built for a laptop between meetings.",
     streets: "Bandra Kurla Complex",
   },
   thane: {
     slug: "thane",
     name: "Thane",
-    description: "The satellite city's own cafe scene, growing fast along Ghodbunder Road. Directory listings, not yet scored.",
+    description:
+      "The satellite city's own cafe scene, growing fast along Ghodbunder Road as the western suburbs push north.",
     streets: "Ghodbunder Road · Vartak Nagar · Thane West · Thane East",
   },
   "navi-mumbai": {
     slug: "navi-mumbai",
     name: "Navi Mumbai",
-    description: "Planned-city cafes across Vashi, Nerul and Belapur. Directory listings, not yet scored.",
+    description:
+      "Planned-city cafes across Vashi, Nerul and Belapur — wide streets and mall-adjacent rooms built for a different kind of commute.",
     streets: "Vashi · Nerul · Belapur · Kharghar",
   },
 } as const;

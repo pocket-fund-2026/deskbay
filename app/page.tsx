@@ -120,7 +120,9 @@ export default function HomePage() {
         <p className="wa-mono mb-4 mt-12 text-paper/40">Explore by area</p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {(Object.values(AREAS)).map((area, i) => {
-            const count = cafesByArea(area.slug).length;
+            const areaCafes = cafesByArea(area.slug);
+            const count = areaCafes.length;
+            const scoredCount = areaCafes.filter((c) => c.workability !== null).length;
             const style = AREA_STYLES[i % AREA_STYLES.length];
             return (
               <Link
@@ -145,7 +147,7 @@ export default function HomePage() {
                 </span>
                 <span className="wa-mono absolute right-4 top-4 z-10 flex items-center gap-1.5 rounded-full border border-paper/15 bg-ink/85 px-2.5 py-1 text-paper/80 backdrop-blur-sm">
                   <PinBadge color={style.pin} size={11} />
-                  {count}
+                  {scoredCount === count ? count : `${scoredCount}/${count} scored`}
                 </span>
                 <span className="relative z-10 bg-gradient-to-t from-ink via-ink/90 to-transparent p-6 pt-14">
                   <span className="font-display block text-xl font-medium tracking-tight sm:text-2xl">
