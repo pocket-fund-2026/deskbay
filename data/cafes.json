@@ -831,7 +831,7 @@
       "website": "https://veronicasbombay.com",
       "instagram": "https://instagram.com/veronicasbombay",
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Veronica's%2C%20Waroda%20Road%2C%20Ranwar%2C%20Bandra%20West%2C%20Mumbai%20400050%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 8am–11pm",
       "editorialNote": "A sandwich shop with the ambition of a restaurant. Eat standing if you have to.",
       "whyWeRecommend": "The sandwiches are the reason and they are worth the trip. Do not plan a working session around it, the room is built for turnover, not for lingering.",
       "scores": {
@@ -872,7 +872,7 @@
         "veronicasbombay.com",
         "district.in"
       ],
-      "lastVerifiedAt": "2026-08-23",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": {
         "value": 4.2,
         "count": 1964,
@@ -1488,7 +1488,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kyani%20&%20Co.%2C%20Jer%20Mahal%20Estate%2C%20Jagannath%20Shankar%20Seth%20Road%2C%20Marine%20Lines%2C%20Mumbai%20400002%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 7am–8pm",
       "editorialNote": "1904. Marble tables, slow fans, bun maska. The oldest room on this map and the least interested in changing.",
       "whyWeRecommend": "Everything modern cafes reconstruct, this one simply kept: marble tops, aged wooden chairs, high ceilings, shared tables. Seating is limited and you may sit with strangers. That is the experience, not a flaw.",
       "scores": {
@@ -1527,9 +1527,10 @@
       ],
       "sources": [
         "eazydiner.com",
-        "thetastytales.com"
+        "thetastytales.com",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-08-23",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": {
         "value": 4.1,
         "count": 13602,
@@ -1954,7 +1955,7 @@
       "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-churchgate-mumbai/",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%2C%20Churchgate%2C%20Unit%20116A%2C%20HP%20Petrol%20Pump%2C%20Jamshedji%20Tata%20Road%2C%20near%20Eros%20Cinema%2C%20Churchgate%2C%20Mumbai%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 8am–11pm",
       "editorialNote": "Two minutes from Churchgate station and open absurdly late. The commuter's coffee.",
       "whyWeRecommend": "Location is the entire argument: you can be off the train and into a seat in three minutes. Useful before a South Bombay meeting, and one of the later options in the area.",
       "scores": {
@@ -1994,9 +1995,11 @@
         "air conditioned"
       ],
       "sources": [
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "thirdwavecoffeeroasters.com",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-08-23",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "A reviewer explicitly worked here undisturbed, free wifi, a genuinely quiet atmosphere, and a spacious first floor once you're past the small ground level.",
       "workability": 3.2,
@@ -2349,7 +2352,7 @@
       "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-worli-atithi-mumbai",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%2C%20Worli%20(Atithi)%2C%20108%2C%20Ground%20Floor%2C%20Navneelam%20Society%2C%20Dr.%20RG%20Thadani%20Marg%2C%20B%20Wing%2C%20Siddharth%20Nagar%2C%20Worli%2C%20Mumbai%20400018",
-      "openingHours": null,
+      "openingHours": "Daily 7am–3am",
       "editorialNote": "Third Wave's Worli outlet, tucked into a residential society off Dr. RG Thadani Marg.",
       "whyWeRecommend": "Third Wave's Worli outlet, tucked into a residential society off Dr. RG Thadani Marg.",
       "scores": {
@@ -2381,9 +2384,10 @@
       "tags": [],
       "sources": [
         "laptopfriendlycafe.com",
-        "zomato.com"
+        "zomato.com",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Reviews are largely brand-level rather than specific to this outlet, but point to a workable Third Wave setup: decent wifi and comfortable seating.",
       "workability": 2.4,
@@ -2610,7 +2614,7 @@
       "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-powai-cafe-powai-mumbai-436769/Home",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20Powai%2C%20No%20G%2F01%2C%20Ventura%20Building%2C%20Central%20Avenue%2C%20Near%20Hiranandani%20Business%20Park%2C%20Powai%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 7am–1am",
       "editorialNote": "Sits by Hiranandani Business Park, drawing Powai's office/IIT crowd.",
       "whyWeRecommend": "Sits by Hiranandani Business Park, drawing Powai's office/IIT crowd.",
       "scores": {
@@ -2629,7 +2633,7 @@
         "seatingStyles": null,
         "stay": null,
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹250–500"
       },
       "evidence": {
         "wifi": null,
@@ -2641,9 +2645,10 @@
       "toggles": [],
       "tags": [],
       "sources": [
-        "restaurant-guru.in"
+        "restaurant-guru.in",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Multiple sources call the Powai outlet a good, quiet place to work, though wifi and seating specifics weren't confirmed for this location.",
       "workability": 2.9,
@@ -2714,7 +2719,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20Phoenix%20Palladium%2C%20Lower%20Parel%2C%20No%2015%2C%20Grand%20Zone%2C%20Phoenix%20Palladium%2C%20Block%20No%2043%2C%20Lower%20Parel%2C%20Mumbai%20400013",
-      "openingHours": null,
+      "openingHours": "Daily 7am–11pm",
       "editorialNote": "Blue Tokai's counter inside the Phoenix Palladium mall.",
       "whyWeRecommend": "Blue Tokai's counter inside the Phoenix Palladium mall.",
       "scores": {
@@ -2733,7 +2738,7 @@
         "seatingStyles": null,
         "stay": "long",
         "peakCrowd": "Late morning",
-        "avgFoodCost": null
+        "avgFoodCost": "₹250–500"
       },
       "evidence": {
         "wifi": null,
@@ -2746,9 +2751,10 @@
       "tags": [],
       "sources": [
         "postcard.inc",
-        "rahul.biz"
+        "rahul.biz",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Chain-wide reports describe laptop-friendly single-seater platforms with power sockets, but wifi reliability is disputed and seating is genuinely limited. Get there early.",
       "workability": 2.9,
@@ -3740,7 +3746,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mysore%20Cafe%2C%20461%2C%20Durlabh%20Nivas%2C%20Bhaudaji%20Road%2C%20Matunga%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Mon, Tue, Thu, Fri 7:30am–9:30pm · Sat–Sun 7am–10pm · Wed closed",
       "editorialNote": "A Mysuru-style South Indian cafe operating in Matunga since the 1930s.",
       "whyWeRecommend": "A Mysuru-style South Indian cafe operating in Matunga since the 1930s.",
       "scores": {
@@ -3771,9 +3777,10 @@
       "toggles": [],
       "tags": [],
       "sources": [
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "cafemysore.com"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "A historic South Indian cafe that's genuinely calm outside rush hours but hard to get a seat in during them, timing matters a lot here.",
       "workability": 1.9,
@@ -4622,7 +4629,7 @@
       "website": "https://www.thirdwavecoffeeroasters.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%2C%20Viviana%20Mall%2C%20Viviana%20Mall%2C%20Service%20Road%2C%20Eastern%20Express%20Highway%2C%20Thane%20West%2C%20Thane%20400601",
-      "openingHours": null,
+      "openingHours": "Daily 10am–11pm",
       "editorialNote": "A mall outlet inside Viviana Mall, one of Thane's largest malls.",
       "whyWeRecommend": "A mall outlet inside Viviana Mall, one of Thane's largest malls.",
       "scores": {
@@ -4654,9 +4661,10 @@
       "tags": [],
       "sources": [
         "magicpin.in",
-        "rokazu.com"
+        "rokazu.com",
+        "thirdwavecoffee.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "A busy, well-rated mall outlet with wifi and seating confirmed generically, but no review specifically addresses whether it works for a long laptop session.",
       "workability": 2.4,
@@ -4834,7 +4842,7 @@
       "website": "https://www.thirdwavecoffeeroasters.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%2C%20Inorbit%20Mall%2C%20Vashi%2C%20Unit%20No.%20G49%2C%2049A%2C%20Sector%2030A%2C%20Inorbit%20Mall%2C%20Vashi%2C%20Navi%20Mumbai%20400705",
-      "openingHours": null,
+      "openingHours": "Daily 11am–11pm",
       "editorialNote": "A Third Wave Coffee outlet inside Inorbit Mall, Vashi's main shopping centre.",
       "whyWeRecommend": "Listed by a local guide as offering a workspace-friendly layout with charging points.",
       "scores": {
@@ -4866,9 +4874,10 @@
       "tags": [],
       "sources": [
         "awifiplace.com",
-        "travelkismat.com"
+        "travelkismat.com",
+        "thirdwavecoffeeroasters.com"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Chain-wide reports describe reliable wifi and plug points, but no evidence specific to this exact outlet. Treat as a decent default Third Wave bet, mornings before the lunch crowd.",
       "workability": 2.9,
@@ -5203,7 +5212,7 @@
       "website": "https://bluetokaicoffee.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20Goregaon%20East%2C%20SN%202%2C%20Om%20Shree%20Ganesh%20Building%2C%20Churi%20Wadi%2C%20Vishveshwar%20Nagar%20Road%2C%20opposite%20ICICI%20Bank%2C%20Goregaon%20East%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 7am–11pm",
       "editorialNote": "A Blue Tokai outlet on Vishveshwar Nagar Road in Goregaon East's industrial-turned-commercial belt.",
       "whyWeRecommend": "A Blue Tokai outlet on Vishveshwar Nagar Road in Goregaon East's industrial-turned-commercial belt.",
       "scores": {
@@ -5222,7 +5231,7 @@
         "seatingStyles": null,
         "stay": "medium",
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹250–500"
       },
       "evidence": {
         "wifi": null,
@@ -5236,7 +5245,7 @@
       "sources": [
         "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "General coverage frames it as fine for casual work, but wifi quality wasn't confirmed for this specific branch (a sibling Blue Tokai in Goregaon West was flagged for bad wifi, which was not applied here since it's a different location).",
       "workability": 2.4,
@@ -5304,7 +5313,7 @@
       "website": "https://bluetokaicoffee.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20Mulund%2C%20Shop%20No%2056%20%26%2057%2C%20Ground%20Floor%2C%20Runwal%20Greens%2C%20Mulund-Goregaon%20Link%20Road%2C%20Mulund%20West%2C%20Mumbai%20400078",
-      "openingHours": null,
+      "openingHours": "Daily 7am–11pm",
       "editorialNote": "A Blue Tokai outlet inside the Runwal Greens complex on the Mulund-Goregaon Link Road.",
       "whyWeRecommend": "A Blue Tokai outlet inside the Runwal Greens complex on the Mulund-Goregaon Link Road.",
       "scores": {
@@ -5323,7 +5332,7 @@
         "seatingStyles": null,
         "stay": "long",
         "peakCrowd": "Late morning",
-        "avgFoodCost": null
+        "avgFoodCost": "₹250–500"
       },
       "evidence": {
         "wifi": null,
@@ -5336,9 +5345,10 @@
       "tags": [],
       "sources": [
         "postcard.inc",
-        "rahul.biz"
+        "rahul.biz",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Chain-wide reports describe laptop-friendly single-seater platforms with power sockets, but wifi reliability is disputed and seating is genuinely limited. Get there early.",
       "workability": 2.9,
@@ -5767,7 +5777,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cogs%20and%20Brews%20Cafe%2C%20Supreme%20Business%20Park%2C%20S2%20%26%20S3%2C%20Stilt%202%2C%20A%20Wing%2C%20Hiranandani%20Gardens%2C%20Powai%2C%20Mumbai%2C%20Maharashtra%20400076",
-      "openingHours": null,
+      "openingHours": "Daily 9am–10pm",
       "editorialNote": "Billed as one of India's first dedicated study-and-business cafes: a walk-in workspace cafe (not a coworking space, no ID or paperwork needed) with separate casual and deep-focus seating areas.",
       "whyWeRecommend": "The cafe's own description states complimentary wifi and a plug point at every seat across both its casual and focus-seating areas, open 9am-9pm.",
       "scores": {
@@ -5786,7 +5796,7 @@
         "seatingStyles": null,
         "stay": "long",
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹250–500"
       },
       "evidence": {
         "wifi": "Described as wifi-abundant, explicitly positioned as a study/business cafe.",
@@ -5801,7 +5811,7 @@
         "district.in",
         "coworkingers.com"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Purpose-built as a study/business cafe with a dedicated quiet workspace, plug points and hourly seating, the strongest work-specific evidence of any cafe in this batch.",
       "workability": 3.9,
@@ -6170,7 +6180,7 @@
       "website": "https://www.bombayisland.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bombay%20Island%20Coffee%20Company%2C%20Jio%20World%20Drive%2C%20G34B%2C%20Ground%20Floor%2C%20Jio%20World%20Drive%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%20400051",
-      "openingHours": null,
+      "openingHours": "Daily 10am–10pm",
       "editorialNote": "An artisanal coffee roaster's outlet inside the Jio World Drive mall in BKC.",
       "whyWeRecommend": "An artisanal coffee roaster's outlet inside the Jio World Drive mall in BKC.",
       "scores": {
@@ -6200,8 +6210,10 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
-      "lastVerifiedAt": "2026-09-01",
+      "sources": [
+        "bombayisland.com"
+      ],
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": null,
       "workability": null,
@@ -6219,7 +6231,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chaayos%2C%20One%20BKC%2C%20Unit%20C%2C%20One%20BKC%2C%2066%2C%20G%20Block%20Road%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%20400051",
-      "openingHours": null,
+      "openingHours": "Daily 8am–10pm",
       "editorialNote": "A chai-and-snacks chain outlet inside the One BKC office tower.",
       "whyWeRecommend": "A chai-and-snacks chain outlet inside the One BKC office tower.",
       "scores": {
@@ -6251,7 +6263,7 @@
       "sources": [
         "chaayos.com"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Wifi exists but is capped at roughly 2 hours or 200MB at some outlets, workable for a quick session, not a three-hour block.",
       "workability": 2.3,
