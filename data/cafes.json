@@ -1237,18 +1237,18 @@
         "charging": null,
         "chargingNote": null,
         "noise": null,
-        "seating": null,
+        "seating": "Indoor",
         "seatingStyles": null,
         "stay": "moderate",
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹900+"
       },
       "evidence": {
         "wifi": null,
         "charging": null,
         "quiet": null,
         "seating": null,
-        "work": null
+        "work": "district.in lists it as work friendly, with indoor seating."
       },
       "toggles": [],
       "tags": [
@@ -1259,9 +1259,10 @@
       ],
       "sources": [
         "subko.coffee",
-        "baristamagazine.com"
+        "baristamagazine.com",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-08-23",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": {
         "value": 4.3,
         "count": 1169,
@@ -3136,7 +3137,7 @@
       "website": null,
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Silk%20Road%20Coffee%20Company%2C%20Versova%2C%20Andheri%20West%2C%20Mumbai",
-      "openingHours": null,
+      "openingHours": "Daily 8am–10pm",
       "editorialNote": "A tree-shaded, low-key spot in Versova known for strong coffee.",
       "whyWeRecommend": "A tree-shaded, low-key spot in Versova known for strong coffee.",
       "scores": {
@@ -3151,11 +3152,11 @@
         "charging": null,
         "chargingNote": null,
         "noise": "Peaceful",
-        "seating": null,
+        "seating": "Indoor and outdoor",
         "seatingStyles": null,
         "stay": "medium",
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹900+"
       },
       "evidence": {
         "wifi": "Cited by LBB as providing wifi.",
@@ -3165,11 +3166,14 @@
         "work": "Indoor and outdoor seating options let you switch spots."
       },
       "toggles": [],
-      "tags": [],
-      "sources": [
-        "lbb.in"
+      "tags": [
+        "outdoor seating"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "sources": [
+        "lbb.in",
+        "district.in"
+      ],
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "LBB calls it very peaceful with wifi, on a general listing rather than a detailed per-visit account.",
       "workability": 2.9,
@@ -4051,7 +4055,7 @@
       "website": "https://www.sofitel-mumbai-bkc.com/gourmet-delights/pondichery-cafe-all-day-dining/",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pondichery%20Cafe%2C%20Sofitel%20Mumbai%20BKC%2C%20C%2057%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%20400051",
-      "openingHours": null,
+      "openingHours": "Daily 7am–11pm",
       "editorialNote": "An all-day dining cafe in the lobby of the Sofitel Mumbai BKC.",
       "whyWeRecommend": "An all-day dining cafe in the lobby of the Sofitel Mumbai BKC.",
       "scores": {
@@ -4082,9 +4086,10 @@
       "toggles": [],
       "tags": [],
       "sources": [
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "sofitel.accor.com"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "A Sofitel buffet restaurant with a live band, built for dining, not for a laptop session.",
       "workability": 0.4,
@@ -5725,7 +5730,7 @@
       "website": "https://mockingbirdcafebar.com",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mockingbird%20Cafe%20Bar%2C%2080%20Veer%20Nariman%20Road%2C%20Churchgate%2C%20Mumbai%20400020",
-      "openingHours": null,
+      "openingHours": "Daily 9am–midnight",
       "editorialNote": "A cafe and bar a short walk from Churchgate station, serving an Italian/French/Chinese menu.",
       "whyWeRecommend": "A Mumbai work-cafe roundup names Mockingbird's wifi as fast and reliable enough to work uninterrupted for hours.",
       "scores": {
@@ -5744,7 +5749,7 @@
         "seatingStyles": null,
         "stay": "medium",
         "peakCrowd": null,
-        "avgFoodCost": null
+        "avgFoodCost": "₹900+"
       },
       "evidence": {
         "wifi": "Confirmed to offer free wifi suited to working.",
@@ -5757,9 +5762,10 @@
       "tags": [],
       "sources": [
         "lbb.in",
-        "tripadvisor.com"
+        "tripadvisor.com",
+        "district.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "A genuinely spacious Churchgate cafe-bar with confirmed free wifi and varied seating, and a spot on LBB's work-friendly list.",
       "workability": 3.1,
@@ -5829,7 +5835,7 @@
       "website": "https://www.bombayisland.com/pages/vikhroli-cafe-godrej-trees",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bombay%20Island%20Coffee%20Company%2C%20Vikhroli%2C%20Godrej%20One%2C%20Shop%20%234%2C%20Tower%20C%2C%20Retail%20Street%2C%20The%20Trees%2C%20Pirojshanagar%2C%20Vikhroli%20East%2C%20Mumbai%20400079",
-      "openingHours": null,
+      "openingHours": "Daily 9am–10:30pm",
       "editorialNote": "A specialty coffee outlet inside the Godrej One office/retail complex at The Trees, Vikhroli.",
       "whyWeRecommend": "A specialty coffee outlet inside the Godrej One office/retail complex at The Trees, Vikhroli.",
       "scores": {
@@ -5859,8 +5865,10 @@
       },
       "toggles": [],
       "tags": [],
-      "sources": [],
-      "lastVerifiedAt": "2026-09-01",
+      "sources": [
+        "bombayisland.com"
+      ],
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": null,
       "workability": null,
@@ -6080,7 +6088,7 @@
       "website": "https://stores.pretamanger.in/location/maharashtra/mumbai",
       "instagram": null,
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pret%20A%20Manger%2C%20BKC%2C%20Maker%20Maxity%2C%20Ground%20Floor%2C%203%20North%20Avenue%2C%20Bandra%20Kurla%20Complex%20Road%2C%20Mumbai%20400051",
-      "openingHours": null,
+      "openingHours": "Daily 8:30am–11:30pm",
       "editorialNote": "The British sandwich-and-coffee chain's BKC outlet, part of its Reliance-backed India launch.",
       "whyWeRecommend": "The British sandwich-and-coffee chain's BKC outlet, part of its Reliance-backed India launch.",
       "scores": {
@@ -6111,9 +6119,10 @@
       "toggles": [],
       "tags": [],
       "sources": [
-        "justdial.com"
+        "justdial.com",
+        "pretamanger.in"
       ],
-      "lastVerifiedAt": "2026-09-01",
+      "lastVerifiedAt": "2026-09-08",
       "publicRating": null,
       "synthesis": "Reviews specific to this BKC outlet flag overcrowding and limited seating, a lunch grab-and-go spot, not a place to settle in with a laptop.",
       "workability": 1.6,
