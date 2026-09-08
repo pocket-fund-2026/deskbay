@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 import { AREAS } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
+import OpenBadge from "@/components/OpenBadge";
 
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
@@ -109,14 +110,17 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
 
         <div className="mt-5 rounded-lg border border-paper/10 bg-paper/[0.02] px-3.5 py-3">
           {cafe.openingHours && (
-            <p className="wa-mono text-paper/50">{cafe.openingHours}</p>
+            <div className="flex flex-wrap items-center gap-2">
+              <OpenBadge openingHours={cafe.openingHours} />
+              <p className="wa-mono text-paper/50">{cafe.openingHours}</p>
+            </div>
           )}
           <p className={`text-[13px] leading-relaxed text-paper/50 ${cafe.openingHours ? "mt-1.5" : ""}`}>
             {cafe.address}
           </p>
           {cafe.publicRating && (
             <p className="wa-mono mt-2 text-paper/40">
-              {cafe.publicRating.value.toFixed(1)}★ public rating ({cafe.publicRating.count.toLocaleString()}) — {cafe.publicRating.source}
+              {cafe.publicRating.value.toFixed(1)}★ public rating ({cafe.publicRating.count.toLocaleString()}) via {cafe.publicRating.source}
             </p>
           )}
         </div>
@@ -181,7 +185,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
 
         {cafe.sources.length > 0 && (
           <p className="wa-mono mt-5 text-paper/30">
-            Sources: {cafe.sources.join(" · ")} — verified {cafe.lastVerifiedAt}
+            Sources: {cafe.sources.join(" · ")} · verified {cafe.lastVerifiedAt}
           </p>
         )}
 

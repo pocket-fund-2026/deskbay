@@ -12,8 +12,8 @@ export default function Footer() {
             Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </div>
           <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/50">
-            Mumbai cafes scored on whether you can actually work from them — wifi, power,
-            seating, noise — with every finding cited.
+            Mumbai cafes scored on whether you can actually work from them: wifi, power,
+            seating and noise, with every finding cited.
           </p>
           <a
             href="https://www.instagram.com/bombaycafemap/"

@@ -109,7 +109,7 @@ export async function approveSubmission(id: number) {
   const rows = await sql`SELECT latitude, longitude FROM cafe_submissions WHERE id = ${id}`;
   const row = rows[0] as { latitude: number | null; longitude: number | null } | undefined;
   if (!row || row.latitude === null || row.longitude === null) {
-    throw new Error("Cannot approve a submission without valid coordinates — fix the address first.");
+    throw new Error("Cannot approve a submission without valid coordinates. Fix the address first.");
   }
   await sql`UPDATE cafe_submissions SET status = 'approved', reviewed_at = now() WHERE id = ${id}`;
 }
@@ -136,7 +136,7 @@ function submissionToCafe(s: Submission): Cafe {
     editorialNote: s.notes || "Added by a reader, not yet independently verified against published sources.",
     whyWeRecommend:
       s.notes ||
-      "A reader submission — listed as a directory entry while we work through verifying wifi, power and seating the same way as everywhere else on the map.",
+      "A reader submission, listed as a directory entry while we work through verifying wifi, power and seating the same way as everywhere else on the map.",
     scores: { wifi: null, charging: null, quiet: null, seating: null, work: null },
     attrs: {},
     evidence: {},

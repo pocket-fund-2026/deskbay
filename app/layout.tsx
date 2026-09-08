@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { CAFES } from "@/lib/cafes";
 
 const GA_MEASUREMENT_ID = "G-89FQDR1XDM";
 
@@ -25,14 +26,19 @@ const plexMono = IBM_Plex_Mono({
 
 const SITE_URL = "https://bombaycafemap.com";
 
+// Counted rather than typed, so the description can't quietly go stale the
+// way "starting in Bandra and South Bombay" did once the map went citywide.
+const SCORED = CAFES.filter((c) => c.workability !== null).length;
+
+const DESCRIPTION = `${SCORED} Mumbai cafes scored on plug points, wifi, noise and seating, so you know which ones will let you sit for three hours. Every finding cited.`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
+    default: "Bombay Cafe Map: Mumbai cafes you can actually work from",
     template: "%s · Bombay Cafe Map",
   },
-  description:
-    "A map of Mumbai cafes scored on wifi, power outlets, noise and seating — starting in Bandra and South Bombay, expanding citywide — so you know which one will let you stay three hours.",
+  description: DESCRIPTION,
   keywords: [
     "work friendly cafes Mumbai",
     "cafes with wifi Mumbai",
@@ -44,9 +50,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
-    description:
-      "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
+    title: "Bombay Cafe Map: Mumbai cafes you can actually work from",
+    description: DESCRIPTION,
     url: SITE_URL,
     siteName: "Bombay Cafe Map",
     locale: "en_IN",
@@ -56,8 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bombay Cafe Map",
-    description:
-      "Cafes across Mumbai ranked on wifi, power outlets, noise and seating, starting with Bandra and South Bombay.",
+    description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
   icons: {
@@ -102,7 +106,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/*
           Runs before first paint so a visitor who chose dark never sees a
           flash of the cream palette while React hydrates. Deliberately
-          inline and dependency-free — anything async is already too late.
+          inline and dependency-free, anything async is already too late.
           No stored choice means no attribute, which leaves the CSS
           prefers-color-scheme rules in charge.
         */}

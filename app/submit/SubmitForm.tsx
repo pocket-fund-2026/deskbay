@@ -46,14 +46,14 @@ export default function SubmitForm() {
       }
     } catch {
       setStatus("error");
-      setError("Couldn't reach the server — try again.");
+      setError("Couldn't reach the server. Try again.");
     }
   }
 
   if (status === "done") {
     return (
       <p className="wa-mono mt-8 text-paper/60">
-        Thanks — it&apos;s in the review queue. If it checks out it&apos;ll go straight on the map.
+        Thanks, it&apos;s in the review queue. If it checks out it&apos;ll go straight on the map.
       </p>
     );
   }
@@ -119,7 +119,7 @@ export default function SubmitForm() {
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           className="mt-2 w-full rounded-lg border border-paper/15 bg-paper/5 px-3.5 py-2.5 text-[14.5px] outline-none focus:border-accent"
-          placeholder="Street, landmark, Mumbai — specific enough to place on a map"
+          placeholder="Street, landmark, Mumbai. Specific enough to place on a map"
         />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">

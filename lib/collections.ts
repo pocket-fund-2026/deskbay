@@ -59,9 +59,9 @@ export const COLLECTIONS: Collection[] = [
     title: "Mumbai cafes that won't rush you",
     question: "Can I stay three hours?",
     blurb:
-      "The single thing most likely to ruin a working afternoon is not bad coffee — it is the second time a waiter asks whether you'd like anything else. These are the cafes recorded as tolerating a long sit.",
+      "The single thing most likely to ruin a working afternoon is not bad coffee. It is the second time a waiter asks whether you'd like anything else. These are the cafes recorded as tolerating a long sit.",
     description:
-      "Mumbai cafes where you can work for hours without being moved along — long-stay tolerance, recorded per cafe.",
+      "Mumbai cafes where you can work for hours without being moved along. Long-stay tolerance, recorded per cafe.",
     match: (c) => attr(c, "stay") === "long" || labels(c).has("no time limit"),
     reason: (c) =>
       attr(c, "stay") === "long" ? "Recorded as tolerating a long stay" : "Listed as having no time limit",
@@ -90,7 +90,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Mumbai cafes where you can actually plug in",
     question: "Will my laptop survive the afternoon?",
     blurb:
-      "Power is the heaviest factor in the score, at 22 percent, because nothing else matters once the battery goes. These are the cafes with plug points recorded at the seats — not one behind the counter.",
+      "Power is the heaviest factor in the score, at 22 percent, because nothing else matters once the battery goes. These are the cafes with plug points recorded at the seats, not one behind the counter.",
     description:
       "Mumbai cafes with usable plug points at the tables, recorded per cafe rather than assumed.",
     match: (c) =>
@@ -169,12 +169,12 @@ export const COLLECTIONS: Collection[] = [
   {
     slug: "old-bombay-not-for-laptops",
     name: "Old Bombay",
-    title: "Old Bombay cafes worth seeing — and not for laptops",
+    title: "Old Bombay cafes worth seeing, and not for laptops",
     question: "Which are the famous ones, and can I work there?",
     blurb:
-      "The Irani cafes and institutions people mean when they say Bombay cafes. Most of them score badly as workplaces, and that is not a criticism — they were built to turn tables, not to host a laptop for three hours. Go for an hour, eat, and leave the laptop in the bag.",
+      "The Irani cafes and institutions people mean when they say Bombay cafes. Most of them score badly as workplaces, and that is not a criticism: they were built to turn tables, not to host a laptop for three hours. Go for an hour, eat, and leave the laptop in the bag.",
     description:
-      "Mumbai's Irani cafes, heritage rooms and institutions — worth visiting, honestly rated as places to work.",
+      "Mumbai's Irani cafes, heritage rooms and institutions: worth visiting, honestly rated as places to work.",
     match: (c) => {
       const l = labels(c);
       return l.has("institution") || l.has("irani cafe") || l.has("parsi food");
@@ -194,7 +194,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Mumbai cafes in heritage buildings you can work from",
     question: "Can I get the old Bombay room without the bad chair?",
     blurb:
-      "The other half of the heritage answer. These are newer cafes that took over old rooms — stone arcades, mill buildings, Ranwar bungalows — and kept them workable. You get the building and a plug.",
+      "The other half of the heritage answer. These are newer cafes that took over old rooms (stone arcades, mill buildings, Ranwar bungalows) and kept them workable. You get the building and a plug.",
     description:
       "Mumbai cafes inside heritage buildings that still work as places to sit and get things done.",
     match: (c) => labels(c).has("heritage building") && !(labels(c).has("institution") || labels(c).has("irani cafe")),

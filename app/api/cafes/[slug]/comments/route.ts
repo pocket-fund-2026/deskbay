@@ -55,7 +55,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   `;
   const lastCreatedAt = (recent[0] as { createdAt: Date } | undefined)?.createdAt;
   if (lastCreatedAt && Date.now() - new Date(lastCreatedAt).getTime() < RATE_LIMIT_WINDOW_SECONDS * 1000) {
-    return NextResponse.json({ error: "You're posting too fast — try again in a moment." }, { status: 429 });
+    return NextResponse.json({ error: "You're posting too fast. Try again in a moment." }, { status: 429 });
   }
 
   const dailyCount = await sql`

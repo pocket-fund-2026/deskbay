@@ -8,6 +8,10 @@ import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 import ThemeToggle from "@/components/ThemeToggle";
 import PinBadge from "@/components/PinBadge";
 import VoteAndComments from "@/components/VoteAndComments";
+import StillTrue from "@/components/StillTrue";
+import OpenBadge from "@/components/OpenBadge";
+import { parseOpeningHours, toSchemaOpeningHours } from "@/lib/hours";
+import { cafeDescription, cafeTitle } from "@/lib/snippet";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -24,8 +28,9 @@ export async function generateMetadata({
   const cafe = getCafe(slug) ?? (await getApprovedCafeBySlug(slug));
   if (!cafe) return {};
 
-  const title = `${cafe.name} — ${cafe.neighborhood}, Mumbai`;
-  const description = `${cafe.editorialNote} Workability ${cafe.workability !== null ? `${cafe.workability.toFixed(1)}/5` : "not yet scored"} on wifi, power, quiet and seating, with every finding cited.`;
+  // Lead with the answer, not the name they just typed — see lib/snippet.ts.
+  const title = cafeTitle(cafe);
+  const description = cafeDescription(cafe);
   const image = cafe.images[0]?.url ?? "/opengraph-image";
 
   return {
@@ -70,6 +75,25 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
   const areaName = AREAS[cafe.area].name;
   const nearby = nearbyCafes(cafe, 3);
+  const schemaHours = toSchemaOpeningHours(parseOpeningHours(cafe.openingHours));
+
+  // The amenities people actually search for ("does blue tokai have wifi"),
+  // stated as structured facts rather than left buried in the prose. Only
+  // what the data records — an absent field means unknown, not absent.
+  const amenities = [
+    cafe.attrs?.wifi
+      ? { name: "Wi-Fi", value: true, note: String(cafe.attrs.wifi) }
+      : null,
+    cafe.attrs?.charging
+      ? { name: "Power outlets", value: true, note: String(cafe.attrs.charging) }
+      : null,
+    cafe.toggles.includes("No time limit")
+      ? { name: "No time limit", value: true, note: null }
+      : null,
+    cafe.tags.includes("outdoor seating")
+      ? { name: "Outdoor seating", value: true, note: null }
+      : null,
+  ].filter((a): a is { name: string; value: boolean; note: string | null } => a !== null);
 
   const cafeLd = {
     "@context": "https://schema.org",
@@ -85,7 +109,19 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
       addressCountry: "IN",
     },
     geo: { "@type": "GeoCoordinates", latitude: cafe.latitude, longitude: cafe.longitude },
-    ...(cafe.openingHours ? { openingHours: cafe.openingHours } : {}),
+    // schema.org wants "Mo-Th 07:30-22:00", not the prose we show readers.
+    ...(schemaHours ? { openingHours: schemaHours } : {}),
+    ...(cafe.attrs?.avgFoodCost ? { priceRange: String(cafe.attrs.avgFoodCost) } : {}),
+    ...(amenities.length > 0
+      ? {
+          amenityFeature: amenities.map((a) => ({
+            "@type": "LocationFeatureSpecification",
+            name: a.name,
+            value: a.value,
+            ...(a.note ? { description: a.note } : {}),
+          })),
+        }
+      : {}),
     ...(cafe.menuUrl ? { hasMenu: cafe.menuUrl } : {}),
     ...(cafe.publicRating
       ? {
@@ -248,7 +284,12 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           </Link>
         </div>
 
-        {cafe.openingHours && <p className="wa-mono mt-5 text-paper/40">{cafe.openingHours}</p>}
+        {cafe.openingHours && (
+          <div className="mt-5 flex flex-wrap items-center gap-2.5">
+            <OpenBadge openingHours={cafe.openingHours} />
+            <p className="wa-mono text-paper/40">{cafe.openingHours}</p>
+          </div>
+        )}
         <p className="mt-1 text-[13.5px] leading-relaxed text-paper/50">{cafe.address}</p>
 
         <div className="mt-6 space-y-1.5">
@@ -277,7 +318,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         {cafe.publicRating && (
           <p className="wa-mono mt-4 text-paper/40">
-            {cafe.publicRating.value.toFixed(1)}★ public rating ({cafe.publicRating.count}) —{" "}
+            {cafe.publicRating.value.toFixed(1)}★ public rating ({cafe.publicRating.count}) via{" "}
             {cafe.publicRating.source}
           </p>
         )}
@@ -316,9 +357,11 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         {cafe.sources.length > 0 && (
           <p className="wa-mono mt-6 text-paper/30">
-            Sources: {cafe.sources.join(" · ")} — verified {cafe.lastVerifiedAt}
+            Sources: {cafe.sources.join(" · ")} · verified {cafe.lastVerifiedAt}
           </p>
         )}
+
+        <StillTrue slug={cafe.slug} lastVerifiedAt={cafe.lastVerifiedAt} />
 
         <VoteAndComments slug={cafe.slug} />
 
@@ -329,7 +372,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           </p>
         ) : (
           <p className="wa-mono mt-3 text-paper/25">
-            No photo yet —{" "}
+            No photo yet.{" "}
             <Link href="/submit" className="underline hover:text-paper/60">send us one</Link>.
           </p>
         )}

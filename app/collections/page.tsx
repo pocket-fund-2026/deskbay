@@ -9,7 +9,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Best-of lists";
 const DESCRIPTION =
-  "Mumbai cafes grouped by the thing you actually need today — a plug, quiet, a table you can spread out on, or somewhere that won't move you along.";
+  "Mumbai cafes grouped by the thing you actually need today: a plug, quiet, a table you can spread out on, or somewhere that won't move you along.";
 
 export const metadata: Metadata = {
   title: TITLE,

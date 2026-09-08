@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: BASE, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/mumbai`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/mumbai/near-me`, changeFrequency: "weekly", priority: 0.8 },
     ...areaUrls,
     ...cafeUrls,
     { url: `${BASE}/collections`, changeFrequency: "weekly", priority: 0.8 },

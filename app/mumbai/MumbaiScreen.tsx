@@ -2,8 +2,10 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AREAS, type AreaSlug, type Cafe } from "@/lib/cafes";
+import { distanceKm, formatDistance, type Point } from "@/lib/distance";
+import { isOpenNow } from "@/lib/hours";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
 import Logo from "@/components/Logo";
@@ -22,9 +24,12 @@ const MapView = dynamic(() => import("@/components/MapView"), {
 export default function MumbaiScreen({
   initialArea,
   allCafes,
+  initialNearMe = false,
 }: {
   initialArea: AreaSlug | "all";
   allCafes: Cafe[];
+  /** Set by /mumbai/near-me, which exists to answer "cafes near me to work". */
+  initialNearMe?: boolean;
 }) {
   const [area, setArea] = useState<AreaSlug | "all">(initialArea);
   const [selected, setSelected] = useState<string | null>(null);
@@ -39,6 +44,37 @@ export default function MumbaiScreen({
   const areaOptions: (AreaSlug | "all")[] = ["all", ...Object.keys(AREAS) as AreaSlug[]];
 
   const [query, setQuery] = useState("");
+  const [openNowOnly, setOpenNowOnly] = useState(false);
+  const [nearMe, setNearMe] = useState(initialNearMe);
+  const [here, setHere] = useState<Point | null>(null);
+  const [geoError, setGeoError] = useState<string | null>(null);
+
+  // "Open now" is a moving target — re-evaluate on the minute so a cafe that
+  // shuts at 10pm drops out of the list at 10pm rather than on next reload.
+  const [minuteTick, setMinuteTick] = useState(0);
+  useEffect(() => {
+    if (!openNowOnly) return;
+    const timer = setInterval(() => setMinuteTick((n) => n + 1), 60_000);
+    return () => clearInterval(timer);
+  }, [openNowOnly]);
+
+  // The browser only hands over a location in response to a gesture-adjacent
+  // request, and only over https. Asked for once, when the reader turns
+  // "Near me" on — never on load.
+  useEffect(() => {
+    if (!nearMe || here || typeof navigator === "undefined" || !navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setHere({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
+        setGeoError(null);
+      },
+      () => {
+        setGeoError("Couldn't get your location. Sorting by score instead.");
+        setNearMe(false);
+      },
+      { enableHighAccuracy: false, timeout: 10_000, maximumAge: 300_000 }
+    );
+  }, [nearMe, here]);
 
   const cafes = useMemo(
     () => (area === "all" ? allCafes : allCafes.filter((c) => c.area === area)),
@@ -47,11 +83,36 @@ export default function MumbaiScreen({
 
   const visibleCafes = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return cafes;
-    return cafes.filter(
-      (c) => c.name.toLowerCase().includes(q) || c.neighborhood.toLowerCase().includes(q)
-    );
-  }, [cafes, query]);
+    let list = q
+      ? cafes.filter(
+          (c) => c.name.toLowerCase().includes(q) || c.neighborhood.toLowerCase().includes(q)
+        )
+      : cafes;
+
+    if (openNowOnly) {
+      // A cafe whose hours we've never recorded is unknown, not open. Hiding
+      // it is the same call the scores make when the evidence is too thin.
+      list = list.filter((c) => isOpenNow(c.openingHours) === true);
+    }
+
+    if (nearMe && here) {
+      list = [...list].sort(
+        (a, b) =>
+          distanceKm(here, { latitude: a.latitude, longitude: a.longitude }) -
+          distanceKm(here, { latitude: b.latitude, longitude: b.longitude })
+      );
+    }
+
+    return list;
+    // minuteTick is the clock, not a value — it re-runs the open-now filter.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cafes, query, openNowOnly, nearMe, here, minuteTick]);
+
+  const hiddenForUnknownHours = useMemo(
+    () => (openNowOnly ? cafes.filter((c) => isOpenNow(c.openingHours) === null).length : 0),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [cafes, openNowOnly, minuteTick]
+  );
 
   const selectedCafe = selected ? cafes.find((c) => c.slug === selected) ?? null : null;
 
@@ -137,7 +198,7 @@ export default function MumbaiScreen({
           </div>
         </div>
         <h1 className="sr-only">
-          {area === "all" ? "Mumbai" : AREAS[area].name} — cafes you can work from
+          {area === "all" ? "Mumbai" : AREAS[area].name}: cafes you can work from
         </h1>
         <div className="mt-3 md:hidden">{areaDropdown}</div>
       </header>
@@ -173,7 +234,7 @@ export default function MumbaiScreen({
           >
             <span className="h-1 w-10 rounded-full bg-paper/25" />
             {!sheetOpen && (
-              <span className="wa-mono text-paper/40">{visibleCafes.length} cafes — tap to expand</span>
+              <span className="wa-mono text-paper/40">{visibleCafes.length} cafes · tap to expand</span>
             )}
           </button>
           <div className="relative shrink-0 border-b border-paper/10 px-3 py-2.5">
@@ -194,6 +255,47 @@ export default function MumbaiScreen({
                 ×
               </button>
             )}
+
+            <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+              <button
+                onClick={() => setOpenNowOnly((v) => !v)}
+                aria-pressed={openNowOnly}
+                className={`wa-mono rounded-full border px-3 py-1.5 transition-colors ${
+                  openNowOnly
+                    ? "border-emerald-400/50 bg-emerald-400/10 text-paper"
+                    : "border-paper/15 text-paper/55 hover:text-paper"
+                }`}
+              >
+                Open now
+              </button>
+              <button
+                onClick={() => {
+                  if (typeof navigator !== "undefined" && !navigator.geolocation) {
+                    setGeoError("This browser can't share a location.");
+                    return;
+                  }
+                  setNearMe((v) => !v);
+                  setGeoError(null);
+                }}
+                aria-pressed={nearMe}
+                className={`wa-mono rounded-full border px-3 py-1.5 transition-colors ${
+                  nearMe
+                    ? "border-accent/60 bg-accent/15 text-paper"
+                    : "border-paper/15 text-paper/55 hover:text-paper"
+                }`}
+              >
+                {nearMe && !here ? "Locating…" : "Near me"}
+              </button>
+              {nearMe && here && (
+                <span className="wa-mono text-paper/35">nearest first</span>
+              )}
+            </div>
+            {geoError && <p className="wa-mono mt-1.5 text-paper/40">{geoError}</p>}
+            {openNowOnly && hiddenForUnknownHours > 0 && (
+              <p className="wa-mono mt-1.5 text-paper/35">
+                {hiddenForUnknownHours} hidden (hours not recorded yet).
+              </p>
+            )}
           </div>
           <div className={`min-h-0 flex-1 overflow-y-auto ${sheetOpen ? "" : "hidden"} md:block`}>
             {selectedCafe ? (
@@ -201,7 +303,8 @@ export default function MumbaiScreen({
             ) : visibleCafes.length === 0 ? (
               <p className="wa-mono p-4 text-paper/40">
                 No cafes{query ? ` match "${query}"` : ""}
-                {area !== "all" ? ` in ${AREAS[area].name}` : ""}.
+                {area !== "all" ? ` in ${AREAS[area].name}` : ""}
+                {openNowOnly ? " are open right now" : ""}.
               </p>
             ) : (
               <>
@@ -226,6 +329,16 @@ export default function MumbaiScreen({
                       hovered={hovered === cafe.slug}
                       onSelect={() => handleSelect(cafe.slug)}
                       onHover={setHovered}
+                      distance={
+                        here
+                          ? formatDistance(
+                              distanceKm(here, {
+                                latitude: cafe.latitude,
+                                longitude: cafe.longitude,
+                              })
+                            )
+                          : null
+                      }
                     />
                   ))}
                 </div>

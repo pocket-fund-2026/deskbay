@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "Blog";
-const DESCRIPTION = "Notes on Mumbai's cafe scene — best-of lists pulled from our own data, and what's actually new.";
+const DESCRIPTION = "Notes on Mumbai's cafe scene: best-of lists pulled from our own data, and what's actually new.";
 
 export const metadata: Metadata = {
   title: TITLE,

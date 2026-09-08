@@ -91,7 +91,7 @@ export default function VoteAndComments({ slug }: { slug: string }) {
         setError(d.error ?? "Couldn't post that comment.");
       }
     } catch {
-      setError("Couldn't reach the server — try again.");
+      setError("Couldn't reach the server. Try again.");
     } finally {
       setPosting(false);
     }
@@ -139,10 +139,10 @@ export default function VoteAndComments({ slug }: { slug: string }) {
           onChange={(e) => setDraft(e.target.value)}
           maxLength={500}
           rows={3}
-          placeholder="Wifi held up, or it didn't — leave a note for the next person."
+          placeholder="Wifi held up, or it didn't. Leave a note for the next person."
           className="w-full rounded-lg border border-paper/15 bg-paper/5 px-3.5 py-2.5 text-[14px] leading-relaxed outline-none focus:border-accent"
         />
-        {/* Hidden from real visitors via CSS, not display:none — screen
+        {/* Hidden from real visitors via CSS, not display:none. Screen
             readers and simple bots that ignore stylesheets still see an
             empty-on-load field, so filling it in is a reliable spam tell. */}
         <input
@@ -170,7 +170,7 @@ export default function VoteAndComments({ slug }: { slug: string }) {
       <ul className="mt-5 space-y-3">
         {comments === null && <li className="wa-mono text-paper/30">Loading comments…</li>}
         {comments?.length === 0 && (
-          <li className="wa-mono text-paper/30">No comments yet — be the first.</li>
+          <li className="wa-mono text-paper/30">No comments yet. Be the first.</li>
         )}
         {comments?.map((c) => (
           <li key={c.id} className="rounded-lg border border-paper/10 p-3.5">

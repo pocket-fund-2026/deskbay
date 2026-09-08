@@ -35,12 +35,18 @@ const EDITOR_PICKS = [
   .map((slug) => CAFES.find((c) => c.slug === slug))
   .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
+const SCORED = CAFES.filter((c) => c.workability !== null).length;
+const UNSCORED = CAFES.length - SCORED;
+
 const LANDMARKS = ["cafe-mondegar-colaba", "leopold-cafe-bar-colaba", "yazdani-bakery-fort"]
   .map((slug) => CAFES.find((c) => c.slug === slug))
   .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
 export const metadata: Metadata = {
-  title: "Bombay Cafe Map — find a Mumbai cafe you can actually work from",
+  // The root layout's title.template only applies to child segments, not to
+  // a page in the same segment, so the homepage carries the brand itself.
+  title: "Bombay Cafe Map: Mumbai cafes you can actually work from",
+  description: `${SCORED} Mumbai cafes scored on plug points, wifi, noise and seating, so you know which ones will let you sit for three hours. Every finding cited.`,
   alternates: { canonical: "/" },
 };
 
@@ -65,26 +71,27 @@ export default function HomePage() {
       </header>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-10 sm:px-10">
-        {/* The proposition used to sit below all nine area cards — roughly
+        {/* The proposition used to sit below all nine area cards, roughly
             3,400px down on a phone. Someone landing here has to be told what
-            this is before they are asked to pick a neighbourhood. */}
-        <div className="max-w-2xl">
-          <h1 className="font-display text-[clamp(1.6rem,4.6vw,2.6rem)] font-medium leading-[1.15] tracking-tight">
+            this is before they are asked to pick a neighbourhood, and it
+            holds the page better centred than ranged left against nothing. */}
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="inline-block"><Logo size={52} /></span>
+          <h1 className="font-display mt-5 text-[clamp(1.75rem,5vw,2.9rem)] font-medium leading-[1.12] tracking-tight">
             Mumbai cafes you can{" "}
             <em className="not-italic text-accent">actually</em> work from.
           </h1>
-          <p className="mt-4 text-[15.5px] leading-relaxed text-paper/70">
+          <p className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-paper/70">
             Scored on what decides whether you last three hours: somewhere to plug in,
             somewhere to sit, a connection that holds, and whether anyone minds you staying.
           </p>
-          <p className="mt-3 text-[14px] leading-relaxed text-paper/50">
-            {CAFES.filter((c) => c.workability !== null).length} cafes graded on the same{" "}
-            {FACTORS.length} weighted factors, from published evidence, with every finding
-            cited. Another {CAFES.filter((c) => c.workability === null).length} are listed
-            with directory info while we work through scoring them properly.
+          <p className="mx-auto mt-3 max-w-lg text-[14px] leading-relaxed text-paper/50">
+            {SCORED} cafes graded on the same {FACTORS.length} weighted factors, from
+            published evidence, with every finding cited. Another {UNSCORED} are listed with
+            directory info while we work through scoring them properly.
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-2.5">
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
             <Link href="/mumbai" className="wa-btn wa-btn--solid !bg-paper !text-ink">
               Open the map
             </Link>
@@ -98,10 +105,10 @@ export default function HomePage() {
         </div>
 
         {/* Straight after the pitch, because "where can I plug in" is the
-            question people actually arrive with — not "which suburb". */}
-        <div className="mt-10">
-          <p className="wa-mono mb-3 text-paper/40">Start from what you need today</p>
-          <div className="flex flex-wrap gap-2.5">
+            question people actually arrive with, not "which suburb". */}
+        <div className="mt-12">
+          <p className="wa-mono mb-3 text-center text-paper/40">Start from what you need today</p>
+          <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2.5">
             {COLLECTIONS.map((collection) => (
               <Link
                 key={collection.slug}

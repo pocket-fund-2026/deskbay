@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 import { FACTORS } from "@/lib/cafes";
+import OpenBadge from "@/components/OpenBadge";
 
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
@@ -27,12 +28,15 @@ export default function CafeCard({
   hovered,
   onSelect,
   onHover,
+  distance,
 }: {
   cafe: Cafe;
   active: boolean;
   hovered?: boolean;
   onSelect: () => void;
   onHover?: (slug: string | null) => void;
+  /** Pre-formatted straight-line distance, once the reader has shared a location. */
+  distance?: string | null;
 }) {
   return (
     <div
@@ -55,7 +59,10 @@ export default function CafeCard({
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-display text-[17px] font-medium leading-snug">{cafe.name}</h3>
-          <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
+          <p className="wa-mono mt-1 text-paper/40">
+            {cafe.neighborhood}
+            {distance ? ` · ${distance} away` : ""}
+          </p>
         </div>
         <div className="shrink-0 rounded-lg border border-paper/12 px-2 py-1 text-center">
           <div className="font-display text-[15px] leading-none">
@@ -76,8 +83,14 @@ export default function CafeCard({
         <ScoreBar label="Seating" value={cafe.scores.seating} />
       </div>
 
+      {cafe.openingHours && (
+        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+          <OpenBadge openingHours={cafe.openingHours} />
+        </div>
+      )}
+
       {cafe.toggles.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
+        <div className="mt-2 flex flex-wrap gap-1.5">
           {cafe.toggles.map((t) => (
             <span
               key={t}

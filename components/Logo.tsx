@@ -1,14 +1,45 @@
+/**
+ * A map pin with a coffee bean cut out of it: the two things the site is,
+ * in one mark.
+ *
+ * The old logo was a cup inside a hard-coded dark rounded square, which read
+ * as a black box once the dark theme swapped the background under it. This
+ * one carries no background of its own and paints the cutout in `--color-ink`
+ * (the page ground in both themes), so it sits on light and dark without a
+ * second version, and the pin silhouette stays legible down to about 16px
+ * where cup handles and steam turn to mush.
+ */
 export default function Logo({ size = 22 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="8" fill="#2b1810" />
-      {/* cup */}
-      <path d="M9 14h11l-1.3 9.3a2 2 0 0 1-2 1.7h-4.4a2 2 0 0 1-2-1.7z" fill="#f7efe0" />
-      <path d="M9 14h11l-.5 3.4H9.5z" fill="#b5651d" />
-      {/* handle */}
-      <path d="M20 15.3c1.8.2 3 1.3 3 3s-1.4 3.1-3.4 3.1" stroke="#f7efe0" strokeWidth="1.6" fill="none" />
-      {/* steam */}
-      <path d="M12.5 11c-.6-1 .6-1.4 0-2.4M15.7 11c-.6-1 .6-1.4 0-2.4" stroke="#f7efe0" strokeWidth="1.3" strokeLinecap="round" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      role="img"
+      aria-label="Bombay Cafe Map"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 30.5s10.8-11.4 10.8-17.9A10.8 10.8 0 1 0 5.2 12.6C5.2 19.1 16 30.5 16 30.5Z"
+        fill="var(--color-accent)"
+      />
+      {/* The bean, tilted the way a bean actually sits. */}
+      <ellipse
+        cx="16"
+        cy="12.4"
+        rx="5"
+        ry="6.6"
+        transform="rotate(-28 16 12.4)"
+        fill="var(--color-ink)"
+      />
+      <path
+        d="M13.2 8.6c2.2 1.4 3.4 4.6 2.9 7.6"
+        stroke="var(--color-accent)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
     </svg>
   );
 }

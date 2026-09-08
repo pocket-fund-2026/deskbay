@@ -30,7 +30,7 @@ export default class MapErrorBoundary extends Component<
           <div>
             <p className="wa-mono text-paper/50">The map couldn&apos;t load in this browser.</p>
             <p className="mt-1.5 text-[13px] text-paper/35">
-              The cafe list alongside it still works — pick a cafe there instead.
+              The cafe list alongside it still works. Pick a cafe there instead.
             </p>
           </div>
         </div>

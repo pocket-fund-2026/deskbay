@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Bombay Cafe Map",
     short_name: "Cafe Map",
     description:
-      "Mumbai cafes scored on whether you can actually work from them — power, wifi, seating, and whether they'll let you stay.",
+      "Mumbai cafes scored on whether you can actually work from them: power, wifi, seating, and whether they'll let you stay.",
     start_url: "/mumbai",
     display: "standalone",
     background_color: "#f7efe0",

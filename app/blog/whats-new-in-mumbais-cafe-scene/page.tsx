@@ -64,11 +64,11 @@ export default function Post() {
         </div>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
-          Mumbai&apos;s cafe scene doesn&apos;t sit still — chains keep opening new outlets in the
+          Mumbai&apos;s cafe scene doesn&apos;t sit still. Chains keep opening new outlets in the
           suburbs, independents keep expanding into new neighborhoods, and the specialty coffee
           crowd keeps pushing what a Mumbai cafe menu looks like. This is a roundup of real
           openings and expansions reported recently, plus where the city&apos;s coffee culture is
-          actually heading — each claim sourced, same standard as every cafe profile on this
+          actually heading, with each claim sourced to the same standard as every cafe profile on this
           site. Nothing here is guessed at or paraphrased from a press release without checking
           it against an independent report first.
         </p>
@@ -79,8 +79,8 @@ export default function Post() {
           <div>
             <h3 className="font-medium text-[15.5px]">Third Wave Coffee&apos;s 200th store</h3>
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
-              Third Wave Coffee opened its 200th cafe in Sindhi Society, Chembur — its ~40th in
-              Mumbai — as part of a stated plan to add roughly 100 more cafes nationally through
+              Third Wave Coffee opened its 200th cafe in Sindhi Society, Chembur, its ~40th in
+              Mumbai, as part of a stated plan to add roughly 100 more cafes nationally through
               2026. The chain has become one of the most reliable names on Bombay Cafe Map&apos;s own
               directory precisely because of that scale: a Third Wave branch is one of the few
               cafe formats consistent enough across suburbs like Andheri, Kandivali and Santacruz
@@ -90,7 +90,7 @@ export default function Post() {
           <div>
             <h3 className="font-medium text-[15.5px]">Bombay Sweet Shop, Borivali</h3>
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
-              Bombay Sweet Shop opened its first Borivali outpost in June 2026 — an all-day cafe,
+              Bombay Sweet Shop opened its first Borivali outpost in June 2026, an all-day cafe,
               mithai shop and retail store serving chaat, sandwiches, coffee and mithai alongside
               its usual retail line. It&apos;s a sign of where new cafe openings are landing:
               further out in the western suburbs, not just Bandra, which is also where most of
@@ -100,14 +100,14 @@ export default function Post() {
           <div>
             <h3 className="font-medium text-[15.5px]">Boojee Cafe, BKC</h3>
             <p className="mt-1.5 text-[14px] leading-relaxed text-paper/65">
-              Boojee Cafe — already on Bombay Cafe Map
+              Boojee Cafe, already on Bombay Cafe Map
               {boojee && (
                 <>
                   {" "}
                   at its <Link href={`/mumbai/${boojee.slug}`} className="underline hover:text-paper">Perry Road, Bandra location</Link>
                 </>
               )}{" "}
-              — was reported in August 2026 to be opening a fifth Mumbai outlet in Bandra Kurla
+, was reported in August 2026 to be opening a fifth Mumbai outlet in Bandra Kurla
               Complex, following the wider pattern of independent Bandra cafes following the
               office crowd into BKC rather than sticking to residential neighbourhoods.
             </p>
@@ -131,11 +131,11 @@ export default function Post() {
         <h2 className="font-display mt-9 text-[20px] font-medium tracking-tight">Where the scene is heading</h2>
         <p className="mt-3 text-[14px] leading-relaxed text-paper/65">
           Mumbai&apos;s specialty coffee culture keeps leaning into Indian-origin, direct-sourced
-          beans — menus increasingly read like a map of the country&apos;s coffee-growing south,
+          beans. Menus increasingly read like a map of the country&apos;s coffee-growing south,
           with roasters working single-origin lots from Chikmagalur and the Araku Valley. Brewing
           methods are diversifying beyond straight espresso into pour-overs, siphon bars and
-          coffee cocktails, and cafes are positioning themselves as community spaces — cupping
-          sessions, brewing classes and tasting flights — rather than just counters to grab a cup
+          coffee cocktails, and cafes are positioning themselves as community spaces (cupping
+          sessions, brewing classes and tasting flights) rather than just counters to grab a cup
           and go.
         </p>
 
@@ -146,7 +146,7 @@ export default function Post() {
           We track this expansion directly: Bombay Cafe Map now lists {CAFES.length} Mumbai cafes across
           seven areas, up from an initial 30 in Bandra and South Bombay. Newer areas like BKC,
           Thane and Navi Mumbai are still directory listings rather than fully scored, which is
-          the honest state of coverage right now — a cafe appearing on the map is not the same as
+          the honest state of coverage right now: a cafe appearing on the map is not the same as
           a cafe we&apos;ve verified is good to work from. See the{" "}
           <Link href="/about" className="underline hover:text-paper">methodology</Link> for the
           distinction.
@@ -157,32 +157,32 @@ export default function Post() {
           <ul className="space-y-1.5 text-[13px] leading-relaxed text-paper/55">
             <li>
               <a href="https://www.retail4growth.com/news/third-wave-coffee-opens-200th-cafe-in-mumbai-plans-100-new-cafes-by-2026-7640" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                Third Wave Coffee opens 200th cafe in Mumbai — retail4growth.com
+                Third Wave Coffee opens 200th cafe in Mumbai · retail4growth.com
               </a>
             </li>
             <li>
               <a href="https://www.timeout.com/mumbai/news/bombay-sweet-shop-arrives-in-borivali-with-chaat-coffee-and-cult-mithai-063026" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                Bombay Sweet Shop arrives in Borivali — Time Out Mumbai
+                Bombay Sweet Shop arrives in Borivali · Time Out Mumbai
               </a>
             </li>
             <li>
               <a href="https://www.timeout.com/mumbai/news/boojee-cafe-is-opening-a-new-outlet-at-one-bkc-in-mumbai-082026" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                Boojee Cafe opening at One BKC — Time Out Mumbai
+                Boojee Cafe opening at One BKC · Time Out Mumbai
               </a>
             </li>
             <li>
               <a href="https://www.indianretailer.com/news/cafe-quattro-opens-second-mumbai-cafe-mumbai" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                Cafe Quattro opens second Mumbai outlet — Indian Retailer
+                Cafe Quattro opens second Mumbai outlet · Indian Retailer
               </a>
             </li>
             <li>
               <a href="https://www.indianretailer.com/news/goat-brew-opens-new-cafe-and-bar-mumbai" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                GOAT Brew opens new cafe and bar — Indian Retailer
+                GOAT Brew opens new cafe and bar · Indian Retailer
               </a>
             </li>
             <li>
               <a href="https://www.baristamagazine.com/indian-specialty-coffee-shines-in-mumbai-an-exclusive-guide-to-the-city/" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
-                An exclusive guide to Mumbai&apos;s specialty coffee scene — Barista Magazine
+                An exclusive guide to Mumbai&apos;s specialty coffee scene · Barista Magazine
               </a>
             </li>
           </ul>

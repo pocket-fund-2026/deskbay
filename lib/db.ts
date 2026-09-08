@@ -61,6 +61,27 @@ export function ensureSchema(): Promise<void> {
       `;
       await sql`CREATE INDEX IF NOT EXISTS cafe_comments_slug_idx ON cafe_comments (cafe_slug, created_at DESC)`;
 
+      // One-tap "is this still true?" answers. Kept separate from votes: a
+      // vote is an opinion about the cafe, this is a claim about a specific
+      // fact we published, and the point of it is that `lastVerifiedAt` in
+      // data/cafes.json is a date somebody typed once and no reader can
+      // refresh.
+      await sql`
+        CREATE TABLE IF NOT EXISTS cafe_confirmations (
+          id BIGSERIAL PRIMARY KEY,
+          cafe_slug TEXT NOT NULL,
+          visitor_id TEXT NOT NULL,
+          field TEXT NOT NULL CHECK (field IN ('wifi', 'power', 'stay')),
+          still_true BOOLEAN NOT NULL,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+          UNIQUE (cafe_slug, visitor_id, field)
+        )
+      `;
+      await sql`
+        CREATE INDEX IF NOT EXISTS cafe_confirmations_slug_idx
+        ON cafe_confirmations (cafe_slug, created_at DESC)
+      `;
+
       await sql`
         CREATE TABLE IF NOT EXISTS cafe_submissions (
           id BIGSERIAL PRIMARY KEY,

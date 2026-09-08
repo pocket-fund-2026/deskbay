@@ -36,7 +36,7 @@ function SubmissionCard({
 
       <p className="mt-2.5 text-[13.5px] text-paper/70">{s.address}</p>
       {!hasCoords && (
-        <p className="wa-mono mt-1 text-red-400">Couldn&apos;t geocode this address — fix and retry below.</p>
+        <p className="wa-mono mt-1 text-red-400">Couldn&apos;t geocode this address. Fix and retry below.</p>
       )}
 
       <div className="mt-2 flex flex-wrap gap-3 text-[13px]">
@@ -78,7 +78,7 @@ function SubmissionCard({
               <form action={approveAction}>
                 <input type="hidden" name="id" value={s.id} />
                 <button type="submit" className="wa-btn wa-btn--solid !bg-paper !text-ink">
-                  Approve — goes live immediately
+                  Approve (goes live immediately)
                 </button>
               </form>
             )}

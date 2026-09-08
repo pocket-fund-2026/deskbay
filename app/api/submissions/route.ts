@@ -56,6 +56,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, slug }, { status: 201 });
   } catch (err) {
     console.error("Failed to create submission:", err);
-    return NextResponse.json({ error: "Something went wrong — try again." }, { status: 500 });
+    return NextResponse.json({ error: "Something went wrong. Try again." }, { status: 500 });
   }
 }

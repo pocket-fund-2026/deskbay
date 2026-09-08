@@ -36,7 +36,7 @@ export default function Image() {
           <span>you can actually work from</span>
         </div>
         <div style={{ fontSize: 26, marginTop: 28, opacity: 0.65 }}>
-          Wifi · Power · Noise · Seating — Bandra &amp; South Bombay
+          Wifi · Power · Noise · Seating · all of Mumbai
         </div>
       </div>
     ),

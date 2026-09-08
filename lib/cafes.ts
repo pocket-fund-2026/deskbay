@@ -67,14 +67,14 @@ export const AREAS = {
     slug: "andheri-juhu",
     name: "Andheri & Juhu",
     description:
-      "Chains and specialty roasters through Andheri, Juhu and Khar — the widest spread of any suburb, from film-crowd regulars to airport-adjacent chains.",
+      "Chains and specialty roasters through Andheri, Juhu and Khar: the widest spread of any suburb, from film-crowd regulars to airport-adjacent chains.",
     streets: "Andheri · Juhu · Khar · Santacruz · Versova",
   },
   "malad-borivali": {
     slug: "malad-borivali",
     name: "Malad & Borivali",
     description:
-      "The far western suburbs' own cafe stretch, from Goregaon up to Borivali — quieter rooms, and fewer laptops fighting for the good table.",
+      "The far western suburbs' own cafe stretch, from Goregaon up to Borivali. Quieter rooms, and fewer laptops fighting for the good table.",
     streets: "Malad · Goregaon · Kandivali · Borivali",
   },
   "central-mumbai": {
@@ -95,7 +95,7 @@ export const AREAS = {
     slug: "bkc",
     name: "BKC",
     description:
-      "Coffee built for the business district's schedule — quick counters and a handful of rooms built for a laptop between meetings.",
+      "Coffee built for the business district's schedule: quick counters and a handful of rooms built for a laptop between meetings.",
     streets: "Bandra Kurla Complex",
   },
   thane: {
@@ -109,7 +109,7 @@ export const AREAS = {
     slug: "navi-mumbai",
     name: "Navi Mumbai",
     description:
-      "Planned-city cafes across Vashi, Nerul and Belapur — wide streets and mall-adjacent rooms built for a different kind of commute.",
+      "Planned-city cafes across Vashi, Nerul and Belapur: wide streets and mall-adjacent rooms built for a different kind of commute.",
     streets: "Vashi · Nerul · Belapur · Kharghar",
   },
 } as const;

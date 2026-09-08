@@ -108,17 +108,17 @@ export default function Post() {
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
           Finding a Mumbai cafe with fast wifi, real power outlets and staff who won&apos;t hover
           once your cup is empty is harder than it should be for a city this size. This isn&apos;t
-          a separate opinion piece — it&apos;s the top 15 out of the{" "}
+          a separate opinion piece. It is the top 15 out of the{" "}
           {CAFES.filter((c) => c.workability !== null).length} cafes we&apos;ve fully scored on
           Bombay Cafe Map&apos;s nine-factor workability model (wifi, power, seating, noise, and how long
           you can actually stay), ranked by that same score and scored on a deliberately strict
-          scale. Every claim here traces back to the cited evidence on each cafe&apos;s own page —
-          nothing is invented to fill a paragraph.
+          scale. Every claim here traces back to the cited evidence on each cafe&apos;s own page,
+          and nothing is invented to fill a paragraph.
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-paper/75">
           A quick note on what this list is not: it is not a ranking of the best coffee in
           Mumbai, or the most popular cafes on Google. Some genuinely great cafes are loud,
-          cramped, or turn tables fast on purpose — great for a coffee, bad for three hours with a
+          cramped, or turn tables fast on purpose: great for a coffee, bad for three hours with a
           laptop. This list only answers one question: where can you actually get work done.
         </p>
 
@@ -180,7 +180,7 @@ export default function Post() {
             <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
               {TOP_15[0].name} on {TOP_15[0].neighborhood} currently has Bombay Cafe Map&apos;s highest
               workability score ({TOP_15[0].workability}/5), based on cited evidence about its
-              wifi, seating and noise levels — see its{" "}
+              wifi, seating and noise levels. See its{" "}
               <Link href={`/mumbai/${TOP_15[0].slug}`} className="underline hover:text-paper">full profile</Link>.
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function Post() {
             <p className="font-medium text-[14.5px]">How does Bombay Cafe Map decide which cafes are good for working?</p>
             <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
               Every cafe is scored on wifi, power outlets, seating, noise and how long you can
-              realistically stay, using published evidence rather than star ratings — read the{" "}
+              realistically stay, using published evidence rather than star ratings. Read the{" "}
               <Link href="/about" className="underline hover:text-paper">full methodology</Link>.
             </p>
           </div>

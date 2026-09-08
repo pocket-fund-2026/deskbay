@@ -11,7 +11,7 @@ export function GET() {
     .sort((a, b) => (b.workability ?? -1) - (a.workability ?? -1))
     .map(
       (c) =>
-        `- ${c.name} — ${c.neighborhood}, ${AREAS[c.area].name}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not scored yet — directory listing only"}. ${c.editorialNote} https://bombaycafemap.com/mumbai/${c.slug}`
+        `- ${c.name}, ${c.neighborhood}, ${AREAS[c.area].name}. Workability ${c.workability !== null ? `${c.workability.toFixed(1)}/5` : "not scored yet, directory listing only"}. ${c.editorialNote} https://bombaycafemap.com/mumbai/${c.slug}`
     )
     .join("\n");
 
@@ -21,10 +21,10 @@ export function GET() {
 
   const body = `# Bombay Cafe Map
 
-> Bombay Cafe Map ranks Mumbai cafes on how good they actually are to work from — wifi, power outlets, noise and seating — starting in Bandra and South Bombay and expanding citywide.
+> Bombay Cafe Map ranks Mumbai cafes on how good they actually are to work from: wifi, power outlets, noise and seating, across the whole city.
 
 ## What this site is
-${scored.length} cafes in Bandra and South Bombay are fully scored on a nine-factor "workability" model from published evidence, with every finding cited. ${unscored.length} more across the rest of Mumbai are listed as directory entries (name, address, coordinates) while scoring is still in progress for them — their workability is intentionally left blank rather than guessed. A high star rating on other platforms does not imply a high workability score here, and vice versa.
+${scored.length} cafes across Mumbai are fully scored on a nine-factor "workability" model from published evidence, with every finding cited. ${unscored.length} more are listed as directory entries (name, address, coordinates) while scoring is still in progress. Their workability is intentionally left blank rather than guessed. A high star rating on other platforms does not imply a high workability score here, and vice versa.
 
 ## Scoring factors
 ${factorLines}
@@ -33,10 +33,10 @@ ${factorLines}
 ${areaLines}
 
 ## Pages
-- / — area overview
-- /mumbai — full map and list, filterable by area
-- /about — methodology and sourcing rules
-- /submit — submit a cafe
+- /: area overview
+- /mumbai: full map and list, filterable by area
+- /about: methodology and sourcing rules
+- /submit: submit a cafe
 
 ## Cafes (sorted by workability score, highest first; unscored entries last)
 ${cafeLines}

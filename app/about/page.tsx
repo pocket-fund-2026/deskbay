@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 const SITE_URL = "https://bombaycafemap.com";
 const TITLE = "About Bombay Cafe Map's scoring methodology";
 const DESCRIPTION =
-  "How Bombay Cafe Map scores Mumbai cafes on wifi, power, noise and seating — the nine weighted factors, sourcing rules, and what we will not fake.";
+  "How Bombay Cafe Map scores Mumbai cafes on wifi, power, noise and seating: the nine weighted factors, the sourcing rules, and what we will not fake.";
 
 export const metadata: Metadata = {
   title: "About",
@@ -44,7 +44,7 @@ const faqLd = {
     name: f.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: `Weighted at ${f.weight}% of the workability score — Bombay Cafe Map's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Mumbai cafes, scored from published evidence and left blank where the sources are too thin to average. The rest are listed as directory entries and not yet scored on this model.`,
+      text: `Weighted at ${f.weight}% of the workability score. This is Bombay Cafe Map's answer to "${f.question}" for each of the ${CAFES.filter((c) => c.workability !== null).length} fully-scored Mumbai cafes, scored from published evidence and left blank where the sources are too thin to average. The rest are listed as directory entries and not yet scored on this model.`,
     },
   })),
 };
@@ -91,16 +91,16 @@ export default function AboutPage() {
         <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
           One weighted model, applied to the {CAFES.filter((c) => c.workability !== null).length}{" "}
           cafes across Mumbai we&apos;ve fully researched so far. It is weighted toward the
-          two things that end a work session early — nowhere to plug in and a connection that
-          drops — and it treats a bathroom as worth noting and almost nothing else. The other{" "}
+          two things that end a work session early: nowhere to plug in, and a connection that
+          drops. It treats a bathroom as worth noting and almost nothing else. The other{" "}
           {CAFES.filter((c) => c.workability === null).length} cafes are on the map as directory
-          listings — name, address, links — while we work through scoring them the same way.
+          listings (name, address, links) while we work through scoring them the same way.
         </p>
         <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
           The scale runs stricter than most star ratings: a &quot;good&quot; wifi mention in one
           review isn&apos;t enough for a 4 here, and a cafe has to clear a higher bar to be called
-          excellent at any single factor. A low workability score is not a verdict on the cafe —
-          plenty of great cafes are bad places to open a laptop, and that&apos;s the entire
+          excellent at any single factor. A low workability score is not a verdict on the cafe.
+          Plenty of great cafes are bad places to open a laptop, and that&apos;s the entire
           question this site answers.
         </p>
 
@@ -124,7 +124,7 @@ export default function AboutPage() {
           ))}
         </ul>
         <p className="wa-mono mt-3 text-paper/35">
-          The percentages are the weights the code actually applies — this list is generated
+          The percentages are the weights the code actually applies: this list is generated
           from the same table the score is computed from, so it cannot fall out of date.
         </p>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
           The scores should get better
         </h2>
         <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
-          Every cafe panel has a short feedback form — wifi, outlets, noise. It is anonymous and
+          Every cafe panel has a short feedback form: wifi, outlets, noise. It is anonymous and
           takes a few seconds. Reports go into a queue rather than straight onto the score, so a
           handful of votes cannot swing a listing, but enough of them will get it re-rated.
         </p>

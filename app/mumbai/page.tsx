@@ -21,8 +21,8 @@ export async function generateMetadata({
 
   const title =
     area === "all"
-      ? "Mumbai — cafes you can work from"
-      : `${AREAS[area].name} — cafes you can work from`;
+      ? "Mumbai: cafes you can work from"
+      : `${AREAS[area].name}: cafes you can work from`;
   const description =
     area === "all"
       ? "Cafes across Mumbai ranked on wifi, power outlets, noise and seating. Find one you can actually work from."
