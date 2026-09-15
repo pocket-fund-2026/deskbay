@@ -4,18 +4,14 @@ import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 import { FACTORS } from "@/lib/cafes";
 import OpenBadge from "@/components/OpenBadge";
+import ScoreFill from "@/components/ScoreFill";
 
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
       <span className="wa-mono w-16 shrink-0 text-paper/40">{label}</span>
-      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-paper/10">
-        {value !== null && (
-          <div
-            className="h-full rounded-full bg-accent"
-            style={{ width: `${(value / 5) * 100}%` }}
-          />
-        )}
+      <div className="h-1.5 flex-1 rounded-full bg-paper/10">
+        {value !== null && <ScoreFill value={value} />}
       </div>
       <span className="wa-mono w-4 text-right text-paper/50">{value ?? "–"}</span>
     </div>
@@ -48,11 +44,11 @@ export default function CafeCard({
       onMouseLeave={() => onHover?.(null)}
       onFocus={() => onHover?.(cafe.slug)}
       onBlur={() => onHover?.(null)}
-      className={`w-full cursor-pointer rounded-xl border p-4 text-left transition-colors ${
+      className={`w-full cursor-pointer rounded-xl border p-4 text-left transition-[color,background-color,border-color,box-shadow,transform] duration-200 [transition-timing-function:var(--wa-spring)] ${
         active
-          ? "border-accent/60 bg-paper/[0.06]"
+          ? "border-accent/60 bg-paper/[0.06] -translate-y-0.5 shadow-[0_8px_20px_rgb(var(--color-paper-rgb)/0.12)]"
           : hovered
-            ? "border-accent/35 bg-paper/[0.03]"
+            ? "border-accent/35 bg-paper/[0.03] -translate-y-0.5 shadow-[0_8px_20px_rgb(var(--color-paper-rgb)/0.1)]"
             : "border-paper/10 hover:bg-paper/[0.03]"
       }`}
     >

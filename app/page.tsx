@@ -135,8 +135,17 @@ export default function HomePage() {
               <Link
                 key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
-                className="wa-fade group relative flex min-h-[210px] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 sm:min-h-0 sm:aspect-[16/10] lg:aspect-[4/3]"
-                style={{ animationDelay: `${i * 90}ms` }}
+                className="wa-fade wa-area-card group relative flex min-h-[210px] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 transition-[transform,box-shadow,border-color] duration-300 [transition-timing-function:var(--wa-spring)] hover:-translate-y-1 sm:min-h-0 sm:aspect-[16/10] lg:aspect-[4/3]"
+                style={{
+                  animationDelay: `${i * 90}ms`,
+                  // The lift on hover uses each area's own pin color for its
+                  // shadow (applied by the .wa-area-card:hover rule in
+                  // globals.css) rather than a generic dark drop-shadow — the
+                  // same color-per-area coding the pins and score dots
+                  // already use elsewhere, so the hover state ties back to
+                  // something the reader has already learned to read.
+                  ["--area-glow" as string]: `${style.pin}55`,
+                }}
               >
                 <span className="absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-[1.035]">
                   {AREA_PHOTOS[area.slug] ? (

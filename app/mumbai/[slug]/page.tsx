@@ -12,6 +12,8 @@ import StillTrue from "@/components/StillTrue";
 import OpenBadge from "@/components/OpenBadge";
 import { parseOpeningHours, toSchemaOpeningHours } from "@/lib/hours";
 import { cafeDescription, cafeTitle } from "@/lib/snippet";
+import ScoreFill from "@/components/ScoreFill";
+import CountUp from "@/components/CountUp";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -57,11 +59,8 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
       <span className="wa-mono w-16 shrink-0 text-paper/45">{label}</span>
-      <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-paper/[0.07]">
-        <div
-          className="h-full rounded-full"
-          style={{ width: `${((value ?? 0) / 5) * 100}%`, background: tier(value).color }}
-        />
+      <div className="h-[5px] flex-1 rounded-full bg-paper/[0.07]">
+        {value !== null && <ScoreFill value={value} color={tier(value).color} />}
       </div>
       <span className="wa-mono w-4 text-right text-paper/50">{value ?? "–"}</span>
     </div>
@@ -246,7 +245,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             }}
           >
             <div className="font-display text-[19px] leading-none">
-              {cafe.workability !== null ? cafe.workability.toFixed(1) : "–"}
+              {cafe.workability !== null ? <CountUp value={cafe.workability} /> : "–"}
             </div>
             <div className="wa-mono mt-0.5 text-[8px] uppercase text-paper/45">/5</div>
           </div>

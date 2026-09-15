@@ -58,7 +58,7 @@ export default function OpenBadge({
       <span
         aria-hidden
         className={`h-1.5 w-1.5 rounded-full ${
-          label.open ? (label.soon ? "bg-amber-400" : "bg-emerald-400") : "bg-paper/30"
+          label.open ? (label.soon ? "bg-amber-400 text-amber-400 wa-pulse-dot" : "bg-emerald-400 text-emerald-400 wa-pulse-dot") : "bg-paper/30"
         }`}
       />
       {label.text}

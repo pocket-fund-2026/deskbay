@@ -607,6 +607,38 @@ export default function MapView({
     source?.setData(pointFC(cafe));
   }, [hoveredSlug, cafes, mapReady]);
 
+  // A slow breathing halo on the 4.0+ pins — the map's one ambient touch of
+  // life, reserved for the cafes actually worth noticing rather than
+  // applied to every dot, which would just be visual noise at city zoom.
+  // A plain setInterval rather than a 60fps rAF loop: this is a two-second
+  // breath, not a fast animation, and it's cheap enough not to fight the
+  // map's own render loop while panning.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!map.getLayer("point-halo")) return;
+
+    const period = 2200;
+    const start = performance.now();
+    const timer = setInterval(() => {
+      if (!map.getLayer("point-halo")) return;
+      const t = ((performance.now() - start) % period) / period;
+      const breathe = 0.3 + 0.12 * Math.sin(t * Math.PI * 2);
+      try {
+        map.setPaintProperty("point-halo", "circle-opacity", [
+          "case",
+          ["get", "topScored"],
+          breathe,
+          0.16,
+        ]);
+      } catch {
+        /* layer was torn down by a concurrent theme swap; next tick recovers */
+      }
+    }, 120);
+    return () => clearInterval(timer);
+  }, [mapReady]);
+
   if (unsupported) {
     return (
       <div className="grid h-full w-full place-items-center bg-ink px-6 text-center">
