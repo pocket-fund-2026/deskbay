@@ -140,6 +140,9 @@ export default function MumbaiScreen({
     <div className="relative w-full md:w-56">
       <button
         onClick={() => setAreaMenuOpen((v) => !v)}
+        onKeyDown={(e) => e.key === "Escape" && setAreaMenuOpen(false)}
+        aria-expanded={areaMenuOpen}
+        aria-haspopup="listbox"
         className="wa-mono flex w-full items-center justify-between gap-2 rounded-full border border-paper/15 bg-paper/[0.03] px-4 py-2 text-paper/70 transition-colors hover:text-paper"
       >
         <span>{area === "all" ? "All areas" : AREAS[area].name}</span>
@@ -148,11 +151,24 @@ export default function MumbaiScreen({
 
       {areaMenuOpen && (
         <>
-          <div className="fixed inset-0 z-20" onClick={() => setAreaMenuOpen(false)} />
-          <div className="no-scrollbar absolute left-0 right-0 top-full z-30 mt-1.5 max-h-72 overflow-y-auto rounded-xl border border-paper/15 bg-ink shadow-lg">
+          {/* The overlay is click-to-close only — a keyboard user tabbing
+              through the open list has no mouse to click it, so Escape has
+              to close the menu from inside the list too, not just the
+              trigger button above. */}
+          <div
+            className="fixed inset-0 z-20"
+            onClick={() => setAreaMenuOpen(false)}
+          />
+          <div
+            role="listbox"
+            onKeyDown={(e) => e.key === "Escape" && setAreaMenuOpen(false)}
+            className="no-scrollbar absolute left-0 right-0 top-full z-30 mt-1.5 max-h-72 overflow-y-auto rounded-xl border border-paper/15 bg-ink shadow-lg"
+          >
             {areaOptions.map((a) => (
               <button
                 key={a}
+                role="option"
+                aria-selected={area === a}
                 onClick={() => {
                   setArea(a);
                   // The selected cafe usually isn't in the new area; keeping it

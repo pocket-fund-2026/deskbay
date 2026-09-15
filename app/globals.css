@@ -135,6 +135,20 @@ body {
   }
 }
 
+/* A visible focus state was missing on most interactive elements (buttons,
+   links, the custom area dropdown) — they fell back to whatever the browser
+   ships by default, which is inconsistent across engines and clashes with
+   the warm ink/paper palette. This gives every focusable element the same
+   accent-colored ring, including the form inputs that already turn off the
+   native outline in favor of a border-color change (that alone is too
+   subtle to count as a clear indicator). Keyboard-only, via :focus-visible,
+   so it never appears on a mouse click. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
