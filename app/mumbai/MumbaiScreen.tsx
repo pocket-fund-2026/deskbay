@@ -25,14 +25,17 @@ export default function MumbaiScreen({
   initialArea,
   allCafes,
   initialNearMe = false,
+  initialSelected = null,
 }: {
   initialArea: AreaSlug | "all";
   allCafes: Cafe[];
   /** Set by /mumbai/near-me, which exists to answer "cafes near me to work". */
   initialNearMe?: boolean;
+  /** From a cafe page's "See on the map" link (?cafe=slug), so the reader lands on their pin instead of the whole area. */
+  initialSelected?: string | null;
 }) {
   const [area, setArea] = useState<AreaSlug | "all">(initialArea);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(initialSelected);
   // Which cafe is under the cursor, in either the list or the map. Shared so
   // hovering one highlights the other.
   const [hovered, setHovered] = useState<string | null>(null);

@@ -14,7 +14,7 @@ function resolveArea(area?: string): AreaSlug | "all" {
 export async function generateMetadata({
   searchParams,
 }: {
-  searchParams: Promise<{ area?: string }>;
+  searchParams: Promise<{ area?: string; cafe?: string }>;
 }): Promise<Metadata> {
   const { area: rawArea } = await searchParams;
   const area = resolveArea(rawArea);
@@ -52,9 +52,9 @@ export async function generateMetadata({
 export default async function MumbaiPage({
   searchParams,
 }: {
-  searchParams: Promise<{ area?: string }>;
+  searchParams: Promise<{ area?: string; cafe?: string }>;
 }) {
-  const { area: rawArea } = await searchParams;
+  const { area: rawArea, cafe: rawCafe } = await searchParams;
   const area = resolveArea(rawArea);
 
   // Reader-submitted cafes go live the moment an admin approves them —
@@ -63,6 +63,11 @@ export default async function MumbaiPage({
   const approved = await getApprovedCafes();
   const allCafes = [...CAFES, ...approved];
   const cafes = area === "all" ? allCafes : allCafes.filter((c) => c.area === area);
+  // "See on the map" from a cafe's own page used to drop the reader on the
+  // whole area with nothing marked — same complaint as landing at an
+  // address with no pin. Only honor a slug that's actually in view, so a
+  // stale or mistyped ?cafe= doesn't silently select nothing.
+  const initialSelected = rawCafe && cafes.some((c) => c.slug === rawCafe) ? rawCafe : null;
 
   const itemListLd = {
     "@context": "https://schema.org",
@@ -115,7 +120,7 @@ export default async function MumbaiPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <MumbaiScreen initialArea={area} allCafes={allCafes} />
+      <MumbaiScreen initialArea={area} allCafes={allCafes} initialSelected={initialSelected} />
     </>
   );
 }

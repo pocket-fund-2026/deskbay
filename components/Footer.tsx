@@ -68,8 +68,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="wa-mono mx-auto mt-9 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-paper/10 pt-5 text-paper/35">
+      <div className="wa-mono mx-auto mt-9 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-paper/10 pt-5 text-paper/50">
         <span>© 2026 Bombay Cafe Map</span>
+        <nav className="flex gap-4">
+          <Link href="/privacy" className="hover:text-paper">Privacy</Link>
+          <Link href="/terms" className="hover:text-paper">Terms</Link>
+        </nav>
         <span>Built for people who need a table for three hours</span>
       </div>
     </footer>

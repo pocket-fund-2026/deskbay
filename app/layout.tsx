@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { CAFES } from "@/lib/cafes";
+import Analytics from "@/components/Analytics";
+import CookieConsent from "@/components/CookieConsent";
 
 const GA_MEASUREMENT_ID = "G-89FQDR1XDM";
 
@@ -117,16 +118,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-dvh font-sans antialiased">
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');`}
-        </Script>
+        <Analytics measurementId={GA_MEASUREMENT_ID} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
@@ -136,6 +128,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

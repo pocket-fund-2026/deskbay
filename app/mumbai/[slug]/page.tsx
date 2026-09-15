@@ -279,7 +279,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           <a href={cafe.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="wa-btn border-paper/15">
             Directions
           </a>
-          <Link href={`/mumbai?area=${cafe.area}`} className="wa-btn wa-btn--solid !bg-paper !text-ink">
+          <Link href={`/mumbai?area=${cafe.area}&cafe=${cafe.slug}`} className="wa-btn wa-btn--solid !bg-paper !text-ink">
             See on the map
           </Link>
         </div>
