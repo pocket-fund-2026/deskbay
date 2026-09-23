@@ -99,7 +99,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
     "@type": "CafeOrCoffeeShop",
     name: cafe.name,
     url: cafe.website ?? undefined,
-    image: cafe.images.map((i) => i.url),
+    ...(cafe.images.length > 0 ? { image: cafe.images.map((i) => i.url) } : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: cafe.address,
@@ -149,7 +149,11 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
       ? {
           "@context": "https://schema.org",
           "@type": "Review",
-          itemReviewed: { "@type": "CafeOrCoffeeShop", name: cafe.name, image: cafe.images.map((i) => i.url) },
+          itemReviewed: {
+            "@type": "CafeOrCoffeeShop",
+            name: cafe.name,
+            ...(cafe.images.length > 0 ? { image: cafe.images.map((i) => i.url) } : {}),
+          },
           reviewRating: {
             "@type": "Rating",
             ratingValue: cafe.workability,

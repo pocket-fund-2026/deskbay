@@ -136,10 +136,15 @@ export function cafeDescription(cafe: Cafe): string {
     facts.push(`${label} ${clause.toLowerCase()}`);
   }
 
+  // Only claim "scored" when it's actually scored — the same honesty rule
+  // the site applies everywhere else (see llms.txt: unscored entries are
+  // directory listings, not silently implied verdicts).
   const lead =
     facts.length > 0
       ? `${facts.slice(0, 4).join(", ")}.`
-      : `${cafe.neighborhood}, Mumbai. Scored on wifi, power, noise and seating.`;
+      : cafe.workability !== null
+        ? `${cafe.neighborhood}, Mumbai. Scored on wifi, power, noise and seating.`
+        : `${cafe.neighborhood}, Mumbai. Not yet scored — directory listing for now.`;
 
   const tail: string[] = [];
   if (stay) tail.push(stay.charAt(0).toUpperCase() + stay.slice(1));
@@ -152,10 +157,20 @@ export function cafeDescription(cafe: Cafe): string {
     .filter(Boolean)
     .join(" ");
 
-  // The editorial line is a bonus, so it goes in only if it fits whole —
-  // appending then truncating just threw the sentence away again.
-  if (out.length + 1 + cafe.editorialNote.length <= DESCRIPTION_BUDGET) {
+  // The editorial line is what actually differentiates one cafe's snippet
+  // from another's — two unrelated cafes can easily land on the same wifi/
+  // power/noise/cost facts, but never on the same hand-written note. So it
+  // always goes in, whole when it fits, trimmed to a word boundary when it
+  // doesn't, and is dropped only when there's truly no room left.
+  const room = DESCRIPTION_BUDGET - out.length - 1;
+  if (room >= cafe.editorialNote.length) {
     return `${out} ${cafe.editorialNote}`;
+  }
+  if (room >= 20) {
+    const slice = cafe.editorialNote.slice(0, room - 1);
+    const lastSpace = slice.lastIndexOf(" ");
+    const trimmed = lastSpace > 10 ? slice.slice(0, lastSpace) : slice;
+    return `${out} ${trimmed.trimEnd()}…`;
   }
   if (out.length <= DESCRIPTION_BUDGET) return out;
 
