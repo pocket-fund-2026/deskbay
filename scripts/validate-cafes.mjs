@@ -117,6 +117,17 @@ for (const [i, c] of spots.entries()) {
   if (!Array.isArray(c.images)) {
     errors.push(`${label}: images must be an array`);
   }
+
+  // publicRating is `{value, count, source, url}` or `null` — never a
+  // partially-filled object (crashes .toFixed() on the rendered cafe page).
+  const pr = c.publicRating;
+  if (pr !== null && pr !== undefined) {
+    for (const key of ["value", "count", "source", "url"]) {
+      if (pr[key] === null || pr[key] === undefined) {
+        errors.push(`${label}: publicRating.${key} is null — set the whole publicRating to null instead of a partial object`);
+      }
+    }
+  }
 }
 
 if (errors.length > 0) {

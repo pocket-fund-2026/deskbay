@@ -200,6 +200,18 @@ export const COLLECTIONS: Collection[] = [
     match: (c) => labels(c).has("heritage building") && !(labels(c).has("institution") || labels(c).has("irani cafe")),
     reason: () => "Heritage building",
   },
+  {
+    slug: "colaba",
+    name: "Colaba",
+    title: "107 cafes, bakeries and Irani institutions in Colaba, Mumbai",
+    question: "Where do I get coffee, food or work done in Colaba?",
+    blurb:
+      "Colaba is Mumbai's densest old-city stretch, from the Causeway to the Taj and out to Cuffe Parade: Irani institutions, hotel patisseries, dessert counters and a handful of genuine work cafes packed into a few square kilometres. Most of what's here was never built for a laptop, and we say so rather than inflate the score — the specialty roasters and hotel lounges that do hold up are rated on the same nine factors as everywhere else on the map.",
+    description:
+      "Every cafe, bakery, Irani cafe and hotel coffee shop we could verify in Colaba, Mumbai, from Causeway institutions to Cuffe Parade patisseries, ranked on how work-friendly each one actually is.",
+    match: (c) => (c.address ?? "").toLowerCase().includes("colaba"),
+    reason: (c) => c.neighborhood || "Colaba",
+  },
 ];
 
 export function getCollection(slug: string) {
