@@ -23,6 +23,22 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-09-01",
     readingTime: "5 min read",
   },
+  {
+    slug: "best-cafes-to-work-from-in-bandra",
+    title: "The best cafes to work from in Bandra",
+    description:
+      "Bandra has the best odds in the city of a table, a plug and three quiet hours. Our scored, cited ranking of where to actually get work done there.",
+    date: "2026-09-24",
+    readingTime: "5 min read",
+  },
+  {
+    slug: "best-cafes-to-work-from-in-south-bombay",
+    title: "The best cafes to work from in South Bombay",
+    description:
+      "135 cafes across Fort, Colaba, Ballard Estate and Nariman Point — our scored, cited ranking of which ones actually hold up for a work session.",
+    date: "2026-09-24",
+    readingTime: "5 min read",
+  },
 ];
 
 export function getPost(slug: string) {
