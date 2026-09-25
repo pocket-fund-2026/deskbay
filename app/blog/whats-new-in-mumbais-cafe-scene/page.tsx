@@ -47,12 +47,12 @@ export default function Post() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
+          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
             ← Blog
           </Link>
           <ThemeToggle />
         </div>
-        <p className="wa-mono mt-6 text-paper/40">
+        <p className="wa-mono mt-6 text-paper/65">
           {post.date} · {post.readingTime}
         </p>
         <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
@@ -153,8 +153,8 @@ export default function Post() {
         </p>
 
         <div className="mt-9 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
-          <p className="wa-mono mb-2 text-paper/40">Sources</p>
-          <ul className="space-y-1.5 text-[13px] leading-relaxed text-paper/55">
+          <p className="wa-mono mb-2 text-paper/65">Sources</p>
+          <ul className="space-y-1.5 text-[13px] leading-relaxed text-paper/65">
             <li>
               <a href="https://www.retail4growth.com/news/third-wave-coffee-opens-200th-cafe-in-mumbai-plans-100-new-cafes-by-2026-7640" target="_blank" rel="noopener noreferrer" className="underline hover:text-paper">
                 Third Wave Coffee opens 200th cafe in Mumbai · retail4growth.com

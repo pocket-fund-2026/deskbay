@@ -49,7 +49,7 @@ export default function OpenBadge({
     ? label.soon
       ? "border-amber-400/40 text-amber-300/90"
       : "border-emerald-400/40 text-emerald-300/90"
-    : "border-paper/15 text-paper/40";
+    : "border-paper/15 text-paper/65";
 
   return (
     <span

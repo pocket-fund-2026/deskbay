@@ -643,8 +643,8 @@ export default function MapView({
     return (
       <div className="grid h-full w-full place-items-center bg-ink px-6 text-center">
         <div>
-          <p className="wa-mono text-paper/50">The map couldn&apos;t load in this browser.</p>
-          <p className="mt-1.5 text-[13px] text-paper/35">
+          <p className="wa-mono text-paper/65">The map couldn&apos;t load in this browser.</p>
+          <p className="mt-1.5 text-[13px] text-paper/65">
             The cafe list alongside it still works. Pick a cafe there instead.
           </p>
         </div>
@@ -664,7 +664,7 @@ export default function MapView({
 
       {/* Without this the dot colors are a private code: the map's whole
           point is the workability score, so say what the colors mean. */}
-      <div className="wa-mono absolute bottom-3 left-3 z-10 hidden rounded-xl md:block border border-paper/15 bg-ink/85 px-3 py-2 text-paper/60 shadow-sm backdrop-blur-sm">
+      <div className="wa-mono absolute bottom-3 left-3 z-10 hidden rounded-xl md:block border border-paper/15 bg-ink/85 px-3 py-2 text-paper/65 shadow-sm backdrop-blur-sm">
         <ul className="space-y-1">
           {LEGEND.map((l) => (
             <li key={l.label} className="flex items-center gap-2 whitespace-nowrap">

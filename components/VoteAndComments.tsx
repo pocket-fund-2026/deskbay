@@ -99,7 +99,7 @@ export default function VoteAndComments({ slug }: { slug: string }) {
 
   return (
     <div className="mt-8 border-t border-paper/10 pt-6">
-      <p className="wa-mono mb-3 text-paper/40">Been here? Say so</p>
+      <p className="wa-mono mb-3 text-paper/65">Been here? Say so</p>
 
       <div className="flex items-center gap-2.5">
         <button
@@ -109,7 +109,7 @@ export default function VoteAndComments({ slug }: { slug: string }) {
           className={`flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13.5px] transition-colors disabled:opacity-60 ${
             myVote === 1
               ? "border-accent/60 bg-accent/15 text-paper"
-              : "border-paper/15 text-paper/60 hover:text-paper"
+              : "border-paper/15 text-paper/65 hover:text-paper"
           }`}
         >
           <span aria-hidden>👍</span>
@@ -122,14 +122,14 @@ export default function VoteAndComments({ slug }: { slug: string }) {
           className={`flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-[13.5px] transition-colors disabled:opacity-60 ${
             myVote === -1
               ? "border-paper/40 bg-paper/10 text-paper"
-              : "border-paper/15 text-paper/60 hover:text-paper"
+              : "border-paper/15 text-paper/65 hover:text-paper"
           }`}
         >
           <span aria-hidden>👎</span>
           {down ?? "–"}
         </button>
         {myVote !== null && (
-          <span className="wa-mono text-paper/35">Tap again to undo</span>
+          <span className="wa-mono text-paper/65">Tap again to undo</span>
         )}
       </div>
 
@@ -162,20 +162,20 @@ export default function VoteAndComments({ slug }: { slug: string }) {
           >
             {posting ? "Posting…" : "Post comment"}
           </button>
-          <span className="wa-mono text-paper/30">Anonymous · {draft.length}/500</span>
+          <span className="wa-mono text-paper/65">Anonymous · {draft.length}/500</span>
         </div>
         {error && <p className="text-[13px] text-red-400">{error}</p>}
       </form>
 
       <ul className="mt-5 space-y-3">
-        {comments === null && <li className="wa-mono text-paper/30">Loading comments…</li>}
+        {comments === null && <li className="wa-mono text-paper/65">Loading comments…</li>}
         {comments?.length === 0 && (
-          <li className="wa-mono text-paper/30">No comments yet. Be the first.</li>
+          <li className="wa-mono text-paper/65">No comments yet. Be the first.</li>
         )}
         {comments?.map((c) => (
           <li key={c.id} className="rounded-lg border border-paper/10 p-3.5">
             <p className="text-[13.5px] leading-relaxed text-paper/75">{c.body}</p>
-            <p className="wa-mono mt-1.5 text-paper/30">{timeAgo(c.createdAt)}</p>
+            <p className="wa-mono mt-1.5 text-paper/65">{timeAgo(c.createdAt)}</p>
           </li>
         ))}
       </ul>

@@ -88,8 +88,8 @@ export default function StillTrue({
 
   return (
     <div className="mt-8 rounded-lg border border-paper/10 bg-paper/[0.02] p-4">
-      <p className="wa-mono text-paper/40">Still true?</p>
-      <p className="mt-1.5 text-[13px] leading-relaxed text-paper/50">
+      <p className="wa-mono text-paper/65">Still true?</p>
+      <p className="mt-1.5 text-[13px] leading-relaxed text-paper/65">
         We last checked this cafe on {lastVerifiedAt}. Wifi gets worse and rules change. If
         you&apos;re sitting there now, one tap keeps the next person honest.
       </p>
@@ -109,10 +109,10 @@ export default function StillTrue({
                   className={`wa-mono rounded-full border px-3 py-1.5 transition-colors disabled:opacity-60 ${
                     answered === true
                       ? "border-emerald-400/50 bg-emerald-400/10 text-paper"
-                      : "border-paper/15 text-paper/55 hover:text-paper"
+                      : "border-paper/15 text-paper/65 hover:text-paper"
                   }`}
                 >
-                  Yes {c.yes > 0 && <span className="text-paper/40">{c.yes}</span>}
+                  Yes {c.yes > 0 && <span className="text-paper/65">{c.yes}</span>}
                 </button>
                 <button
                   onClick={() => answer(field, false)}
@@ -121,10 +121,10 @@ export default function StillTrue({
                   className={`wa-mono rounded-full border px-3 py-1.5 transition-colors disabled:opacity-60 ${
                     answered === false
                       ? "border-paper/40 bg-paper/10 text-paper"
-                      : "border-paper/15 text-paper/55 hover:text-paper"
+                      : "border-paper/15 text-paper/65 hover:text-paper"
                   }`}
                 >
-                  No {c.no > 0 && <span className="text-paper/40">{c.no}</span>}
+                  No {c.no > 0 && <span className="text-paper/65">{c.no}</span>}
                 </button>
               </span>
             </div>
@@ -132,7 +132,7 @@ export default function StillTrue({
         })}
       </div>
 
-      <p className="wa-mono mt-3.5 text-paper/30">
+      <p className="wa-mono mt-3.5 text-paper/65">
         {summary === null
           ? "Loading…"
           : total === 0

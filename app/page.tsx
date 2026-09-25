@@ -59,7 +59,7 @@ export default function HomePage() {
           Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
         </div>
         <div className="flex items-center gap-4">
-          <nav className="wa-mono hidden items-center gap-6 text-paper/45 sm:flex">
+          <nav className="wa-mono hidden items-center gap-6 text-paper/65 sm:flex">
             <Link href="/collections" className="-my-2 py-2 transition-colors hover:text-paper">Lists</Link>
             <Link href="/blog" className="-my-2 py-2 transition-colors hover:text-paper">Blog</Link>
             <Link href="/mumbai" className="-my-2 flex items-center gap-1.5 py-2 transition-colors hover:text-paper">
@@ -85,7 +85,7 @@ export default function HomePage() {
             Scored on what decides whether you last three hours: somewhere to plug in,
             somewhere to sit, a connection that holds, and whether anyone minds you staying.
           </p>
-          <p className="mx-auto mt-3 max-w-lg text-[14px] leading-relaxed text-paper/50">
+          <p className="mx-auto mt-3 max-w-lg text-[14px] leading-relaxed text-paper/65">
             {SCORED} cafes graded on the same {FACTORS.length} weighted factors, from
             published evidence, with every finding cited. Another {UNSCORED} are listed with
             directory info while we work through scoring them properly.
@@ -107,7 +107,7 @@ export default function HomePage() {
         {/* Straight after the pitch, because "where can I plug in" is the
             question people actually arrive with, not "which suburb". */}
         <div className="mt-12">
-          <p className="wa-mono mb-3 text-center text-paper/40">Start from what you need today</p>
+          <p className="wa-mono mb-3 text-center text-paper/65">Start from what you need today</p>
           <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2.5">
             {COLLECTIONS.map((collection) => (
               <Link
@@ -116,7 +116,7 @@ export default function HomePage() {
                 className="group flex items-center gap-2.5 rounded-full border border-paper/18 bg-paper/[0.03] py-2 pl-4 pr-2 text-[14px] font-medium text-paper/85 transition-colors hover:border-accent/50 hover:bg-accent/[0.08] hover:text-paper"
               >
                 {collection.name}
-                <span className="wa-mono rounded-full bg-paper/10 px-2 py-0.5 text-[11px] text-paper/55 transition-colors group-hover:bg-accent/25 group-hover:text-paper">
+                <span className="wa-mono rounded-full bg-paper/10 px-2 py-0.5 text-[11px] text-paper/65 transition-colors group-hover:bg-accent/25 group-hover:text-paper">
                   {collectionCount(collection)}
                 </span>
               </Link>
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <p className="wa-mono mb-4 mt-12 text-paper/40">Explore by area</p>
+        <p className="wa-mono mb-4 mt-12 text-paper/65">Explore by area</p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {(Object.values(AREAS)).map((area, i) => {
             const areaCafes = cafesByArea(area.slug);
@@ -172,7 +172,7 @@ export default function HomePage() {
                   <span className="mt-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
                     {area.description}
                   </span>
-                  <span className="wa-mono mt-3 block text-paper/45">{area.streets}</span>
+                  <span className="wa-mono mt-3 block text-paper/65">{area.streets}</span>
                 </span>
               </Link>
             );
@@ -180,7 +180,7 @@ export default function HomePage() {
         </div>
 
         <Reveal className="mt-12">
-          <p className="wa-mono mb-4 text-paper/40">A few we&apos;d actually go back to</p>
+          <p className="wa-mono mb-4 text-paper/65">A few we&apos;d actually go back to</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {EDITOR_PICKS.map((cafe) => {
               const t = tier(cafe.workability);
@@ -194,8 +194,8 @@ export default function HomePage() {
                     <PinBadge color={t.color} />
                     <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
                   </div>
-                  <p className="wa-mono mt-1.5 text-paper/40">{cafe.neighborhood}</p>
-                  <p className="mt-2 text-[13px] leading-relaxed text-paper/60">
+                  <p className="wa-mono mt-1.5 text-paper/65">{cafe.neighborhood}</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
                     {cafe.whyWeRecommend}
                   </p>
                 </Link>
@@ -205,7 +205,7 @@ export default function HomePage() {
         </Reveal>
 
         <Reveal className="mt-12 pb-4" delay={100}>
-          <p className="wa-mono mb-4 text-paper/40">Mumbai institutions worth seeing (not for laptops)</p>
+          <p className="wa-mono mb-4 text-paper/65">Mumbai institutions worth seeing (not for laptops)</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {LANDMARKS.map((cafe) => (
               <Link
@@ -227,8 +227,8 @@ export default function HomePage() {
                 )}
                 <div className="p-4">
                   <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
-                  <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
-                  <p className="mt-2 text-[13px] leading-relaxed text-paper/60">{cafe.editorialNote}</p>
+                  <p className="wa-mono mt-1 text-paper/65">{cafe.neighborhood}</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-paper/65">{cafe.editorialNote}</p>
                 </div>
               </Link>
             ))}

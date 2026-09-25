@@ -11,7 +11,7 @@ export default function Footer() {
             <Logo size={20} />
             Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </div>
-          <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/50">
+          <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/65">
             Mumbai cafes scored on whether you can actually work from them: wifi, power,
             seating and noise, with every finding cited.
           </p>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="wa-mono mb-3 text-paper/40">Explore</p>
+          <p className="wa-mono mb-3 text-paper/65">Explore</p>
           <nav className="flex flex-col gap-3 text-[13.5px] sm:gap-2">
             <Link href="/mumbai" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">The map</Link>
             <Link href="/collections" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Best-of lists</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="wa-mono mb-3 text-paper/40">Areas</p>
+          <p className="wa-mono mb-3 text-paper/65">Areas</p>
           <nav className="flex flex-col gap-3 text-[13.5px] sm:gap-2">
             {Object.values(AREAS).map((area) => (
               <Link
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="wa-mono mx-auto mt-9 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-paper/10 pt-5 text-paper/50">
+      <div className="wa-mono mx-auto mt-9 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-paper/10 pt-5 text-paper/65">
         <span>© 2026 Bombay Cafe Map</span>
         <nav className="flex gap-4">
           <Link href="/privacy" className="hover:text-paper">Privacy</Link>

@@ -13,7 +13,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={label}
       title={label}
-      className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-paper/15 text-paper/55 transition-colors hover:bg-paper/[0.06] hover:text-paper [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 ${className}`}
+      className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-paper/15 text-paper/65 transition-colors hover:bg-paper/[0.06] hover:text-paper [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 ${className}`}
     >
       <svg
         width="15"

@@ -58,11 +58,11 @@ export async function generateMetadata({
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="wa-mono w-16 shrink-0 text-paper/45">{label}</span>
+      <span className="wa-mono w-16 shrink-0 text-paper/65">{label}</span>
       <div className="h-[5px] flex-1 rounded-full bg-paper/[0.07]">
         {value !== null && <ScoreFill value={value} color={tier(value).color} />}
       </div>
-      <span className="wa-mono w-4 text-right text-paper/50">{value ?? "–"}</span>
+      <span className="wa-mono w-4 text-right text-paper/65">{value ?? "–"}</span>
     </div>
   );
 }
@@ -185,7 +185,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
       <div className="mx-auto max-w-2xl">
         <div className="flex items-start justify-between gap-4">
-          <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/40">
+          <nav className="wa-mono flex flex-wrap gap-1.5 text-paper/65">
             <Link href="/" className="-my-1.5 py-1.5 transition-colors hover:text-paper">Bombay Cafe Map</Link>
             <span>/</span>
             <Link href="/mumbai" className="-my-1.5 py-1.5 transition-colors hover:text-paper">Mumbai</Link>
@@ -235,7 +235,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             <h1 className="font-display text-[clamp(1.7rem,4vw,2.3rem)] font-medium leading-tight">
               {cafe.name}
             </h1>
-            <p className="wa-mono mt-1.5 text-paper/40">
+            <p className="wa-mono mt-1.5 text-paper/65">
               {cafe.neighborhood} · {areaName}
             </p>
           </div>
@@ -251,7 +251,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             <div className="font-display text-[19px] leading-none">
               {cafe.workability !== null ? <CountUp value={cafe.workability} /> : "–"}
             </div>
-            <div className="wa-mono mt-0.5 text-[8px] uppercase text-paper/45">/5</div>
+            <div className="wa-mono mt-0.5 text-[8px] uppercase text-paper/65">/5</div>
           </div>
         </div>
         <p className="wa-mono mt-2" style={{ color: tier(cafe.workability).color }}>
@@ -260,7 +260,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         <p className="mt-4 text-[15px] leading-relaxed text-paper/75">{cafe.editorialNote}</p>
         {cafe.whyWeRecommend && cafe.whyWeRecommend !== cafe.editorialNote && (
-          <p className="mt-3 text-[14px] leading-relaxed text-paper/55">{cafe.whyWeRecommend}</p>
+          <p className="mt-3 text-[14px] leading-relaxed text-paper/65">{cafe.whyWeRecommend}</p>
         )}
 
         <div className="mt-5 flex flex-wrap gap-2 text-[12.5px]">
@@ -290,10 +290,10 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         {cafe.openingHours && (
           <div className="mt-5 flex flex-wrap items-center gap-2.5">
             <OpenBadge openingHours={cafe.openingHours} />
-            <p className="wa-mono text-paper/40">{cafe.openingHours}</p>
+            <p className="wa-mono text-paper/65">{cafe.openingHours}</p>
           </div>
         )}
-        <p className="mt-1 text-[13.5px] leading-relaxed text-paper/50">{cafe.address}</p>
+        <p className="mt-1 text-[13.5px] leading-relaxed text-paper/65">{cafe.address}</p>
 
         <div className="mt-6 space-y-1.5">
           {SCORE_ROWS.filter((r) => cafe.scores[r.key] !== null).map((r) => (
@@ -301,7 +301,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           ))}
         </div>
         {SCORE_ROWS.some((r) => cafe.scores[r.key] === null) && (
-          <p className="wa-mono mt-2 text-paper/30">
+          <p className="wa-mono mt-2 text-paper/65">
             Not enough evidence:{" "}
             {SCORE_ROWS.filter((r) => cafe.scores[r.key] === null)
               .map((r) => r.label)
@@ -312,7 +312,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         {cafe.toggles.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">
             {cafe.toggles.map((t) => (
-              <span key={t} className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/50">
+              <span key={t} className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/65">
                 {t}
               </span>
             ))}
@@ -320,7 +320,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         )}
 
         {cafe.publicRating && (
-          <p className="wa-mono mt-4 text-paper/40">
+          <p className="wa-mono mt-4 text-paper/65">
             {cafe.publicRating.value.toFixed(1)}★ public rating ({cafe.publicRating.count}) via{" "}
             {cafe.publicRating.source}
           </p>
@@ -331,18 +331,18 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             className="mt-7 rounded-lg border-l-2 bg-paper/[0.03] p-4"
             style={{ borderColor: tier(cafe.workability).color }}
           >
-            <p className="wa-mono mb-1.5 text-paper/40">Verdict</p>
+            <p className="wa-mono mb-1.5 text-paper/65">Verdict</p>
             <p className="text-[14px] leading-relaxed text-paper/70">{cafe.synthesis}</p>
           </div>
         )}
 
         <div className="mt-7">
-          <p className="wa-mono mb-2 text-paper/40">Where the scores come from</p>
+          <p className="wa-mono mb-2 text-paper/65">Where the scores come from</p>
           <ul className="space-y-3">
             {EVIDENCE_ORDER.filter(({ key }) => cafe.evidence[key]).map(({ key, label }) => (
               <li key={key} className="border-l-2 border-paper/10 pl-3">
-                <p className="text-[12.5px] font-medium text-paper/60">{label}</p>
-                <p className="mt-0.5 text-[13px] leading-relaxed text-paper/50">{cafe.evidence[key]}</p>
+                <p className="text-[12.5px] font-medium text-paper/65">{label}</p>
+                <p className="mt-0.5 text-[13px] leading-relaxed text-paper/65">{cafe.evidence[key]}</p>
               </li>
             ))}
           </ul>
@@ -351,7 +351,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         {cafe.tags.length > 0 && (
           <div className="mt-6 flex flex-wrap gap-1.5">
             {cafe.tags.map((t) => (
-              <span key={t} className="wa-mono text-paper/30">
+              <span key={t} className="wa-mono text-paper/65">
                 #{t.replace(/\s+/g, "-")}
               </span>
             ))}
@@ -359,7 +359,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         )}
 
         {cafe.sources.length > 0 && (
-          <p className="wa-mono mt-6 text-paper/30">
+          <p className="wa-mono mt-6 text-paper/65">
             Sources: {cafe.sources.join(" · ")} · verified {cafe.lastVerifiedAt}
           </p>
         )}
@@ -369,25 +369,25 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         <VoteAndComments slug={cafe.slug} />
 
         {cafe.images.some((i) => i.license) ? (
-          <p className="wa-mono mt-3 text-paper/25">
+          <p className="wa-mono mt-3 text-paper/65">
             Photos via Wikimedia Commons, licensed{" "}
             {[...new Set(cafe.images.map((i) => i.license).filter(Boolean))].join(", ")}.
           </p>
         ) : cafe.images.some((i) => i.credit) ? (
-          <p className="wa-mono mt-3 text-paper/25">
+          <p className="wa-mono mt-3 text-paper/65">
             Photo courtesy of{" "}
             {[...new Set(cafe.images.map((i) => i.credit).filter(Boolean))].join(", ")}.
           </p>
         ) : (
-          <p className="wa-mono mt-3 text-paper/25">
+          <p className="wa-mono mt-3 text-paper/65">
             No photo yet.{" "}
-            <Link href="/submit" className="underline hover:text-paper/60">send us one</Link>.
+            <Link href="/submit" className="underline hover:text-paper/65">send us one</Link>.
           </p>
         )}
 
         {nearby.length > 0 && (
           <div className="mt-10">
-            <p className="wa-mono mb-3 text-paper/40">More in {areaName}</p>
+            <p className="wa-mono mb-3 text-paper/65">More in {areaName}</p>
             <div className="grid gap-2.5 sm:grid-cols-3">
               {nearby.map((n) => (
                 <Link
@@ -399,7 +399,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
                     <PinBadge color={tier(n.workability).color} size={12} />
                     <p className="font-display text-[13.5px] font-medium leading-snug">{n.name}</p>
                   </div>
-                  <p className="wa-mono mt-1.5 text-paper/40">{n.neighborhood}</p>
+                  <p className="wa-mono mt-1.5 text-paper/65">{n.neighborhood}</p>
                 </Link>
               ))}
             </div>

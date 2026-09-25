@@ -17,7 +17,7 @@ function SubmissionCard({
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-display text-[16px] font-medium">{s.name}</p>
-          <p className="wa-mono mt-1 text-paper/40">
+          <p className="wa-mono mt-1 text-paper/65">
             {s.neighborhood} · {AREAS[s.area]?.name ?? s.area}
           </p>
         </div>
@@ -27,7 +27,7 @@ function SubmissionCard({
               ? "border-green-500/30 text-green-400"
               : s.status === "rejected"
                 ? "border-red-500/30 text-red-400"
-                : "border-paper/15 text-paper/50"
+                : "border-paper/15 text-paper/65"
           }`}
         >
           {s.status}
@@ -41,21 +41,21 @@ function SubmissionCard({
 
       <div className="mt-2 flex flex-wrap gap-3 text-[13px]">
         {s.website && (
-          <a href={s.website} target="_blank" rel="noopener noreferrer" className="text-paper/50 underline">
+          <a href={s.website} target="_blank" rel="noopener noreferrer" className="text-paper/65 underline">
             website
           </a>
         )}
         {s.instagram && (
-          <a href={s.instagram} target="_blank" rel="noopener noreferrer" className="text-paper/50 underline">
+          <a href={s.instagram} target="_blank" rel="noopener noreferrer" className="text-paper/65 underline">
             instagram
           </a>
         )}
-        {s.submitterEmail && <span className="text-paper/40">from {s.submitterEmail}</span>}
+        {s.submitterEmail && <span className="text-paper/65">from {s.submitterEmail}</span>}
       </div>
 
-      {s.notes && <p className="mt-2.5 text-[13.5px] leading-relaxed text-paper/60">{s.notes}</p>}
+      {s.notes && <p className="mt-2.5 text-[13.5px] leading-relaxed text-paper/65">{s.notes}</p>}
 
-      <p className="wa-mono mt-3 text-paper/30">Submitted {new Date(s.createdAt).toLocaleString()}</p>
+      <p className="wa-mono mt-3 text-paper/65">Submitted {new Date(s.createdAt).toLocaleString()}</p>
 
       {showActions && (
         <div className="mt-4 space-y-3 border-t border-paper/10 pt-4">
@@ -104,10 +104,10 @@ export default async function AdminPage() {
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <div className="mx-auto max-w-2xl">
         <h1 className="font-display text-[24px] font-medium">Cafe submissions</h1>
-        <p className="wa-mono mt-2 text-paper/40">{pending.length} pending review</p>
+        <p className="wa-mono mt-2 text-paper/65">{pending.length} pending review</p>
 
         <div className="mt-6 space-y-3">
-          {pending.length === 0 && <p className="text-paper/50">Nothing waiting on review.</p>}
+          {pending.length === 0 && <p className="text-paper/65">Nothing waiting on review.</p>}
           {pending.map((s) => (
             <SubmissionCard key={s.id} s={s} showActions />
           ))}
@@ -115,7 +115,7 @@ export default async function AdminPage() {
 
         {reviewed.length > 0 && (
           <>
-            <p className="wa-mono mb-3 mt-10 text-paper/40">Reviewed</p>
+            <p className="wa-mono mb-3 mt-10 text-paper/65">Reviewed</p>
             <div className="space-y-3">
               {reviewed.map((s) => (
                 <SubmissionCard key={s.id} s={s} showActions={false} />

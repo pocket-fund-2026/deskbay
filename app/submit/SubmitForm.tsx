@@ -52,7 +52,7 @@ export default function SubmitForm() {
 
   if (status === "done") {
     return (
-      <p className="wa-mono mt-8 text-paper/60">
+      <p className="wa-mono mt-8 text-paper/65">
         Thanks, it&apos;s in the review queue. If it checks out it&apos;ll go straight on the map.
       </p>
     );
@@ -61,7 +61,7 @@ export default function SubmitForm() {
   return (
     <form onSubmit={handleSubmit} className="mt-8 space-y-5">
       <div>
-        <label className="wa-mono block text-paper/50" htmlFor="name">
+        <label className="wa-mono block text-paper/65" htmlFor="name">
           Cafe name
         </label>
         <input
@@ -75,7 +75,7 @@ export default function SubmitForm() {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="wa-mono block text-paper/50" htmlFor="area">
+          <label className="wa-mono block text-paper/65" htmlFor="area">
             Area
           </label>
           <select
@@ -96,7 +96,7 @@ export default function SubmitForm() {
           </select>
         </div>
         <div>
-          <label className="wa-mono block text-paper/50" htmlFor="neighborhood">
+          <label className="wa-mono block text-paper/65" htmlFor="neighborhood">
             Neighborhood
           </label>
           <input
@@ -110,7 +110,7 @@ export default function SubmitForm() {
         </div>
       </div>
       <div>
-        <label className="wa-mono block text-paper/50" htmlFor="address">
+        <label className="wa-mono block text-paper/65" htmlFor="address">
           Address
         </label>
         <input
@@ -124,7 +124,7 @@ export default function SubmitForm() {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="wa-mono block text-paper/50" htmlFor="website">
+          <label className="wa-mono block text-paper/65" htmlFor="website">
             Website (optional)
           </label>
           <input
@@ -137,7 +137,7 @@ export default function SubmitForm() {
           />
         </div>
         <div>
-          <label className="wa-mono block text-paper/50" htmlFor="instagram">
+          <label className="wa-mono block text-paper/65" htmlFor="instagram">
             Instagram (optional)
           </label>
           <input
@@ -150,7 +150,7 @@ export default function SubmitForm() {
         </div>
       </div>
       <div>
-        <label className="wa-mono block text-paper/50" htmlFor="notes">
+        <label className="wa-mono block text-paper/65" htmlFor="notes">
           Why it belongs here
         </label>
         <textarea
@@ -164,7 +164,7 @@ export default function SubmitForm() {
         />
       </div>
       <div>
-        <label className="wa-mono block text-paper/50" htmlFor="submitterEmail">
+        <label className="wa-mono block text-paper/65" htmlFor="submitterEmail">
           Your email (optional, in case we have questions)
         </label>
         <input

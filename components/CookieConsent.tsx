@@ -36,7 +36,7 @@ export default function CookieConsent() {
         <div className="flex shrink-0 gap-2">
           <button
             onClick={() => choose("declined")}
-            className="wa-mono rounded-full border border-paper/15 px-4 py-2 text-paper/60 transition-colors hover:text-paper"
+            className="wa-mono rounded-full border border-paper/15 px-4 py-2 text-paper/65 transition-colors hover:text-paper"
           >
             Decline
           </button>

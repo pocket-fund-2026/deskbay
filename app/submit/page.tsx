@@ -45,12 +45,12 @@ export default function SubmitPage() {
       <div className="mx-auto max-w-lg">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
+            <Link href="/" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
               ← Bombay Cafe Map
             </Link>
             <ThemeToggle />
           </div>
-          <nav className="wa-mono flex gap-4 text-paper/45">
+          <nav className="wa-mono flex gap-4 text-paper/65">
             <Link href="/mumbai" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">The map</Link>
             <Link href="/blog" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">Blog</Link>
             <Link href="/about" className="-my-1.5 inline-block py-1.5 transition-colors hover:text-paper">About</Link>
@@ -59,7 +59,7 @@ export default function SubmitPage() {
         <h1 className="font-display mt-6 text-[clamp(1.6rem,3.6vw,2.1rem)] font-medium tracking-tight">
           Submit a cafe
         </h1>
-        <p className="mt-3 text-[14.5px] leading-relaxed text-paper/60">
+        <p className="mt-3 text-[14.5px] leading-relaxed text-paper/65">
           Know a Mumbai cafe that deserves a place on the map? Tell us the basics. It goes into a
           review queue, and if it checks out it&apos;s added straight away, unscored on wifi and
           power until we can verify those the same way as everywhere else.

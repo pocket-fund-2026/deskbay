@@ -63,12 +63,12 @@ export default function AboutPage() {
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
+            <Link href="/" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
               ← Bombay Cafe Map
             </Link>
             <ThemeToggle />
           </div>
-          <nav className="wa-mono flex gap-4 text-paper/45">
+          <nav className="wa-mono flex gap-4 text-paper/65">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>
             <Link href="/blog" className="hover:text-paper">Blog</Link>
             <Link href="/submit" className="hover:text-paper">Submit a cafe</Link>
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
           The nine factors
         </h2>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/65">
           One weighted model, applied to the {CAFES.filter((c) => c.workability !== null).length}{" "}
           cafes across Mumbai we&apos;ve fully researched so far. It is weighted toward the
           two things that end a work session early: nowhere to plug in, and a connection that
@@ -96,7 +96,7 @@ export default function AboutPage() {
           {CAFES.filter((c) => c.workability === null).length} cafes are on the map as directory
           listings (name, address, links) while we work through scoring them the same way.
         </p>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/65">
           The scale runs stricter than most star ratings: a &quot;good&quot; wifi mention in one
           review isn&apos;t enough for a 4 here, and a cafe has to clear a higher bar to be called
           excellent at any single factor. A low workability score is not a verdict on the cafe.
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <li key={f.key} className="px-4 py-3.5">
               <div className="flex items-baseline justify-between gap-4">
                 <span className="text-[15px] font-medium">{f.label}</span>
-                <span className="wa-mono shrink-0 tabular-nums text-paper/55">{f.weight}%</span>
+                <span className="wa-mono shrink-0 tabular-nums text-paper/65">{f.weight}%</span>
               </div>
               <div className="mt-2 h-[4px] overflow-hidden rounded-full bg-paper/[0.07]">
                 <div
@@ -117,13 +117,13 @@ export default function AboutPage() {
                   style={{ width: `${(f.weight / FACTORS[0].weight) * 100}%` }}
                 />
               </div>
-              <p className="mt-2 text-[13.5px] leading-snug text-paper-dim text-paper/55">
+              <p className="mt-2 text-[13.5px] leading-snug text-paper-dim text-paper/65">
                 {f.question}
               </p>
             </li>
           ))}
         </ul>
-        <p className="wa-mono mt-3 text-paper/35">
+        <p className="wa-mono mt-3 text-paper/65">
           The percentages are the weights the code actually applies: this list is generated
           from the same table the score is computed from, so it cannot fall out of date.
         </p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
         <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
           Where the factor scores come from
         </h2>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/65">
           An unknown factor is left out, not scored zero. Names, addresses, hours and public
           ratings are what the cafe or a credible source publishes, attributed on the panel. A
           public rating is shown next to the workability score, never blended into it: they
@@ -141,7 +141,7 @@ export default function AboutPage() {
         <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
           What we will not fake
         </h2>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/65">
           Every finding is cited. Where the sources are too thin to average a factor, the panel
           says so instead of printing a number.
         </p>
@@ -149,7 +149,7 @@ export default function AboutPage() {
         <h2 className="font-display mt-10 text-[24px] font-normal tracking-tight">
           The scores should get better
         </h2>
-        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/60">
+        <p className="mt-2.5 text-[15px] leading-relaxed text-paper/65">
           Every cafe panel has a short feedback form: wifi, outlets, noise. It is anonymous and
           takes a few seconds. Reports go into a queue rather than straight onto the score, so a
           handful of votes cannot swing a listing, but enough of them will get it re-rated.

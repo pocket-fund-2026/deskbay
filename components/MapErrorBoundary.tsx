@@ -28,8 +28,8 @@ export default class MapErrorBoundary extends Component<
       return (
         <div className="grid h-full w-full place-items-center bg-ink px-6 text-center">
           <div>
-            <p className="wa-mono text-paper/50">The map couldn&apos;t load in this browser.</p>
-            <p className="mt-1.5 text-[13px] text-paper/35">
+            <p className="wa-mono text-paper/65">The map couldn&apos;t load in this browser.</p>
+            <p className="mt-1.5 text-[13px] text-paper/65">
               The cafe list alongside it still works. Pick a cafe there instead.
             </p>
           </div>

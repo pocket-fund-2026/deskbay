@@ -16,7 +16,7 @@ const MapView = dynamic(() => import("@/components/MapView"), {
   ssr: false,
   loading: () => (
     <div className="grid h-full w-full place-items-center bg-ink">
-      <p className="wa-mono text-paper/40">Loading map…</p>
+      <p className="wa-mono text-paper/65">Loading map…</p>
     </div>
   ),
 });
@@ -182,11 +182,11 @@ export default function MumbaiScreen({
                   setAreaMenuOpen(false);
                 }}
                 className={`wa-mono flex w-full items-center justify-between gap-3 px-4 py-2.5 text-left transition-colors ${
-                  area === a ? "bg-paper/10 text-paper" : "text-paper/60 hover:bg-paper/[0.05] hover:text-paper"
+                  area === a ? "bg-paper/10 text-paper" : "text-paper/65 hover:bg-paper/[0.05] hover:text-paper"
                 }`}
               >
                 <span>{a === "all" ? "All areas" : AREAS[a].name}</span>
-                <span className="text-paper/35">
+                <span className="text-paper/65">
                   {a === "all" ? allCafes.length : allCafes.filter((c) => c.area === a).length}
                 </span>
               </button>
@@ -206,10 +206,10 @@ export default function MumbaiScreen({
             Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
           </Link>
           <div className="flex items-center gap-3 md:gap-5">
-            <Link href="/collections" className="wa-mono -my-2 py-2 text-paper/45 hover:text-paper">
+            <Link href="/collections" className="wa-mono -my-2 py-2 text-paper/65 hover:text-paper">
               Lists
             </Link>
-            <Link href="/blog" className="wa-mono -my-2 hidden py-2 text-paper/45 hover:text-paper md:block">
+            <Link href="/blog" className="wa-mono -my-2 hidden py-2 text-paper/65 hover:text-paper md:block">
               Blog
             </Link>
             <div className="hidden md:block">{areaDropdown}</div>
@@ -253,7 +253,7 @@ export default function MumbaiScreen({
           >
             <span className="h-1 w-10 rounded-full bg-paper/25" />
             {!sheetOpen && (
-              <span className="wa-mono text-paper/40">{visibleCafes.length} cafes · tap to expand</span>
+              <span className="wa-mono text-paper/65">{visibleCafes.length} cafes · tap to expand</span>
             )}
           </button>
           <div className="relative shrink-0 border-b border-paper/10 px-3 py-2.5">
@@ -263,13 +263,13 @@ export default function MumbaiScreen({
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search by name or neighbourhood…"
               aria-label="Search cafes"
-              className="wa-mono w-full rounded-full border border-paper/15 bg-paper/[0.03] px-4 py-2 text-paper/80 outline-none placeholder:text-paper/35 focus:border-accent"
+              className="wa-mono w-full rounded-full border border-paper/15 bg-paper/[0.03] px-4 py-2 text-paper/80 outline-none placeholder:text-paper/65 focus:border-accent"
             />
             {query && (
               <button
                 onClick={() => setQuery("")}
                 aria-label="Clear search"
-                className="absolute right-6 top-1/2 -translate-y-1/2 text-paper/40 hover:text-paper"
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-paper/65 hover:text-paper"
               >
                 ×
               </button>
@@ -282,7 +282,7 @@ export default function MumbaiScreen({
                 className={`wa-mono rounded-full border px-3 py-1.5 transition-colors ${
                   openNowOnly
                     ? "border-emerald-400/50 bg-emerald-400/10 text-paper"
-                    : "border-paper/15 text-paper/55 hover:text-paper"
+                    : "border-paper/15 text-paper/65 hover:text-paper"
                 }`}
               >
                 Open now
@@ -300,18 +300,18 @@ export default function MumbaiScreen({
                 className={`wa-mono rounded-full border px-3 py-1.5 transition-colors ${
                   nearMe
                     ? "border-accent/60 bg-accent/15 text-paper"
-                    : "border-paper/15 text-paper/55 hover:text-paper"
+                    : "border-paper/15 text-paper/65 hover:text-paper"
                 }`}
               >
                 {nearMe && !here ? "Locating…" : "Near me"}
               </button>
               {nearMe && here && (
-                <span className="wa-mono text-paper/35">nearest first</span>
+                <span className="wa-mono text-paper/65">nearest first</span>
               )}
             </div>
-            {geoError && <p className="wa-mono mt-1.5 text-paper/40">{geoError}</p>}
+            {geoError && <p className="wa-mono mt-1.5 text-paper/65">{geoError}</p>}
             {openNowOnly && hiddenForUnknownHours > 0 && (
-              <p className="wa-mono mt-1.5 text-paper/35">
+              <p className="wa-mono mt-1.5 text-paper/65">
                 {hiddenForUnknownHours} hidden (hours not recorded yet).
               </p>
             )}
@@ -320,7 +320,7 @@ export default function MumbaiScreen({
             {selectedCafe ? (
               <CafeDetailPanel cafe={selectedCafe} onBack={() => setSelected(null)} />
             ) : visibleCafes.length === 0 ? (
-              <p className="wa-mono p-4 text-paper/40">
+              <p className="wa-mono p-4 text-paper/65">
                 No cafes{query ? ` match "${query}"` : ""}
                 {area !== "all" ? ` in ${AREAS[area].name}` : ""}
                 {openNowOnly ? " are open right now" : ""}.
@@ -333,7 +333,7 @@ export default function MumbaiScreen({
                   </div>
                   <Link
                     href="/about"
-                    className="wa-mono flex items-center justify-between gap-2 text-paper/40 hover:text-paper md:hidden"
+                    className="wa-mono flex items-center justify-between gap-2 text-paper/65 hover:text-paper md:hidden"
                   >
                     <span>{visibleCafes.length} cafes · scored on 9 weighted factors</span>
                     <span>→</span>

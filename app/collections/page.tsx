@@ -29,7 +29,7 @@ export default function CollectionsIndex() {
     <main className="min-h-dvh bg-ink text-paper">
       <div className="mx-auto max-w-3xl px-6 py-10 sm:px-10">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
+          <Link href="/" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
             ← Bombay Cafe Map
           </Link>
           <ThemeToggle />
@@ -38,7 +38,7 @@ export default function CollectionsIndex() {
           Best-of lists
         </h1>
         <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-paper/65">{DESCRIPTION}</p>
-        <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-paper/45">
+        <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-paper/65">
           Every list is a rule applied to the same data, not a hand-picked selection. Each cafe
           shows the recorded detail that put it there.
         </p>
@@ -60,18 +60,18 @@ export default function CollectionsIndex() {
                   style={{ background: t.color }}
                 />
                 <div className="flex items-center justify-between gap-3">
-                  <p className="wa-mono text-paper/40">{members.length} cafes</p>
+                  <p className="wa-mono text-paper/65">{members.length} cafes</p>
                   {top && <PinBadge color={t.color} size={13} />}
                 </div>
                 <h2 className="font-display mt-1.5 text-[18px] font-medium leading-snug">
                   {collection.title}
                 </h2>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-paper/60">
+                <p className="mt-2 text-[13.5px] leading-relaxed text-paper/65">
                   {collection.question}
                 </p>
                 {top && (
-                  <p className="wa-mono mt-3 text-paper/35">
-                    Top pick: <span className="text-paper/55">{top.name}</span>
+                  <p className="wa-mono mt-3 text-paper/65">
+                    Top pick: <span className="text-paper/65">{top.name}</span>
                   </p>
                 )}
               </Link>

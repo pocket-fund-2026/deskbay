@@ -89,12 +89,12 @@ export default function Post() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/45 transition-colors hover:text-paper">
+          <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
             ← Blog
           </Link>
           <ThemeToggle />
         </div>
-        <p className="wa-mono mt-6 text-paper/40">
+        <p className="wa-mono mt-6 text-paper/65">
           {post.date} · {post.readingTime}
         </p>
         <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
@@ -127,13 +127,13 @@ export default function Post() {
               <li key={cafe.slug} className="border-t border-paper/10 pt-5 first:border-t-0 first:pt-0">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="wa-mono text-paper/35">#{i + 1}</p>
+                    <p className="wa-mono text-paper/65">#{i + 1}</p>
                     <Link href={`/mumbai/${cafe.slug}`} className="group">
                       <h2 className="font-display mt-1 text-[19px] font-medium leading-snug group-hover:underline">
                         {cafe.name}
                       </h2>
                     </Link>
-                    <p className="wa-mono mt-1 text-paper/40">{cafe.neighborhood}</p>
+                    <p className="wa-mono mt-1 text-paper/65">{cafe.neighborhood}</p>
                   </div>
                   <div
                     className="flex shrink-0 flex-col items-center justify-center rounded-full"
@@ -157,11 +157,11 @@ export default function Post() {
                   </div>
                 )}
                 <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{writeup(cafe)}</p>
-                <p className="wa-mono mt-2 text-paper/35">
+                <p className="wa-mono mt-2 text-paper/65">
                   {cafe.address}
                   {cafe.openingHours ? ` · ${cafe.openingHours}` : ""}
                 </p>
-                <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1 inline-block py-1.5 text-paper/40 transition-colors hover:text-paper">
+                <Link href={`/mumbai/${cafe.slug}`} className="wa-mono mt-1 inline-block py-1.5 text-paper/65 transition-colors hover:text-paper">
                   Full profile and evidence →
                 </Link>
               </li>
@@ -175,7 +175,7 @@ export default function Post() {
         <div className="mt-3 space-y-4">
           <div>
             <p className="font-medium text-[14.5px]">What is the best cafe to work from in Bandra?</p>
-            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
+            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/65">
               {RANKED[0].name} on {RANKED[0].neighborhood} currently has Bombay Cafe Map&apos;s
               highest workability score in Bandra ({RANKED[0].workability}/5), based on cited
               evidence about its wifi, seating and noise levels. See its{" "}
@@ -184,7 +184,7 @@ export default function Post() {
           </div>
           <div>
             <p className="font-medium text-[14.5px]">How many cafes has Bombay Cafe Map scored in Bandra?</p>
-            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/60">
+            <p className="mt-1 text-[13.5px] leading-relaxed text-paper/65">
               {SCORED.length} of the {cafesByArea("bandra").length} Bandra cafes on Bombay Cafe Map
               have a workability score, based on published evidence rather than star ratings
               alone. Read the{" "}

@@ -9,11 +9,11 @@ import ScoreFill from "@/components/ScoreFill";
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="wa-mono w-16 shrink-0 text-paper/40">{label}</span>
+      <span className="wa-mono w-16 shrink-0 text-paper/65">{label}</span>
       <div className="h-1.5 flex-1 rounded-full bg-paper/10">
         {value !== null && <ScoreFill value={value} />}
       </div>
-      <span className="wa-mono w-4 text-right text-paper/50">{value ?? "–"}</span>
+      <span className="wa-mono w-4 text-right text-paper/65">{value ?? "–"}</span>
     </div>
   );
 }
@@ -55,7 +55,7 @@ export default function CafeCard({
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-display text-[17px] font-medium leading-snug">{cafe.name}</h3>
-          <p className="wa-mono mt-1 text-paper/40">
+          <p className="wa-mono mt-1 text-paper/65">
             {cafe.neighborhood}
             {distance ? ` · ${distance} away` : ""}
           </p>
@@ -64,7 +64,7 @@ export default function CafeCard({
           <div className="font-display text-[15px] leading-none">
             {cafe.workability !== null ? cafe.workability.toFixed(1) : "–"}
           </div>
-          <div className="wa-mono mt-0.5 text-[9px] text-paper/40">
+          <div className="wa-mono mt-0.5 text-[9px] text-paper/65">
             {cafe.workability !== null ? "score" : "too thin"}
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function CafeCard({
           {cafe.toggles.map((t) => (
             <span
               key={t}
-              className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/50"
+              className="wa-mono rounded-full border border-paper/10 px-2 py-1 text-paper/65"
             >
               {t}
             </span>
@@ -101,7 +101,7 @@ export default function CafeCard({
       <Link
         href={`/mumbai/${cafe.slug}`}
         onClick={(e) => e.stopPropagation()}
-        className="wa-mono mt-2 inline-block py-1.5 text-paper/40 transition-colors hover:text-paper"
+        className="wa-mono mt-2 inline-block py-1.5 text-paper/65 transition-colors hover:text-paper"
       >
         Full page →
       </Link>
@@ -111,7 +111,7 @@ export default function CafeCard({
 
 export function FactorLegend() {
   return (
-    <ul className="wa-mono flex flex-wrap gap-x-4 gap-y-1 text-paper/35">
+    <ul className="wa-mono flex flex-wrap gap-x-4 gap-y-1 text-paper/65">
       {FACTORS.map((f) => (
         <li key={f.key}>
           {f.label} {f.weight}%

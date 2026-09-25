@@ -43,7 +43,7 @@ export default function PrivacyPage() {
       />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="wa-mono -my-2 py-2 text-paper/50 transition-colors hover:text-paper">
+          <Link href="/" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
             ← Bombay Cafe Map
           </Link>
           <ThemeToggle />
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
         <h1 className="font-display mt-6 text-[clamp(1.7rem,4vw,2.3rem)] font-medium leading-tight">
           Privacy Policy
         </h1>
-        <p className="wa-mono mt-2 text-paper/45">Last updated 15 September 2026</p>
+        <p className="wa-mono mt-2 text-paper/65">Last updated 15 September 2026</p>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
           Bombay Cafe Map is a small, independently run site. This page lists everything the
