@@ -39,6 +39,22 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-09-24",
     readingTime: "5 min read",
   },
+  {
+    slug: "best-cafes-to-work-from-in-eastern-suburbs",
+    title: "The best cafes to work from in the Eastern Suburbs",
+    description:
+      "Powai's lakeside cafes anchor a scene now spreading through Ghatkopar, Chembur and Mulund — our scored, cited ranking of which ones actually hold up for a work session.",
+    date: "2026-09-25",
+    readingTime: "5 min read",
+  },
+  {
+    slug: "best-cafes-to-work-from-in-thane",
+    title: "The best cafes to work from in Thane",
+    description:
+      "Thane's own cafe scene is growing fast along Ghodbunder Road — our scored, cited ranking of where to actually get a table, a plug and some quiet.",
+    date: "2026-09-25",
+    readingTime: "5 min read",
+  },
 ];
 
 export function getPost(slug: string) {

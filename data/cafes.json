@@ -18605,6 +18605,1909 @@
       "workability": 1.0,
       "images": [],
       "menuUrl": null
+    },
+    {
+      "slug": "blue-tokai-coffee-roasters-maker-maxity-bkc",
+      "name": "Blue Tokai Coffee Roasters, BKC",
+      "area": "bkc",
+      "neighborhood": "Maker Maxity, BKC",
+      "address": "G1-C, Ground Floor, 3 North Avenue, Maker Maxity, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0655,
+      "longitude": 72.8656,
+      "website": "https://bluetokaicoffee.com",
+      "instagram": "https://www.instagram.com/bluetokaicoffee",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20BKC%2C%20G1-C%2C%20Ground%20Floor%2C%203%20North%20Avenue%2C%20Maker%20Maxity%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": "11:00 AM - 9:00 PM",
+      "editorialNote": "A Blue Tokai outlet inside the Maker Maxity office cluster, carrying the roastery's own 'work friendly' listing tag rather than any laptop-specific reviews.",
+      "whyWeRecommend": "District.in lists it under a 'work friendly' designation with strong 4.3/5 ambience and 4.4/5 service scores, though no reviewer has yet weighed in on wifi speed or how long you can hold a table.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 3.0
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": "Rs 600 for two (District.in)"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": "Listed under a 'work friendly' tag with 4.3/5 ambience and 4.4/5 service ratings (District.in)"
+      },
+      "toggles": [
+        "Work-friendly tag (listing)"
+      ],
+      "tags": [
+        "Specialty coffee",
+        "Roastery chain",
+        "Maker Maxity"
+      ],
+      "sources": [
+        "District.in",
+        "EazyDiner"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.4,
+        "count": 94,
+        "source": "District.in",
+        "url": "https://www.district.in/dining/mumbai/blue-tokai-coffee-roasters-2-bandra-kurla-complex"
+      },
+      "synthesis": "A dependable specialty-coffee stop carrying an official 'work friendly' tag, but with no first-hand wifi or noise reports to back it up yet.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "white-crow-books-and-coffee-jio-world-drive",
+      "name": "The White Crow Books and Coffee",
+      "area": "bkc",
+      "neighborhood": "Jio World Drive, BKC",
+      "address": "2nd Floor, Jio World Drive, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0695,
+      "longitude": 72.8658,
+      "website": "https://jioworlddrive.com/brands/the-white-crow---books-&-coffee",
+      "instagram": "https://www.instagram.com/thewhitecrowbooksandcoffee/",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20White%20Crow%20Books%20and%20Coffee%2C%202nd%20Floor%2C%20Jio%20World%20Drive%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "editorialNote": "A bookstore-cafe on the mall's second floor with a Nandan Coffee bar built into the shelves, more browsing room than office.",
+      "whyWeRecommend": "LBB describes 'comfortable seating and a warm atmosphere' in a book-lined, glass-ceilinged room built for lingering with a book and a coffee, though no one has published wifi or noise numbers for it yet.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.3,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Book-lined room, described as comfortable and warm (LBB)",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "'Comfortable seating and a warm atmosphere' in a book-lined, glass-ceilinged room (LBB)",
+        "work": null
+      },
+      "toggles": [
+        "Bookstore cafe"
+      ],
+      "tags": [
+        "Bookstore cafe",
+        "Specialty coffee",
+        "Reading room"
+      ],
+      "sources": [
+        "LBB",
+        "Knocksense"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A calm, book-lined room built for lingering over a coffee, though untested so far for a full workday of wifi and calls.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cou-cou-by-oberoi-jio-world-drive-bkc",
+      "name": "Cou Cou by Oberoi",
+      "area": "bkc",
+      "neighborhood": "Jio World Drive, BKC",
+      "address": "G-29, Jio World Drive, Maker Maxity, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0693,
+      "longitude": 72.866,
+      "website": "https://coucoubyoberoi.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cou%20Cou%20by%20Oberoi%2C%20G-29%2C%20Jio%20World%20Drive%2C%20Maker%20Maxity%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": null,
+      "editorialNote": "An Oberoi-run all-day French cafe and patisserie on Jio World Drive, built more for breakfast meetings than solo laptop time.",
+      "whyWeRecommend": "Aggregated dining reviews on District.in describe a 'decent seating area' and a consistently high 4.4 rating across 758 ratings, but nobody has reported on its wifi.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.0,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Open seating plan, described as decent (District.in)",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "'Decent seating area with absolutely amazing cuisine & tea' (District.in aggregated review)",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "All-day cafe",
+        "French patisserie",
+        "Breakfast spot"
+      ],
+      "sources": [
+        "District.in",
+        "Zomato"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.4,
+        "count": 758,
+        "source": "District.in",
+        "url": "https://www.district.in/dining/mumbai/cou-cou-by-oberoi-bandra-kurla-complex"
+      },
+      "synthesis": "A polished all-day French cafe with decent seating and strong ratings, but no laptop-specific reports yet.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "starbucks-jio-world-drive-bkc",
+      "name": "Starbucks, Jio World Drive (BKC)",
+      "area": "bkc",
+      "neighborhood": "Jio World Drive, BKC",
+      "address": "Unit F7, 1st Floor, Jio World Drive, Bandra Kurla Complex, Near Maker Maxity, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0694,
+      "longitude": 72.8657,
+      "website": "https://www.starbucks.in",
+      "instagram": "https://www.instagram.com/starbucksindia",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%2C%20Jio%20World%20Drive%20%28BKC%29%2C%20Unit%20F7%2C%201st%20Floor%2C%20Jio%20World%20Drive%2C%20Bandra%20Kurla%20Complex%2C%20Near%20Maker%20Maxity%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": "10:00 AM - 11:00 PM",
+      "editorialNote": "The mall's own Starbucks, a distinct outlet from the one in the Capital building on the other side of BKC.",
+      "whyWeRecommend": "Aggregated reviews note that grabbing a seat here is 'tricky' most of the day since it's 'usually buzzing with people', but describe a calmer, better ambience on weekday mornings.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2.0,
+        "seating": 2.5,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Described as a vibrant youth hangout rather than a quiet spot (aggregated reviews)",
+        "seating": "Contended most of the day; better on weekday mornings",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": "Most of the day; calmer weekday mornings",
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Called 'Mumbai's newest, vibrant urban hangout' for the youth crowd rather than a quiet spot (aggregated reviews)",
+        "seating": "'Seating is tricky, as it's usually buzzing with people' outside weekday mornings (aggregated reviews)",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Chain cafe",
+        "Mall location",
+        "Busy"
+      ],
+      "sources": [
+        "Magicpin",
+        "Justdial"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.7,
+        "count": 152,
+        "source": "Aggregated reviews (Magicpin)",
+        "url": "https://magicpin.in/Mumbai/Jio-World-Drive,-Bandra-Kurla-Complex/Restaurant/Starbucks-Coffee/store/169221a/"
+      },
+      "synthesis": "The mall's busiest Starbucks: good coffee, but seating is a scramble outside weekday mornings.",
+      "workability": 2.3,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "le-pain-quotidien-bkc-maker-maxity",
+      "name": "Le Pain Quotidien, BKC",
+      "area": "bkc",
+      "neighborhood": "Maker Maxity, BKC",
+      "address": "G2, 3 North Avenue, Maker Maxity, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0653,
+      "longitude": 72.8654,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Le%20Pain%20Quotidien%2C%20BKC%2C%20G2%2C%203%20North%20Avenue%2C%20Maker%20Maxity%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": null,
+      "editorialNote": "A Belgian bakery-cafe by the office cluster's edge, better for a window-side coffee than a full afternoon of work.",
+      "whyWeRecommend": "One Tripadvisor reviewer titled their visit 'Work lunch at LPQ, BKC', though other write-ups warn it's 'packed during lunch and dinner, even on weekends'.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2.0,
+        "seating": null,
+        "work": 2.5
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Packed at lunch and dinner, even weekends (India Food Club)",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": "Lunch and dinner",
+        "avgFoodCost": "Approx Rs 1,500 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "'Packed during lunch and dinner, even on weekends' (India Food Club review)",
+        "seating": null,
+        "work": "A Tripadvisor reviewer titled their visit 'Work lunch at LPQ, BKC' (Tripadvisor)"
+      },
+      "toggles": [],
+      "tags": [
+        "Bakery cafe",
+        "Belgian chain",
+        "Window seating"
+      ],
+      "sources": [
+        "Tripadvisor",
+        "India Food Club",
+        "Homegrown"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A pleasant window-side coffee spot by day, but it fills up fast at lunch and dinner.",
+      "workability": 2.3,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "tea-trails-the-capital-bkc",
+      "name": "Tea Trails, The Capital",
+      "area": "bkc",
+      "neighborhood": "The Capital, BKC",
+      "address": "308, Sky Lobby, 3rd Floor, The Capital Building, Opposite ICICI Bank, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0662,
+      "longitude": 72.8676,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tea%20Trails%2C%20The%20Capital%2C%20308%2C%20Sky%20Lobby%2C%203rd%20Floor%2C%20The%20Capital%20Building%2C%20Opposite%20ICICI%20Bank%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": null,
+      "editorialNote": "A tea lounge tucked into the Capital building's third-floor sky lobby, built around specialty teas rather than coffee.",
+      "whyWeRecommend": "Described as a 'high-ceiling, open lobby space with wooden seating' (Wanderlog) -- an unusually airy room for an office-tower cafe, though nobody has reviewed its wifi or how long you can camp there.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.0,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Wooden seating in a high-ceiling, open sky lobby (Wanderlog)",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "'High-ceiling, open lobby space with wooden seating' (Wanderlog)",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Tea lounge",
+        "Sky lobby",
+        "Specialty tea"
+      ],
+      "sources": [
+        "Wanderlog",
+        "Tripadvisor",
+        "Homegrown"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "An airy, high-ceilinged tea lounge in the Capital building's sky lobby -- pleasant, though untested for a full workday.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "sodabottleopenerwala-the-capital-bkc",
+      "name": "SodaBottleOpenerWala, BKC",
+      "area": "bkc",
+      "neighborhood": "The Capital, BKC",
+      "address": "The Capital, 02, G Block Road, G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
+      "latitude": 19.0663,
+      "longitude": 72.8675,
+      "website": "https://www.sodabottleopenerwala.in",
+      "instagram": "https://www.instagram.com/sbowindia",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SodaBottleOpenerWala%2C%20BKC%2C%20The%20Capital%2C%2002%2C%20G%20Block%20Road%2C%20G%20Block%2C%20Bandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra%20400051",
+      "openingHours": null,
+      "editorialNote": "A contemporary Irani-cafe chain outlet that Uppercrust India reports became the brand's top-grossing outlet nationwide -- a sign of steady crowds, not quiet corners.",
+      "whyWeRecommend": "Good for a long, communal-table lunch in the Irani-cafe tradition, but its status as the chain's top-grossing outlet in India points to a consistently busy room rather than a place to settle in with a laptop.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 1.5,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Reported as the brand's top-grossing outlet in India, implying steady crowds (Uppercrust India)",
+        "seating": null,
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Became the brand's 'top grossing outlet' in India, pointing to a consistently busy room (Uppercrust India)",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Irani cafe",
+        "All-day dining",
+        "Busy"
+      ],
+      "sources": [
+        "Uppercrust India",
+        "Tripadvisor"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A big, bustling contemporary Irani cafe -- great for a long lunch, likely too loud for focused work.",
+      "workability": 1.5,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "roadies-koffeehouz-kharghar",
+      "name": "Roadies Koffeehouz, Kharghar",
+      "area": "navi-mumbai",
+      "neighborhood": "Sector 23, Kharghar",
+      "address": "Bhagwati Greens, Central Park Road, Sector 23, Kharghar, Navi Mumbai 410210",
+      "latitude": 19.0333,
+      "longitude": 73.0645,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Roadies%20Koffeehouz%2C%20Kharghar%2C%20Bhagwati%20Greens%2C%20Central%20Park%20Road%2C%20Sector%2023%2C%20Kharghar%2C%20Navi%20Mumbai%20410210",
+      "openingHours": null,
+      "editorialNote": "A biker-themed cafe on Kharghar's Central Park service road, in the same cluster as Cafe Monza and The Courtyard Cafe.",
+      "whyWeRecommend": "Reviewers describe a 7am opening and staff comfortable with a laptop for a few hours, though the cafe discourages camping out all day on a single coffee.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 2.8,
+        "work": 2.8
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Biker-cafe theme, stylish interiors",
+        "seatingStyles": null,
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "Rated 4.7/5 from 144 reviews on Restaurant Guru, with reviewers describing comfortable seating and a fun, biker-inspired atmosphere.",
+        "work": "Reviews describe an early 7am opening and staff who tolerate laptop work for a few hours, but the cafe discourages ordering one coffee and staying all day."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "zomato.com",
+        "restaurant-guru.in",
+        "justdial.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.7,
+        "count": 144,
+        "source": "Restaurant Guru",
+        "url": "https://restaurant-guru.in/Roadies-Koffeehouz-Navi-Mumbai"
+      },
+      "synthesis": "Reviewers say the cafe welcomes laptop work for a few hours but discourages long single-coffee stays, so it suits a working session rather than a full workday.",
+      "workability": 2.8,
+      "images": [],
+      "menuUrl": "https://www.zomato.com/mumbai/roadies-koffee-houz-kharghar-navi-mumbai/menu"
+    },
+    {
+      "slug": "olde-baileys-kharghar-sector-6",
+      "name": "Olde Baileys, Kharghar",
+      "area": "navi-mumbai",
+      "neighborhood": "Sector 6, Kharghar",
+      "address": "Shop No 1, Plot No 9, Sai Saakshaat, Sector 6, Kharghar, Navi Mumbai 410210",
+      "latitude": 19.0468,
+      "longitude": 73.0632,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Olde%20Baileys%2C%20Kharghar%2C%20Shop%20No%201%2C%20Plot%20No%209%2C%20Sai%20Saakshaat%2C%20Sector%206%2C%20Kharghar%2C%20Navi%20Mumbai%20410210",
+      "openingHours": null,
+      "editorialNote": "An English-themed cafe chain outlet in Kharghar Sector 6, one of three Olde Baileys locations across Navi Mumbai.",
+      "whyWeRecommend": "Described in chain-wide coverage as a reliable laptop spot with spacious indoor and outdoor seating and staff used to people camping out on one coffee for a while.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.2,
+        "work": 3.0
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Calm despite a busy commercial stretch",
+        "seating": "Indoor and outdoor",
+        "seatingStyles": null,
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reviewers describe a calm atmosphere despite the cafe sitting inside a busy commercial stretch (chain-wide reports, not confirmed for this exact outlet).",
+        "seating": "Coverage describes spacious seating, both indoor and outdoor, across Olde Baileys' Navi Mumbai locations.",
+        "work": "Called a reliable option for a laptop, with staff described as used to people camping out with one coffee for a while chain-wide; nothing specific to this Sector 6 outlet is confirmed."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "zomato.com",
+        "tripadvisor.in",
+        "justdial.com",
+        "mappls.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "Chain-wide reports describe a calm, laptop-friendly room where staff don't rush single-coffee stays, but nothing specific to this Sector 6 outlet is confirmed.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": "https://www.zomato.com/mumbai/olde-baileys-kharghar-navi-mumbai/menu"
+    },
+    {
+      "slug": "communion-cafe-cbd-belapur",
+      "name": "Communion Cafe, CBD Belapur",
+      "area": "navi-mumbai",
+      "neighborhood": "Sector 15, CBD Belapur",
+      "address": "Plot No. 50, Ground Floor, D Y Patil University Campus, Sector 15, CBD Belapur, Navi Mumbai 400614",
+      "latitude": 19.0092,
+      "longitude": 73.0331,
+      "website": null,
+      "instagram": "https://www.instagram.com/communion_cafe/",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Communion%20Cafe%2C%20CBD%20Belapur%2C%20Plot%20No.%2050%2C%20Ground%20Floor%2C%20D%20Y%20Patil%20University%20Campus%2C%20Sector%2015%2C%20CBD%20Belapur%2C%20Navi%20Mumbai%20400614",
+      "openingHours": "Daily 8am–11pm",
+      "editorialNote": "A cafe on the D Y Patil University campus in CBD Belapur, popular with the college crowd for long sits.",
+      "whyWeRecommend": "A local guide describes the space as designed for people to congregate, cowork and converse, and it carries a 4.0 Swiggy rating from over 600 diners.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.0,
+        "work": 3.0
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Indoor and outdoor, pet-friendly",
+        "seatingStyles": null,
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": "₹1200 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "Described as offering indoor and outdoor, pet-friendly seating on a university campus (navimumbaihub.com).",
+        "work": "Local write-ups describe the space as \"designed for people to congregate, cowork, and converse\" (navimumbaihub.com); no source confirms wifi or charging specifically."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "navimumbaihub.com",
+        "zomato.com",
+        "swiggy.com",
+        "eazydiner.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.0,
+        "count": 634,
+        "source": "Swiggy",
+        "url": "https://www.swiggy.com/restaurants/communion-cafe-cbd-belapur-cbd-belapur-765743/dineout"
+      },
+      "synthesis": "Positioned as a cowork-friendly campus cafe with strong local ratings, but no source confirms wifi speed or charging access.",
+      "workability": 3.0,
+      "images": [],
+      "menuUrl": "https://www.zomato.com/mumbai/communion-cafe-1-cbd-belapur-navi-mumbai/menu"
+    },
+    {
+      "slug": "blue-tokai-coffee-roasters-nerul-seawoods",
+      "name": "Blue Tokai Coffee Roasters, Nerul",
+      "area": "navi-mumbai",
+      "neighborhood": "Sector 46A, Nerul",
+      "address": "Shop 6 & 7, Plot 1, 1A, 1B, 1C, Shreeji Heights, Sector 46A, Nerul, Navi Mumbai 400706",
+      "latitude": 19.0195,
+      "longitude": 73.0178,
+      "website": "https://bluetokaicoffee.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Tokai%20Coffee%20Roasters%2C%20Nerul%2C%20Shop%206%20%26%207%2C%20Plot%201%2C%201A%2C%201B%2C%201C%2C%20Shreeji%20Heights%2C%20Sector%2046A%2C%20Nerul%2C%20Navi%20Mumbai%20400706",
+      "openingHours": "Daily 7am–11pm",
+      "editorialNote": "A second Blue Tokai outlet for Navi Mumbai, on the Nerul-Seawoods border, distinct from the chain's Airoli branch already listed here.",
+      "whyWeRecommend": "The operator's own page describes a relaxed, spacious room, and chain-wide reputation suggests it's workable, but this outlet's own listing doesn't advertise wifi or laptop seating specifically.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 2.8,
+        "work": 2.8
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Relaxed, spacious",
+        "seatingStyles": null,
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "The official store page describes a relaxed and spacious ambiance for breakfast or a quick bite; seating capacity for this outlet isn't detailed.",
+        "work": "General coverage describes it as suitable for quiet work sessions chain-wide, but wifi and charging aren't specifically confirmed for this Nerul location."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "stores.bluetokaicoffee.com",
+        "navimumbaihub.com",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "Chain reputation suggests a workable room, but this Seawoods-Nerul outlet's own listings don't confirm wifi or charging specifically.",
+      "workability": 2.8,
+      "images": [],
+      "menuUrl": "https://www.zomato.com/mumbai/blue-tokai-coffee-roasters-nerul-navi-mumbai/menu"
+    },
+    {
+      "slug": "starbucks-nexus-seawoods-seawoods",
+      "name": "Starbucks, Nexus Seawoods",
+      "area": "navi-mumbai",
+      "neighborhood": "Seawoods",
+      "address": "UG-39, Nexus Seawoods Mall, Plot No. R1, Seawoods Station Road, Sector 40, Seawoods, Navi Mumbai 400706",
+      "latitude": 19.0175,
+      "longitude": 73.0183,
+      "website": "https://www.starbucks.in",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%2C%20Nexus%20Seawoods%2C%20UG-39%2C%20Nexus%20Seawoods%20Mall%2C%20Plot%20No.%20R1%2C%20Seawoods%20Station%20Road%2C%20Sector%2040%2C%20Seawoods%2C%20Navi%20Mumbai%20400706",
+      "openingHours": "Daily 9am–11pm",
+      "editorialNote": "A Starbucks outlet inside Nexus Seawoods mall, next to Seawoods-Darave railway station, distinct from the chain's Inorbit Vashi branch already listed here.",
+      "whyWeRecommend": "Rated 4.4 on Zomato from over 700 dining reviews, with local write-ups describing a peaceful ambiance suited to reading or working over several hours.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 3.0,
+        "seating": 3.2,
+        "work": 3.0
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Described as peaceful",
+        "seating": "Mall food-court adjacent, indoor and outdoor",
+        "seatingStyles": null,
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": "₹900 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "A local guide describes the ambiance as peaceful, \"perfect for work, reading, or simply relaxing\" (coworkingers.com).",
+        "seating": "Indoor and outdoor seating inside Nexus Seawoods mall, per magicpin and Zomato listings.",
+        "work": "Chain-wide reputation for tolerating long laptop sits, consistent with the peaceful-ambiance description above; wifi and charging aren't specifically confirmed for this outlet."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "coworkingers.com",
+        "zomato.com",
+        "justdial.com",
+        "magicpin.in"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.4,
+        "count": 700,
+        "source": "Zomato",
+        "url": "https://www.zomato.com/mumbai/starbucks-coffee-seawoods-navi-mumbai"
+      },
+      "synthesis": "Strong local ratings and a reputation for a peaceful mall-adjacent room, though no source confirms wifi speed or charging access at this outlet specifically.",
+      "workability": 3.1,
+      "images": [],
+      "menuUrl": "https://www.zomato.com/mumbai/starbucks-coffee-seawoods-navi-mumbai/menu"
+    },
+    {
+      "slug": "chaayos-inorbit-mall-vashi",
+      "name": "Chaayos, Inorbit Mall, Vashi",
+      "area": "navi-mumbai",
+      "neighborhood": "Vashi",
+      "address": "Inorbit Mall, 37 Bhagwan Mahaveer Road, Sector 30A, Vashi, Navi Mumbai 400703",
+      "latitude": 19.0728,
+      "longitude": 73.0002,
+      "website": "https://chaayos.com/pages/inorbitvashi",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chaayos%2C%20Inorbit%20Mall%2C%20Vashi%2C%20Inorbit%20Mall%2C%2037%20Bhagwan%20Mahaveer%20Road%2C%20Sector%2030A%2C%20Vashi%2C%20Navi%20Mumbai%20400703",
+      "openingHours": null,
+      "editorialNote": "A Chaayos outlet inside Inorbit Mall, Vashi, in the same building as the Third Wave and Starbucks outlets already listed here.",
+      "whyWeRecommend": "Chain-wide reports describe comfortable seating and free wifi, but the free connection is capped at 2 hours or 200MB, so plan around it rather than an all-day session.",
+      "scores": {
+        "wifi": 2.0,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.0,
+        "work": 2.5
+      },
+      "attrs": {
+        "wifi": "Free, capped",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Comfortable, well-lit",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Chain-wide coverage notes free wifi is capped at 2 hours or 200MB max, after which it cuts off (crowndevour.com).",
+        "charging": null,
+        "quiet": null,
+        "seating": "Described chain-wide as offering comfortable seating and well-lit interiors; this Inorbit Vashi outlet carries a 4.2 Google rating.",
+        "work": "The wifi data cap makes it workable for a short session rather than a full day at this desk."
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "chaayos.com",
+        "crowndevour.com",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A convenient Inorbit Mall option with comfortable seating, but the free wifi's 2-hour/200MB cap limits it to a short work session rather than a full day.",
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": "https://www.eazydiner.com/mumbai/chaayos-inorbit-mall-navi-mumbai-662559/menu"
+    },
+    {
+      "slug": "cafe-delhi-heights-airoli",
+      "name": "Cafe Delhi Heights, Airoli",
+      "area": "navi-mumbai",
+      "neighborhood": "Mindspace, Airoli",
+      "address": "Unit No. F&B01, Ground Floor, Block A, Mindspace Business Park, Mindspace Airoli East, Thane-Belapur Road, MIDC, Airoli, Navi Mumbai 400708",
+      "latitude": 19.155,
+      "longitude": 72.997,
+      "website": "https://stores.cafedelhiheights.com/store-pages/cafe-delhi-heights-mindspace-airoli-east-navi-mumbai",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Delhi%20Heights%2C%20Airoli%2C%20Unit%20No.%20F%26B01%2C%20Ground%20Floor%2C%20Block%20A%2C%20Mindspace%20Business%20Park%2C%20Mindspace%20Airoli%20East%2C%20Thane-Belapur%20Road%2C%20MIDC%2C%20Airoli%2C%20Navi%20Mumbai%20400708",
+      "openingHours": null,
+      "editorialNote": "A large-format Cafe Delhi Heights outlet inside the Mindspace Airoli East business park, built more for group sit-downs than solo laptop work.",
+      "whyWeRecommend": "At over 3,100 sq ft with seating for 92, coverage of the launch says it's better suited to a group meeting than a quick counter, though no source confirms wifi or laptop-specific seating.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.0,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Indoor and outdoor, 92 covers",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "The outlet spans over 3,100 square feet across indoor and outdoor areas with seating for 92 guests, making it better suited to a group meeting or sit-down catch-up than a quick counter (bwtravel.com).",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [],
+      "sources": [
+        "bwtravel.com",
+        "stores.cafedelhiheights.com",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A large, business-park cafe built for groups rather than solo laptop work; nothing confirms wifi or charging specifically.",
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "third-wave-coffee-lake-shore-mall-thane-west",
+      "name": "Third Wave Coffee, Lake Shore Mall",
+      "area": "thane",
+      "neighborhood": "Pokhran Road No. 2, Thane West",
+      "address": "Ground Floor, Lake Shore Mall, Eastern Express Highway, Pokhran Road No. 2, Beside Jupiter Hospital, Subhash Nagar, Thane West, Thane 400601",
+      "latitude": 19.2086,
+      "longitude": 72.9717,
+      "website": "https://www.thirdwavecoffeeroasters.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Third%20Wave%20Coffee%2C%20Lake%20Shore%20Mall%2C%20Pokhran%20Road%20No.%202%2C%20Thane%20West%2C%20Thane%20400601",
+      "openingHours": "Daily 10am–11pm",
+      "editorialNote": "A second Third Wave outlet in Thane West, inside Lake Shore Mall on Pokhran Road No. 2, distinct from the chain's Viviana Mall and Hiranandani Estate branches.",
+      "whyWeRecommend": "This outlet carries the chain's usual 4.9-rated consistency on Justdial-linked listings, and being inside a smaller mall than Viviana means fewer weekend crowds competing for a table.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 2.8,
+        "work": null
+      },
+      "attrs": {
+        "wifi": "Unknown",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Mall-format seating",
+        "seatingStyles": "Standard Third Wave counter-and-table format",
+        "stay": null,
+        "peakCrowd": "Weekend afternoons",
+        "avgFoodCost": "₹400+"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "Mall directory listings describe a full-size cafe with standard seating, rated 4.9 from 650+ reviews.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Chain coffee",
+        "Mall cafe",
+        "Lake Shore Mall",
+        "Thane West"
+      ],
+      "sources": [
+        "mappls.com",
+        "justdial.com",
+        "thirdwavecoffeeroasters.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.9,
+        "count": 650,
+        "source": "Justdial-linked listing",
+        "url": "https://www.justdial.com/Mumbai/Third-Wave-Coffee-Viviana-Mall-Thane-West/022PXX22-XX22-230222115209-C1A5_BZDET/locations"
+      },
+      "synthesis": "A reliable mall-outlet branch of a familiar chain, but with no Thane-specific review addressing wifi or laptop use directly.",
+      "workability": 2.8,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "starbucks-hiranandani-estate-thane-west",
+      "name": "Starbucks, Hiranandani Estate",
+      "area": "thane",
+      "neighborhood": "Hiranandani Estate, Thane West",
+      "address": "5-7, Ground Floor, Astalia, A-Wing, Building 25, Plot-K, Village Kolshet, Hiranandani Estate, Thane West, Thane 400607",
+      "latitude": 19.2201,
+      "longitude": 72.9728,
+      "website": "https://www.starbucks.in",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%2C%20Astalia%2C%20Hiranandani%20Estate%2C%20Thane%20West%2C%20Thane%20400607",
+      "openingHours": "Daily 9am–12am",
+      "editorialNote": "A second Starbucks in Thane, tucked into the Astalia retail block deep inside Hiranandani Estate rather than the Viviana Mall branch already known to regulars.",
+      "whyWeRecommend": "Reviewers describe the same plush seating, ambient lighting and free wifi as the chain's other Thane branch, calling it a dependable spot whether you're working solo or meeting someone, though service complaints about slow orders turn up here too.",
+      "scores": {
+        "wifi": 3,
+        "charging": null,
+        "quiet": null,
+        "seating": 3,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": "Free",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Plush seating",
+        "seatingStyles": "Standard Starbucks sofa-and-table format",
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": "₹700 for two"
+      },
+      "evidence": {
+        "wifi": "Described as offering \"consistent coffee, comfortable seating, and free Wi-Fi,\" and a \"dependable spot whether you're working solo, meeting friends, or just taking a break\" (magicpin/district.in listings).",
+        "charging": null,
+        "quiet": null,
+        "seating": "Plush seating and ambient lighting called out in aggregated review summaries.",
+        "work": "Called a dependable working spot in the same review language used for the chain's other Thane outlet."
+      },
+      "toggles": [
+        "Free WiFi"
+      ],
+      "tags": [
+        "Chain coffee",
+        "Hiranandani Estate",
+        "Thane West"
+      ],
+      "sources": [
+        "magicpin.in",
+        "district.in",
+        "justdial.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.3,
+        "count": 3130,
+        "source": "Aggregated review count via magicpin/district listing",
+        "url": "https://magicpin.in/Thane/Hiranandani-Estate,-Thane-West/Restaurant/Starbucks/store/a91bb/reviews/"
+      },
+      "synthesis": "A dependable branch of a chain already trusted for laptop work elsewhere in Thane, with the same free wifi and comfortable seating, tucked into a quieter Hiranandani Estate retail block.",
+      "workability": 3,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-coffee-day-khopat-thane-west",
+      "name": "Cafe Coffee Day, Khopat",
+      "area": "thane",
+      "neighborhood": "Khopat, Thane West",
+      "address": "Shop No 1, Samarth Arcade, K Villa, Opposite Holy Cross Convent School, Khopat, Thane West, Thane 400601",
+      "latitude": 19.2014,
+      "longitude": 72.9727,
+      "website": "https://www.cafecoffeeday.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Coffee%20Day%2C%20Samarth%20Arcade%2C%20Khopat%2C%20Thane%20West%2C%20Thane%20400601",
+      "openingHours": null,
+      "editorialNote": "A neighbourhood CCD in Khopat, a residential pocket near Thane station rather than the mall-heavy Ghodbunder stretch most other chain cafes cluster around.",
+      "whyWeRecommend": "CCD's chain-wide reputation is for predictable, unglamorous reliability rather than inspiration: consistent wifi and power outlets and a tolerance for long laptop sessions, which makes this Khopat branch a fallback when the more scenic Thane cafes are full.",
+      "scores": {
+        "wifi": 2.5,
+        "charging": 2.5,
+        "quiet": null,
+        "seating": 2.5,
+        "work": 2.5
+      },
+      "attrs": {
+        "wifi": "Free (chain-wide)",
+        "charging": "Some",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Standard CCD booth seating",
+        "seatingStyles": "First-come-first-served booths and tables",
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": "₹300+"
+      },
+      "evidence": {
+        "wifi": "Chain-wide coverage describes CCD outlets as offering \"consistent WiFi, power outlets, and tolerance for extended laptop use\" (aggregated cafe-guide coverage of the chain).",
+        "charging": null,
+        "quiet": null,
+        "seating": "First-come-first-served seating is standard chain-wide, with this branch rated 3.4/5 from 147 reviews on Justdial.",
+        "work": "Chain guides describe CCD outlets as places where \"you can spend hours huddled over your laptop\" alongside other regulars doing the same."
+      },
+      "toggles": [],
+      "tags": [
+        "Chain coffee",
+        "Khopat",
+        "Thane West",
+        "Near Thane station"
+      ],
+      "sources": [
+        "justdial.com",
+        "cafecoffeeday.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 3.4,
+        "count": 147,
+        "source": "Justdial",
+        "url": "https://www.justdial.com/Thane/Cafe-Coffee-Day-Near-Holy-Cross-Convent-School-Thane-West/022PXX22-XX22-160129151741-G3D5_BZDET"
+      },
+      "synthesis": "A predictable, unglamorous chain fallback near Thane station rather than a destination cafe, but functional for a laptop session if nothing else is free.",
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "chaayos-lake-shore-mall-thane-west",
+      "name": "Chaayos, Lake Shore Mall",
+      "area": "thane",
+      "neighborhood": "Pokhran Road No. 2, Thane West",
+      "address": "Unit FF 39, Floor Level 1, Lake Shore Mall, Beside Jupiter Hospital, Subhash Nagar, Pokhran Road No. 2, Thane West, Thane 400601",
+      "latitude": 19.2086,
+      "longitude": 72.9717,
+      "website": "https://chaayos.com",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chaayos%2C%20Lake%20Shore%20Mall%2C%20Pokhran%20Road%20No.%202%2C%20Thane%20West%2C%20Thane%20400601",
+      "openingHours": "Daily 11am–11pm",
+      "editorialNote": "A tea-first chain outlet inside Lake Shore Mall, one of several Chaayos branches now scattered across Thane West.",
+      "whyWeRecommend": "Chain-wide reviews describe free wifi and staff who \"happily allowed someone to work on their laptop without hesitation for longer time,\" though other reviewers of the same chain call some branches too loud for focused work, so it depends on the hour.",
+      "scores": {
+        "wifi": 2.5,
+        "charging": null,
+        "quiet": 2,
+        "seating": 2.8,
+        "work": 2.5
+      },
+      "attrs": {
+        "wifi": "Free (chain-wide)",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": "Can get loud at peak hours",
+        "seating": "Cafe-style tables",
+        "seatingStyles": "Standard Chaayos tea-lounge format",
+        "stay": "medium",
+        "peakCrowd": "Evenings",
+        "avgFoodCost": "₹400+"
+      },
+      "evidence": {
+        "wifi": "Chain-wide reviews note free wifi and staff who \"happily allowed someone to work on their laptop without hesitation for longer time\" (aggregated Tripadvisor coverage of the chain).",
+        "charging": null,
+        "quiet": "One chain-wide reviewer specifically called a branch \"a little loud for getting work done,\" a risk that applies across outlets including this one.",
+        "seating": "This branch is rated 4.1/5 from 781 reviews on Justdial, among the chain's better-rated Thane locations.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Chain cafe",
+        "Tea lounge",
+        "Lake Shore Mall",
+        "Thane West"
+      ],
+      "sources": [
+        "justdial.com",
+        "tripadvisor.com",
+        "chaayos.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.1,
+        "count": 781,
+        "source": "Justdial",
+        "url": "https://www.justdial.com/Thane/Chaayos-Lake-Shore-Mall-Beside-Jupitor-Hospital-Subhash-Nagar-Thane-West/022PXX22-XX22-181219111013-M1Z7_BZDET"
+      },
+      "synthesis": "A well-rated tea-lounge branch with free wifi in principle, but chain-wide reports of noisy peak hours mean the best work window is likely a quiet mid-morning.",
+      "workability": 2.6,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-bun-tea-patlipada-thane-west",
+      "name": "Cafe Bun Tea, Patlipada",
+      "area": "thane",
+      "neighborhood": "Patlipada, Thane West",
+      "address": "Shop No. 7, Unique Vistas, Neelkanth Greens, Opp. Dansing Bottle, Patlipada, Thane West, Thane 400607",
+      "latitude": 19.2131,
+      "longitude": 72.9702,
+      "website": null,
+      "instagram": "https://www.instagram.com/cafe.buntea/",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Bun%20Tea%2C%20Unique%20Vistas%2C%20Patlipada%2C%20Thane%20West%2C%20Thane%20400607",
+      "openingHours": null,
+      "editorialNote": "A tea-and-snacks cafe in the Unique Vistas retail strip at Patlipada, distinct from the chain outlets nearby, with an enclosed upper deck that reviewers single out as calmer.",
+      "whyWeRecommend": "Reviewers describe the vibe as \"cozy yet refreshing, making it just as perfect for a quick tea break as it is for long, creative hours with your laptop,\" though the ground floor gets crowded and smoky, so the enclosed upper-deck seating is the better bet for a work session.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 2.5,
+        "seating": 2,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": "Unknown",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": "Ground floor can be smoky and crowded",
+        "seating": "Limited, upper deck enclosed",
+        "seatingStyles": "Ground-floor outdoor-style seating plus an enclosed upper deck",
+        "stay": "medium",
+        "peakCrowd": "Evenings",
+        "avgFoodCost": "₹350+"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reviewers note \"an enclosed sitting area on the upper deck,\" a quieter option away from the smoky, crowded ground floor (Tripadvisor review coverage).",
+        "seating": "Described as having \"limited seating available\" and getting \"crowded at times,\" with a smoky ground-floor environment (Tripadvisor review coverage).",
+        "work": "Explicitly called \"just as perfect for a quick tea break as it is for long, creative hours with your laptop\" (Tripadvisor review coverage)."
+      },
+      "toggles": [],
+      "tags": [
+        "Tea cafe",
+        "Patlipada",
+        "Thane West",
+        "Instagrammable"
+      ],
+      "sources": [
+        "tripadvisor.com",
+        "zomato.com",
+        "district.in"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A genuinely laptop-friendly cafe by reviewer account, but only if you claim the quieter enclosed upper deck rather than the crowded, smoky ground floor.",
+      "workability": 2.5,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "riccis-cafe-hiranandani-estate-thane-west",
+      "name": "Ricci's Cafe, Hiranandani Estate",
+      "area": "thane",
+      "neighborhood": "Hiranandani Estate, Thane West",
+      "address": "Tower 1, Shop 29, Rosa Manhattan, Hiranandani Estate, Thane West, Thane 400607",
+      "latitude": 19.2225,
+      "longitude": 72.9762,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ricci%27s%20Cafe%2C%20Rosa%20Manhattan%2C%20Hiranandani%20Estate%2C%20Thane%20West%2C%20Thane%20400607",
+      "openingHours": "Daily 10am–12am",
+      "editorialNote": "A high-ceilinged cafe in the Rosa Manhattan tower, open late, with a spaced-out interior reviewers call unusual for a Hiranandani retail cafe.",
+      "whyWeRecommend": "Reviewers repeatedly call out the \"high ceiling and perfectly spaced-out venue with unique ambience,\" which suggests more breathing room between tables than the tightly packed retail-strip cafes nearby, though food quality complaints are common enough to note.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 3,
+        "seating": 3.5,
+        "work": null
+      },
+      "attrs": {
+        "wifi": "Unknown",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Spaced-out, high-ceilinged interior",
+        "seatingStyles": "Cafe tables with unusually generous spacing",
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": "₹1,800 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reviewers praise the \"high ceiling and perfectly spaced-out venue with unique ambience,\" and call the ambience, staff and interiors \"really good\" (Justdial/district.in review summaries).",
+        "seating": "Same spaced-out, high-ceiling layout noted above gives more room between tables than typical retail-strip cafes.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Hiranandani Estate",
+        "Thane West",
+        "Late night"
+      ],
+      "sources": [
+        "justdial.com",
+        "district.in",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.5,
+        "count": 70,
+        "source": "Justdial",
+        "url": "https://www.justdial.com/Thane/RicciS-Caff/022PXX22-XX22-251124184551-H9J3_BZDET"
+      },
+      "synthesis": "A spacious, high-ceilinged Hiranandani cafe that reviewers praise mainly for ambience and room to breathe, with no direct evidence on wifi or laptop tolerance.",
+      "workability": 3.25,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "parsik-cafe-kalwa-thane",
+      "name": "Parsik Cafe, Kalwa",
+      "area": "thane",
+      "neighborhood": "Parsik Nagar, Kalwa",
+      "address": "Shop-9, Chandrabhaga Park, Opposite Reliance Market, Parsik Nagar, Kharegaon, Kalwa, Thane 400605",
+      "latitude": 19.1755,
+      "longitude": 72.9668,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parsik%20Cafe%2C%20Chandrabhaga%20Park%2C%20Parsik%20Nagar%2C%20Kharegaon%2C%20Kalwa%2C%20Thane%20400605",
+      "openingHours": "11:30am–11pm",
+      "editorialNote": "A Kalwa-side cafe named directly in a dedicated work-friendly-spaces directory for Thane, a rarer distinction than a generic \"has wifi\" filter tag.",
+      "whyWeRecommend": "This is one of only a handful of Thane venues singled out by a directory built specifically to track work- and study-friendly spaces with free wifi, which is a stronger signal than a general cafe review, even though the surrounding Kalwa stretch is well outside the usual Ghodbunder Road/Hiranandani cafe cluster.",
+      "scores": {
+        "wifi": 3,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": 3
+      },
+      "attrs": {
+        "wifi": "Free",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Unknown",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Listed by name as a work- and study-friendly venue with free wifi in a directory of \"the best work and study-friendly cafes, restaurants, libraries, and hotel lobbies in Thane\" (laptopfriendly.co).",
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": "Included specifically for offering \"free and reliable Wi-Fi, ample power sockets, and comfy seating areas\" per the same directory's general description of its Thane picks."
+      },
+      "toggles": [
+        "Free WiFi"
+      ],
+      "tags": [
+        "Kalwa",
+        "Work-friendly directory pick"
+      ],
+      "sources": [
+        "laptopfriendly.co"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A Kalwa cafe specifically flagged by a work-friendly-spaces directory, though independent review coverage to corroborate seating or noise wasn't found.",
+      "workability": 3,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-kalwa-restaurant-kalwa-thane",
+      "name": "Cafe Kalwa Restaurant",
+      "area": "thane",
+      "neighborhood": "Kalwa",
+      "address": "Thane-Belapur Road, Kalwa, Thane 400605",
+      "latitude": 19.1748,
+      "longitude": 72.9701,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Kalwa%20Restaurant%2C%20Thane-Belapur%20Road%2C%20Kalwa%2C%20Thane%20400605",
+      "openingHours": "9am–12am",
+      "editorialNote": "A long-hours Kalwa restaurant-cafe on Thane-Belapur Road, also named in a directory built specifically to track work-friendly spaces in Thane.",
+      "whyWeRecommend": "Its near-round-the-clock hours (9am to midnight) and inclusion in a dedicated work-friendly-spaces directory make it a plausible option for anyone working from the Kalwa side of Thane, though no independent review confirms actual seating comfort or noise levels.",
+      "scores": {
+        "wifi": 3,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {
+        "wifi": "Free",
+        "charging": "Unknown",
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Unknown",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Listed by name as a work- and study-friendly venue with free wifi in a directory of \"the best work and study-friendly cafes, restaurants, libraries, and hotel lobbies in Thane\" (laptopfriendly.co).",
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "toggles": [
+        "Free WiFi",
+        "Long hours"
+      ],
+      "tags": [
+        "Kalwa",
+        "Work-friendly directory pick"
+      ],
+      "sources": [
+        "laptopfriendly.co"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A long-hours Kalwa restaurant-cafe flagged for free wifi by a work-friendly-spaces directory, but otherwise thin on independent review evidence.",
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "the-burrow-cafe-orlem-malad-west",
+      "name": "The Burrow Cafe",
+      "area": "malad-borivali",
+      "neighborhood": "Orlem, Malad West",
+      "address": "Shop 10, 11, 12, Springfield 1, Sunder Lane, Orlem, Malad West, Mumbai 400064",
+      "latitude": 19.1953,
+      "longitude": 72.837,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Burrow%20Cafe%2C%20Shop%2010%2C%2011%2C%2012%2C%20Springfield%201%2C%20Sunder%20Lane%2C%20Orlem%2C%20Malad%20West%2C%20Mumbai%20400064",
+      "openingHours": "Mon-Thu & Sat-Sun 8am-10pm, Fri 9am-10pm",
+      "editorialNote": "A cozy Orlem side-street cafe with both indoor and outdoor seating, tucked into a residential Springfield lane off Malad West's main stretch.",
+      "whyWeRecommend": "Directly listed as good for laptop work with free wifi, though the same listing calls the room 'tranquil' at slow hours and 'buzzing' once it fills up, so timing matters here.",
+      "scores": {
+        "wifi": 3.0,
+        "charging": null,
+        "quiet": 3.0,
+        "seating": 3.3,
+        "work": 3.5
+      },
+      "attrs": {
+        "wifi": "Free wifi available",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Tranquil off-peak, buzzing at peak hours",
+        "seating": "Indoor and outdoor, wheelchair-accessible",
+        "seatingStyles": "Cozy, simple setup for solo visitors and groups",
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Listed as offering free Wi-Fi (laptopfriendlycafe.com).",
+        "charging": null,
+        "quiet": "Described as having a 'tranquil' atmosphere that gets 'buzzing' during peak hours (laptopfriendlycafe.com).",
+        "seating": "Cozy, simple indoor-and-outdoor setup with wheelchair-accessible seating, suited to 'both solo visitors and groups alike' (laptopfriendlycafe.com).",
+        "work": "Explicitly tagged 'Good for working on laptop', described as a spot to 'catch up on work' or 'tackle that to-do list' (laptopfriendlycafe.com)."
+      },
+      "toggles": [
+        "Free WiFi",
+        "Laptop-friendly"
+      ],
+      "tags": [
+        "Work cafe",
+        "Orlem",
+        "Malad West"
+      ],
+      "sources": [
+        "laptopfriendlycafe.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.1,
+        "count": 1513,
+        "source": "laptopfriendlycafe.com (citing Google)",
+        "url": "https://laptopfriendlycafe.com/cafes/mumbai/the-burrow-cafe"
+      },
+      "synthesis": "A genuinely laptop-tagged Orlem cafe, best worked from before the room fills up and gets buzzy.",
+      "workability": 3.3,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "love-and-latte-borivali-west-padma-nagar",
+      "name": "Love & Latte, Borivali West",
+      "area": "malad-borivali",
+      "neighborhood": "Padma Nagar, Borivali West",
+      "address": "Shop No 4, Ground Floor, TG School, Chikuwadi Road, next to Phoenix Hospital, Padma Nagar, Borivali West, Mumbai",
+      "latitude": 19.2196,
+      "longitude": 72.839,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Love%20%26%20Latte%2C%20Shop%20No%204%2C%20Ground%20Floor%2C%20TG%20School%2C%20Chikuwadi%20Road%2C%20next%20to%20Phoenix%20Hospital%2C%20Padma%20Nagar%2C%20Borivali%20West%2C%20Mumbai",
+      "openingHours": "Daily 10am-6pm (coworking desk hours)",
+      "editorialNote": "The Borivali West branch of the Love & Latte format, run as a paid coworking cafe rather than a walk-in-and-order room.",
+      "whyWeRecommend": "MyHQ lists this branch specifically as a coworking space with desk booking, at a flat day-rate cover charge, which is a more explicit remote-work setup than most cafes on this list.",
+      "scores": {
+        "wifi": 3.5,
+        "charging": 3.2,
+        "quiet": null,
+        "seating": 3.5,
+        "work": 3.5
+      },
+      "attrs": {
+        "wifi": "Reported as coworking-ready",
+        "charging": "Desk-style seating with outlets per chain format",
+        "chargingNote": "₹300/day cover charge for coworking desk access",
+        "noise": null,
+        "seating": "Desk-style seating",
+        "seatingStyles": "Cafe tables plus dedicated work desks",
+        "stay": "long",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Listed on myHQ as a coworking-enabled outlet, implying desk-ready connectivity as with sibling Love & Latte branches.",
+        "charging": "Chain format includes desk-style seating with outlets; this branch is specifically flagged for coworking use.",
+        "quiet": null,
+        "seating": "myHQ lists the branch under coworking/desk-booking spaces rather than as a purely social cafe.",
+        "work": "Operates 10am-6pm with a ₹300/day cover charge for desk seating, marketed explicitly as a coworking option."
+      },
+      "toggles": [
+        "Coworking desks",
+        "Day-rate cover charge"
+      ],
+      "tags": [
+        "Work cafe",
+        "Coworking",
+        "Borivali West"
+      ],
+      "sources": [
+        "myhq.in",
+        "eazydiner.com",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "A Borivali West cafe set up more like a paid coworking desk than a casual cafe — good if the day-rate model works for you.",
+      "workability": 3.4,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "coffee-bean-tea-leaf-infiniti-mall-malad-west",
+      "name": "The Coffee Bean & Tea Leaf, Infiniti Mall",
+      "area": "malad-borivali",
+      "neighborhood": "Malad West",
+      "address": "Shop No 10, Lower Ground Floor, Infiniti Mall 2, Link Road, Mindspace, Malad West, Mumbai 400064",
+      "latitude": 19.184853,
+      "longitude": 72.834145,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Coffee%20Bean%20%26%20Tea%20Leaf%2C%20Shop%20No%2010%2C%20Lower%20Ground%20Floor%2C%20Infiniti%20Mall%202%2C%20Link%20Road%2C%20Mindspace%2C%20Malad%20West%2C%20Mumbai%20400064",
+      "openingHours": "Daily 10:30am-9:30pm",
+      "editorialNote": "A mall-kiosk branch of the American chain on Infiniti Mall's lower ground floor, more a coffee counter than a sit-down work room.",
+      "whyWeRecommend": "Wifi is confirmed as available chain-wide per local listings, but reviewers and listings both flag that the actual seating footprint here is small — treat it as a between-errands coffee stop rather than a laptop base.",
+      "scores": {
+        "wifi": 2.8,
+        "charging": null,
+        "quiet": null,
+        "seating": 1.8,
+        "work": 2.0
+      },
+      "attrs": {
+        "wifi": "Available",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Limited",
+        "seatingStyles": "Mall-kiosk style, few tables",
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": "₹300 for two"
+      },
+      "evidence": {
+        "wifi": "Wifi listed as available at this outlet (mumbaicoworking.com).",
+        "charging": null,
+        "quiet": null,
+        "seating": "Described as having 'limited seating space, as it is located at the shopping floor of the mall' (mappls.com listing).",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Mall cafe",
+        "Malad West",
+        "Infiniti Mall"
+      ],
+      "sources": [
+        "mumbaicoworking.com",
+        "mappls.com",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "Fine for a quick coffee inside Infiniti Mall, but the small kiosk footprint makes it a weak pick for a real work session.",
+      "workability": 2.2,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "starbucks-bhattad-tower-borivali-west",
+      "name": "Starbucks Coffee, Bhattad Tower, Borivali West",
+      "area": "malad-borivali",
+      "neighborhood": "Dalvi Nagar, Borivali West",
+      "address": "Shop 10/11, Plot 713, Ground Floor, Bhattad Tower, RM Bhattad Road, opposite Kora Kendra Ground, Dalvi Nagar, Borivali West, Mumbai",
+      "latitude": 19.2312,
+      "longitude": 72.8577,
+      "website": "https://www.starbucks.com/store-locator/store/1030305/rm-bhattad-road-rm-bhattad-road-borivali-west-ground-floor-bhattad",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%20Coffee%2C%20Shop%2010%2F11%2C%20Plot%20713%2C%20Ground%20Floor%2C%20Bhattad%20Tower%2C%20RM%20Bhattad%20Road%2C%20opposite%20Kora%20Kendra%20Ground%2C%20Dalvi%20Nagar%2C%20Borivali%20West%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "A standard Starbucks outlet opposite Kora Kendra ground, on the same Dalvi Nagar stretch as this site's other Borivali West chain cafes.",
+      "whyWeRecommend": "Reviewers specifically call out comfortable seating, free wifi, and standout service at this branch, which is a more consistent work-friendly signal than most independent cafes nearby.",
+      "scores": {
+        "wifi": 3.5,
+        "charging": null,
+        "quiet": null,
+        "seating": 3.3,
+        "work": 3.3
+      },
+      "attrs": {
+        "wifi": "Free wifi reported",
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Comfortable",
+        "seatingStyles": null,
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Reviewers describe 'consistently great coffee, comfortable seating, free Wi-Fi' at this branch (Zomato reviews, via search aggregation).",
+        "charging": null,
+        "quiet": null,
+        "seating": "Called out for comfortable seating alongside its menu (Zomato reviews).",
+        "work": "One reviewer highlighted the barista's 'customer-centric mindset' as standout service, suggesting a welcoming rather than rushed atmosphere."
+      },
+      "toggles": [
+        "Free WiFi"
+      ],
+      "tags": [
+        "Chain cafe",
+        "Starbucks",
+        "Borivali West"
+      ],
+      "sources": [
+        "zomato.com",
+        "justdial.com",
+        "starbucks.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.3,
+        "count": 253,
+        "source": "justdial.com",
+        "url": "https://www.justdial.com/Mumbai/Starbucks-Opposite-Kora-Kendra-Ground-Dalvi-Nagar-Borivali-West/022PXX22-XX22-230610190652-X2T4_BZDET"
+      },
+      "synthesis": "A reliable, if unremarkable, chain option on the Dalvi Nagar cafe stretch, with reviewer-confirmed wifi and comfortable seating.",
+      "workability": 3.4,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "starbucks-oberoi-mall-goregaon-east",
+      "name": "Starbucks Coffee, Oberoi Mall, Goregaon East",
+      "area": "malad-borivali",
+      "neighborhood": "Goregaon East",
+      "address": "Second Floor, Oberoi Mall, General AK Vidya Marg, Western Express Highway, Goregaon East, Mumbai 400063",
+      "latitude": 19.1737,
+      "longitude": 72.8605,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%20Coffee%2C%20Second%20Floor%2C%20Oberoi%20Mall%2C%20General%20AK%20Vidya%20Marg%2C%20Western%20Express%20Highway%2C%20Goregaon%20East%2C%20Mumbai%20400063",
+      "openingHours": "10am-11pm weekdays, 10am-11:30pm weekends",
+      "editorialNote": "A mall-format Starbucks on Oberoi Mall's second floor, sharing the building with a PVR and the mall's usual weekend crowds.",
+      "whyWeRecommend": "Reviews split on seating: some call it limited, others call the same room 'spacious' with a 'premium cafe feel' — likely a function of time of day rather than the room itself, so weekday mornings are the safer bet.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 2.8,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Mixed reports: limited to spacious depending on reviewer",
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": "Weekends (mall traffic)",
+        "avgFoodCost": "₹700 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "One review calls seating 'limited... but the ambience was nice', another describes the seating area as 'spacious' with a 'premium cafe feel' (aggregated review search).",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Chain cafe",
+        "Starbucks",
+        "Goregaon East",
+        "Mall cafe"
+      ],
+      "sources": [
+        "zomato.com",
+        "justdial.com",
+        "magicpin.in"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.4,
+        "count": 4035,
+        "source": "justdial.com",
+        "url": "https://www.justdial.com/Mumbai/Starbucks-Oberoi-Mall-Near-Off-Western-Express-Highway-Nirmal-Knowledge-Park-Goregaon-East/022PXX22-XX22-120721160315-U9J2_BZDET"
+      },
+      "synthesis": "A dependable chain option inside Oberoi Mall, best treated as a weekday-morning pick given how crowded reviewers say it gets otherwise.",
+      "workability": 2.8,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "starbucks-growels-101-kandivali-east",
+      "name": "Starbucks Coffee, Growel's 101, Kandivali East",
+      "area": "malad-borivali",
+      "neighborhood": "Kandivali East",
+      "address": "Ground Floor, Growel's 101 Mall, Akurli Road, off Western Express Highway, near Samta Nagar Police Station, Kandivali East, Mumbai 400101",
+      "latitude": 19.2073,
+      "longitude": 72.8656,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks%20Coffee%2C%20Ground%20Floor%2C%20Growel%27s%20101%20Mall%2C%20Akurli%20Road%2C%20off%20Western%20Express%20Highway%2C%20near%20Samta%20Nagar%20Police%20Station%2C%20Kandivali%20East%2C%20Mumbai%20400101",
+      "openingHours": "Daily 11am-11pm",
+      "editorialNote": "A ground-floor Starbucks inside Growel's 101 mall, on the same Kandivali East stretch as this site's other chain-cafe entries.",
+      "whyWeRecommend": "Reviewer coverage is thin on work-specific details beyond decor, so treat this as a decent-but-unverified mall default rather than a confirmed work spot.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": null,
+        "seatingStyles": null,
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": "₹900 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "General coverage calls it a 'good place to spend time over coffee', with 'excellent decor', but no specifics on table count or outlets.",
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Chain cafe",
+        "Starbucks",
+        "Kandivali East",
+        "Mall cafe"
+      ],
+      "sources": [
+        "zomato.com",
+        "tripadvisor.in"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": null,
+      "synthesis": "No confirmed wifi, power, or seating specifics — a mall Starbucks worth trying but not yet verified as a work spot.",
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "magari-cafe-mahavir-nagar-kandivali-west",
+      "name": "Magari",
+      "area": "malad-borivali",
+      "neighborhood": "Mahavir Nagar, Kandivali West",
+      "address": "86/853, Siddhivinayak CHS, Petrol Pump Lane, Mahavir Nagar, near Pancholia School, Kandivali West, Mumbai 400067",
+      "latitude": 19.2003,
+      "longitude": 72.8397,
+      "website": null,
+      "instagram": "https://www.instagram.com/magaricafe/",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Magari%2C%2086%2F853%2C%20Siddhivinayak%20CHS%2C%20Petrol%20Pump%20Lane%2C%20Mahavir%20Nagar%2C%20near%20Pancholia%20School%2C%20Kandivali%20West%2C%20Mumbai%20400067",
+      "openingHours": null,
+      "editorialNote": "A small European-style cafe on Mahavir Nagar's Petrol Pump Lane, built around window seats and a pet-friendly, low-key room.",
+      "whyWeRecommend": "Consistently described across reviews as quiet with soft background music and window seating good for sitting 'with a laptop/book while sipping coffee' — one of the few cafes in this stretch where quiet is an actual reported trait, not an assumption.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 3.8,
+        "seating": 3.5,
+        "work": 3.5
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Quiet with soft music",
+        "seating": "Cozy window seating",
+        "seatingStyles": "European-style interiors, window nooks",
+        "stay": "medium",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reviewers say it's known for being 'quiet' with 'soft music' (LBB, Zomato reviews).",
+        "seating": "Described as having 'simple and pretty European style interiors with cute corners and lovely window seatings' (LBB).",
+        "work": "Explicitly called a place to 'sit with a laptop/book while sipping coffee' in reviewer descriptions (LBB)."
+      },
+      "toggles": [
+        "Pet-friendly",
+        "Quiet"
+      ],
+      "tags": [
+        "Independent cafe",
+        "Kandivali West",
+        "Mahavir Nagar",
+        "Pet-friendly"
+      ],
+      "sources": [
+        "lbb.in",
+        "zomato.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.3,
+        "count": 1211,
+        "source": "zomato.com",
+        "url": "https://www.zomato.com/mumbai/magari-kandivali-west"
+      },
+      "synthesis": "One of the few cafes on this stretch with an actual reputation for being quiet, though wifi and power remain unconfirmed.",
+      "workability": 3.6,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "blabber-all-day-borivali-east",
+      "name": "Blabber All Day, Borivali East",
+      "area": "malad-borivali",
+      "neighborhood": "Borivali East",
+      "address": "Shop 6 & 7, CTS 79, Esspee Tower, Dattapada Road, Borivali East, Mumbai",
+      "latitude": 19.2267,
+      "longitude": 72.8624,
+      "website": "https://blabberallday.com/borivali/",
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blabber%20All%20Day%2C%20Shop%206%20%26%207%2C%20CTS%2079%2C%20Esspee%20Tower%2C%20Dattapada%20Road%2C%20Borivali%20East%2C%20Mumbai",
+      "openingHours": "Mon-Thu 10am-1am, Fri-Sun 10am-2am",
+      "editorialNote": "A large, colourful all-day cafe-bar on Dattapada Road, part of a 3-outlet local chain, built more for hangouts than solo focus.",
+      "whyWeRecommend": "Wifi is listed as an amenity and reviewers do note cosy sofa seating, but the same reviews flag loud music that makes conversation difficult — a room to expect background noise in, not silence.",
+      "scores": {
+        "wifi": 3.0,
+        "charging": null,
+        "quiet": 1.8,
+        "seating": 3.3,
+        "work": 2.3
+      },
+      "attrs": {
+        "wifi": "Listed as available",
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Music often loud enough to make conversation difficult",
+        "seating": "Cosy sofas, ground plus one floor",
+        "seatingStyles": "Sofa seating and standard tables",
+        "stay": "medium",
+        "peakCrowd": "Evenings",
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": "Wifi listed as an available amenity at the restaurant (aggregated review search).",
+        "charging": null,
+        "quiet": "Reviewers say 'the music volume in the restaurant was often too loud, making conversation difficult'.",
+        "seating": "Described as having 'cosy sitting sofas and sitting areas' across a ground-plus-one layout.",
+        "work": null
+      },
+      "toggles": [
+        "WiFi listed"
+      ],
+      "tags": [
+        "Cafe-bar",
+        "Borivali East",
+        "Instagrammable"
+      ],
+      "sources": [
+        "zomato.com",
+        "justdial.com",
+        "curlytales.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.5,
+        "count": 2260,
+        "source": "zomato.com / aggregated review count",
+        "url": "https://www.zomato.com/mumbai/blabber-all-day-borivali-east"
+      },
+      "synthesis": "A social, decor-forward cafe-bar with wifi on paper, but reviewer-reported loud music makes it a poor pick for focus work.",
+      "workability": 2.6,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "cafe-meter-on-ic-colony-borivali-west",
+      "name": "Cafe Meter On",
+      "area": "malad-borivali",
+      "neighborhood": "IC Colony, Borivali West",
+      "address": "Shop 3/4, Meghkamal Building, opposite Saffron Building, Subhjivan Circle, IC Colony, Borivali West, Mumbai 400103",
+      "latitude": 19.241,
+      "longitude": 72.853,
+      "website": null,
+      "instagram": "https://www.instagram.com/cafemeteron/",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Meter%20On%2C%20Shop%203%2F4%2C%20Meghkamal%20Building%2C%20opposite%20Saffron%20Building%2C%20Subhjivan%20Circle%2C%20IC%20Colony%2C%20Borivali%20West%2C%20Mumbai%20400103",
+      "openingHours": null,
+      "editorialNote": "A rustic, plant-lined Italian-leaning cafe in IC Colony, known locally for its pasta menu rather than for being a work spot.",
+      "whyWeRecommend": "Reviews describe a 'cozy, peaceful atmosphere' and praise the staff, but also flag inconsistent food quality and higher prices, and there's no specific mention of wifi or outlets, so go in expecting a nice room rather than a confirmed workstation.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": 3.2,
+        "seating": null,
+        "work": null
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": "Cozy, peaceful atmosphere per reviewers",
+        "seating": null,
+        "seatingStyles": "Rustic corners, plant-lined interior",
+        "stay": null,
+        "peakCrowd": null,
+        "avgFoodCost": "~₹1000 for two"
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": "Reviews highlight 'good food quality, taste, and a cozy, peaceful atmosphere' (aggregated Justdial/magicpin reviews).",
+        "seating": null,
+        "work": null
+      },
+      "toggles": [],
+      "tags": [
+        "Independent cafe",
+        "IC Colony",
+        "Borivali West",
+        "Italian"
+      ],
+      "sources": [
+        "justdial.com",
+        "magicpin.in"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.2,
+        "count": 1709,
+        "source": "justdial.com",
+        "url": "https://www.justdial.com/Mumbai/Cafe-Meter-On-Opposite-Saffron-Building-Opp-IDFC-Bank-Borivali-West/022PXX22-XX22-180320194809-G3S7_BZDET"
+      },
+      "synthesis": "A pleasant, peaceful-sounding IC Colony room, but with no evidence yet on wifi or power — worth a scouting visit before relying on it.",
+      "workability": null,
+      "images": [],
+      "menuUrl": null
+    },
+    {
+      "slug": "coffee-connect-goregaon-west",
+      "name": "Coffee.Connect",
+      "area": "malad-borivali",
+      "neighborhood": "Goregaon West",
+      "address": "Shop 14, Nisarg CHS, SV Road, beside PVR Cinemas, near Goregaon Police Station, Goregaon West, Mumbai",
+      "latitude": 19.1685,
+      "longitude": 72.849,
+      "website": null,
+      "instagram": null,
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coffee.Connect%2C%20Shop%2014%2C%20Nisarg%20CHS%2C%20SV%20Road%2C%20beside%20PVR%20Cinemas%2C%20near%20Goregaon%20Police%20Station%2C%20Goregaon%20West%2C%20Mumbai",
+      "openingHours": null,
+      "editorialNote": "A casual cafe beside Goregaon West's PVR, styled around board games (Uno, Ludo, chess) as much as coffee.",
+      "whyWeRecommend": "The games-and-cozy-vibes setup sounds promising, but multiple reviews describe staff asking customers to vacate tables right after the bill is paid — a direct signal against treating this as a long-stay work spot.",
+      "scores": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": 2.5,
+        "work": 1.5
+      },
+      "attrs": {
+        "wifi": null,
+        "charging": null,
+        "chargingNote": null,
+        "noise": null,
+        "seating": "Cozy vibes but table turnover pressure reported",
+        "seatingStyles": null,
+        "stay": "short",
+        "peakCrowd": null,
+        "avgFoodCost": null
+      },
+      "evidence": {
+        "wifi": null,
+        "charging": null,
+        "quiet": null,
+        "seating": "Reviews mention 'good ambience and cozy vibes' but also note the room turns tables quickly (aggregated Justdial/magicpin reviews).",
+        "work": "Multiple reviews report staff 'asked to vacate the table as soon as the bill was paid', a direct signal against long stays."
+      },
+      "toggles": [],
+      "tags": [
+        "Independent cafe",
+        "Goregaon West",
+        "Board games"
+      ],
+      "sources": [
+        "magicpin.in",
+        "justdial.com"
+      ],
+      "lastVerifiedAt": "2026-09-25",
+      "publicRating": {
+        "value": 4.3,
+        "count": 1350,
+        "source": "justdial.com",
+        "url": "https://www.justdial.com/Mumbai/Coffee-Connect-Near-PVR-Cinema-Goregaon-West/022PXX22-XX22-200222070227-D4J6_BZDET"
+      },
+      "synthesis": "Cozy on the surface, but reported table-turnover pressure makes this a poor pick for anyone planning to stay and work.",
+      "workability": 2.0,
+      "images": [],
+      "menuUrl": null
     }
   ]
 }
