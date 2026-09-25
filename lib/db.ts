@@ -24,6 +24,16 @@ function getClient(): NeonQueryFunction<false, false> {
   return client;
 }
 
+// Lets read paths that have a static fallback (the map, a cafe page) check
+// before querying instead of throwing — local dev has no DB attached, and a
+// user-submitted cafe missing from a page for that reason is a much smaller
+// problem than the whole page 500ing. Write paths (votes, comments,
+// submissions) deliberately don't use this and still throw, since those
+// really do need the database to do anything at all.
+export function isDatabaseConfigured(): boolean {
+  return Boolean(process.env.bombaycafemapdb_DATABASE_URL);
+}
+
 export const sql: NeonQueryFunction<false, false> = ((...args: Parameters<NeonQueryFunction<false, false>>) =>
   getClient()(...args)) as NeonQueryFunction<false, false>;
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { CAFES } from "@/lib/cafes";
 import Analytics from "@/components/Analytics";
@@ -109,9 +110,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           flash of the cream palette while React hydrates. Deliberately
           inline and dependency-free, anything async is already too late.
           No stored choice means no attribute, which leaves the CSS
-          prefers-color-scheme rules in charge.
+          prefers-color-scheme rules in charge. next/script's
+          beforeInteractive strategy (rather than a plain <script> tag) is
+          what guarantees this actually runs before paint/hydration instead
+          of only when the initial HTML happens to be parsed by the browser.
         */}
-        <script
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}`,
           }}

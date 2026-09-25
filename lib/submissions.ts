@@ -1,4 +1,4 @@
-import { sql, ensureSchema } from "@/lib/db";
+import { sql, ensureSchema, isDatabaseConfigured } from "@/lib/db";
 import { geocodeAddress } from "@/lib/geocode";
 import { CAFES, type Cafe, type AreaSlug } from "@/lib/cafes";
 
@@ -152,8 +152,14 @@ function submissionToCafe(s: Submission): Cafe {
   };
 }
 
-/** Approved reader submissions, in the same shape as the static cafe list. */
+/**
+ * Approved reader submissions, in the same shape as the static cafe list.
+ * Returns [] rather than throwing when the database isn't configured (local
+ * dev with no DB attached) so the map still renders with the static cafes —
+ * the same silent-fallback the votes/comments UI already does per-cafe.
+ */
 export async function getApprovedCafes(): Promise<Cafe[]> {
+  if (!isDatabaseConfigured()) return [];
   await ensureSchema();
   const rows = await sql`
     SELECT * FROM cafe_submissions
@@ -164,6 +170,7 @@ export async function getApprovedCafes(): Promise<Cafe[]> {
 }
 
 export async function getApprovedCafeBySlug(slug: string): Promise<Cafe | null> {
+  if (!isDatabaseConfigured()) return null;
   await ensureSchema();
   const rows = await sql`
     SELECT * FROM cafe_submissions
