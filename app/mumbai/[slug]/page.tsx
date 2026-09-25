@@ -368,10 +368,15 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
         <VoteAndComments slug={cafe.slug} />
 
-        {cafe.images.some((i) => i.creditUrl) ? (
+        {cafe.images.some((i) => i.license) ? (
           <p className="wa-mono mt-3 text-paper/25">
             Photos via Wikimedia Commons, licensed{" "}
             {[...new Set(cafe.images.map((i) => i.license).filter(Boolean))].join(", ")}.
+          </p>
+        ) : cafe.images.some((i) => i.credit) ? (
+          <p className="wa-mono mt-3 text-paper/25">
+            Photo courtesy of{" "}
+            {[...new Set(cafe.images.map((i) => i.credit).filter(Boolean))].join(", ")}.
           </p>
         ) : (
           <p className="wa-mono mt-3 text-paper/25">
