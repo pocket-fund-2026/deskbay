@@ -47,6 +47,16 @@ export default function MumbaiScreen({
   const areaOptions: (AreaSlug | "all")[] = ["all", ...Object.keys(AREAS) as AreaSlug[]];
 
   const [query, setQuery] = useState("");
+  // The map re-fits its camera to whatever cafe list it's handed, so filtering
+  // straight off every keystroke made it re-fly on each letter typed — a
+  // glitchy, self-interrupting animation. The input still shows every
+  // keystroke instantly; only the filtering (and the map that reacts to it)
+  // waits for a short pause.
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query), 300);
+    return () => clearTimeout(timer);
+  }, [query]);
   const [openNowOnly, setOpenNowOnly] = useState(false);
   const [nearMe, setNearMe] = useState(initialNearMe);
   const [here, setHere] = useState<Point | null>(null);
@@ -85,7 +95,7 @@ export default function MumbaiScreen({
   );
 
   const visibleCafes = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = debouncedQuery.trim().toLowerCase();
     let list = q
       ? cafes.filter(
           (c) => c.name.toLowerCase().includes(q) || c.neighborhood.toLowerCase().includes(q)
@@ -109,7 +119,7 @@ export default function MumbaiScreen({
     return list;
     // minuteTick is the clock, not a value — it re-runs the open-now filter.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cafes, query, openNowOnly, nearMe, here, minuteTick]);
+  }, [cafes, debouncedQuery, openNowOnly, nearMe, here, minuteTick]);
 
   const hiddenForUnknownHours = useMemo(
     () => (openNowOnly ? cafes.filter((c) => isOpenNow(c.openingHours) === null).length : 0),

@@ -550,11 +550,25 @@ export default function MapView({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // The list a parent hands in gets a new array identity on every recompute
+  // (a fresh .filter() result) even when the actual cafes are unchanged --
+  // e.g. the "open now" filter re-runs every minute to catch closing times,
+  // producing the same slugs every time. Refitting the camera on every one
+  // of those was a real bug: the map would silently re-fly itself once a
+  // minute, or on every letter typed into search before that had a debounce,
+  // undoing wherever the reader had just panned to. Compare the actual slugs
+  // instead of trusting the array reference.
+  const prevSlugsRef = useRef<string>("");
+
   // Keep the clustered source in sync with whichever cafes are currently shown.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !mapReady) return;
     (map.getSource("cafes") as maplibregl.GeoJSONSource | undefined)?.setData(toGeoJSON(cafes));
+
+    const slugsKey = cafes.map((c) => c.slug).join(",");
+    if (slugsKey === prevSlugsRef.current) return;
+    prevSlugsRef.current = slugsKey;
 
     // Refit unless a cafe that is actually in this list is selected — after an
     // area change the old selection is gone, and skipping the refit here used
