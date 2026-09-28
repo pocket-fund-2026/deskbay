@@ -138,6 +138,15 @@ export default function Post() {
           laptop. This list only answers one question: where can you actually get work done.
         </p>
 
+        <div className="mt-6 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
+          <p className="wa-mono mb-2 text-paper/65">In brief</p>
+          <ul className="space-y-1.5 text-[13.5px] leading-relaxed text-paper/75">
+            <li>{TOP_15[0].name} on {TOP_15[0].neighborhood} has Bombay Cafe Map&apos;s highest workability score citywide ({TOP_15[0].workability}/5).</li>
+            <li>{CAFES.filter((c) => c.workability !== null).length} Mumbai cafes are fully scored on wifi, power, seating and noise.</li>
+            <li>Every score is backed by cited evidence on the cafe&apos;s own page, not a star rating.</li>
+          </ul>
+        </div>
+
         <ol className="mt-8 space-y-5">
           {TOP_15.map((cafe, i) => {
             const t = tier(cafe.workability);

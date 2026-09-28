@@ -136,6 +136,15 @@ export default function Post() {
           checking the score before you commit to a laptop session.
         </p>
 
+        <div className="mt-6 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
+          <p className="wa-mono mb-2 text-paper/65">In brief</p>
+          <ul className="space-y-1.5 text-[13.5px] leading-relaxed text-paper/75">
+            <li>{RANKED[0].name} on {RANKED[0].neighborhood} has the highest workability score in {AREA.name} ({RANKED[0].workability}/5).</li>
+            <li>{SCORED.length} of {cafesByArea("andheri-juhu").length} {AREA.name} cafes are fully scored on wifi, power, seating and noise.</li>
+            <li>Every score is backed by cited evidence on the cafe&apos;s own page, not a star rating.</li>
+          </ul>
+        </div>
+
         <ol className="mt-8 space-y-5">
           {RANKED.map((cafe, i) => {
             const t = tier(cafe.workability);
