@@ -55,6 +55,14 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-09-25",
     readingTime: "5 min read",
   },
+  {
+    slug: "best-cafes-to-work-from-in-andheri-juhu",
+    title: "The best cafes to work from in Andheri & Juhu",
+    description:
+      "The widest stretch of cafes on the map, from airport-adjacent chains to film-crowd regulars — our scored, cited ranking of which ones actually hold up for a work session.",
+    date: "2026-09-28",
+    readingTime: "5 min read",
+  },
 ];
 
 export function getPost(slug: string) {
