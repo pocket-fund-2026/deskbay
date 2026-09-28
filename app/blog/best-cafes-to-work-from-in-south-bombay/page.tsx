@@ -13,6 +13,7 @@ const AREA = AREAS["south-bombay"];
 
 const SCORED = cafesByArea("south-bombay").filter((c) => c.workability !== null);
 const RANKED = [...SCORED].sort((a, b) => (b.workability as number) - (a.workability as number)).slice(0, 8);
+const HERO_CAFE = RANKED.find((c) => c.images[0]);
 
 export const metadata: Metadata = {
   title: post.title,
@@ -118,7 +119,25 @@ export default function Post() {
         </h1>
 
         <div className="mt-6">
-          <CoffeeHero />
+          {HERO_CAFE?.images[0] ? (
+            <figure className="relative aspect-[16/7] overflow-hidden rounded-2xl border border-paper/12">
+              <Image
+                src={HERO_CAFE.images[0].url}
+                alt={HERO_CAFE.images[0].alt}
+                fill
+                unoptimized
+                sizes="(max-width: 672px) 100vw, 672px"
+                className="object-cover"
+              />
+              {HERO_CAFE.images[0].credit && (
+                <figcaption className="wa-mono absolute bottom-1.5 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[9px] text-paper/70">
+                  {HERO_CAFE.images[0].credit}
+                </figcaption>
+              )}
+            </figure>
+          ) : (
+            <CoffeeHero />
+          )}
         </div>
 
         <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
@@ -170,7 +189,7 @@ export default function Post() {
                   </div>
                 </div>
                 {cafe.images[0] && (
-                  <div className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
+                  <figure className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
                     <Image
                       src={cafe.images[0].url}
                       alt={cafe.images[0].alt}
@@ -179,7 +198,12 @@ export default function Post() {
                       sizes="(max-width: 640px) 100vw, 640px"
                       className="object-cover"
                     />
-                  </div>
+                    {cafe.images[0].credit && (
+                      <figcaption className="wa-mono absolute bottom-1.5 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[9px] text-paper/70">
+                        {cafe.images[0].credit}
+                      </figcaption>
+                    )}
+                  </figure>
                 )}
                 <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{writeup(cafe)}</p>
                 <p className="wa-mono mt-2 text-paper/65">

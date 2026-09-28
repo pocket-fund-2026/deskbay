@@ -172,7 +172,7 @@ export default function Post() {
                   </div>
                 </div>
                 {cafe.images[0] && (
-                  <div className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
+                  <figure className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
                     <Image
                       src={cafe.images[0].url}
                       alt={cafe.images[0].alt}
@@ -181,7 +181,12 @@ export default function Post() {
                       sizes="(max-width: 640px) 100vw, 640px"
                       className="object-cover"
                     />
-                  </div>
+                    {cafe.images[0].credit && (
+                      <figcaption className="wa-mono absolute bottom-1.5 right-2 rounded bg-black/60 px-1.5 py-0.5 text-[9px] text-paper/70">
+                        {cafe.images[0].credit}
+                      </figcaption>
+                    )}
+                  </figure>
                 )}
                 <p className="mt-2.5 text-[14px] leading-relaxed text-paper/65">{writeup(cafe)}</p>
                 <p className="wa-mono mt-2 text-paper/65">
