@@ -54,7 +54,7 @@ const articleLd = {
   headline: post.title,
   description: post.description,
   datePublished: post.date,
-  dateModified: post.date,
+  dateModified: post.lastUpdated ?? post.date,
   author: { "@type": "Organization", name: "Bombay Cafe Map" },
   publisher: { "@type": "Organization", name: "Bombay Cafe Map", url: SITE_URL },
   mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
@@ -113,6 +113,9 @@ export default function Post() {
         </div>
         <p className="wa-mono mt-6 text-paper/65">
           {post.date} · {post.readingTime}
+          {post.lastUpdated && post.lastUpdated !== post.date && (
+            <> · Updated {post.lastUpdated}</>
+          )}
         </p>
         <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           {post.title}
