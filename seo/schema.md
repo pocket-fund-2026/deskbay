@@ -25,17 +25,21 @@ each route builds its own object(s) inline.
 ## `/blog/[slug]` (7 posts)
 
 - **`Article`** (`author`/`publisher` as `Organization` = "Bombay Cafe Map") on every post.
-- **`FAQPage`** on the 5 area-ranking posts (Bandra, South Bombay, Eastern Suburbs,
-  Thane, Andheri & Juhu) — added 2026-09-24+ deliberately for GEO/AI-answer-engine
+- **`FAQPage`** on the 6 ranking posts (Mumbai top 15, Bandra, South Bombay, Eastern
+  Suburbs, Thane, Andheri & Juhu) — added 2026-09-24+ deliberately for GEO/AI-answer-engine
   citation, not for Google rich results (Google retired FAQ rich results May 2026;
   the "Deliberately not implemented" note below predates this and is stale for these
-  pages — kept accurate only for pages that don't have genuine Q&A-shaped content).
-  Questions are answered from real on-page data (`RANKED[0]`, `SCORED.length`), never
-  invented.
-- **`ItemList`** on `best-cafes-to-work-from-in-andheri-juhu` (added 2026-09-28) wrapping
-  the ranked top-8, `itemListOrder: Descending` matching the page's actual sort. This
-  was the documented opportunity below — implement the same block on the other 4
-  area-ranking posts next time one is touched.
+  pages — kept accurate only for pages that don't have genuine Q&A-shaped content, e.g.
+  `whats-new-in-mumbais-cafe-scene`, which has none).
+  Questions are answered from real on-page data (`RANKED[0]`/`TOP_15[0]`, `SCORED.length`),
+  never invented.
+- **`ItemList`** on all 6 ranking posts (added 2026-09-28, completing the opportunity
+  below) wrapping the ranked cafes, `itemListOrder: Descending` matching each page's
+  actual sort, `itemListElement[].url` pointing at each cafe's own `/mumbai/[slug]`
+  page. `whats-new-in-mumbais-cafe-scene` also got an `ItemList` the same day, over its
+  5 reported openings, `url` pointing at either the cafe's own profile (Boojee) or the
+  cited source article — a genuinely different shape since it's a news roundup, not a
+  ranking, so no `itemListOrder` and no workability-based sort.
 
 ## `/about`, `/submit`, `/mumbai`
 
@@ -72,7 +76,5 @@ each route builds its own object(s) inline.
   list — would reinforce the "ranked list" semantics for AI/LLM extraction. Left
   as a recommendation rather than auto-applied because it requires picking a
   stable ordering (workability desc is already the default sort, so this is low-risk
-  to add later).
-- **`ItemList`** on the 4 area-ranking posts that don't have it yet (Bandra, South
-  Bombay, Eastern Suburbs, Thane) — same block as `best-cafes-to-work-from-in-andheri-juhu`,
-  not backfilled onto those 4 in this pass to keep the change scoped to the new post.
+  to add later). (All 7 blog posts now have it, as of 2026-09-28 — this is the
+  only remaining `ItemList` gap.)

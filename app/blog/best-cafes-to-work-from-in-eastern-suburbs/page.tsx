@@ -82,11 +82,27 @@ const faqLd = {
   ],
 };
 
+const itemListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: post.title,
+  description: post.description,
+  numberOfItems: RANKED.length,
+  itemListOrder: "https://schema.org/ItemListOrderDescending",
+  itemListElement: RANKED.map((cafe, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${SITE_URL}/mumbai/${cafe.slug}`,
+    name: cafe.name,
+  })),
+};
+
 export default function Post() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
           <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">

@@ -41,10 +41,51 @@ const articleLd = {
 
 const boojee = getCafe("boojee-cafe-perry-road");
 
+const itemListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Recent Mumbai cafe openings and expansions",
+  description: "Cafe openings and expansions reported recently in Mumbai, each sourced to an independent report.",
+  numberOfItems: 5,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Third Wave Coffee's 200th store, Chembur",
+      url: "https://www.retail4growth.com/news/third-wave-coffee-opens-200th-cafe-in-mumbai-plans-100-new-cafes-by-2026-7640",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Bombay Sweet Shop, Borivali",
+      url: "https://www.timeout.com/mumbai/news/bombay-sweet-shop-arrives-in-borivali-with-chaat-coffee-and-cult-mithai-063026",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Boojee Cafe, BKC",
+      url: boojee ? `${SITE_URL}/mumbai/${boojee.slug}` : "https://www.timeout.com/mumbai/news/boojee-cafe-is-opening-a-new-outlet-at-one-bkc-in-mumbai-082026",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Cafe Quattro, Babulnath",
+      url: "https://www.indianretailer.com/news/cafe-quattro-opens-second-mumbai-cafe-mumbai",
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "GOAT Brew",
+      url: "https://www.indianretailer.com/news/goat-brew-opens-new-cafe-and-bar-mumbai",
+    },
+  ],
+};
+
 export default function Post() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <div className="mx-auto max-w-2xl">
         <div className="flex items-center justify-between gap-4">
           <Link href="/blog" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">
