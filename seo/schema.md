@@ -22,12 +22,20 @@ each route builds its own object(s) inline.
   fabricated).
 - **`BreadcrumbList`** — Home → Mumbai → `{Area}` → `{Cafe name}`, 4 levels.
 
-## `/blog/[slug]` (both posts)
+## `/blog/[slug]` (7 posts)
 
-- **`Article`** (`author`/`publisher` as `Organization` = "Bombay Cafe Map").
-- One post (`15-best-cafes-to-work-from-in-mumbai`) also includes an **`ItemList`**
-  or ranking-relevant structured content tied to the ranked cafes — see file for
-  exact shape.
+- **`Article`** (`author`/`publisher` as `Organization` = "Bombay Cafe Map") on every post.
+- **`FAQPage`** on the 5 area-ranking posts (Bandra, South Bombay, Eastern Suburbs,
+  Thane, Andheri & Juhu) — added 2026-09-24+ deliberately for GEO/AI-answer-engine
+  citation, not for Google rich results (Google retired FAQ rich results May 2026;
+  the "Deliberately not implemented" note below predates this and is stale for these
+  pages — kept accurate only for pages that don't have genuine Q&A-shaped content).
+  Questions are answered from real on-page data (`RANKED[0]`, `SCORED.length`), never
+  invented.
+- **`ItemList`** on `best-cafes-to-work-from-in-andheri-juhu` (added 2026-09-28) wrapping
+  the ranked top-8, `itemListOrder: Descending` matching the page's actual sort. This
+  was the documented opportunity below — implement the same block on the other 4
+  area-ranking posts next time one is touched.
 
 ## `/about`, `/submit`, `/mumbai`
 
@@ -65,3 +73,6 @@ each route builds its own object(s) inline.
   as a recommendation rather than auto-applied because it requires picking a
   stable ordering (workability desc is already the default sort, so this is low-risk
   to add later).
+- **`ItemList`** on the 4 area-ranking posts that don't have it yet (Bandra, South
+  Bombay, Eastern Suburbs, Thane) — same block as `best-cafes-to-work-from-in-andheri-juhu`,
+  not backfilled onto those 4 in this pass to keep the change scoped to the new post.

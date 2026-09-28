@@ -48,6 +48,7 @@ export default function Footer() {
             <Link href="/collections" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Best-of lists</Link>
             <Link href="/blog" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Blog</Link>
             <Link href="/about" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">How we score</Link>
+            <Link href="/glossary" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Glossary</Link>
             <Link href="/submit" className="-my-1.5 py-1.5 text-paper/65 transition-colors hover:text-paper">Submit a cafe</Link>
           </nav>
         </div>

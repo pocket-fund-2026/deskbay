@@ -71,6 +71,7 @@ export default function AboutPage() {
           <nav className="wa-mono flex gap-4 text-paper/65">
             <Link href="/mumbai" className="hover:text-paper">The map</Link>
             <Link href="/blog" className="hover:text-paper">Blog</Link>
+            <Link href="/glossary" className="hover:text-paper">Glossary</Link>
             <Link href="/submit" className="hover:text-paper">Submit a cafe</Link>
           </nav>
         </div>
