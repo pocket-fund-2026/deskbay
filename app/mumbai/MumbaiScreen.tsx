@@ -227,7 +227,9 @@ export default function MumbaiScreen({
           </div>
         </div>
         <h1 className="sr-only">
-          {area === "all" ? "Mumbai" : AREAS[area].name}: cafes you can work from
+          {initialNearMe
+            ? "Cafes near you to work from in Mumbai"
+            : `${area === "all" ? "Mumbai" : AREAS[area].name}: cafes you can work from`}
         </h1>
         <div className="mt-3 md:hidden">{areaDropdown}</div>
       </header>
