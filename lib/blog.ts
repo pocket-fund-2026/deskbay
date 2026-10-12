@@ -70,6 +70,14 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-09-28",
     readingTime: "5 min read",
   },
+  {
+    slug: "best-cafes-to-work-from-in-bkc",
+    title: "The best cafes to work from in BKC",
+    description:
+      "Coffee built for the business district's schedule — our scored, cited ranking of which Bandra Kurla Complex cafes actually hold up for a laptop session.",
+    date: "2026-10-12",
+    readingTime: "5 min read",
+  },
 ];
 
 export function getPost(slug: string) {

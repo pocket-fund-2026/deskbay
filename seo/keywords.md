@@ -27,6 +27,7 @@ wifi, power, quiet, seating). Local-directory intent, not transactional.
 | `/blog/best-cafes-to-work-from-in-eastern-suburbs` | best cafes to work from in Powai | cafes to work from Ghatkopar Chembur Mulund |
 | `/blog/best-cafes-to-work-from-in-thane` | best cafes to work from in Thane | cafes to work from Ghodbunder Road |
 | `/blog/best-cafes-to-work-from-in-andheri-juhu` | best cafes to work from in Andheri | cafes to work from Juhu Khar Versova Santacruz |
+| `/blog/best-cafes-to-work-from-in-bkc` | best cafes to work from in BKC | laptop friendly cafes Bandra Kurla Complex |
 | `/about` | how Bombay Cafe Map scores cafes | workability methodology |
 | `/submit` | submit a cafe Mumbai | add a cafe to directory |
 
