@@ -99,7 +99,7 @@ const itemListLd = {
 
 export default function Post() {
   return (
-    <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
+    <main className="min-h-dvh bg-ink px-6 py-6 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
@@ -116,15 +116,15 @@ export default function Post() {
             <> · Updated {post.lastUpdated}</>
           )}
         </p>
-        <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
+        <h1 className="font-display mt-1.5 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           {post.title}
         </h1>
 
-        <div className="mt-6">
+        <div className="mt-4 max-h-36 overflow-hidden rounded-2xl [&>div]:aspect-[16/4]">
           <CoffeeHero />
         </div>
 
-        <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
+        <p className="mt-4 text-[15px] leading-relaxed text-paper/75">
           Finding a Mumbai cafe with fast wifi, real power outlets and staff who won&apos;t hover
           once your cup is empty is harder than it should be for a city this size. This isn&apos;t
           a separate opinion piece. It is the top 15 out of the{" "}
@@ -141,7 +141,7 @@ export default function Post() {
           laptop. This list only answers one question: where can you actually get work done.
         </p>
 
-        <div className="mt-6 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
+        <div className="mt-4 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
           <p className="wa-mono mb-2 text-paper/65">In brief</p>
           <ul className="space-y-1.5 text-[13.5px] leading-relaxed text-paper/75">
             <li>{TOP_15[0].name} on {TOP_15[0].neighborhood} has Bombay Cafe Map&apos;s highest workability score citywide ({TOP_15[0].workability}/5).</li>
@@ -150,11 +150,11 @@ export default function Post() {
           </ul>
         </div>
 
-        <ol className="mt-8 space-y-5">
+        <ol className="mt-5 space-y-4">
           {TOP_15.map((cafe, i) => {
             const t = tier(cafe.workability);
             return (
-              <li key={cafe.slug} className="border-t border-paper/10 pt-5 first:border-t-0 first:pt-0">
+              <li key={cafe.slug} className="border-t border-paper/10 pt-4 first:border-t-0 first:pt-0">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="wa-mono text-paper/65">#{i + 1}</p>
@@ -175,7 +175,7 @@ export default function Post() {
                   </div>
                 </div>
                 {cafe.images[0] && (
-                  <figure className="relative mt-3 aspect-[16/8] overflow-hidden rounded-lg border border-paper/10">
+                  <figure className="relative mt-3 aspect-[16/6] overflow-hidden rounded-lg border border-paper/10">
                     <Image
                       src={cafe.images[0].url}
                       alt={cafe.images[0].alt}
@@ -204,7 +204,7 @@ export default function Post() {
           })}
         </ol>
 
-        <h2 className="font-display mt-10 text-[20px] font-medium tracking-tight">
+        <h2 className="font-display mt-7 text-[20px] font-medium tracking-tight">
           Frequently asked
         </h2>
         <div className="mt-3 space-y-4">
@@ -227,7 +227,7 @@ export default function Post() {
           </div>
         </div>
 
-        <div className="mt-8 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
+        <div className="mt-6 rounded-xl border border-paper/10 bg-paper/[0.03] p-5">
           <p className="text-[14px] leading-relaxed text-paper/65">
             Want the full picture, including the cafes that scored lower and why? See{" "}
             <Link href="/mumbai" className="underline hover:text-paper">the interactive map</Link>{" "}

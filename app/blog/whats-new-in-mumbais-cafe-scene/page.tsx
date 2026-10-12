@@ -83,7 +83,7 @@ const itemListLd = {
 
 export default function Post() {
   return (
-    <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
+    <main className="min-h-dvh bg-ink px-6 py-6 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <div className="mx-auto max-w-2xl">
@@ -99,15 +99,15 @@ export default function Post() {
             <> · Updated {post.lastUpdated}</>
           )}
         </p>
-        <h1 className="font-display mt-2 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
+        <h1 className="font-display mt-1.5 text-[clamp(1.8rem,4vw,2.4rem)] font-medium leading-tight">
           {post.title}
         </h1>
 
-        <div className="mt-6">
+        <div className="mt-4 max-h-36 overflow-hidden rounded-2xl [&>div]:aspect-[16/4]">
           <CoffeeHero />
         </div>
 
-        <p className="mt-5 text-[15px] leading-relaxed text-paper/75">
+        <p className="mt-4 text-[15px] leading-relaxed text-paper/75">
           Mumbai&apos;s cafe scene doesn&apos;t sit still. Chains keep opening new outlets in the
           suburbs, independents keep expanding into new neighborhoods, and the specialty coffee
           crowd keeps pushing what a Mumbai cafe menu looks like. This is a roundup of real
