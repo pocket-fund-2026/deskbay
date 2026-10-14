@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/about`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/glossary`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/submit`, changeFrequency: "monthly", priority: 0.3 },
+    { url: `${BASE}/contact`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/privacy`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/terms`, changeFrequency: "yearly", priority: 0.1 },
   ];

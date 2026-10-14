@@ -95,6 +95,14 @@ const organizationLd = {
   name: "Bombay Cafe Map",
   url: SITE_URL,
   logo: `${SITE_URL}/icon.svg`,
+  description:
+    "Bombay Cafe Map ranks Mumbai cafes on how good they are to work from: wifi, power outlets, noise and seating, with every finding cited.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    url: `${SITE_URL}/contact`,
+    availableLanguage: "English",
+  },
   sameAs: ["https://www.instagram.com/bombaycafemap/"],
 };
 

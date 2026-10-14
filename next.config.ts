@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
+          // Markdown/HTML negotiation (see proxy.ts) varies by Accept.
+          { key: "Vary", value: "Accept" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
