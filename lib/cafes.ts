@@ -132,6 +132,16 @@ export function cafesByArea(area: AreaSlug) {
   return CAFES.filter((c) => c.area === area);
 }
 
+/**
+ * A page is only worth indexing when it carries at least one of the work
+ * factors people actually search for. Pages with none are templated
+ * stubs; they stay reachable but are kept out of the index and sitemap.
+ */
+export function isIndexable(cafe: Cafe) {
+  const s = cafe.scores;
+  return s.wifi != null || s.charging != null || s.quiet != null;
+}
+
 export function getCafe(slug: string) {
   return CAFES.find((c) => c.slug === slug);
 }

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { AREAS, CAFES } from "@/lib/cafes";
+import { AREAS, CAFES, isIndexable } from "@/lib/cafes";
 import { BLOG_POSTS } from "@/lib/blog";
 import { COLLECTIONS } from "@/lib/collections";
 
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const cafeUrls = CAFES.map((c) => ({
+  const cafeUrls = CAFES.filter(isIndexable).map((c) => ({
     url: `${BASE}/mumbai/${c.slug}`,
     lastModified: c.lastVerifiedAt,
     changeFrequency: "monthly" as const,

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { AREAS, CAFES, getCafe, nearbyCafes } from "@/lib/cafes";
+import { AREAS, CAFES, getCafe, isIndexable, nearbyCafes } from "@/lib/cafes";
 import { getApprovedCafeBySlug } from "@/lib/submissions";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -39,6 +39,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: `/mumbai/${cafe.slug}` },
+    ...(getCafe(slug) && !isIndexable(getCafe(slug)!) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: `${title} · Bombay Cafe Map`,
       description,
