@@ -44,8 +44,8 @@
         "avgFoodCost": "₹900+"
       },
       "evidence": {
-        "wifi": "\"WiFi works, especially on weekdays before the laptop crowd descends... customers praise the stable WiFi\" (Wanderlog listing)",
-        "charging": "\"offers comfortable seating, high-speed free Wi-Fi, and numerous power outlets\" (laptopfriendlycafe.com listing for Mary Lodge by Subko)",
+        "wifi": "No wifi claim we could verify: the laptopfriendlycafe.com Mary Lodge listing and the Wanderlog page we opened on 2026-10-14 do not mention wifi. An earlier note quoted Wanderlog on stable weekday wifi; we could not reproduce it.",
+        "charging": "No verified power-outlet claim. The laptopfriendlycafe.com Mary Lodge listing (read 2026-10-14) says it is \"Good for working on laptop\" and that you can \"work on your laptop without feeling rushed\", but does not mention outlets or wifi.",
         "quiet": "Reported as quiet through the morning, filling up after 10am on weekdays.",
         "seating": "Reviewers consistently describe limited seating, roughly eight to ten tables.",
         "work": "\"multi-level coffee roastery where laptop-wielding creatives camp out for hours\" (Wanderlog)"
@@ -120,7 +120,7 @@
         "avgFoodCost": "₹250–500"
       },
       "evidence": {
-        "wifi": "district.in lists complimentary internet and describes the room as designed for remote workers.",
+        "wifi": "district.in tags the cafe with \"free Wi-Fi\" (read 2026-10-14), and a reviewer there calls it a \"chill place to work/study as well\". LBB's work-friendly cafes roundup (undated) also lists wifi. No source we could open publishes a speed.",
         "charging": "Remote-work guides report that outlets are easy to find at most tables.",
         "quiet": "Reported to stay quieter later into the afternoon than the nearby brunch cafes.",
         "seating": "district.in lists indoor, comfortable and large-group seating.",
@@ -2253,7 +2253,7 @@
         "avgFoodCost": null
       },
       "evidence": {
-        "wifi": "Chain-wide reviews report 40+ Mbps wifi at Third Wave outlets.",
+        "wifi": "LBB's work-friendly cafes roundup (undated) says of Third Wave: \"The wifi is reliable, and there's no pressure to leave.\" district.in's listing for the Chowpatty outlet tags it \"Good Wifi\". No source we could open speaks to this Juhu outlet specifically.",
         "charging": "Outlets built into counter-style seating chain-wide.",
         "quiet": null,
         "seating": null,
@@ -6431,7 +6431,7 @@
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Kokomo%2C%204%20Pratap%20CHS%2C%20Shivaji%20Road%2C%20Near%20Vakola%20Bridge%2C%20Santacruz%20East%2C%20Mumbai",
       "openingHours": "Daily 11am–11pm",
       "editorialNote": "A women-led corner cafe tucked into the Vakola bylanes, small enough that it still feels like someone's find rather than a listing.",
-      "whyWeRecommend": "We haven't found a source that speaks to wifi or plug access here, so treat it as a coffee-and-conversation stop for now rather than a scored work spot, we'll update this once we can verify it properly.",
+      "whyWeRecommend": "The cafe's own website lists wifi and plug points and says you are welcome to stay through the afternoon. That is the cafe's claim, not a tested speed, so confirm at the counter before a call.",
       "scores": {
         "wifi": 4,
         "charging": 3.8,
@@ -6449,8 +6449,8 @@
         "stay": "long"
       },
       "evidence": {
-        "wifi": "cafekokomo.com/cafekokomo.net copy: 'reliable high-speed Wi-Fi... perfect for freelancers and remote work'",
-        "charging": "Site copy + reviews specifically call out accessible power plugs/charging points",
+        "wifi": "The cafe's own website (cafekokomo.com, read 2026-10-14) lists \"Wi-Fi, plug points and a quiet table through the afternoon\" and its FAQ answers \"Yes\" to working from the cafe. No speed is published.",
+        "charging": "The cafe's own website (cafekokomo.com, read 2026-10-14) lists \"plug points\" among what it offers for working.",
         "quiet": "Described as lo-fi lounge with soft ambient music, not silent, so scored Moderate rather than fully Quiet",
         "seating": "Cozy, intimate seating configurations described in site copy",
         "work": "Explicitly marketed as work/freelancer-friendly with charging + wifi confirmed by multiple sources"
@@ -9946,7 +9946,7 @@
         "avgFoodCost": "₹400+"
       },
       "evidence": {
-        "wifi": "Chain-standard wifi across Blue Tokai cafes nationally.",
+        "wifi": "LBB's work-friendly cafes roundup (undated) says of Blue Tokai: \"all outlets provide high-speed WiFi\". No source we could open speaks to this outlet specifically.",
         "charging": null,
         "quiet": null,
         "seating": null,

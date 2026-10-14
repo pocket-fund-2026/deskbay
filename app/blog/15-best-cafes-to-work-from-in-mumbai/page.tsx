@@ -126,7 +126,16 @@ export default function Post() {
 
         <p className="mt-4 text-[15px] leading-relaxed text-paper/75">
           Finding a Mumbai cafe with fast wifi, real power outlets and staff who won&apos;t hover
-          once your cup is empty is harder than it should be for a city this size. This isn&apos;t
+          once your cup is empty is harder than it should be for a city this size.
+          {getPost("best-cafes-with-wifi-in-mumbai") && (
+            <>
+              {" "}If wifi is the deciding factor, our{" "}
+              <Link href="/blog/best-cafes-with-wifi-in-mumbai" className="underline hover:text-paper">
+                sourced guide to cafes with wifi
+              </Link>{" "}
+              shows who makes each claim.
+            </>
+          )} This isn&apos;t
           a separate opinion piece. It is the top 15 out of the{" "}
           {CAFES.filter((c) => c.workability !== null).length} cafes we&apos;ve fully scored on
           Bombay Cafe Map&apos;s nine-factor workability model (wifi, power, seating, noise, and how long

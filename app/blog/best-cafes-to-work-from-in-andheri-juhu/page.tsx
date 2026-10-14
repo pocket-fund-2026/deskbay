@@ -130,6 +130,14 @@ export default function Post() {
           how long you can actually stay. This is the top {RANKED.length}, ranked by that score, with
           every claim traceable to the cited evidence on each cafe&apos;s own page &mdash; nothing
           here is invented to fill a paragraph.
+          {getPost("best-cafes-with-wifi-in-mumbai") && (
+            <>
+              {" "}For which cafes back their wifi claims with a named source, see our{" "}
+              <Link href="/blog/best-cafes-with-wifi-in-mumbai" className="underline hover:text-paper">
+                sourced guide to cafes with wifi
+              </Link>.
+            </>
+          )}
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-paper/75">
           Andheri & Juhu spans {AREA.streets}. It&apos;s the widest single stretch of cafes covered

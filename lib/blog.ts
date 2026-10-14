@@ -78,6 +78,14 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-10-12",
     readingTime: "5 min read",
   },
+  {
+    slug: "best-cafes-with-wifi-in-mumbai",
+    title: "Best Cafes With WiFi in Mumbai (Sourced)",
+    description:
+      "Which Mumbai cafes have wifi you can work on? Every wifi claim below names who made it, from a cafe's own site to Wikipedia, and we say what we could not verify.",
+    date: "2026-10-14",
+    readingTime: "4 min read",
+  },
 ];
 
 export function getPost(slug: string) {
