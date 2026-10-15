@@ -15,6 +15,8 @@ import { cafeDescription, cafeTitle } from "@/lib/snippet";
 import ScoreFill from "@/components/ScoreFill";
 import CountUp from "@/components/CountUp";
 import { cafeInsight } from "@/lib/cafeInsights";
+import { getVisit } from "@/lib/visits";
+import { distanceKm, formatDistance } from "@/lib/distance";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -77,6 +79,12 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
   const areaName = AREAS[cafe.area].name;
   const nearby = nearbyCafes(cafe, 3);
   const insight = cafeInsight(cafe);
+  const visit = getVisit(cafe.slug);
+  // Closest listed cafes by straight-line distance from the recorded coordinates.
+  const closest = CAFES.filter((c) => c.slug !== cafe.slug)
+    .map((c) => ({ c, km: distanceKm(cafe, c) }))
+    .sort((a, b) => a.km - b.km)
+    .slice(0, 4);
   const schemaHours = toSchemaOpeningHours(parseOpeningHours(cafe.openingHours));
 
   // The amenities people actually search for ("does blue tokai have wifi"),
@@ -125,15 +133,6 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
         }
       : {}),
     ...(cafe.menuUrl ? { hasMenu: cafe.menuUrl } : {}),
-    ...(cafe.publicRating
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: cafe.publicRating.value,
-            reviewCount: cafe.publicRating.count,
-          },
-        }
-      : {}),
   };
 
   const breadcrumbLd = {
@@ -230,6 +229,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             }}
           >
             <PinBadge color={tier(cafe.workability).color} size={34} />
+            <span className="wa-mono absolute bottom-2 left-3 text-paper/55">Photo not yet available</span>
           </div>
         )}
 
@@ -339,6 +339,69 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           </div>
         )}
 
+        {visit && (
+          <section className="mt-7 rounded-lg border border-paper/12 p-4" aria-labelledby="visit-heading">
+            <h2 id="visit-heading" className="font-display text-[17px] font-medium leading-snug">
+              Visit notes
+            </h2>
+            <p className="wa-mono mt-1 text-paper/65">
+              First-hand, visited {visit.visitedOn}
+              {visit.visitedBy ? ` by ${visit.visitedBy}` : ""}
+            </p>
+            <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-[13.5px] text-paper/75">
+              {visit.wifiDownMbps != null && (
+                <>
+                  <dt className="text-paper/55">Wi-Fi speed test</dt>
+                  <dd>
+                    {visit.wifiDownMbps} Mbps down
+                    {visit.wifiUpMbps != null ? `, ${visit.wifiUpMbps} Mbps up` : ""}
+                    {visit.wifiNote ? ` (${visit.wifiNote})` : ""}
+                  </dd>
+                </>
+              )}
+              {visit.plugPoints != null && (
+                <>
+                  <dt className="text-paper/55">Plug points counted</dt>
+                  <dd>
+                    {visit.plugPoints}
+                    {visit.plugNote ? `, ${visit.plugNote}` : ""}
+                  </dd>
+                </>
+              )}
+              {visit.seatingNote && (
+                <>
+                  <dt className="text-paper/55">Seating</dt>
+                  <dd>{visit.seatingNote}</dd>
+                </>
+              )}
+              {visit.timeLimit && (
+                <>
+                  <dt className="text-paper/55">Time limit</dt>
+                  <dd>{visit.timeLimit}</dd>
+                </>
+              )}
+              {visit.coffeePriceInr != null && (
+                <>
+                  <dt className="text-paper/55">Price of a coffee</dt>
+                  <dd>₹{visit.coffeePriceInr}</dd>
+                </>
+              )}
+            </dl>
+            {visit.notes && <p className="mt-3 text-[13.5px] leading-relaxed text-paper/70">{visit.notes}</p>}
+            {visit.photos && visit.photos.length > 0 && (
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {visit.photos.map((ph) => (
+                  <figure key={ph.src} className="overflow-hidden rounded-lg border border-paper/10">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={ph.src} alt={ph.alt} loading="lazy" className="h-auto w-full" />
+                    {ph.credit && <figcaption className="wa-mono px-2 py-1 text-paper/60">{ph.credit}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
         <section className="mt-7" aria-labelledby="compare-heading">
           <h2 id="compare-heading" className="font-display text-[17px] font-medium leading-snug">
             {insight.heading}
@@ -394,10 +457,24 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
           </p>
         ) : (
           <p className="wa-mono mt-3 text-paper/65">
-            No photo yet.{" "}
-            <Link href="/submit" className="underline hover:text-paper/65">send us one</Link>.
+            Photo not yet available. We only show photos we have the right to use; none is shown here
+            rather than a stand-in.
           </p>
         )}
+
+        <div className="mt-10">
+          <p className="wa-mono mb-3 text-paper/65">Nearest cafes on the map</p>
+          <ul className="space-y-1.5 text-[13.5px]">
+            {closest.map(({ c, km }) => (
+              <li key={c.slug}>
+                <Link href={`/mumbai/${c.slug}`} className="underline hover:text-paper">{c.name}</Link>
+                <span className="wa-mono ml-2 text-paper/60">
+                  {formatDistance(km)} away{c.workability !== null ? ` · ${c.workability.toFixed(1)}/5` : ""}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {nearby.length > 0 && (
           <div className="mt-10">

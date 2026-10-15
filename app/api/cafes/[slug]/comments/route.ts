@@ -16,7 +16,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
   const rows = await sql`
     SELECT id, body, created_at AS "createdAt"
     FROM cafe_comments
-    WHERE cafe_slug = ${slug}
+    WHERE cafe_slug = ${slug} AND status = 'approved'
     ORDER BY created_at DESC
     LIMIT 100
   `;
@@ -40,6 +40,13 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   if (honeypot.trim() !== "") {
     return NextResponse.json({ ok: true });
   }
+  // Optional extras. A photo is only ever a link we review by hand; nothing is
+  // uploaded, stored or shown automatically.
+  const photoRaw = typeof raw?.photoUrl === "string" ? raw.photoUrl.trim() : "";
+  const photoUrl = /^https:\/\/[^\s]{4,290}$/.test(photoRaw) ? photoRaw : null;
+  const visitedRaw = typeof raw?.visitedOn === "string" ? raw.visitedOn.trim() : "";
+  const visitedOn = /^\d{4}-\d{2}-\d{2}$/.test(visitedRaw) ? visitedRaw : null;
+
   if (!body || body.length > MAX_BODY_LENGTH) {
     return NextResponse.json(
       { error: `Comment must be 1-${MAX_BODY_LENGTH} characters` },
@@ -67,10 +74,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
   }
 
   const inserted = await sql`
-    INSERT INTO cafe_comments (cafe_slug, visitor_id, body)
-    VALUES (${slug}, ${visitorId}, ${body})
-    RETURNING id, body, created_at AS "createdAt"
+    INSERT INTO cafe_comments (cafe_slug, visitor_id, body, photo_url, visited_on, status)
+    VALUES (${slug}, ${visitorId}, ${body}, ${photoUrl}, ${visitedOn}, 'pending')
+    RETURNING id
   `;
+  void inserted;
 
-  return NextResponse.json({ comment: inserted[0] }, { status: 201 });
+  // Held for manual approval; deliberately not echoed back as a live comment.
+  return NextResponse.json({ pending: true }, { status: 202 });
 }

@@ -1,0 +1,17 @@
+{
+  "_readme": "First-hand visit data, filled in by a person who actually visited. Never put estimates or web-sourced facts here. Keys are cafe slugs (see data/cafes.json). Copy one 'example-template' entry, rename the key to the cafe slug, and fill only the fields you measured; delete the ones you did not. Any cafe with an entry becomes indexable and shows a 'Visit notes' section. See seo/visit-intake-template.md.",
+  "example-template": {
+    "visitedOn": "YYYY-MM-DD",
+    "visitedBy": "name or initials",
+    "wifiDownMbps": 0,
+    "wifiUpMbps": 0,
+    "wifiNote": "speed test app + time of day + which seat",
+    "plugPoints": 0,
+    "plugNote": "where they are",
+    "seatingNote": "table sizes, how many seats you counted",
+    "timeLimit": "none | stated limit | unwritten pressure, as observed",
+    "coffeePriceInr": 0,
+    "photos": [{ "src": "/visits/<slug>-1.jpg", "alt": "what the photo shows", "credit": "photographer" }],
+    "notes": "anything else you saw yourself"
+  }
+}

@@ -69,6 +69,13 @@ export function ensureSchema(): Promise<void> {
           created_at TIMESTAMPTZ NOT NULL DEFAULT now()
         )
       `;
+      // Reader notes are moderated: nothing is published until approved by hand.
+      // Rows that existed before moderation was added stay visible ('approved');
+      // new rows default to 'pending'.
+      await sql`ALTER TABLE cafe_comments ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'approved'`;
+      await sql`ALTER TABLE cafe_comments ALTER COLUMN status SET DEFAULT 'pending'`;
+      await sql`ALTER TABLE cafe_comments ADD COLUMN IF NOT EXISTS photo_url TEXT`;
+      await sql`ALTER TABLE cafe_comments ADD COLUMN IF NOT EXISTS visited_on TEXT`;
       await sql`CREATE INDEX IF NOT EXISTS cafe_comments_slug_idx ON cafe_comments (cafe_slug, created_at DESC)`;
 
       // One-tap "is this still true?" answers. Kept separate from votes: a

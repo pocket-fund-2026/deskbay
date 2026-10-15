@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { setCommentStatus } from "@/lib/comments";
 import { approveSubmission, rejectSubmission, retryGeocode } from "@/lib/submissions";
 
 export async function approveAction(formData: FormData) {
@@ -27,5 +28,15 @@ export async function retryGeocodeAction(formData: FormData) {
   const id = Number(formData.get("id"));
   const address = String(formData.get("address") ?? "");
   await retryGeocode(id, address);
+  revalidatePath("/admin");
+}
+
+export async function approveCommentAction(formData: FormData) {
+  await setCommentStatus(Number(formData.get("id")), "approved");
+  revalidatePath("/admin");
+}
+
+export async function rejectCommentAction(formData: FormData) {
+  await setCommentStatus(Number(formData.get("id")), "rejected");
   revalidatePath("/admin");
 }

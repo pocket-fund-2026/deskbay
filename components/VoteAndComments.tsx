@@ -27,6 +27,9 @@ export default function VoteAndComments({ slug }: { slug: string }) {
   const [company, setCompany] = useState(""); // honeypot
   const [posting, setPosting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [visitedOn, setVisitedOn] = useState("");
+  const [sent, setSent] = useState(false);
 
   useEffect(() => {
     const visitorId = getVisitorId();
@@ -81,12 +84,15 @@ export default function VoteAndComments({ slug }: { slug: string }) {
       const res = await fetch(`/api/cafes/${slug}/comments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ visitorId, body: draft.trim(), company }),
+        body: JSON.stringify({ visitorId, body: draft.trim(), company, photoUrl: photoUrl.trim(), visitedOn }),
       });
       const d = await res.json();
       if (res.ok) {
-        if (d.comment) setComments((cs) => [d.comment, ...(cs ?? [])]);
+        // Held for review: not added to the visible list.
+        setSent(true);
         setDraft("");
+        setPhotoUrl("");
+        setVisitedOn("");
       } else {
         setError(d.error ?? "Couldn't post that comment.");
       }
@@ -154,23 +160,44 @@ export default function VoteAndComments({ slug }: { slug: string }) {
           aria-hidden="true"
           className="absolute h-0 w-0 overflow-hidden opacity-0"
         />
+        <div className="grid gap-2 sm:grid-cols-2">
+          <input
+            type="date"
+            value={visitedOn}
+            onChange={(e) => setVisitedOn(e.target.value)}
+            aria-label="Date you visited (optional)"
+            className="rounded-lg border border-paper/15 bg-paper/5 px-3 py-2 text-[13px] outline-none focus:border-accent"
+          />
+          <input
+            type="url"
+            value={photoUrl}
+            onChange={(e) => setPhotoUrl(e.target.value)}
+            placeholder="Link to your own photo (optional, https)"
+            aria-label="Link to your own photo (optional)"
+            className="rounded-lg border border-paper/15 bg-paper/5 px-3 py-2 text-[13px] outline-none focus:border-accent"
+          />
+        </div>
+        <p className="wa-mono text-paper/60">
+          Only share notes and photos from your own visit. We ask before using any photo, and never publish one automatically.
+        </p>
         <div className="flex items-center gap-3">
           <button
             type="submit"
             disabled={posting || !draft.trim()}
             className="wa-btn wa-btn--solid !bg-paper !text-ink disabled:opacity-50"
           >
-            {posting ? "Posting…" : "Post comment"}
+            {posting ? "Sending…" : "Submit for review"}
           </button>
-          <span className="wa-mono text-paper/65">Anonymous · {draft.length}/500</span>
+          <span className="wa-mono text-paper/65">Anonymous · {draft.length}/500 · published only after a person reads it</span>
         </div>
         {error && <p className="text-[13px] text-red-400">{error}</p>}
+        {sent && <p className="text-[13px] text-paper/75">Thanks. Your note is waiting for a person to review it and is not public yet.</p>}
       </form>
 
       <ul className="mt-5 space-y-3">
         {comments === null && <li className="wa-mono text-paper/65">Loading comments…</li>}
         {comments?.length === 0 && (
-          <li className="wa-mono text-paper/65">No comments yet. Be the first.</li>
+          <li className="wa-mono text-paper/65">No approved notes yet. Been here? Add yours above.</li>
         )}
         {comments?.map((c) => (
           <li key={c.id} className="rounded-lg border border-paper/10 p-3.5">

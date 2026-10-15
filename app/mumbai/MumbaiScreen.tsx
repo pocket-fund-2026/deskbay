@@ -226,7 +226,7 @@ export default function MumbaiScreen({
             <ThemeToggle />
           </div>
         </div>
-        <h1 className="sr-only">
+        <h1 className="wa-mono mt-2 text-[12px] leading-snug text-paper/70">
           {initialNearMe
             ? "Cafes near you to work from in Mumbai"
             : `${area === "all" ? "Mumbai" : AREAS[area].name}: cafes you can work from`}
@@ -373,6 +373,16 @@ export default function MumbaiScreen({
                     />
                   ))}
                 </div>
+                <nav aria-label="Browse by what matters" className="border-t border-paper/10 px-4 py-4">
+                  <p className="wa-mono mb-2 text-paper/65">Shortlists built from the same cited data</p>
+                  <ul className="space-y-1.5 text-[13px]">
+                    <li><Link href="/collections/wifi-for-calls" className="underline hover:text-paper">Cafes where the wifi holds for a call</Link></li>
+                    <li><Link href="/collections/plug-points" className="underline hover:text-paper">Cafes where you can actually plug in</Link></li>
+                    <li><Link href="/collections/no-time-limit" className="underline hover:text-paper">Cafes that won&apos;t rush you</Link></li>
+                    <li><Link href="/blog/15-best-cafes-to-work-from-in-mumbai" className="underline hover:text-paper">The 15 best cafes to work from</Link></li>
+                    <li><Link href="/blog/best-cafes-with-wifi-in-mumbai" className="underline hover:text-paper">Best cafes with wifi, with sources named</Link></li>
+                  </ul>
+                </nav>
               </>
             )}
           </div>

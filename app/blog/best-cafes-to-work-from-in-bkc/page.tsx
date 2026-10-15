@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import RelatedReading from "@/components/RelatedReading";
 import type { Metadata } from "next";
 import { AREAS, cafesByArea } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
@@ -232,6 +233,7 @@ export default function Post() {
             or read <Link href="/about" className="underline hover:text-paper">how we score</Link>.
           </p>
         </div>
+        <RelatedReading currentSlug="best-cafes-to-work-from-in-bkc" />
       </div>
     </main>
   );

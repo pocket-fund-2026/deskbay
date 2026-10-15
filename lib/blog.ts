@@ -14,7 +14,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Our highest-scored cafes on the workability model, ranked and pulled straight from the same cited data behind the map, not a separate opinion.",
     date: "2026-09-01",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "6 min read",
   },
   {
@@ -32,7 +32,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Bandra has the best odds in the city of a table, a plug and three quiet hours. Our scored, cited ranking of where to actually get work done there.",
     date: "2026-09-24",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -41,7 +41,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "135 cafes across Fort, Colaba, Ballard Estate and Nariman Point — our scored, cited ranking of which ones actually hold up for a work session.",
     date: "2026-09-24",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -50,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Powai's lakeside cafes anchor a scene now spreading through Ghatkopar, Chembur and Mulund — our scored, cited ranking of which ones actually hold up for a work session.",
     date: "2026-09-25",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -59,7 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Thane's own cafe scene is growing fast along Ghodbunder Road — our scored, cited ranking of where to actually get a table, a plug and some quiet.",
     date: "2026-09-25",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -68,6 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "The widest stretch of cafes on the map, from airport-adjacent chains to film-crowd regulars — our scored, cited ranking of which ones actually hold up for a work session.",
     date: "2026-09-28",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -76,6 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Coffee built for the business district's schedule — our scored, cited ranking of which Bandra Kurla Complex cafes actually hold up for a laptop session.",
     date: "2026-10-12",
+    lastUpdated: "2026-10-15",
     readingTime: "5 min read",
   },
   {
@@ -84,6 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Which Mumbai cafes have wifi you can work on? Every wifi claim below names who made it, from a cafe's own site to Wikipedia, and we say what we could not verify.",
     date: "2026-10-14",
+    lastUpdated: "2026-10-15",
     readingTime: "4 min read",
   },
 ];

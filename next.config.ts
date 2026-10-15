@@ -1,6 +1,16 @@
 import type { NextConfig } from "next";
 
+import merged from "./data/merged-slugs.json";
+
 const nextConfig: NextConfig = {
+  // Duplicate cafe listings merged into one page (see lib/cafes.ts MERGED_SLUGS).
+  async redirects() {
+    return Object.entries(merged).map(([from, to]) => ({
+      source: `/mumbai/${from}`,
+      destination: `/mumbai/${to}`,
+      permanent: true,
+    }));
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "upload.wikimedia.org" },

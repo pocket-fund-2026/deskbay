@@ -1,4 +1,6 @@
 import raw from "@/data/cafes.json";
+import merged from "@/data/merged-slugs.json";
+import { hasVisitData } from "@/lib/visits";
 
 export type CafeScores = {
   wifi: number | null;
@@ -46,7 +48,15 @@ export type Cafe = {
 };
 
 export const CITY = raw.city as { slug: string; name: string; tagline: string; center: { lat: number; lng: number }; zoom: number };
-export const CAFES = raw.spots as Cafe[];
+/**
+ * Duplicate listings merged into the entry that carries the most data.
+ * Same venue, same coordinates or same unit address, listed twice. The old
+ * slug 301/308-redirects to the keeper (next.config.ts) and the duplicate is
+ * dropped from every list, map, collection and the sitemap.
+ */
+export const MERGED_SLUGS: Record<string, string> = merged;
+
+export const CAFES = (raw.spots as Cafe[]).filter((c) => !(c.slug in MERGED_SLUGS));
 
 export const AREAS = {
   bandra: {
@@ -132,14 +142,46 @@ export function cafesByArea(area: AreaSlug) {
   return CAFES.filter((c) => c.area === area);
 }
 
+const present = (v: unknown) => v !== null && v !== undefined && String(v).trim() !== "";
+
+// Evidence sentences that appear verbatim on more than one cafe are chain-wide
+// boilerplate, not something known about this venue.
+const EVIDENCE_COUNTS = new Map<string, number>();
+for (const c of CAFES) {
+  for (const v of Object.values(c.evidence)) {
+    if (v) EVIDENCE_COUNTS.set(v, (EVIDENCE_COUNTS.get(v) ?? 0) + 1);
+  }
+}
+
+/** How many of wifi / power / noise / seating / stay-length we hold a real value for. */
+export function verifiedFactorCount(cafe: Cafe) {
+  const a = cafe.attrs ?? {};
+  const s = cafe.scores;
+  return [
+    present(a.wifi) || s.wifi != null,
+    present(a.charging) || s.charging != null,
+    present(a.noise) || s.quiet != null,
+    present(a.seating) || s.seating != null,
+    present(a.stay) || cafe.toggles.includes("No time limit"),
+  ].filter(Boolean).length;
+}
+
+/** Evidence notes written for this venue alone (not shared with any other cafe). */
+export function uniqueEvidenceCount(cafe: Cafe) {
+  return Object.values(cafe.evidence).filter((v) => v && EVIDENCE_COUNTS.get(v) === 1).length;
+}
+
 /**
- * A page is only worth indexing when it carries at least one of the work
- * factors people actually search for. Pages with none are templated
- * stubs; they stay reachable but are kept out of the index and sitemap.
+ * A page is only worth indexing when it holds distinct, cited, work-relevant
+ * data of its own: at least three of the five work factors recorded AND at
+ * least two evidence notes unique to this venue (or first-hand visit data in
+ * data/visits.json). Everything else stays reachable and linked for readers
+ * but is noindexed and left out of the sitemap, so near-identical template
+ * pages do not dilute the site.
  */
 export function isIndexable(cafe: Cafe) {
-  const s = cafe.scores;
-  return s.wifi != null || s.charging != null || s.quiet != null;
+  if (hasVisitData(cafe.slug)) return true;
+  return verifiedFactorCount(cafe) >= 3 && uniqueEvidenceCount(cafe) >= 2;
 }
 
 export function getCafe(slug: string) {

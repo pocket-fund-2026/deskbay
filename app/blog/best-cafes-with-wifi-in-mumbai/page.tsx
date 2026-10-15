@@ -1,7 +1,9 @@
 import Link from "next/link";
+import RelatedReading from "@/components/RelatedReading";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CAFES } from "@/lib/cafes";
+import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -34,6 +36,8 @@ export function generateMetadata(): Metadata {
     },
   };
 }
+
+const WIFI_LIST_COUNT = collectionCount(COLLECTIONS.find((c) => c.slug === "wifi-for-calls")!);
 
 const bySlug = (slug: string) => CAFES.find((c) => c.slug === slug)!;
 const KOKOMO = bySlug("cafe-kokomo-santacruz-east");
@@ -247,6 +251,28 @@ export default function Post() {
           list.
         </p>
 
+        <h2 className={h2}>What does our own data say about wifi?</h2>
+        <p className={lead}>
+          {WIFI_LIST_COUNT} of the {CAFES.length} cafes on the map have wifi recorded as fast or scored
+          3.5 or higher.
+        </p>
+        <p className={body}>
+          That is a recorded rating, not a speed test, and the evidence behind each one is on its
+          page. The list is in{" "}
+          <Link href="/collections/wifi-for-calls" className="underline hover:text-paper">
+            cafes where the wifi holds for a call
+          </Link>
+          ; if you also need power, see{" "}
+          <Link href="/collections/plug-points" className="underline hover:text-paper">
+            cafes where you can plug in
+          </Link>{" "}
+          and{" "}
+          <Link href="/collections/no-time-limit" className="underline hover:text-paper">
+            cafes that won&apos;t rush you
+          </Link>
+          .
+        </p>
+
         <h2 className={h2}>Places to skip for a work session</h2>
         <p className={lead}>
           Skip places built for a quick stop. <CafeLink c={YAZDANI} /> in Fort is the clearest case:
@@ -291,6 +317,7 @@ export default function Post() {
             <Link href="/about" className="underline hover:text-paper">how we score</Link>.
           </p>
         </div>
+        <RelatedReading currentSlug="best-cafes-with-wifi-in-mumbai" />
       </div>
     </main>
   );

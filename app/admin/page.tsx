@@ -1,6 +1,7 @@
 import { listSubmissions } from "@/lib/submissions";
 import { AREAS } from "@/lib/cafes";
-import { approveAction, rejectAction, retryGeocodeAction } from "./actions";
+import { listPendingComments } from "@/lib/comments";
+import { approveAction, rejectAction, retryGeocodeAction, approveCommentAction, rejectCommentAction } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -97,6 +98,7 @@ function SubmissionCard({
 
 export default async function AdminPage() {
   const submissions = await listSubmissions();
+  const pendingComments = await listPendingComments().catch(() => []);
   const pending = submissions.filter((s) => s.status === "pending");
   const reviewed = submissions.filter((s) => s.status !== "pending");
 
@@ -105,6 +107,34 @@ export default async function AdminPage() {
       <div className="mx-auto max-w-2xl">
         <h1 className="font-display text-[24px] font-medium">Cafe submissions</h1>
         <p className="wa-mono mt-2 text-paper/65">{pending.length} pending review</p>
+
+        <div className="mt-6 rounded-xl border border-paper/12 p-4">
+          <p className="wa-mono text-paper/65">{pendingComments.length} reader notes awaiting review</p>
+          <div className="mt-3 space-y-3">
+            {pendingComments.map((c) => (
+              <div key={c.id} className="rounded-lg border border-paper/10 p-3">
+                <p className="wa-mono text-paper/65">/mumbai/{c.cafeSlug}{c.visitedOn ? ` · visited ${c.visitedOn}` : ""}</p>
+                <p className="mt-1.5 text-[13.5px] text-paper/80">{c.body}</p>
+                {c.photoUrl && (
+                  <p className="mt-1.5 text-[12.5px]">
+                    Photo link (check rights before using):{" "}
+                    <a href={c.photoUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline">{c.photoUrl}</a>
+                  </p>
+                )}
+                <div className="mt-2.5 flex gap-2">
+                  <form action={approveCommentAction}>
+                    <input type="hidden" name="id" value={c.id} />
+                    <button type="submit" className="wa-btn wa-btn--solid !bg-paper !text-ink">Approve note</button>
+                  </form>
+                  <form action={rejectCommentAction}>
+                    <input type="hidden" name="id" value={c.id} />
+                    <button type="submit" className="wa-btn border-paper/15">Reject</button>
+                  </form>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="mt-6 space-y-3">
           {pending.length === 0 && <p className="text-paper/65">Nothing waiting on review.</p>}
