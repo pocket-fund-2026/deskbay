@@ -14,6 +14,7 @@ import { parseOpeningHours, toSchemaOpeningHours } from "@/lib/hours";
 import { cafeDescription, cafeTitle } from "@/lib/snippet";
 import ScoreFill from "@/components/ScoreFill";
 import CountUp from "@/components/CountUp";
+import { cafeInsight } from "@/lib/cafeInsights";
 
 const SITE_URL = "https://bombaycafemap.com";
 
@@ -75,6 +76,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
 
   const areaName = AREAS[cafe.area].name;
   const nearby = nearbyCafes(cafe, 3);
+  const insight = cafeInsight(cafe);
   const schemaHours = toSchemaOpeningHours(parseOpeningHours(cafe.openingHours));
 
   // The amenities people actually search for ("does blue tokai have wifi"),
@@ -336,6 +338,17 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             <p className="text-[14px] leading-relaxed text-paper/70">{cafe.synthesis}</p>
           </div>
         )}
+
+        <section className="mt-7" aria-labelledby="compare-heading">
+          <h2 id="compare-heading" className="font-display text-[17px] font-medium leading-snug">
+            {insight.heading}
+          </h2>
+          <div className="mt-2 space-y-2.5 text-[14px] leading-relaxed text-paper/70">
+            {insight.paragraphs.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-7">
           <p className="wa-mono mb-2 text-paper/65">Where the scores come from</p>
