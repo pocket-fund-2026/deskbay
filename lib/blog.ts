@@ -81,6 +81,30 @@ export const BLOG_POSTS: BlogPost[] = [
     readingTime: "5 min read",
   },
   {
+    slug: "best-cafes-to-work-from-in-malad-borivali",
+    title: "The best cafes to work from in Malad & Borivali",
+    description:
+      "The far western suburbs' quieter cafe stretch from Goregaon to Borivali — our scored, cited ranking of where to get a table, a plug and a stable connection.",
+    date: "2026-10-16",
+    readingTime: "5 min read",
+  },
+  {
+    slug: "best-cafes-to-work-from-in-central-mumbai",
+    title: "The best cafes to work from in Central Mumbai",
+    description:
+      "Mill-district roasters in Worli and Lower Parel to old-Bombay rooms in Dadar and Matunga — our scored, cited ranking of which ones hold up for a work session.",
+    date: "2026-10-16",
+    readingTime: "5 min read",
+  },
+  {
+    slug: "best-cafes-to-work-from-in-navi-mumbai",
+    title: "The best cafes to work from in Navi Mumbai",
+    description:
+      "Planned-city cafes across Vashi, Nerul, Belapur and Kharghar — our scored, cited ranking of where to actually get work done, based on evidence rather than star ratings.",
+    date: "2026-10-16",
+    readingTime: "5 min read",
+  },
+  {
     slug: "best-cafes-with-wifi-in-mumbai",
     title: "Best Cafes With WiFi in Mumbai (Sourced)",
     description:

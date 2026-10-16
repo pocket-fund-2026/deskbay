@@ -28,6 +28,9 @@ wifi, power, quiet, seating). Local-directory intent, not transactional.
 | `/blog/best-cafes-to-work-from-in-thane` | best cafes to work from in Thane | cafes to work from Ghodbunder Road |
 | `/blog/best-cafes-to-work-from-in-andheri-juhu` | best cafes to work from in Andheri | cafes to work from Juhu Khar Versova Santacruz |
 | `/blog/best-cafes-to-work-from-in-bkc` | best cafes to work from in BKC | laptop friendly cafes Bandra Kurla Complex |
+| `/blog/best-cafes-to-work-from-in-malad-borivali` | best cafes to work from in Malad | cafes to work from Goregaon Kandivali Borivali |
+| `/blog/best-cafes-to-work-from-in-central-mumbai` | best cafes to work from in Lower Parel | cafes to work from Worli Dadar Matunga |
+| `/blog/best-cafes-to-work-from-in-navi-mumbai` | best cafes to work from in Navi Mumbai | cafes to work from Vashi Nerul Belapur |
 | `/about` | how Bombay Cafe Map scores cafes | workability methodology |
 | `/submit` | submit a cafe Mumbai | add a cafe to directory |
 
