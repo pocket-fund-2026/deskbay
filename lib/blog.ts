@@ -113,6 +113,14 @@ export const BLOG_POSTS: BlogPost[] = [
     lastUpdated: "2026-10-15",
     readingTime: "4 min read",
   },
+  {
+    slug: "best-cafes-with-power-outlets-in-mumbai",
+    title: "Best Cafes With Power Outlets in Mumbai (Sourced)",
+    description:
+      "Which Mumbai cafes have plug points for laptops? Five cafes with a named source for their outlets, what each source says, and what we could not verify.",
+    date: "2026-10-19",
+    readingTime: "4 min read",
+  },
 ];
 
 export function getPost(slug: string) {
