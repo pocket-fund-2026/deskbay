@@ -27,7 +27,14 @@ export default function Analytics({ measurementId }: { measurementId: string }) 
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${measurementId}');`}
+          gtag('config', '${measurementId}');
+          document.addEventListener('click', function (e) {
+            var a = e.target.closest && e.target.closest('a[href]');
+            if (!a) return;
+            var h = a.getAttribute('href');
+            if (h.indexOf('google.com/maps') > -1) gtag('event', 'get_directions', { page: location.pathname });
+            else if (/^https?:/.test(h) && a.hostname !== location.hostname) gtag('event', 'outbound_click', { link_domain: a.hostname, page: location.pathname });
+          });`}
       </Script>
     </>
   );
