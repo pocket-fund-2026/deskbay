@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Cafe } from "@/lib/cafes";
 import { AREAS } from "@/lib/cafes";
 import { tier, SCORE_ROWS, EVIDENCE_ORDER } from "@/lib/scoreTier";
+import ScoreFill from "@/components/ScoreFill";
 import OpenBadge from "@/components/OpenBadge";
 
 function ScoreBar({ label, value }: { label: string; value: number | null }) {
@@ -12,13 +13,7 @@ function ScoreBar({ label, value }: { label: string; value: number | null }) {
     <div className="flex items-center gap-2">
       <span className="wa-mono w-14 shrink-0 text-paper/65">{label}</span>
       <div className="h-[5px] flex-1 overflow-hidden rounded-full bg-paper/[0.07]">
-        <div
-          className="h-full rounded-full"
-          style={{
-            width: `${((value ?? 0) / 5) * 100}%`,
-            background: tier(value).color,
-          }}
-        />
+        <ScoreFill value={value ?? 0} color={tier(value).color} />
       </div>
       <span className="wa-mono w-3.5 text-right text-paper/65">{value ?? "–"}</span>
     </div>
@@ -31,7 +26,7 @@ export default function CafeDetailPanel({ cafe, onBack }: { cafe: Cafe; onBack: 
   const unscoredRows = SCORE_ROWS.filter((r) => cafe.scores[r.key] === null);
 
   return (
-    <div className="flex h-full flex-col overflow-y-auto">
+    <div className="wa-panel-in flex h-full flex-col overflow-y-auto">
       <div className="sticky top-0 z-10 border-b border-paper/10 bg-ink/95 px-4 py-3 backdrop-blur">
         <button
           onClick={onBack}

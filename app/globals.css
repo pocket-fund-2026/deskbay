@@ -433,3 +433,11 @@ body {
   .t-digit-group .t-digit { animation: none !important; }
 }
 
+
+/* Detail panel settles in from the side when a cafe is selected. */
+@keyframes wa-panel-in {
+  from { opacity: 0; transform: translateX(14px); }
+  to { opacity: 1; transform: none; }
+}
+.wa-panel-in { animation: wa-panel-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) { .wa-panel-in { animation: none; } }

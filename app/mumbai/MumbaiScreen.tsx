@@ -7,6 +7,7 @@ import { AREAS, type AreaSlug, type Cafe } from "@/lib/cafes";
 import { distanceKm, formatDistance, type Point } from "@/lib/distance";
 import { isOpenNow } from "@/lib/hours";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
+import NumberPop from "@/components/NumberPop";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -265,7 +266,7 @@ export default function MumbaiScreen({
           >
             <span className="h-1 w-10 rounded-full bg-paper/25" />
             {!sheetOpen && (
-              <span className="wa-mono text-paper/65">{visibleCafes.length} cafes · tap to expand</span>
+              <span className="wa-mono text-paper/65"><NumberPop key={visibleCafes.length} value={visibleCafes.length} /> cafes · tap to expand</span>
             )}
           </button>
           <div className="relative shrink-0 border-b border-paper/10 px-3 py-2.5">
@@ -347,14 +348,14 @@ export default function MumbaiScreen({
                     href="/about"
                     className="wa-mono flex items-center justify-between gap-2 text-paper/65 hover:text-paper md:hidden"
                   >
-                    <span>{visibleCafes.length} cafes · scored on 9 weighted factors</span>
+                    <span><NumberPop key={visibleCafes.length} value={visibleCafes.length} /> cafes · scored on 9 weighted factors</span>
                     <span>→</span>
                   </Link>
                 </div>
-                <div className="space-y-2.5 p-3">
-                  {visibleCafes.map((cafe) => (
+                <div key={area} className="space-y-2.5 p-3">
+                  {visibleCafes.map((cafe, i) => (
+                    <div key={cafe.slug} className="wa-rise" style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}>
                     <CafeCard
-                      key={cafe.slug}
                       cafe={cafe}
                       active={selected === cafe.slug}
                       hovered={hovered === cafe.slug}
@@ -371,6 +372,7 @@ export default function MumbaiScreen({
                           : null
                       }
                     />
+                    </div>
                   ))}
                 </div>
                 <nav aria-label="Browse by what matters" className="border-t border-paper/10 px-4 py-4">

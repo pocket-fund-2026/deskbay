@@ -461,6 +461,19 @@ export default function MapView({
       });
 
       map.addSource("selected-cafe", { type: "geojson", data: emptyFC });
+      // Expanding ring fired once on selection (see the selection effect), so the fly-to has a landing point.
+      map.addLayer({
+        id: "selected-pulse",
+        type: "circle",
+        source: "selected-cafe",
+        paint: {
+          "circle-color": "transparent",
+          "circle-radius": 14,
+          "circle-stroke-width": 3,
+          "circle-stroke-color": t.selectedRing,
+          "circle-stroke-opacity": 0,
+        },
+      });
       map.addLayer({
         id: "selected-ring",
         type: "circle",
@@ -589,6 +602,19 @@ export default function MapView({
     selectedSource?.setData(pointFC(cafe));
     if (cafe) {
       map.flyTo({ center: [cafe.longitude, cafe.latitude], zoom: 16, pitch: 60, duration: 900 });
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && map.getLayer("selected-pulse")) {
+        const t0 = performance.now();
+        let raf = 0;
+        const tick = (now: number) => {
+          const p = Math.min(1, (now - t0) / 1100);
+          if (!map.getLayer("selected-pulse")) return;
+          map.setPaintProperty("selected-pulse", "circle-radius", 14 + 34 * p);
+          map.setPaintProperty("selected-pulse", "circle-stroke-opacity", 0.85 * (1 - p));
+          if (p < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(raf);
+      }
     }
   }, [selectedSlug, cafes, mapReady]);
 
