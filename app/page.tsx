@@ -123,9 +123,9 @@ export default function HomePage() {
             question people actually arrive with, not "which suburb". */}
         <div className="mt-12">
           <p className="wa-mono mb-4 text-paper/65">Start from what you need today</p>
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {COLLECTIONS.map((collection, i) => (
-              <Reveal key={collection.slug} delay={Math.min(i, 5) * 60} className="h-full">
+              <Reveal key={collection.slug} delay={Math.min(i, 5) * 60} className={`h-full ${i === COLLECTIONS.length - 1 ? "max-lg:[&:nth-child(odd)]:col-span-2 lg:[&:nth-child(4n+3)]:col-span-2" : ""}`}>
                 <Link
                   href={`/collections/${collection.slug}`}
                   className="group flex h-full flex-col justify-between rounded-xl border border-paper/12 bg-paper/[0.02] p-4 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:var(--wa-spring)] hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/[0.07]"
