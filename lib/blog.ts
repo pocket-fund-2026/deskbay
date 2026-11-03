@@ -121,6 +121,38 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-10-19",
     readingTime: "4 min read",
   },
+  {
+    slug: "best-cafes-in-mumbai-where-you-can-stay-three-hours",
+    title: "Best Mumbai cafes where you can stay three hours",
+    description:
+      "Which Mumbai cafes are recorded as tolerating a long sit, ranked by workability score and broken down by area, from the same cited data as the map.",
+    date: "2026-10-21",
+    readingTime: "3 min read",
+  },
+  {
+    slug: "which-mumbai-area-is-best-to-work-from-cafes-compared",
+    title: "Which Mumbai area is best to work from? Nine areas compared",
+    description:
+      "Cafe count, average workability score and long-stay, wifi, plug and quiet counts for all nine Mumbai areas in one table.",
+    date: "2026-10-24",
+    readingTime: "3 min read",
+  },
+  {
+    slug: "quiet-cafes-in-mumbai-to-work-from",
+    title: "Quiet cafes in Mumbai to work from",
+    description:
+      "The Mumbai cafes recorded as quiet, ranked by workability score, with the count by area and what quiet does and does not tell you.",
+    date: "2026-10-28",
+    readingTime: "3 min read",
+  },
+  {
+    slug: "best-mumbai-cafes-for-video-calls",
+    title: "Best Mumbai cafes for video calls: fast wifi and a quiet room",
+    description:
+      "The Mumbai cafes recorded with both fast wifi and low noise, with any unverified wifi claim flagged. No speed tests claimed.",
+    date: "2026-10-31",
+    readingTime: "3 min read",
+  },
 ];
 
 export function getPost(slug: string) {

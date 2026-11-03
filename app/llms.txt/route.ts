@@ -1,3 +1,5 @@
+import { BLOG_POSTS } from "@/lib/blog";
+import { COLLECTIONS } from "@/lib/collections";
 import { AREAS, CAFES, FACTORS } from "@/lib/cafes";
 
 export const revalidate = 3600;
@@ -19,6 +21,9 @@ export function GET() {
     .map((a) => `- ${a.name} (${a.slug}): /mumbai?area=${a.slug}`)
     .join("\n");
 
+  const guideLines = BLOG_POSTS.map((p) => `- ${p.title}: ${p.description} https://bombaycafemap.com/blog/${p.slug}`).join("\n");
+  const collectionLines = COLLECTIONS.map((c) => `- ${c.title}: ${c.description} https://bombaycafemap.com/collections/${c.slug}`).join("\n");
+
   const body = `# Bombay Cafe Map
 
 > Bombay Cafe Map ranks Mumbai cafes on how good they actually are to work from: wifi, power outlets, noise and seating, across the whole city.
@@ -39,7 +44,16 @@ ${factorLines}
 ## Areas
 ${areaLines}
 
+## Guides (data-derived, each states its method and date)
+${guideLines}
+
+## Shortlists
+${collectionLines}
+
 ## Pages
+- /blog: all guides
+- /collections: all shortlists
+- /glossary: terms used in scores
 - /: area overview
 - /mumbai: full map and list, filterable by area
 - /about: methodology and sourcing rules

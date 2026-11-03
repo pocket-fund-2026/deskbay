@@ -25,9 +25,27 @@ const POSTS = BLOG_POSTS.map((p, i) => ({ p, i }))
   .sort((a, b) => b.p.date.localeCompare(a.p.date) || b.i - a.i)
   .map(({ p }) => p);
 
+const listLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Bombay Cafe Map blog",
+  url: `${SITE_URL}/blog`,
+  description: DESCRIPTION,
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: POSTS.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${SITE_URL}/blog/${p.slug}`,
+      name: p.title,
+    })),
+  },
+};
+
 export default function BlogIndex() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-6 text-paper sm:px-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }} />
       <div className="mx-auto max-w-4xl">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="wa-mono -my-2 py-2 text-paper/65 transition-colors hover:text-paper">

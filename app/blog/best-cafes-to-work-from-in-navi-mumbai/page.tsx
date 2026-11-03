@@ -7,6 +7,7 @@ import { tier } from "@/lib/scoreTier";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
 import ThemeToggle from "@/components/ThemeToggle";
+import { breadcrumbLd } from "@/components/BlogShell";
 
 const SITE_URL = "https://bombaycafemap.com";
 const post = getPost("best-cafes-to-work-from-in-navi-mumbai")!;
@@ -102,6 +103,7 @@ export default function Post() {
   return (
     <main className="min-h-dvh bg-ink px-6 py-6 text-paper sm:px-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd(post.slug)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <div className="mx-auto max-w-2xl">
