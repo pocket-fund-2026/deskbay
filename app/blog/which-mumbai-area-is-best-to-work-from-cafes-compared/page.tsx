@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
+import ScoreFill from "@/components/ScoreFill";
 import BlogShell, { H2, P, postMetadata } from "@/components/BlogShell";
 import { AREAS, CAFES } from "@/lib/cafes";
 import { DATA_AS_OF, inCollection } from "@/lib/blogData";
@@ -32,7 +34,7 @@ export default function Post() {
       { label: "Browse the map by area", href: "/mumbai" },
     ]}>
       <H2>Nine Mumbai areas compared on cafe data</H2>
-      <div className="mt-3 overflow-x-auto">
+      <Reveal className="mt-3 overflow-x-auto">
         <table className="w-full min-w-[34rem] text-left text-[13px] text-paper/65">
           <caption className="sr-only">Mumbai areas compared by cafe count, average workability and recorded work features</caption>
           <thead>
@@ -45,18 +47,18 @@ export default function Post() {
           </thead>
           <tbody>
             {rows.sort((x, y) => y.avg - x.avg).map((r) => (
-              <tr key={r.a.slug} className="border-b border-paper/8">
+              <tr key={r.a.slug} className={`border-b border-paper/8 ${r.a.slug === best.a.slug ? "bg-accent/10" : ""}`}>
                 <th scope="row" className="py-2 pr-3 font-medium">
                   <Link href={`/blog/best-cafes-to-work-from-in-${r.a.slug}`} className="underline hover:text-paper">{r.a.name}</Link>
                 </th>
                 <td className="py-2 pr-3">{r.total}</td>
-                <td className="py-2 pr-3">{r.avg.toFixed(2)}</td>
+                <td className="py-2 pr-3">{r.avg.toFixed(2)}<div className="mt-1 h-1 w-16 rounded-full bg-paper/10" aria-hidden><ScoreFill value={r.avg} /></div></td>
                 {r.n.map((x, i) => <td key={i} className="py-2 pr-3">{x}</td>)}
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
+      </Reveal>
       <P>Average score uses only cafes we have fully scored; the feature columns count cafes whose record meets that collection&apos;s rule, so an area with many cafes can show large numbers without a high average.</P>
       <H2>How to use this</H2>
       <P>Pick the column that matters most to your day. Calls need wifi and quiet; deep work needs long stay and plugs. Then open that area&apos;s guide for the ranked cafes. For a citywide view see the <Link href="/blog/15-best-cafes-to-work-from-in-mumbai" className="underline hover:text-paper">15 best cafes to work from in Mumbai</Link>.</P>

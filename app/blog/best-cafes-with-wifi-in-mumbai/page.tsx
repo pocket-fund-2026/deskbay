@@ -7,6 +7,7 @@ import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
 import ThemeToggle from "@/components/ThemeToggle";
+import ReadingProgress from "@/components/ReadingProgress";
 
 const SITE_URL = "https://bombaycafemap.com";
 const SLUG = "best-cafes-with-wifi-in-mumbai";
@@ -125,6 +126,7 @@ export default function Post() {
   if (!post) notFound();
   return (
     <main className="min-h-dvh bg-ink px-6 py-6 text-paper sm:px-10">
+      <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

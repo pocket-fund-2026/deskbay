@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getPost } from "@/lib/blog";
 import CoffeeHero from "@/components/CoffeeHero";
+import ReadingProgress from "@/components/ReadingProgress";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
@@ -88,6 +89,7 @@ export default function BlogShell({
   );
   return (
     <main className="min-h-dvh bg-ink px-6 py-10 text-paper sm:px-10">
+      <ReadingProgress />
       {ld(articleLd)}
       {ld(breadcrumbLd(slug))}
       {ld(faqLd)}
