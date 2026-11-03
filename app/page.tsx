@@ -11,6 +11,9 @@ import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
 import areaPhotos from "@/data/areaPhotos.json";
 import ThemeToggle from "@/components/ThemeToggle";
+import { TiltCard } from "@/components/TiltCard";
+import NumberPop from "@/components/NumberPop";
+import StaggerLines from "@/components/StaggerLines";
 
 type AreaPhoto = { url: string; alt: string };
 const AREA_PHOTOS = areaPhotos as Record<string, AreaPhoto>;
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="wa-grid flex min-h-dvh flex-col bg-ink text-paper">
-      <header className="wa-rise relative z-10 flex items-baseline justify-between gap-4 px-6 pt-7 sm:px-10">
+      <header className="wa-rise sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-paper/10 bg-ink/80 px-6 py-4 backdrop-blur-md sm:px-10">
         <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
           <Logo size={26} />
           Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
@@ -75,51 +78,65 @@ export default function HomePage() {
             3,400px down on a phone. Someone landing here has to be told what
             this is before they are asked to pick a neighbourhood, and it
             holds the page better centred than ranged left against nothing. */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-block"><Logo size={52} /></span>
-          <h1 className="font-display mt-5 text-[clamp(1.75rem,5vw,2.9rem)] font-medium leading-[1.12] tracking-tight">
-            Mumbai cafes you can{" "}
-            <em className="not-italic text-accent">actually</em> work from.
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-paper/70">
-            Scored on what decides whether you last three hours: somewhere to plug in,
-            somewhere to sit, a connection that holds, and whether anyone minds you staying.
-          </p>
-          <p className="mx-auto mt-3 max-w-lg text-[14px] leading-relaxed text-paper/65">
-            {SCORED} cafes graded on the same {FACTORS.length} weighted factors, from
-            published evidence, with every finding cited. Another {UNSCORED} are listed with
-            directory info while we work through scoring them properly.
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
-            <Link href="/mumbai" className="wa-btn wa-btn--solid !bg-paper !text-ink">
-              Open the map
-            </Link>
-            <Link href="/collections" className="wa-btn">
-              Best-of lists
-            </Link>
-            <Link href="/about" className="wa-btn">
-              How we score
-            </Link>
+        <div className="grid items-center gap-10 py-6 lg:grid-cols-[1.25fr_1fr] lg:py-12">
+          <div>
+            <p className="wa-mono text-accent">Mumbai · scored on evidence</p>
+            <h1 className="font-display mt-4 text-[clamp(2rem,5vw,3.3rem)] font-medium leading-[1.05] tracking-tight">
+              <StaggerLines
+                lines={[
+                  "Mumbai cafes you can",
+                  <span key="a"><em className="not-italic text-accent">actually</em> work from.</span>,
+                ]}
+              />
+            </h1>
+            <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-paper/70">
+              Somewhere to plug in, somewhere to sit, a connection that holds, and nobody minding
+              that you stay. Every cafe graded on {FACTORS.length} weighted factors, every finding cited.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-2.5">
+              <Link href="/mumbai" className="wa-btn wa-btn--solid !bg-paper !text-ink">Open the map</Link>
+              <Link href="/collections" className="wa-btn">Best-of lists</Link>
+              <Link href="/about" className="wa-btn">How we score</Link>
+            </div>
           </div>
+          <dl className="grid grid-cols-2 gap-3">
+            {[
+              { n: SCORED, l: "cafes scored" },
+              { n: UNSCORED, l: "listed, scoring in progress" },
+              { n: Object.keys(AREAS).length, l: "areas, Bandra to Navi Mumbai" },
+              { n: FACTORS.length, l: "weighted factors per cafe" },
+            ].map((s) => (
+              <div key={s.l} className="rounded-2xl border border-paper/12 bg-paper/[0.03] p-5">
+                <dt className="sr-only">{s.l}</dt>
+                <dd>
+                  <span className="font-display block text-[clamp(2rem,4vw,2.8rem)] font-medium leading-none tracking-tight">
+                    <NumberPop value={s.n} />
+                  </span>
+                  <span className="wa-mono mt-2 block text-paper/65">{s.l}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         {/* Straight after the pitch, because "where can I plug in" is the
             question people actually arrive with, not "which suburb". */}
         <div className="mt-12">
-          <p className="wa-mono mb-3 text-center text-paper/65">Start from what you need today</p>
-          <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2.5">
-            {COLLECTIONS.map((collection) => (
-              <Link
-                key={collection.slug}
-                href={`/collections/${collection.slug}`}
-                className="group flex items-center gap-2.5 rounded-full border border-paper/18 bg-paper/[0.03] py-2 pl-4 pr-2 text-[14px] font-medium text-paper/85 transition-colors hover:border-accent/50 hover:bg-accent/[0.08] hover:text-paper"
-              >
-                {collection.name}
-                <span className="wa-mono rounded-full bg-paper/10 px-2 py-0.5 text-[11px] text-paper/65 transition-colors group-hover:bg-accent/25 group-hover:text-paper">
-                  {collectionCount(collection)}
-                </span>
-              </Link>
+          <p className="wa-mono mb-4 text-paper/65">Start from what you need today</p>
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+            {COLLECTIONS.map((collection, i) => (
+              <Reveal key={collection.slug} delay={Math.min(i, 5) * 60} className="h-full">
+                <Link
+                  href={`/collections/${collection.slug}`}
+                  className="group flex h-full flex-col justify-between rounded-xl border border-paper/12 bg-paper/[0.02] p-4 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:var(--wa-spring)] hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/[0.07]"
+                >
+                  <span className="text-[14.5px] font-medium leading-snug">{collection.question}</span>
+                  <span className="mt-4 flex items-baseline justify-between gap-2">
+                    <span className="wa-mono text-paper/65">{collection.name}</span>
+                    <span className="font-display text-2xl leading-none text-accent"><NumberPop value={collectionCount(collection)} /></span>
+                  </span>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -132,8 +149,8 @@ export default function HomePage() {
             const scoredCount = areaCafes.filter((c) => c.workability !== null).length;
             const style = AREA_STYLES[i % AREA_STYLES.length];
             return (
+              <TiltCard key={area.slug} className="!overflow-visible !rounded-2xl">
               <Link
-                key={area.slug}
                 href={`/mumbai?area=${area.slug}`}
                 className="wa-fade wa-area-card group relative flex min-h-[210px] flex-col justify-end overflow-hidden rounded-2xl border border-paper/12 transition-[transform,box-shadow,border-color] duration-300 [transition-timing-function:var(--wa-spring)] hover:-translate-y-1 sm:min-h-0 sm:aspect-[16/10] lg:aspect-[4/3]"
                 style={{
@@ -169,12 +186,13 @@ export default function HomePage() {
                   <span className="font-display block text-xl font-medium tracking-tight sm:text-2xl">
                     {area.name}
                   </span>
-                  <span className="mt-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
+                  <span className="mt-2 line-clamp-2 block max-w-md text-[14px] leading-relaxed text-paper/70">
                     {area.description}
                   </span>
                   <span className="wa-mono mt-3 block text-paper/65">{area.streets}</span>
                 </span>
               </Link>
+              </TiltCard>
             );
           })}
         </div>
@@ -188,11 +206,14 @@ export default function HomePage() {
                 <Link
                   key={cafe.slug}
                   href={`/mumbai?area=${cafe.area}`}
-                  className="rounded-xl border border-paper/12 p-4 transition-colors hover:bg-paper/[0.04]"
+                  className="block rounded-xl border border-paper/12 p-4 transition-[transform,background-color] duration-300 [transition-timing-function:var(--wa-spring)] hover:-translate-y-0.5 hover:bg-paper/[0.04]"
                 >
                   <div className="flex items-center gap-2">
                     <PinBadge color={t.color} />
                     <p className="font-display text-[15px] font-medium leading-snug">{cafe.name}</p>
+                    {cafe.workability !== null && (
+                      <span className="wa-mono ml-auto rounded-full px-2 py-0.5 text-ink" style={{ background: t.color }}>{cafe.workability.toFixed(1)}</span>
+                    )}
                   </div>
                   <p className="wa-mono mt-1.5 text-paper/65">{cafe.neighborhood}</p>
                   <p className="mt-2 text-[13px] leading-relaxed text-paper/65">
