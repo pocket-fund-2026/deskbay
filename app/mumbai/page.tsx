@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AREAS, CAFES, type AreaSlug } from "@/lib/cafes";
+import { AREAS, CAFES, FACTORS, type AreaSlug } from "@/lib/cafes";
 import { getApprovedCafes } from "@/lib/submissions";
 import MumbaiScreen from "./MumbaiScreen";
 
@@ -110,8 +110,34 @@ export default async function MumbaiPage({
     ],
   };
 
+  // Counts and weights come from the data so the answers can't drift from the page.
+  const where = area === "all" ? "Mumbai" : AREAS[area].name;
+  const faq = [
+    {
+      q: `How many work-friendly cafes are there in ${where}?`,
+      a: `Bombay Cafe Map lists ${cafes.length} cafe${cafes.length === 1 ? "" : "s"} in ${where}${area === "all" ? ` across ${Object.keys(AREAS).length} areas` : ""}.`,
+    },
+    {
+      q: "How are the cafes ranked?",
+      a: `Each cafe is scored on ${FACTORS.length} factors: ${FACTORS.map((f) => `${f.label.toLowerCase()} (${f.weight}%)`).join(", ")}.`,
+    },
+  ];
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
@@ -121,6 +147,15 @@ export default async function MumbaiPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
       <MumbaiScreen initialArea={area} allCafes={allCafes} initialSelected={initialSelected} />
+      <section className="bg-ink px-6 py-10 text-paper/80">
+        <h2 className="font-display text-xl text-paper">Questions</h2>
+        {faq.map((f) => (
+          <div key={f.q} className="mt-4">
+            <h3 className="text-paper">{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }
