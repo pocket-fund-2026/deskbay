@@ -153,6 +153,14 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-10-31",
     readingTime: "3 min read",
   },
+  {
+    slug: "cheap-cafes-to-work-from-in-mumbai",
+    title: "Cheap cafes to work from in Mumbai: under ₹500 a head",
+    description:
+      "The Mumbai cafes recorded at ₹500 a head or less, ranked by workability score, with the count by area and a note on how little cost data exists.",
+    date: "2026-11-05",
+    readingTime: "3 min read",
+  },
 ];
 
 export function getPost(slug: string) {
