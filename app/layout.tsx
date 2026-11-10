@@ -84,6 +84,7 @@ const websiteLd = {
   "@type": "WebSite",
   name: "Bombay Cafe Map",
   url: SITE_URL,
+  publisher: { "@id": `${SITE_URL}/#organization` },
   description:
     "A map of Mumbai cafes scored on wifi, power outlets, noise and seating, expanding across the city.",
   inLanguage: "en-IN",
@@ -94,7 +95,13 @@ const organizationLd = {
   "@type": "Organization",
   name: "Bombay Cafe Map",
   url: SITE_URL,
-  logo: `${SITE_URL}/icon.svg`,
+  "@id": `${SITE_URL}/#organization`,
+  alternateName: ["BombayCafeMap", "Bombay Cafe Map™"],
+  slogan: "A table for three hours.",
+  // Raster logo: Google's logo guidelines favour PNG/JPG over SVG.
+  logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
+  knowsAbout: ["Work-friendly cafes in Mumbai", "Cafe wifi and power outlets", "Remote work in Mumbai"],
+  areaServed: { "@type": "City", name: "Mumbai" },
   description:
     "Bombay Cafe Map ranks Mumbai cafes on how good they are to work from: wifi, power outlets, noise and seating, with every finding cited.",
   contactPoint: {

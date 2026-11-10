@@ -5,7 +5,7 @@ import { AREAS, CAFES, FACTORS, cafesByArea } from "@/lib/cafes";
 import { tier } from "@/lib/scoreTier";
 import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
-import Logo from "@/components/Logo";
+import Logo, { Wordmark } from "@/components/Logo";
 import Footer from "@/components/Footer";
 import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
@@ -59,7 +59,7 @@ export default function HomePage() {
       <header className="wa-rise sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-paper/10 bg-ink/80 px-6 py-4 backdrop-blur-md sm:px-10">
         <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
           <Logo size={26} />
-          Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
+          <Wordmark />
         </div>
         <div className="flex items-center gap-4">
           <nav className="wa-mono hidden items-center gap-6 text-paper/65 sm:flex">
@@ -80,12 +80,12 @@ export default function HomePage() {
             holds the page better centred than ranged left against nothing. */}
         <div className="grid items-center gap-10 py-6 lg:grid-cols-[1.25fr_1fr] lg:py-12">
           <div>
-            <p className="wa-mono text-accent">Mumbai · scored on evidence</p>
+            <p className="wa-mono text-accent-text">Mumbai · scored on evidence</p>
             <h1 className="font-display mt-4 text-[clamp(2rem,5vw,3.3rem)] font-medium leading-[1.05] tracking-tight">
               <StaggerLines
                 lines={[
                   "Mumbai cafes you can",
-                  <span key="a"><em className="not-italic text-accent">actually</em> work from.</span>,
+                  <span key="a"><em className="not-italic text-accent-text">actually</em> work from.</span>,
                 ]}
               />
             </h1>
@@ -133,7 +133,7 @@ export default function HomePage() {
                   <span className="text-[14.5px] font-medium leading-snug">{collection.question}</span>
                   <span className="mt-4 flex items-baseline justify-between gap-2">
                     <span className="wa-mono text-paper/65">{collection.name}</span>
-                    <span className="font-display text-2xl leading-none text-accent"><NumberPop value={collectionCount(collection)} /></span>
+                    <span className="font-display text-2xl leading-none text-accent-text"><NumberPop value={collectionCount(collection)} /></span>
                   </span>
                 </Link>
               </Reveal>

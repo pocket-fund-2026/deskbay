@@ -38,7 +38,7 @@ const TERMS: Term[] = [
     slug: "workability-score",
     term: "Workability score",
     definition:
-      "Bombay Cafe Map's own rating (0–5) of how good a cafe actually is to sit and work from, built from nine weighted factors led by power and wifi. It is a separate axis from a public star rating: a cafe can be beloved and still score low here if you can't plug in or stay past an hour.",
+      "Bombay Cafe Map's own score (0–5) of how good a cafe actually is to sit and work from, built from nine weighted factors led by power and wifi. It is a separate axis from a public star rating: a cafe can be beloved and still score low here if you can't plug in or stay past an hour.",
     link: { href: "/about", label: "See the full methodology" },
   },
   {

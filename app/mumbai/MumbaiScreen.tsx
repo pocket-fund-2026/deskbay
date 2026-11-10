@@ -9,7 +9,7 @@ import { isOpenNow } from "@/lib/hours";
 import CafeCard, { FactorLegend } from "@/components/CafeCard";
 import NumberPop from "@/components/NumberPop";
 import CafeDetailPanel from "@/components/CafeDetailPanel";
-import Logo from "@/components/Logo";
+import Logo, { Wordmark } from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 import MapErrorBoundary from "@/components/MapErrorBoundary";
 
@@ -214,7 +214,7 @@ export default function MumbaiScreen({
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-1.5 font-display text-[18px] tracking-tight">
             <Logo size={20} />
-            Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
+            <Wordmark />
           </Link>
           <div className="flex items-center gap-3 md:gap-5">
             <Link href="/collections" className="wa-mono -my-2 py-2 text-paper/65 hover:text-paper">

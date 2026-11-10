@@ -11,6 +11,14 @@
   --color-paper: #2b1810;
   --color-paper-rgb: 43 24 16;
   --color-accent: #b5651d;
+  /* Brand guide v2.0: Copper on Paper fails contrast (2.2), so accent *text*
+     on light grounds uses Copper Text; the pin/fills keep --color-accent. */
+  --color-accent-text: #8a4a12;
+  --color-sand: #e5d3b6;
+  --color-porcelain: #fffaf0;
+  --color-roast: #3a2216;
+  --color-mist: #9db2b3;
+  --color-park: #b8c4a8;
 }
 
 /* Dark is the same design with ink and paper exchanged: a deep espresso
@@ -23,6 +31,7 @@
     --color-paper: #f2e6d3;
     --color-paper-rgb: 242 230 211;
     --color-accent: #d98c4a;
+    --color-accent-text: #d98c4a;
   }
 }
 
@@ -31,12 +40,19 @@
   --color-paper: #f2e6d3;
   --color-paper-rgb: 242 230 211;
   --color-accent: #d98c4a;
+  --color-accent-text: #d98c4a;
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
   --color-paper: var(--color-paper);
   --color-accent: var(--color-accent);
+  --color-accent-text: var(--color-accent-text);
+  --color-sand: var(--color-sand);
+  --color-porcelain: var(--color-porcelain);
+  --color-roast: var(--color-roast);
+  --color-mist: var(--color-mist);
+  --color-park: var(--color-park);
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-plex-mono);
@@ -159,7 +175,7 @@ body {
    subtle to count as a clear indicator). Keyboard-only, via :focus-visible,
    so it never appears on a mouse click. */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 3px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 4px;
 }

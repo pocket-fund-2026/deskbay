@@ -43,3 +43,14 @@ export default function Logo({ size = 22 }: { size?: number }) {
     </svg>
   );
 }
+
+/** Wordmark per the brand guide: Fraunces 500 "Bombay Cafe" + 600 italic "Map".
+ *  ™ stays until the mark is registered (then swap to ®). */
+export function Wordmark() {
+  return (
+    <span>
+      Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
+      <sup aria-hidden="true" className="ml-0.5 align-super font-sans text-[0.4em] leading-none font-normal not-italic opacity-70">™</sup>
+    </span>
+  );
+}

@@ -118,7 +118,7 @@ export default function ContactPage() {
               About page
             </Link>
             , which sets out the nine weighted factors and the sourcing rules. Scores are editorial
-            and are not an official rating from the cafes themselves.
+            and are not an official score from the cafes themselves.
           </p>
         </Section>
 

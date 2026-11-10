@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AREAS } from "@/lib/cafes";
-import Logo from "@/components/Logo";
+import Logo, { Wordmark } from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-1.5 font-display text-[17px] tracking-tight">
             <Logo size={20} />
-            Bombay Cafe <em className="font-semibold not-italic italic">Map</em>
+            <Wordmark />
           </div>
           <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/65">
             Mumbai cafes scored on whether you can actually work from them: wifi, power,
