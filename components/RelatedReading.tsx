@@ -17,7 +17,7 @@ export default function RelatedReading({ currentSlug }: { currentSlug: string })
         {lists.map((c) => (
           <li key={c.slug}>
             <Link href={`/collections/${c.slug}`} className="underline hover:text-paper">{c.title}</Link>
-            <span className="wa-mono ml-2 text-paper/55">{collectionCount(c)} cafes</span>
+            <span className="wa-mono ml-2 text-paper/65">{collectionCount(c)} cafes</span>
           </li>
         ))}
         <li><Link href="/mumbai" className="underline hover:text-paper">The full Mumbai map</Link></li>

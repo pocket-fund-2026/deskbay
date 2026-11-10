@@ -229,7 +229,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             }}
           >
             <PinBadge color={tier(cafe.workability).color} size={34} />
-            <span className="wa-mono absolute bottom-2 left-3 text-paper/55">Photo not yet available</span>
+            <span className="wa-mono absolute bottom-2 left-3 text-paper/65">Photo not yet available</span>
           </div>
         )}
 
@@ -351,7 +351,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-[13.5px] text-paper/75">
               {visit.wifiDownMbps != null && (
                 <>
-                  <dt className="text-paper/55">Wi-Fi speed test</dt>
+                  <dt className="text-paper/65">Wi-Fi speed test</dt>
                   <dd>
                     {visit.wifiDownMbps} Mbps down
                     {visit.wifiUpMbps != null ? `, ${visit.wifiUpMbps} Mbps up` : ""}
@@ -361,7 +361,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
               )}
               {visit.plugPoints != null && (
                 <>
-                  <dt className="text-paper/55">Plug points counted</dt>
+                  <dt className="text-paper/65">Plug points counted</dt>
                   <dd>
                     {visit.plugPoints}
                     {visit.plugNote ? `, ${visit.plugNote}` : ""}
@@ -370,19 +370,19 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
               )}
               {visit.seatingNote && (
                 <>
-                  <dt className="text-paper/55">Seating</dt>
+                  <dt className="text-paper/65">Seating</dt>
                   <dd>{visit.seatingNote}</dd>
                 </>
               )}
               {visit.timeLimit && (
                 <>
-                  <dt className="text-paper/55">Time limit</dt>
+                  <dt className="text-paper/65">Time limit</dt>
                   <dd>{visit.timeLimit}</dd>
                 </>
               )}
               {visit.coffeePriceInr != null && (
                 <>
-                  <dt className="text-paper/55">Price of a coffee</dt>
+                  <dt className="text-paper/65">Price of a coffee</dt>
                   <dd>₹{visit.coffeePriceInr}</dd>
                 </>
               )}
@@ -394,7 +394,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
                   <figure key={ph.src} className="overflow-hidden rounded-lg border border-paper/10">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={ph.src} alt={ph.alt} loading="lazy" className="h-auto w-full" />
-                    {ph.credit && <figcaption className="wa-mono px-2 py-1 text-paper/60">{ph.credit}</figcaption>}
+                    {ph.credit && <figcaption className="wa-mono px-2 py-1 text-paper/65">{ph.credit}</figcaption>}
                   </figure>
                 ))}
               </div>
@@ -468,7 +468,7 @@ export default async function CafePage({ params }: { params: Promise<{ slug: str
             {closest.map(({ c, km }) => (
               <li key={c.slug}>
                 <Link href={`/mumbai/${c.slug}`} className="underline hover:text-paper">{c.name}</Link>
-                <span className="wa-mono ml-2 text-paper/60">
+                <span className="wa-mono ml-2 text-paper/65">
                   {formatDistance(km)} away{c.workability !== null ? ` · ${c.workability.toFixed(1)}/5` : ""}
                 </span>
               </li>

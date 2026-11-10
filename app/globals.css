@@ -279,7 +279,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: rgb(var(--color-paper-rgb) / 0.45);
+  color: rgb(var(--color-paper-rgb) / 0.65);
   margin-top: 2px;
 }
 

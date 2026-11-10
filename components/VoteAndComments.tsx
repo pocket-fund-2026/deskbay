@@ -177,7 +177,7 @@ export default function VoteAndComments({ slug }: { slug: string }) {
             className="rounded-lg border border-paper/15 bg-paper/5 px-3 py-2 text-[13px] outline-none focus:border-accent"
           />
         </div>
-        <p className="wa-mono text-paper/60">
+        <p className="wa-mono text-paper/65">
           Only share notes and photos from your own visit. We ask before using any photo, and never publish one automatically.
         </p>
         <div className="flex items-center gap-3">

@@ -295,6 +295,24 @@ export default function MapView({
         }
       }
 
+      // Brand guide §2.5 map style (light theme): Paper land, Oat roads, Mist
+      // water, Park green, Ink labels. The dark style keeps its own ground.
+      if (themeRef.current === "light") {
+        const paint = (id: string, prop: string, v: string) => {
+          try { map.setPaintProperty(id, prop, v); } catch { /* layer lacks this property */ }
+        };
+        for (const l of layers) {
+          const id = l.id;
+          if (l.type === "background") paint(id, "background-color", "#f2e6d3");
+          else if (/^(park|landcover_(wood|grass)|landuse_(pitch|track|cemetery|school))$/.test(id) && l.type === "fill") paint(id, "fill-color", "#b8c4a8");
+          else if (id === "water") paint(id, "fill-color", "#9db2b3");
+          else if (id.startsWith("waterway") && l.type === "line") paint(id, "line-color", "#9db2b3");
+          else if (/casing$/.test(id) && l.type === "line") paint(id, "line-color", "#e5d3b6");
+          else if (/^(road|bridge|tunnel)_(minor|service_track|link|secondary_tertiary|trunk_primary|motorway|street|path_pedestrian)$/.test(id) && l.type === "line") paint(id, "line-color", "#f7efe0");
+          else if (l.type === "symbol" && /label|name/.test(id)) { paint(id, "text-color", "#17100b"); paint(id, "text-halo-color", "#f2e6d3"); }
+        }
+      }
+
       // Real depth instead of a flat dark silhouette: a vertical gradient
       // shades each building darker at street level and warmer near the
       // roofline, like it's catching low light.

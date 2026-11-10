@@ -186,7 +186,7 @@ export default function Post() {
                 <tr key={r.cafe.slug} className="border-b border-paper/10 align-top text-paper/75">
                   <td className="py-2 pr-3">
                     <CafeLink c={r.cafe} />
-                    <span className="wa-mono block text-paper/55">{r.cafe.neighborhood}</span>
+                    <span className="wa-mono block text-paper/65">{r.cafe.neighborhood}</span>
                   </td>
                   <td className="py-2 pr-3">{r.claim}</td>
                   <td className="py-2">
@@ -197,7 +197,7 @@ export default function Post() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-[12.5px] leading-relaxed text-paper/55">
+        <p className="mt-2 text-[12.5px] leading-relaxed text-paper/65">
           Sources read 2026-10-14. Pages change, so we plan to re-check these claims each quarter;
           treat anything older than that as due for a fresh look.
         </p>

@@ -6,6 +6,7 @@ import { tier } from "@/lib/scoreTier";
 import Skyline, { type SkylineVariant } from "@/components/Skyline";
 import PinBadge from "@/components/PinBadge";
 import Logo, { Wordmark } from "@/components/Logo";
+import { Ripple, TheLine } from "@/components/Brandmarks";
 import Footer from "@/components/Footer";
 import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
@@ -55,7 +56,8 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="wa-grid flex min-h-dvh flex-col bg-ink text-paper">
+    <main className="wa-grid relative flex min-h-dvh flex-col overflow-x-clip bg-ink text-paper">
+      <Ripple className="-right-40 top-8 h-[560px] w-[560px] max-sm:hidden" />
       <header className="wa-rise sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-paper/10 bg-ink/80 px-6 py-4 backdrop-blur-md sm:px-10">
         <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,3.4vw,2rem)] leading-none tracking-tight">
           <Logo size={26} />
@@ -78,7 +80,7 @@ export default function HomePage() {
             3,400px down on a phone. Someone landing here has to be told what
             this is before they are asked to pick a neighbourhood, and it
             holds the page better centred than ranged left against nothing. */}
-        <div className="grid items-center gap-10 py-6 lg:grid-cols-[1.25fr_1fr] lg:py-12">
+        <div className="relative grid items-center gap-10 py-6 lg:grid-cols-[1.25fr_1fr] lg:py-12">
           <div>
             <p className="wa-mono text-accent-text">Mumbai · scored on evidence</p>
             <h1 className="font-display mt-4 text-[clamp(2rem,5vw,3.3rem)] font-medium leading-[1.05] tracking-tight">
@@ -122,7 +124,8 @@ export default function HomePage() {
         {/* Straight after the pitch, because "where can I plug in" is the
             question people actually arrive with, not "which suburb". */}
         <div className="mt-12">
-          <p className="wa-mono mb-4 text-paper/65">Start from what you need today</p>
+          <TheLine />
+          <p className="wa-mono mb-4 mt-8 text-paper/65">Start from what you need today</p>
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {COLLECTIONS.map((collection, i) => (
               <Reveal key={collection.slug} delay={Math.min(i, 5) * 60} className={`h-full ${i === COLLECTIONS.length - 1 ? "max-lg:[&:nth-child(odd)]:col-span-2 lg:[&:nth-child(4n+3)]:col-span-2" : ""}`}>

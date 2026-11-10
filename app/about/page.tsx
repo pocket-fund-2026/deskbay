@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CAFES, FACTORS } from "@/lib/cafes";
+import FactorIcon from "@/components/FactorIcon";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const SITE_URL = "https://bombaycafemap.com";
@@ -109,7 +110,7 @@ export default function AboutPage() {
           {FACTORS.map((f) => (
             <li key={f.key} className="px-4 py-3.5">
               <div className="flex items-baseline justify-between gap-4">
-                <span className="text-[15px] font-medium">{f.label}</span>
+                <span className="flex items-center gap-2.5 text-[15px] font-medium"><FactorIcon name={f.key} />{f.label}</span>
                 <span className="wa-mono shrink-0 tabular-nums text-paper/65">{f.weight}%</span>
               </div>
               <div className="mt-2 h-[4px] overflow-hidden rounded-full bg-paper/[0.07]">
