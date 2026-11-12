@@ -10,6 +10,7 @@ import { Ripple, TheLine } from "@/components/Brandmarks";
 import Footer from "@/components/Footer";
 import { COLLECTIONS, collectionCount } from "@/lib/collections";
 import Reveal from "@/components/Reveal";
+import ReelStrip from "@/components/ReelStrip";
 import areaPhotos from "@/data/areaPhotos.json";
 import ThemeToggle from "@/components/ThemeToggle";
 import { TiltCard } from "@/components/TiltCard";
@@ -226,6 +227,10 @@ export default function HomePage() {
               );
             })}
           </div>
+        </Reveal>
+
+        <Reveal className="mt-12">
+          <ReelStrip />
         </Reveal>
 
         <Reveal className="mt-12 pb-4" delay={100}>
